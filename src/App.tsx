@@ -1,5 +1,5 @@
 function App() {
-  return <>Ezekiel's Portfolio</>;
+  return <h1 className="text-3xl">Ezekiel's Portfolio</h1>;
 }
 
 export default App;
