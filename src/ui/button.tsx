@@ -6,12 +6,12 @@ interface ButtonProps {
 }
 
 const buttonVariants = cva(
-  'inline-flex items-center button-shadows justify-center gap-2 rounded-[10px] py-2 px-4 font-geist text-white text-sm',
+  'inline-flex font-medium items-center button-shadows justify-center gap-2 rounded-[10px] py-2 px-4 font-geist text-white text-sm',
   {
     variants: {
       variant: {
         default:
-          'text-white bg-linear-to-b from-bright-purple bg-linear-(--button-primary-gradient)',
+          'text-white bg-linear-to-b from-bright-purple bg-linear-(--button-primary-gradient) z-[1]  gradient-button relative',
         outline: 'text-button-outline-text outline-button-outline',
       },
 
