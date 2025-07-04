@@ -1,13 +1,11 @@
-import Button from '../../ui/button';
+import HeroSection from './components/hero';
+import MainContent from './components/main-content';
 
 const HomePage = () => {
   return (
-    <main className="bg-sidebar-bg min-h-screen">
-      <h1>Home</h1>
-      <div className="flex items-center px-20 py-20 gap-5">
-        <Button variant="default">Let's Talk</Button>
-        <Button variant="outline">Download Resume</Button>
-      </div>
+    <main className="bg-sidebar-bg min-h-screen flex flex-col gap-8">
+      <HeroSection />
+      <MainContent />
     </main>
   );
 };
