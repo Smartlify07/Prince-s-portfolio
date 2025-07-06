@@ -7,8 +7,13 @@ import Global from '../../public/assets/icons/Global.svg';
 import Settings from '../../public/assets/icons/Settings.svg';
 import Figma from '../../public/assets/icons/Figma.svg';
 import Smartphone from '../../public/assets/icons/deviceVector.svg';
-
-export const tools = [
+import Amaka from '../../public/assets/images/testimonials/amaka.png';
+import TymeTech from '../../public/assets/images/testimonials/tyme.png';
+type Tool = {
+  Icon: string;
+  name: string;
+};
+export const tools: Tool[] = [
   {
     Icon: Design,
     name: 'UX Design',
@@ -44,12 +49,22 @@ export const tools = [
   },
 
   {
-    icon: Framer,
+    Icon: Framer,
     name: 'Framer',
   },
 
   {
     Icon: AdobeIllustrator,
     name: 'Adobe Illustrator',
+  },
+];
+
+export const testimonials = [
+  {
+    name: 'Amaka I.',
+    position: 'Product Manager at Tymetech',
+    testimonial:
+      'Ezekiel didn’t just design our product — he transformed it. Every screen now feels intentional and user-focused. Working with him was one of the best decisions we made for our MVP.',
+    images: [Amaka, TymeTech],
   },
 ];

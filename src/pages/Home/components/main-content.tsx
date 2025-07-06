@@ -2,11 +2,12 @@ import { Calendar, Plain } from '@solar-icons/react';
 import Button from '../../../ui/button';
 import Badge from '../../../ui/badge';
 import { tools } from '../../../lib/constants';
+import Testimonials from '../../../components/testimonials';
 
 const MainContent = () => {
   return (
-    <section className="py-8 gap-11 px-4 flex flex-col">
-      <div className="flex flex-col gap-9">
+    <section className="py-8 gap-11 flex flex-col">
+      <div className="flex flex-col gap-9 px-4">
         <div className="flex flex-col gap-4">
           <Badge className="font-geist self-start inline-flex items-center gap-1">
             <span className="text-[#909090]">From</span>
@@ -37,12 +38,14 @@ const MainContent = () => {
                 className="inline-flex shrink-0 items-center font-geist text-[#EDEDEB] gap-1 p-2 opacity-50"
               >
                 <img src={tool.Icon} key={tool.name} />
-                {tool.name}{' '}
+                {tool.name}
               </Badge>
             ))}
           </div>
         </div>
       </div>
+
+      <Testimonials />
     </section>
   );
 };
