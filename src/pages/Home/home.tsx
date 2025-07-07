@@ -1,3 +1,4 @@
+import Footer from '../../components/footer';
 import HeroSection from './components/hero';
 import MainContent from './components/main-content';
 import SelectedWork from './components/selected-work';
@@ -8,6 +9,7 @@ const HomePage = () => {
       <HeroSection />
       <MainContent />
       <SelectedWork />
+      <Footer />
     </main>
   );
 };
