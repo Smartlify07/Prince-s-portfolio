@@ -27,6 +27,7 @@
   --color-grey-opaque: #ededeb;
   --color-primary: #030712;
   --color-badge-primary: rgba(144, 144, 144, 0.2);
+  --tracking-1: -2px;
 }
 
 .button-shadows {

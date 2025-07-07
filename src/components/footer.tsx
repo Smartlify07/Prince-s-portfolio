@@ -1,4 +1,4 @@
-import { Calendar, Plain } from '@solar-icons/react';
+import { ArrowUp, Calendar, Plain } from '@solar-icons/react';
 import Button from '../ui/button';
 import Dribbble from '../../public/assets/icons/Dribbble.svg';
 import X from '../../public/assets/icons/Twitter.svg';
@@ -13,13 +13,19 @@ const Footer = () => {
     <footer className="py-10 px-4 bg-sidebar-bg overflow-hidden relative grid gap-10">
       <div className="absolute inset-0 bg-[rgba(225,185,148,0.1)] opacity-40"></div>
       <section className="flex flex-col gap-8">
-        <header className="text-[40px]/[52px] flex flex-col items-center font-medium font-geist">
-          <h1 className="gradient-text font-geist tracking-[-1px] text-center">
+        <header className=" relative flex flex-col items-center ">
+          <h1 className="gradient-text font-medium font-geist text-[40px]/[52px] tracking-1 text-center">
             Have a project in mind?
           </h1>
-          <h1 className="gradient-text font-geist tracking-[-1px] text-center">
+          <h1 className="gradient-text font-medium font-geist text-[40px]/[52px] tracking-1 text-center">
             Let’s get to work.
           </h1>
+
+          <ArrowUp
+            className="text-[#909090] absolute bottom-3 right-0"
+            size={16}
+            weight="Broken"
+          />
         </header>
         <div className="flex items-center justify-center gap-4">
           <Button variant="outline" className="flex items-center gap-2">
