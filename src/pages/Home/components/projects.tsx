@@ -41,7 +41,7 @@ const ProjectCard = ({
             <h2 className="text-xl/[30.8px] text-[#EDEDEB] tracking-[-0.88px] text-start">
               {title}
             </h2>
-            <p className="text-sm text-[#909090] font-normal h-10  line-clamp-2 ">
+            <p className="text-sm text-[#909090] font-normal h-10 line-clamp-2 ">
               {description}...
             </p>
           </div>

@@ -119,6 +119,22 @@
   -webkit-text-fill-color: transparent;
 }
 
+.pricing-gradient-text-1 {
+  background: linear-gradient(0deg, #d065ff 0%, #f26ca7 51%, #ffaa4c 100%);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.pricing-gradient-text-2 {
+  background: linear-gradient(-71deg, #b96add 0%, #ff6c64 51%, #ffa94b 100%);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .card-shadow {
   box-shadow: 0px 0px 5.5px 0px rgba(86, 86, 119, 0.25);
 }
