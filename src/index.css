@@ -173,3 +173,14 @@
   background: linear-gradient(-33deg, #b96add, #ff6c64, #ffa94b);
   opacity: 15%;
 }
+
+.navbar-active {
+  background: linear-gradient(var(--button-primary-gradient)),
+    url('/public/assets/images/asfalt-light.png'); /* Put your actual image path here */
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  filter: drop-shadow(0px 10px 4px rgba(255, 170, 76, 0.25)), blur(20px);
+}
