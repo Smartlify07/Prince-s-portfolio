@@ -4,8 +4,9 @@ import Icon from '../../../../public/assets/icons/selected-works.svg';
 export const TopSection = () => {
   return (
     <section className="flex flex-col gap-6 px-4">
-      <Badge className="text-[#EDEDEB] text-xl font-medium flex gap-2 items-center font-geist self-start">
-        <img src={Icon} alt="selected-works" /> Design Services
+      <Badge className="text-[#EDEDEB] text-xl/[20px] px-2 py-2.5 opacity-50 font-medium flex gap-2 items-center font-geist self-start">
+        <img src={Icon} alt="selected-works" className="shrink-0" /> Design
+        Services
       </Badge>
 
       <div className="flex flex-col gap-2">

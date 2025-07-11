@@ -1,6 +1,8 @@
+import { CustomQuestion } from './components/custom-question';
 import { DesignProcess } from './components/design-process';
 import { ExclusiveDeals } from './components/exclusive-deals';
 import { ExclusiveDealsTopSection } from './components/exlusive-deals-top-section';
+import { FaqSection } from './components/faq';
 import { IndustriesExceled } from './components/industries-exceled';
 import { Pricing } from './components/pricing';
 import { ServiceDescription } from './components/service-description';
@@ -20,6 +22,8 @@ export default function ServicesPage() {
       <DesignProcess />
       <IndustriesExceled />
       <Pricing />
+      <FaqSection />
+      <CustomQuestion />
     </main>
   );
 }

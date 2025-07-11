@@ -8,7 +8,12 @@ const Card = ({
   className?: string;
 }) => {
   return (
-    <div className={cn('bg-dark-blue rounded-2xl card-shadow', className)}>
+    <div
+      className={cn(
+        'bg-dark-blue rounded-2xl shadow-[0px_0px_5.5px_rgba(86,86,119,0.25)]',
+        className
+      )}
+    >
       {children}
     </div>
   );

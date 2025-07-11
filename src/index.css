@@ -25,9 +25,13 @@
   --color-dark-blue: #111119;
   --color-white-opaque: #fcffec;
   --color-grey-opaque: #ededeb;
+  --color-grey-9: #909090;
+  --color-grey-4: #4c4c4c;
   --color-primary: #030712;
+  --color-card-shadow: rgba(86, 86, 119, 0.25);
   --color-badge-primary: rgba(144, 144, 144, 0.2);
   --tracking-1: -2px;
+  --tracking-smaller: 0.88px;
 }
 
 .button-shadows {
