@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from 'react-router';
 import HomePage from './pages/Home/home.tsx';
 import ServicesPage from './pages/Services/services.tsx';
 import RootLayout from './layouts/RootLayout.tsx';
+import AboutPage from './pages/About/about-page.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -13,6 +14,7 @@ createRoot(document.getElementById('root')!).render(
         <Route element={<RootLayout />}>
           <Route element={<HomePage />} path="/" />
           <Route element={<ServicesPage />} path="/services" />
+          <Route element={<AboutPage />} path="/about" />
         </Route>
       </Routes>
     </BrowserRouter>
