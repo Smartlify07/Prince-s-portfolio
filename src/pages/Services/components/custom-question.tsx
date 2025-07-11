@@ -7,8 +7,12 @@ export const CustomQuestion = () => {
   return (
     <section className="px-4">
       <Card className="shadow-none border-t-white-opaque bg-[#171721] border-l-white-opaque grid gap-6 border-b-white p-6">
-        <div className="rounded-2xl border-2 h-[125px] w-[100px] border-red-500">
-          <img src={Image} className="rounded-2xl" />
+        <div className="inline-block rounded-2xl p-[2px] w-[100px] card-gradient">
+          <img
+            src={Image}
+            alt="Profile"
+            className="rounded-2xl object-cover card-gradient h-[125px] w-[100px]"
+          />
         </div>
         <div className="grid gap-9">
           <h3 className="font-geist font-medium -tracking-smaller gradient-text">

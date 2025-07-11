@@ -158,6 +158,10 @@
   pointer-events: none;
 }
 
+.card-gradient {
+  background: linear-gradient(var(--primary-gradient));
+}
+
 .project-gradient {
   background: linear-gradient(
     180deg,
