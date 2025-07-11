@@ -28,10 +28,13 @@
   --color-grey-9: #909090;
   --color-grey-4: #4c4c4c;
   --color-primary: #030712;
+  --color-purple-10: #565677;
+
   --color-card-shadow: rgba(86, 86, 119, 0.25);
   --color-badge-primary: rgba(144, 144, 144, 0.2);
   --tracking-1: -2px;
   --tracking-smaller: 0.88px;
+  --tracking-smallest: 0.42px;
 }
 
 .button-shadows {
@@ -115,6 +118,20 @@
   background: linear-gradient(
     90deg,
     var(--color-white-opaque) 0%,
+    rgb(255, 255, 236, 0.2) 100%
+  );
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.spotify-text {
+  background: linear-gradient(
+    -87deg,
+    var(--color-white-opaque) 0%,
+    rgb(255, 255, 236, 0.63) 38%,
+    rgb(255, 255, 236, 0.59) 42%,
     rgb(255, 255, 236, 0.2) 100%
   );
   background-clip: text;
