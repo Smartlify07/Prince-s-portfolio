@@ -2,7 +2,7 @@ import Ezekiel1 from '../../../../public/assets/images/about/ezekiel2.png';
 import CollaborationImage from '../../../../public/assets/images/about/collaboration.png';
 import { morals, type Moral } from '../../../lib/constants';
 import Card from '../../../ui/card';
-import DoubleArrowDown from '../../../../public/assets/icons/DoubleArrowDown.svg';
+import Star from '../../../../public/assets/icons/star.svg';
 import { cn } from '../../../lib/utils';
 import { useState } from 'react';
 
@@ -49,7 +49,7 @@ export const MoralCompasses = () => {
           <MoralCompassCard
             index={index}
             toggle={() => toggle(index)}
-            active={false}
+            active={index === activeIndex}
             {...moral}
             key={index}
           />
@@ -72,7 +72,10 @@ const MoralCompassCard = ({
 } & Moral) => {
   return (
     <Card className="shadow-none font-geist flex flex-col gap-4 items-start p-4 justify-between bg-[#171721]">
-      <div className="flex items-center w-full justify-between">
+      <div
+        onClick={() => toggle(index)}
+        className="flex items-center w-full justify-between"
+      >
         <h1 className="text-xl -tracking-smaller font-medium">
           <span className="text-grey-9">0{index + 1}</span>
           <br />
@@ -80,11 +83,8 @@ const MoralCompassCard = ({
         </h1>
         <img
           onClick={() => toggle(index)}
-          className={cn(
-            'shrink-0 transition-transform duration-75',
-            active ? 'rotate-180' : 'rotate-0'
-          )}
-          src={DoubleArrowDown}
+          className={cn('shrink-0 transition-transform duration-75')}
+          src={Star}
         />
       </div>
 

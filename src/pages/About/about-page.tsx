@@ -5,6 +5,7 @@ import { BrandPartners } from './components/partners';
 import { Stack } from './components/stack';
 import { Statistics } from './components/statistics';
 import { AboutTopSection } from './components/top-section';
+import { UniqueValueProp } from './components/unique-value-prop';
 
 export default function AboutPage() {
   return (
@@ -18,6 +19,7 @@ export default function AboutPage() {
       <BrandPartners />
       <Stack />
       <MoralCompasses />
+      <UniqueValueProp />
     </main>
   );
 }
