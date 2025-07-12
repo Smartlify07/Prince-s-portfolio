@@ -12,7 +12,7 @@ import { CustomQuestion } from '@/components/custom-question';
 
 export default function AboutPage() {
   return (
-    <main className="flex flex-col overflow-hidden relative min-h-screen bg-sidebar-bg py-8 gap-10">
+    <main className="flex flex-col  relative min-h-screen bg-sidebar-bg py-8 gap-10">
       <AboutTopSection />
       <div className="flex flex-col z-30 mt-20 gap-2">
         <AboutContainer />

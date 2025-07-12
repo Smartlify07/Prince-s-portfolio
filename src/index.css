@@ -36,6 +36,8 @@
   --tracking-1: -2px;
   --tracking-smaller: 0.88px;
   --tracking-smallest: 0.42px;
+
+  --drop-shadow-orange: 0px 0px 4px 0px rgba(255, 170, 76, 0.8);
 }
 
 .button-shadows {

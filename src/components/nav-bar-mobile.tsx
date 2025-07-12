@@ -1,4 +1,4 @@
-import { CaseRoundMinimalistic, Cursor } from '@solar-icons/react';
+import { CaseRoundMinimalistic, Cursor, User } from '@solar-icons/react';
 import type { Icon } from '@solar-icons/react/lib/types';
 import { Link, useLocation } from 'react-router';
 
@@ -7,7 +7,7 @@ export const NavbarMobile = () => {
     <nav className="bg-[rgb(14,14,14,0.7)] z-50 fixed justify-center self-center backdrop-blur-2xl bottom-4 flex items-center gap-4 md:hidden rounded-4xl border border-[rgba(76,76,76,0.6)] p-3.5">
       <NavLink to="/projects" Icon={CaseRoundMinimalistic} label="Projects" />
       <NavLink to="/services" Icon={Cursor} label="Services" />
-      <NavLink to="/about" Icon={CaseRoundMinimalistic} label="About" />
+      <NavLink to="/about" Icon={User} label="About" />
       <NavLink
         to="/mentorship"
         Icon={CaseRoundMinimalistic}
@@ -31,13 +31,13 @@ const NavLink = ({
   return (
     <Link
       to={to}
-      className={`grid gap-1 font-geist place-items-center p-2 ${
+      className={`grid gap-1 drop-shadow-2xl font-geist place-items-center p-2 ${
         pathname === to ? 'navbar-active rounded-2xl' : ''
       }`}
     >
       <Icon
         weight="Outline"
-        className={`size-4 ${
+        className={`size-4 drop-shadow-orange ${
           pathname === to ? 'text-[#EDEDEB]' : 'text-[#909090]'
         }`}
       />
