@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <footer className="py-10 px-4 bg-sidebar-bg overflow-hidden relative grid gap-10">
       <div className="absolute inset-0 bg-[rgba(225,185,148,0.1)] opacity-40"></div>
-      <section className="flex flex-col gap-8">
+      <section className="flex flex-col items-center gap-8">
         <header className=" relative flex flex-col items-center ">
           <h1 className="gradient-text font-medium font-geist text-[40px]/[52px] tracking-1 text-center">
             Have a project in mind?

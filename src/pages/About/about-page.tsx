@@ -1,5 +1,7 @@
 import { AboutContainer } from './components/about-container';
 import { MoreInfo } from './components/more-info';
+import { BrandPartners } from './components/partners';
+import { Stack } from './components/stack';
 import { Statistics } from './components/statistics';
 import { AboutTopSection } from './components/top-section';
 
@@ -12,6 +14,8 @@ export default function AboutPage() {
         <MoreInfo />
       </div>
       <Statistics />
+      <BrandPartners />
+      <Stack />
     </main>
   );
 }

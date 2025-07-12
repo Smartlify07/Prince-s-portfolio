@@ -32,6 +32,18 @@ import Lawyers from '../../public/assets/images/services/Lawyers & Attorneys Ima
 import Commerce from '../../public/assets/images/services/Retail & Ecommerce Image.svg';
 import NonProfit from '../../public/assets/images/services/Non-Profit Organizations Image.svg';
 
+import Jira2 from '../../public/assets/images/about/jira.svg';
+import Figma2 from '../../public/assets/images/about/figma.svg';
+import Protopie from '../../public/assets/images/about/protopie.svg';
+import Framer2 from '../../public/assets/images/about/framer.svg';
+import Lovalble from '../../public/assets/images/about/Lovable.svg';
+import Maze from '../../public/assets/images/about/maze.svg';
+import Jitter from '../../public/assets/images/about/jitter.svg';
+import Adobe from '../../public/assets/images/about/jitter.svg';
+import Gpt from '../../public/assets/images/about/gpt.svg';
+import Linear from '../../public/assets/images/about/linear.svg';
+import Shots from '../../public/assets/images/about/shots.svg';
+
 type Tool = {
   Icon: string;
   name: string;
@@ -370,5 +382,52 @@ export const faqs: Faq[] = [
     title: 'Do you work solo or with a team?',
     subtitle:
       'While I handle most projects independently, I collaborate with a trusted network of developers, writers, and researchers if the project requires a larger scope.',
+  },
+];
+
+export const toolsUsed = [
+  {
+    title: 'Jira',
+    icon: Jira2,
+  },
+  {
+    title: 'Figma',
+    icon: Figma2,
+  },
+  {
+    title: 'Protopie',
+    icon: Protopie,
+  },
+  {
+    title: 'Framer',
+    icon: Framer2,
+  },
+  {
+    title: 'Lovable',
+    icon: Lovalble,
+  },
+  {
+    title: 'Maze',
+    icon: Maze,
+  },
+  {
+    title: 'Jitter',
+    icon: Jitter,
+  },
+  {
+    title: 'Adobe',
+    icon: Adobe,
+  },
+  {
+    title: 'ChatGPT',
+    icon: Gpt,
+  },
+  {
+    title: 'Linear',
+    icon: Linear,
+  },
+  {
+    title: 'Shots',
+    icon: Shots,
   },
 ];
