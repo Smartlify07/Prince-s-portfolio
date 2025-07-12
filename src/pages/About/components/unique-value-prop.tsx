@@ -30,7 +30,9 @@ const ValuePropCard = ({
   return (
     <Card className="shadow-none bg-sidebar-bg rounded-none py-9 border-t border-b border-grey-4/60 flex flex-col gap-6 font-geist px-0">
       <div className="flex items-start flex-col gap-2">
-        <h1 className="gradient-text font-medium -tracking-smaller">{title}</h1>
+        <h1 className="gradient-text font-medium text-xl -tracking-smaller">
+          {title}
+        </h1>
         <p className="text-sm/[150%] text-grey-9">{subtitle}</p>
       </div>
       <div className="rounded-2xl">
