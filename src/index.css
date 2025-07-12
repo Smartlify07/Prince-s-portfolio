@@ -32,15 +32,17 @@
 
   --color-card-shadow: rgba(86, 86, 119, 0.25);
   --color-badge-primary: rgba(144, 144, 144, 0.2);
+  --color-orange-2: rgba(255, 170, 76, 0.2);
   --tracking-1: -2px;
   --tracking-smaller: 0.88px;
   --tracking-smallest: 0.42px;
 }
 
 .button-shadows {
-  box-shadow: inset 0px 1px 3px #c7dcff33, inset 0px 0px 20px 0px #c6ccff33,
-    0px 1px 22px 0px #ffffff1a, 0px 4px 4px 0px #0000000d,
-    0px 10px 10px 0px #0000001a;
+  box-shadow: inset 0px 1px 3px #c7dcff33,
+    inset 0px 0px 20px 0px rgba(198, 204, 255, 0.2),
+    0px 1px 22px 0px rgba(255, 255, 255, 0.1),
+    0px 4px 4px 0px rgba(0, 0, 0, 0.05), 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
 }
 
 .outline-button-outline {

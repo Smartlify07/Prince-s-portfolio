@@ -5,6 +5,7 @@ import Card from '../../../ui/card';
 import { faqs, type Faq } from '../../../lib/constants';
 import { useState } from 'react';
 import { cn } from '../../../lib/utils';
+
 export const FaqSection = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const toggle = (index: number) => {

@@ -13,14 +13,16 @@ export const Stack = () => {
       </header>
       <div className="grid grid-cols-5 items-center flex-wrap gap-4">
         {toolsUsed.map((tool) => (
-          <div className="flex flex-col gap-2">
+          <div key={tool.title} className="flex flex-col gap-2">
             <div
               key={tool.title}
-              className="flex flex-col rounded-full button-shadows items-center justify-center size-14  gap-2"
+              className="flex flex-col rounded-full bg-orange-2/2 opacity-50  button-shadows items-center justify-center size-14  gap-2"
             >
               <img src={tool.icon} alt={tool.title} className="size-6" />
             </div>
-            <p className="text-grey-9 text-sm/[150%]">{tool.title}</p>
+            <p className="text-grey-9 text-center text-sm/[150%]">
+              {tool.title}
+            </p>
           </div>
         ))}
       </div>

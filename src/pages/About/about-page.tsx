@@ -1,4 +1,5 @@
 import { AboutContainer } from './components/about-container';
+import { MoralCompasses } from './components/moral-compasses';
 import { MoreInfo } from './components/more-info';
 import { BrandPartners } from './components/partners';
 import { Stack } from './components/stack';
@@ -16,6 +17,7 @@ export default function AboutPage() {
       <Statistics />
       <BrandPartners />
       <Stack />
+      <MoralCompasses />
     </main>
   );
 }
