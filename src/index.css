@@ -126,6 +126,19 @@
   -webkit-text-fill-color: transparent;
 }
 
+.pricing-text {
+  background: linear-gradient(
+    96deg,
+    rgb(255, 255, 236, 1) 0%,
+    rgb(255, 255, 236, 0.08) 50%,
+    rgb(255, 255, 236, 0.02) 100%
+  );
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .spotify-text {
   background: linear-gradient(
     -87deg,
@@ -179,6 +192,29 @@
   background: linear-gradient(var(--primary-gradient));
 }
 
+.card-gradient-2 {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-gradient-2::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    47deg,
+    var(--color-white-opaque) 0%,
+    rgba(252, 255, 236, 0.2) 100%
+  );
+  opacity: 0.1;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.card-gradient-2 > * {
+  position: relative;
+  z-index: 1;
+}
 .project-gradient {
   background: linear-gradient(
     180deg,
@@ -186,6 +222,7 @@
     rgba(15, 15, 26, 1) 77%
   );
 }
+
 .services-text-gradient {
   background: linear-gradient(90deg, var(--primary-gradient));
   background-clip: text;

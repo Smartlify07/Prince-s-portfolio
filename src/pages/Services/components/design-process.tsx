@@ -2,6 +2,8 @@ import Badge from '../../../ui/badge';
 import RoutingIcon from '../../../../public/assets/icons/Routing 3.svg';
 import Curve from '../../../../public/assets/icons/Curve.svg';
 import { designProcesses } from '../../../lib/constants';
+import { CardStroke } from '../../../components/card-stroke';
+import Card from '../../../ui/card';
 
 export const DesignProcess = () => {
   return (
@@ -44,25 +46,27 @@ const ProcessCard = ({
   list: string[];
 }) => {
   return (
-    <div className="rounded-4xl bg-[#171721] border-t border-l font-geist border-b border-[rgba(252,255,236,0.2)] flex flex-col gap-4 p-6">
-      <img
-        className="size-[100px] self-start"
-        src={icon}
-        alt={title + '-illustration'}
-      />
+    <CardStroke className="rounded-4xl">
+      <Card className="rounded-4xl bg-[#171721] font-geist flex flex-col gap-4 p-6">
+        <img
+          className="size-[100px] self-start"
+          src={icon}
+          alt={title + '-illustration'}
+        />
 
-      <div className="flex flex-col gap-4">
-        <h1 className="text-xl font-medium gradient-text">{title}</h1>
+        <div className="flex flex-col gap-4">
+          <h1 className="text-xl font-medium gradient-text">{title}</h1>
 
-        <div className="grid grid-cols-2 gap-x-4 gap-y-2">
-          {list.map((item, index) => (
-            <div key={index} className="flex items-center gap-2">
-              <img src={Curve} />
-              <p className="text-[#909090] text-sm/[150%]">{item}</p>
-            </div>
-          ))}
+          <div className="grid grid-cols-2 gap-x-4 gap-y-2">
+            {list.map((item, index) => (
+              <div key={index} className="flex items-center gap-2">
+                <img src={Curve} />
+                <p className="text-[#909090] text-sm/[150%]">{item}</p>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-    </div>
+      </Card>
+    </CardStroke>
   );
 };

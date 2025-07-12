@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router';
 
 export const NavbarMobile = () => {
   return (
-    <nav className="bg-[rgb(14,14,14,0.7)] z-30 fixed w-10/12  justify-center self-center backdrop-blur-2xl bottom-4 flex items-center gap-4 md:hidden rounded-4xl border border-[rgba(76,76,76,0.6)] p-3.5">
+    <nav className="bg-[rgb(14,14,14,0.7)] z-30 fixed   justify-center self-center backdrop-blur-2xl bottom-4 flex items-center gap-4 md:hidden rounded-4xl border border-[rgba(76,76,76,0.6)] p-3.5">
       <NavLink to="/projects" Icon={CaseRoundMinimalistic} label="Projects" />
       <NavLink to="/services" Icon={Cursor} label="Services" />
       <NavLink to="/about" Icon={CaseRoundMinimalistic} label="About" />

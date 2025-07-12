@@ -6,6 +6,7 @@ import Cursor from '../../../../public/assets/icons/Cursor.svg';
 import DoubleCheck from '../../../../public/assets/icons/DoubleCheck.svg';
 import Button from '../../../ui/button';
 import { pricing } from '../../../lib/constants';
+import { CardStroke } from '../../../components/card-stroke';
 
 export const Pricing = () => {
   return (
@@ -16,7 +17,7 @@ export const Pricing = () => {
           Pricing
         </Badge>
         <div className="grid gap-4 place-items-center">
-          <h1 className="text-[40px] gradient-text text-center font-medium tracking-[-0.88px]">
+          <h1 className="text-[40px] gradient-text text-center font-medium -tracking-smaller">
             Your visions , my creativity—strategies tailored just for you.
           </h1>
           <p className="text-sm/[150%] text-center text-[#909090]">
@@ -98,41 +99,43 @@ const PricingCard = ({
   list: string[];
 }) => {
   return (
-    <div
-      className={`rounded-4xl gap-6 grid p-6   ${
-        first ? 'texture bg-[rgba(15,15,26,0.3)]' : 'bg-[#171721]'
-      }`}
-    >
-      <div className="grid gap-4">
-        <div className="size-12 flex items-center justify-center rounded-full opacity-50 button-shadows">
-          <img src={icon} alt={title} />
-        </div>
+    <CardStroke className="rounded-4xl">
+      <div
+        className={`rounded-4xl gap-6 grid p-6   ${
+          first ? 'texture bg-[rgba(15,15,26,0.3)]' : 'bg-[#171721]'
+        }`}
+      >
+        <div className="grid gap-4">
+          <div className="size-12 flex items-center justify-center rounded-full opacity-50 button-shadows">
+            <img src={icon} alt={title} />
+          </div>
 
-        <div className="grid gap-14">
-          <div className="grid gap-2">
-            <h1 className="gradient-text text-xl text-left tracking-[-0.88px] font-medium ">
-              {title}
+          <div className="grid gap-14">
+            <div className="grid gap-2">
+              <h1 className="gradient-text text-xl text-left -tracking-smaller font-medium ">
+                {title}
+              </h1>
+              <p className="text-sm/[150%] text-[#909090]">{children}</p>
+            </div>
+            <h1 className="pricing-text -tracking-smaller font-medium text-[40px]">
+              Custom
             </h1>
-            <p className="text-sm/[150%] text-[#909090]">{children}</p>
           </div>
-          <h1 className="gradient-text tracking-[-0.88px] font-medium text-[40px]">
-            Custom
-          </h1>
+        </div>
+
+        <Button className="w-full" variant={first ? 'default' : 'outline'}>
+          Contact Me
+        </Button>
+
+        <div className="pt-4 grid gap-2 border-t border-grey-4/60 border-dashed">
+          {list.map((item, index) => (
+            <div key={index} className="flex items-center gap-2">
+              <img src={DoubleCheck} alt="double-check" />
+              <p className="text-sm/[150%] text-[#909090]">{item}</p>
+            </div>
+          ))}
         </div>
       </div>
-
-      <Button className="w-full" variant={first ? 'default' : 'outline'}>
-        Contact Me
-      </Button>
-
-      <div className="pt-4 grid gap-2 border-[rgba(76,76,76,0.6)] border-dashed">
-        {list.map((item, index) => (
-          <div key={index} className="flex items-center gap-2">
-            <img src={DoubleCheck} alt="double-check" />
-            <p className="text-sm/[150%] text-[#909090]">{item}</p>
-          </div>
-        ))}
-      </div>
-    </div>
+    </CardStroke>
   );
 };

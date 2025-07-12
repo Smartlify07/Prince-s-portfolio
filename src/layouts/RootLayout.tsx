@@ -4,7 +4,7 @@ import Footer from '../components/footer';
 
 const RootLayout = () => {
   return (
-    <main className="relative flex flex-col">
+    <main className="relative flex flex-col gap-10 bg-sidebar-bg">
       <NavbarMobile />
       <Outlet />
       <Footer />

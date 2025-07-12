@@ -4,17 +4,20 @@ import Badge from '../../../ui/badge';
 import FiltersIcon from '../../../../public/assets/icons/Filters.svg';
 import Deal1Image from '../../../../public/assets/images/services/exclusive-deal-1.png';
 import { useState } from 'react';
+import { CardStroke } from '../../../components/card-stroke';
 
 export const ExclusiveDeals = () => {
   const [currentDeal] = useState(1);
 
   return (
     <section className="flex flex-col gap-6">
-      <div className="flex items-center bg-[#171721] border-[rgba(252,255,236,0.2)] gap-4 rounded-4xl p-6 overflow-hidden">
-        {exclusiveDeals.map((deal, index) => (
-          <ExclusiveDealCard {...deal} key={index} />
-        ))}
-      </div>
+      <CardStroke className="rounded-4xl">
+        <div className="flex items-center bg-[#171721] gap-4 rounded-4xl p-6 overflow-hidden">
+          {exclusiveDeals.map((deal, index) => (
+            <ExclusiveDealCard {...deal} key={index} />
+          ))}
+        </div>
+      </CardStroke>
 
       {currentDeal === 1 && (
         <ExclusiveDealExtendedCard
@@ -64,24 +67,26 @@ export const ExclusiveDealExtendedCard = ({
   description: string;
 }) => {
   return (
-    <div className="p-6 bg-[#171721] exclusive-deal-card rounded-4xl border-t border-l border-b border-[rgba(252,255,236,0.2)] shadow-none flex flex-col gap-6">
-      <Badge className="flex text-[#EDEDEB] font-medium items-center self-start gap-2">
-        <img src={FiltersIcon} />
-        {badgeTitle}
-      </Badge>
-      <div className="flex flex-col gap-8">
-        <div className="flex flex-col gap-4">
-          <h1 className="text-xl text-left tracking-[-0.88px] gradient-text font-geist">
-            {title}
-          </h1>
-          <p className="text-sm text-[#909090] font-geist font-normal">
-            {description}
-          </p>
-        </div>
-        <div className="shadow-[0px_0px_5.5px_rgba(86,86,119,0.25)] rounded-2xl">
-          <img className="rounded-2xl" src={Deal1Image} />
+    <CardStroke className="rounded-4xl">
+      <div className="p-6 bg-[#171721] exclusive-deal-card rounded-4xl shadow-none flex flex-col gap-6">
+        <Badge className="flex text-[#EDEDEB] font-medium items-center self-start gap-2">
+          <img src={FiltersIcon} />
+          {badgeTitle}
+        </Badge>
+        <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-4">
+            <h1 className="text-xl text-left tracking-[-0.88px] gradient-text font-geist">
+              {title}
+            </h1>
+            <p className="text-sm text-[#909090] font-geist font-normal">
+              {description}
+            </p>
+          </div>
+          <div className="shadow-[0px_0px_5.5px_rgba(86,86,119,0.25)] rounded-2xl">
+            <img className="rounded-2xl" src={Deal1Image} />
+          </div>
         </div>
       </div>
-    </div>
+    </CardStroke>
   );
 };

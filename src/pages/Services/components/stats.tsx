@@ -1,7 +1,7 @@
 export const StatsSection = () => {
   return (
-    <section className="px-6">
-      <div className="flex flex-col texture p-6 gap-2.5 bg-sidebar-bg/30">
+    <section className="px-4">
+      <div className="flex flex-col texture rounded-3xl p-6 gap-2.5 bg-sidebar-bg/30">
         <div className="flex items-center gap-4">
           <Stat number={3} text="Years of Experience" />
           <Stat number={24} text="Projects Completed" />
