@@ -20,7 +20,7 @@ const BadgeAndHeader = ({
         {badgeTitle}
       </Badge>
       <div className="grid gap-4 place-items-center">
-        <h1 className="text-[40px] gradient-text text-center font-medium tracking-[-0.88px]">
+        <h1 className="text-[40px]/[52px] gradient-text text-center font-medium -tracking-smaller">
           {title}
         </h1>
         {subtitle && (

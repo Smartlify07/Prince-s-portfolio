@@ -1,3 +1,4 @@
+import { Pricing } from '@/components/pricing';
 import { AboutContainer } from './components/about-container';
 import { MoralCompasses } from './components/moral-compasses';
 import { MoreInfo } from './components/more-info';
@@ -6,6 +7,8 @@ import { Stack } from './components/stack';
 import { Statistics } from './components/statistics';
 import { AboutTopSection } from './components/top-section';
 import { UniqueValueProp } from './components/unique-value-prop';
+import { FaqSection } from '@/components/faq';
+import { CustomQuestion } from '@/components/custom-question';
 
 export default function AboutPage() {
   return (
@@ -20,6 +23,9 @@ export default function AboutPage() {
       <Stack />
       <MoralCompasses />
       <UniqueValueProp />
+      <Pricing />
+      <FaqSection />
+      <CustomQuestion />
     </main>
   );
 }

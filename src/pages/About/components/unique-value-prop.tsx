@@ -1,19 +1,24 @@
-import { uniqueValueProps } from '../../../lib/constants';
-import Card from '../../../ui/card';
+import { uniqueValueProps } from '@/lib/constants';
+import Card from '@/ui/card';
+import { CallToActionSection } from './cta';
 
 export const UniqueValueProp = () => {
   return (
-    <section className="px-4 grid gap-12">
-      <header>
-        <h1 className="text-[40px] font-medium font-geist gradient-text">
-          Why Am I Unique?
-        </h1>
-      </header>
-      <div className="border-t border-dashed border-t-grey-9/60">
-        {uniqueValueProps.map((valueProp, index) => (
-          <ValuePropCard key={index} {...valueProp} />
-        ))}
+    <section className="px-4 grid gap-14">
+      <div className="grid gap-12">
+        <header>
+          <h1 className="text-[40px] font-medium font-geist gradient-text">
+            Why Am I Unique?
+          </h1>
+        </header>
+        <div className="border-t border-dashed border-t-grey-9/60">
+          {uniqueValueProps.map((valueProp, index) => (
+            <ValuePropCard key={index} {...valueProp} />
+          ))}
+        </div>
       </div>
+
+      <CallToActionSection />
     </section>
   );
 };

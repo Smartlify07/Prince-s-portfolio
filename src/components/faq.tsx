@@ -1,10 +1,10 @@
-import BadgeAndHeader from '../../../components/BadgeAndHeader';
-import FaqIcon from '../../../../public/assets/icons/Question Circle.svg';
-import DoubleArrowDown from '../../../../public/assets/icons/DoubleArrowDown.svg';
-import Card from '../../../ui/card';
-import { faqs, type Faq } from '../../../lib/constants';
+import BadgeAndHeader from '@/components/BadgeAndHeader';
+import FaqIcon from '@/../public/assets/icons/Question Circle.svg';
+import DoubleArrowDown from '@/../public/assets/icons/DoubleArrowDown.svg';
+import Card from '@/ui/card';
+import { faqs, type Faq } from '@/lib/constants';
 import { useState } from 'react';
-import { cn } from '../../../lib/utils';
+import { cn } from '@/lib/utils';
 
 export const FaqSection = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);

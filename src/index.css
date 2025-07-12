@@ -190,6 +190,23 @@
   pointer-events: none;
 }
 
+.texture-2 {
+  background: url(../public/assets/images/asfalt-light.png) repeat center;
+  background-size: cover;
+  pointer-events: none;
+  position: relative;
+}
+
+.texture-2::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 1;
+  background: rgba(15, 15, 26, 0.3);
+  z-index: 0;
+  pointer-events: none;
+}
+
 .card-gradient {
   background: linear-gradient(var(--primary-gradient));
 }

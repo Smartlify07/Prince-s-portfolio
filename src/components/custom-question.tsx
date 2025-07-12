@@ -1,8 +1,8 @@
-import Card from '../../../ui/card';
-import Image from '../../../../public/assets/images/services/ezekiel.png';
-import Forward from '../../../../public/assets/icons/Forward.svg';
-import Button from '../../../ui/button';
-import { CardStroke } from '../../../components/card-stroke';
+import Card from '@/ui/card';
+import Image from '@/../public/assets/images/services/ezekiel.png';
+import Forward from '@/../public/assets/icons/Forward.svg';
+import Button from '@/ui/button';
+import { CardStroke } from '@/components/card-stroke';
 
 export const CustomQuestion = () => {
   return (
