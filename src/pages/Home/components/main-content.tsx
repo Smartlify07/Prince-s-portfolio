@@ -1,8 +1,8 @@
 import { Calendar, Plain } from '@solar-icons/react';
-import Button from '../../../ui/button';
-import Badge from '../../../ui/badge';
-import { tools } from '../../../lib/constants';
-import Testimonials from '../../../components/testimonials';
+import Button from '@/ui/button';
+import Badge from '@/ui/badge';
+import { tools } from '@/lib/constants';
+import Testimonials from '@/components/testimonials';
 
 const MainContent = () => {
   return (

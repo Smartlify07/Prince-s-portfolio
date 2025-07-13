@@ -1,5 +1,5 @@
-import { testimonials } from '../lib/constants';
-import TestimonialBackground from '../../public/assets/images/testimonial-bg.png';
+import { testimonials } from '@/lib/constants';
+import TestimonialBackground from '@/../public/assets/images/testimonial-bg.png';
 
 const Testimonials = () => {
   return (

@@ -1,11 +1,11 @@
 import { ArrowUp, Calendar, Plain } from '@solar-icons/react';
-import Button from '../ui/button';
-import Dribbble from '../../public/assets/icons/Dribbble.svg';
-import X from '../../public/assets/icons/Twitter.svg';
-import LinkedIn from '../../public/assets/icons/LinkedIn.svg';
-import Behance from '../../public/assets/icons/Behance.svg';
-import Email from '../../public/assets/icons/envelope.svg';
-import SixSelf from '../../public/assets/icons/sixself.svg';
+import Button from '@/ui/button';
+import Dribbble from '@/../public/assets/icons/Dribbble.svg';
+import X from '@/../public/assets/icons/Twitter.svg';
+import LinkedIn from '@/../public/assets/icons/LinkedIn.svg';
+import Behance from '@/../public/assets/icons/Behance.svg';
+import Email from '@/../public/assets/icons/envelope.svg';
+import SixSelf from '@/../public/assets/icons/sixself.svg';
 
 const Footer = () => {
   const socialIcons = [Email, Dribbble, Behance, X, LinkedIn, SixSelf];

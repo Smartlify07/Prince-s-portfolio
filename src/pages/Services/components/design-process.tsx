@@ -1,9 +1,9 @@
-import Badge from '../../../ui/badge';
-import RoutingIcon from '../../../../public/assets/icons/Routing 3.svg';
-import Curve from '../../../../public/assets/icons/Curve.svg';
-import { designProcesses } from '../../../lib/constants';
-import { CardStroke } from '../../../components/card-stroke';
-import Card from '../../../ui/card';
+import Badge from '@/ui/badge';
+import RoutingIcon from '@/../public/assets/icons/Routing 3.svg';
+import Curve from '@/../public/assets/icons/Curve.svg';
+import { designProcesses } from '@/lib/constants';
+import { CardStroke } from '@/components/card-stroke';
+import Card from '@/ui/card';
 
 export const DesignProcess = () => {
   return (

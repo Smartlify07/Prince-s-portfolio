@@ -1,9 +1,9 @@
-import Ezekiel1 from '../../../../public/assets/images/about/ezekiel2.png';
-import CollaborationImage from '../../../../public/assets/images/about/collaboration.png';
-import { morals, type Moral } from '../../../lib/constants';
-import Card from '../../../ui/card';
-import Star from '../../../../public/assets/icons/star.svg';
-import { cn } from '../../../lib/utils';
+import Ezekiel1 from '@/../public/assets/images/about/ezekiel2.png';
+import CollaborationImage from '@/../public/assets/images/about/collaboration.png';
+import { morals, type Moral } from '@/lib/constants';
+import Card from '@/ui/card';
+import Star from '@/../public/assets/icons/star.svg';
+import { cn } from '@/lib/utils';
 import { useState } from 'react';
 
 export const MoralCompasses = () => {

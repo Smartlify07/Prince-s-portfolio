@@ -1,7 +1,7 @@
-import Badge from '../../../ui/badge';
-import BuildingIcon from '../../../../public/assets/icons/Buildings 3.svg';
-import { industries } from '../../../lib/constants';
-import Button from '../../../ui/button';
+import Badge from '@/ui/badge';
+import BuildingIcon from '@/../public/assets/icons/Buildings 3.svg';
+import { industries } from '@/lib/constants';
+import Button from '@/ui/button';
 import { CaseMinimalistic, Plain } from '@solar-icons/react';
 export const IndustriesExceled = () => {
   return (

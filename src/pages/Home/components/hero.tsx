@@ -1,7 +1,7 @@
 import { CloudDownload, Plain } from '@solar-icons/react';
-import Button from '../../../ui/button';
-import Card from '../../../ui/card';
-import HeroImage from '../../../../public/assets/images/hero-image.png';
+import Button from '@/ui/button';
+import Card from '@/ui/card';
+import HeroImage from '@/../public/assets/images/hero-image.png';
 const HeroSection = () => {
   return (
     <section className="flex flex-col p-6 gap-8">

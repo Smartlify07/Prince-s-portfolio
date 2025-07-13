@@ -3,10 +3,10 @@ import Layers from '@/../public/assets/icons/Layers.svg';
 import Framer from '@/../public/assets/icons/Framer.svg';
 import Cursor from '@/../public/assets/icons/Cursor.svg';
 import DoubleCheck from '@/../public/assets/icons/DoubleCheck.svg';
-import Badge from '../ui/badge';
-import { pricing } from '../lib/constants';
-import { CardStroke } from './card-stroke';
-import Button from '../ui/button';
+import Badge from '@/ui/badge';
+import { pricing } from '@/lib/constants';
+import { CardStroke } from '@/components/card-stroke';
+import Button from '@/ui/button';
 
 export const Pricing = () => {
   return (

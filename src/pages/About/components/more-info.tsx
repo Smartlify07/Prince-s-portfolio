@@ -1,6 +1,6 @@
-import Star from '../../../../public/assets/icons/Star Icon.svg';
-import Headphones from '../../../../public/assets/icons/Headphones Icon.svg';
-import Suitcase from '../../../../public/assets/icons/Suitcase Icon.svg';
+import Star from '@/../public/assets/icons/Star Icon.svg';
+import Headphones from '@/../public/assets/icons/Headphones Icon.svg';
+import Suitcase from '@/../public/assets/icons/Suitcase Icon.svg';
 import { SpotifyEmbed } from './spotify-embed';
 
 export const MoreInfo = () => {

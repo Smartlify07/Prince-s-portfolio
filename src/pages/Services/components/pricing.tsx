@@ -4,8 +4,8 @@ import Layers from '@/../public/assets/icons/Layers.svg';
 import Framer from '@/../public/assets/icons/Framer.svg';
 import Cursor from '@/../public/assets/icons/Cursor.svg';
 import DoubleCheck from '@/../public/assets/icons/DoubleCheck.svg';
-import Button from '../../../ui/button';
-import { pricing } from '../../../lib/constants';
+import Button from '@/ui/button';
+import { pricing } from '@/lib/constants';
 import { CardStroke } from '@/components/card-stroke';
 
 export const Pricing = () => {

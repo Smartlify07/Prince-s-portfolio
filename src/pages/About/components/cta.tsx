@@ -1,5 +1,5 @@
 import { CaseMinimalistic, Plain } from '@solar-icons/react';
-import Button from '../../../ui/button';
+import Button from '@/ui/button';
 
 export const CallToActionSection = () => {
   return (

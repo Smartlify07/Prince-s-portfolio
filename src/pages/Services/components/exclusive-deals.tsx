@@ -1,10 +1,10 @@
 import { ArrowRightUp } from '@solar-icons/react';
-import { exclusiveDeals } from '../../../lib/constants';
-import Badge from '../../../ui/badge';
-import FiltersIcon from '../../../../public/assets/icons/Filters.svg';
-import Deal1Image from '../../../../public/assets/images/services/exclusive-deal-1.png';
+import { exclusiveDeals } from '@/lib/constants';
+import Badge from '@/ui/badge';
+import FiltersIcon from '@/../public/assets/icons/Filters.svg';
+import Deal1Image from '@/../public/assets/images/services/exclusive-deal-1.png';
 import { useState } from 'react';
-import { CardStroke } from '../../../components/card-stroke';
+import { CardStroke } from '@/components/card-stroke';
 
 export const ExclusiveDeals = () => {
   const [currentDeal] = useState(1);

@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router';
-import { NavbarMobile } from '../components/nav-bar-mobile';
-import Footer from '../components/footer';
+import { NavbarMobile } from '@/components/nav-bar-mobile';
+import Footer from '@/components/footer';
 
 const RootLayout = () => {
   return (

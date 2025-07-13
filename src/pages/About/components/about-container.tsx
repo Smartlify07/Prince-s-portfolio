@@ -1,6 +1,6 @@
 import { CloudDownload, Plain } from '@solar-icons/react';
-import Button from '../../../ui/button';
-import Ezekiel from '../../../../public/assets/images/about/Ezekiel.png';
+import Button from '@/ui/button';
+import Ezekiel from '@/../public/assets/images/about/Ezekiel.png';
 
 export const AboutContainer = () => {
   return (

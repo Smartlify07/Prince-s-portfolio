@@ -1,6 +1,6 @@
 import { ArrowRightUp } from '@solar-icons/react';
-import { projects } from '../../../lib/constants';
-import Badge from '../../../ui/badge';
+import { projects } from '@/lib/constants';
+import Badge from '@/ui/badge';
 
 const ProjectsSection = () => {
   return (

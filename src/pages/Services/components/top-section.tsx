@@ -1,5 +1,5 @@
-import Badge from '../../../ui/badge';
-import Icon from '../../../../public/assets/icons/selected-works.svg';
+import Badge from '@/ui/badge';
+import Icon from '@/../public/assets/icons/selected-works.svg';
 
 export const TopSection = () => {
   return (
