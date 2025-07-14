@@ -1,5 +1,5 @@
-import Pallete2 from '../../../../public/assets/icons/Pallete 2.svg';
-import Badge from '../../../ui/badge';
+import Pallete2 from '@/../public/assets/icons/Pallete 2.svg';
+import Badge from '@/ui/badge';
 
 export const ExclusiveDealsTopSection = () => {
   return (

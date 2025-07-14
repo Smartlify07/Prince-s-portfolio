@@ -3,11 +3,11 @@ import { DesignProcess } from './components/design-process';
 import { ExclusiveDeals } from './components/exclusive-deals';
 import { ExclusiveDealsTopSection } from './components/exlusive-deals-top-section';
 import { IndustriesExceled } from './components/industries-exceled';
-import { Pricing } from './components/pricing';
 import { ServiceDescription } from './components/service-description';
 import { StatsSection } from './components/stats';
 import { TopSection } from './components/top-section';
 import { CustomQuestion } from '@/components/custom-question';
+import { Pricing } from '@/components/pricing';
 
 export default function ServicesPage() {
   return (
