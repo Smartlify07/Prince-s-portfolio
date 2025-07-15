@@ -115,7 +115,7 @@ const PricingCard = ({
               <h1 className="gradient-text text-xl text-left -tracking-smaller font-medium ">
                 {title}
               </h1>
-              <p className="text-sm/[150%] text-[#909090]">{children}</p>
+              <div className="text-sm/[150%] text-[#909090]">{children}</div>
             </div>
             <h1 className="pricing-text -tracking-smaller font-medium text-[40px]">
               Custom

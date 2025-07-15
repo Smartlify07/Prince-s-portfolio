@@ -6,6 +6,7 @@ import HomePage from './pages/Home/home.tsx';
 import ServicesPage from './pages/Services/services.tsx';
 import RootLayout from './layouts/RootLayout.tsx';
 import AboutPage from './pages/About/about-page.tsx';
+import ContactPage from './pages/Contact/contact-page.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -15,6 +16,7 @@ createRoot(document.getElementById('root')!).render(
           <Route element={<HomePage />} path="/" />
           <Route element={<ServicesPage />} path="/services" />
           <Route element={<AboutPage />} path="/about" />
+          <Route element={<ContactPage />} path="/contact" />
         </Route>
       </Routes>
     </BrowserRouter>
