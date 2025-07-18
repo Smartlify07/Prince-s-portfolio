@@ -22,7 +22,7 @@ const KeySection = ({
 }) => {
   return (
     <div className="grid gap-4">
-      <h2 className="gradient-text text-[20px] font-normal">{title}</h2>
+      <h2 className="gradient-text text-[20px] font-medium">{title}</h2>
       <p className="text-sm/[150%] text-grey-9">
         <Markup content={description} />
       </p>
