@@ -8,6 +8,7 @@ import RootLayout from './layouts/RootLayout.tsx';
 import AboutPage from './pages/About/about-page.tsx';
 import ContactPage from './pages/Contact/contact-page.tsx';
 import ProjectDetailsPage from './pages/ProjectDetails/project-detail-page.tsx';
+import TermsOfUse from './pages/TermsOfUse/terms-of-use.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -18,6 +19,7 @@ createRoot(document.getElementById('root')!).render(
           <Route element={<ServicesPage />} path="/services" />
           <Route element={<AboutPage />} path="/about" />
           <Route element={<ContactPage />} path="/contact" />
+          <Route element={<TermsOfUse />} path="/termsofuse" />
           <Route element={<ProjectDetailsPage />} path="/projects/:id" />
         </Route>
       </Routes>

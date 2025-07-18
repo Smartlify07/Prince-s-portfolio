@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
 @import 'tailwindcss';
 
 :root {
@@ -9,6 +9,7 @@
 
 @theme {
   --font-geist: 'Geist', sans-serif;
+  --font-inter-tight: 'Inter Tight', sans-serif;
   --color-bright-purple: #d065ff;
   --color-bright-pink: #f26ca7;
   --color-bright-orange: #ffaa4c;
