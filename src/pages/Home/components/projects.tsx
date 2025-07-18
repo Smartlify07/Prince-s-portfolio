@@ -12,7 +12,7 @@ const ProjectsSection = () => {
   );
 };
 
-const ProjectCard = ({
+export const ProjectCard = ({
   title,
   description,
   category,
@@ -24,7 +24,7 @@ const ProjectCard = ({
   category: string;
 }) => {
   return (
-    <div className="relative">
+    <div className="relative w-full shrink-0">
       <div className="rounded-3xl h-[301px] w-full">
         <img
           src={image}

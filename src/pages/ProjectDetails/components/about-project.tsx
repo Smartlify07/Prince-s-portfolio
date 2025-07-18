@@ -3,7 +3,7 @@ import AboutIcon from '/public/assets/icons/shopping.svg';
 
 export const AboutProjectSection = () => {
   return (
-    <section className="flex px-4 flex-col font-geist gap-8">
+    <section className="flex flex-col font-geist gap-8">
       <Badge className="text-xl/[20px] flex items-center p-2.5 self-start text-grey-opaque font-medium gap-2 opacity-50">
         <img src={AboutIcon} alt="about-icon" /> About the Project
       </Badge>
