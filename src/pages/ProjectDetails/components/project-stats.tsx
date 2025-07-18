@@ -2,7 +2,7 @@ import { DoubleAltArrowRight } from '@solar-icons/react';
 
 export const ProjectStats = ({ title }: { title: string }) => {
   return (
-    <section className="flex flex-col gap-4 px-4 font-geist">
+    <section className="flex flex-col gap-4 font-geist">
       <div className="flex items-center gap-2 justify-center self-start">
         <h3 className="text-sm/[14px] text-grey-9 text-drop-shadow">Project</h3>
         <DoubleAltArrowRight weight="Outline" className="text-grey-9" />
