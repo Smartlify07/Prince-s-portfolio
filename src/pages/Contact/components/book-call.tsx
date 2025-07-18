@@ -1,4 +1,14 @@
+import Cal, { getCalApi } from '@calcom/embed-react';
+import { useEffect } from 'react';
+
 export const BookCall = () => {
+  useEffect(() => {
+    (async function () {
+      const cal = await getCalApi({ namespace: '30min' });
+      cal('ui', { hideEventTypeDetails: false, layout: 'month_view' });
+    })();
+  }, []);
+
   return (
     <section className="py-6 font-geist px-4 grid gap-6">
       <header>
@@ -6,6 +16,11 @@ export const BookCall = () => {
           Book a call
         </h1>
       </header>
+      <Cal
+        calLink="ezeydesign/clients"
+        style={{ width: '100%', height: '100%' }}
+        config={{ theme: 'dark', layout: 'month_view' }}
+      ></Cal>
     </section>
   );
 };
