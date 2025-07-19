@@ -4,7 +4,7 @@ import { DoubleAltArrowLeft } from '@solar-icons/react';
 
 export const NotFound = () => {
   return (
-    <main className="not-found-page min-h-screen font-geist">
+    <main className="not-found-page min-h-screen overflow-hidden bg-[#0F0F1A] font-geist">
       <div className="w-full min-h-screen px-4 flex items-center justify-center not-found-overlay">
         <div className="flex flex-col gap-10">
           <div className="grid gap-4">
