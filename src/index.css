@@ -390,3 +390,24 @@
     0px 4px 4px 0px rgba(0, 0, 0, 0.05), 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
 }
+
+.not-found-page {
+  background-image: url(/public/assets/images/404-small.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.not-found-overlay {
+  background: var(
+    --Overlayer-Linner,
+    linear-gradient(180deg, rgba(15, 15, 26, 0) 0%, #0f0f1a 77.41%)
+  );
+}
+.not-found-text {
+  background: var(
+    --Text-Linner-1,
+    linear-gradient(98deg, #fcffec 0.67%, rgba(252, 255, 236, 0.02) 91.94%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

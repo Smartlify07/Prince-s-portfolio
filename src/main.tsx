@@ -10,6 +10,7 @@ import ContactPage from './pages/Contact/contact-page.tsx';
 import ProjectDetailsPage from './pages/ProjectDetails/project-detail-page.tsx';
 import TermsOfUse from './pages/TermsOfUse/terms-of-use.tsx';
 import PrivacyPolicy from './pages/PrivacyPolicy/privacy-policy.tsx';
+import { NotFound } from './pages/NotFound/not-found.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -23,7 +24,9 @@ createRoot(document.getElementById('root')!).render(
           <Route element={<TermsOfUse />} path="/termsofuse" />
           <Route element={<PrivacyPolicy />} path="/privacy-policy" />
           <Route element={<ProjectDetailsPage />} path="/projects/:id" />
+          <Route element={<NotFound />} path="*" />
         </Route>
+        <Route></Route>
       </Routes>
     </BrowserRouter>
   </StrictMode>
