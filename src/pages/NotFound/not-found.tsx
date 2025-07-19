@@ -1,5 +1,5 @@
 import Button from '@/ui/button';
-import Ghost from '/public/assets/images/ghost.png';
+import Ghost from '/public/assets/images/ghost.svg';
 import { DoubleAltArrowLeft } from '@solar-icons/react';
 
 export const NotFound = () => {
