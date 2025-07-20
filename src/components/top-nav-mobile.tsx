@@ -1,5 +1,5 @@
 import { Calendar, HamburgerMenu, Plain } from '@solar-icons/react';
-import Logo from '@/../public/assets/images/logo.svg';
+import Logo from '@/../public/assets/images/Logo.svg';
 import Wifi from '@/../public/assets/icons/Wifi.svg';
 import Battery from '@/../public/assets/icons/Battery.svg';
 import Cellular from '@/../public/assets/icons/cellular.svg';
