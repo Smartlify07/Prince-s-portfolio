@@ -3,7 +3,7 @@ import Logo from '@/../public/assets/images/Logo.svg';
 import Wifi from '@/../public/assets/icons/Wifi.svg';
 import Battery from '@/../public/assets/icons/Battery.svg';
 import Cellular from '@/../public/assets/icons/cellular.svg';
-import Behance from '@/../public/assets/icons/behance.svg';
+import Behance from '@/../public/assets/icons/Behance.svg';
 import Dribbble from '@/../public/assets/icons/Dribbble.svg';
 import Twitter from '@/../public/assets/icons/Twitter.svg';
 import LinkedIn from '@/../public/assets/icons/LinkedIn.svg';
