@@ -1,6 +1,7 @@
 import { Outlet, useLocation } from 'react-router';
 import { NavbarMobile } from '@/components/nav-bar-mobile';
 import Footer from '@/components/footer';
+import TopNavMobile from '@/components/top-nav-mobile';
 
 const RootLayout = () => {
   const pathname = useLocation().pathname;
@@ -18,6 +19,7 @@ const RootLayout = () => {
   console.log(renderFooter);
   return (
     <main className="relative flex flex-col gap-10 bg-sidebar-bg">
+      <TopNavMobile />
       <NavbarMobile />
       <Outlet />
       {renderFooter && <Footer />}
