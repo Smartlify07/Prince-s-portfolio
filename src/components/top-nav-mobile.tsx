@@ -16,7 +16,7 @@ export default function TopNavMobile() {
     setIsOpen((prev) => !prev);
   };
   return (
-    <nav className="bg-[rgba(14,14,14,0.7)] font-geist flex flex-col gap-4 w-full px-4 fixed top-0 rounded-b-2xl">
+    <nav className="bg-[rgba(14,14,14,0.7)] z-50 font-geist flex flex-col gap-4 w-full px-4 backdrop-blur-[10px] fixed top-0 rounded-b-2xl">
       <div className="flex flex-col gap-2">
         <StatusSection />
         <LogoSection onToggle={() => toggle()} />

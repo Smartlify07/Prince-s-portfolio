@@ -5,7 +5,9 @@ import TopNavMobile from '@/components/top-nav-mobile';
 
 const RootLayout = () => {
   const pathname = useLocation().pathname;
+  console.log(pathname);
   const validPaths = [
+    '/',
     'projects',
     'contact',
     'services',
@@ -16,13 +18,15 @@ const RootLayout = () => {
   ];
 
   const renderFooter = validPaths.includes(pathname);
-  console.log(renderFooter);
+
   return (
     <main className="relative flex flex-col gap-10 bg-sidebar-bg">
       <TopNavMobile />
+      <div className="mt-28 flex flex-col gap-10">
+        <Outlet />
+        {renderFooter && <Footer />}
+      </div>
       <NavbarMobile />
-      <Outlet />
-      {renderFooter && <Footer />}
     </main>
   );
 };
