@@ -4,7 +4,7 @@ import Badge from '@/ui/badge';
 
 const ProjectsSection = () => {
   return (
-    <section className="flex flex-col gap-6 px-4">
+    <section className="flex flex-col gap-6 px-4 md:grid md:grid-cols-2">
       {projects.map((project, index) => (
         <ProjectCard {...project} key={index} />
       ))}

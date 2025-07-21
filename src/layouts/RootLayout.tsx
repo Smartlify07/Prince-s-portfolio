@@ -2,10 +2,11 @@ import { Outlet, useLocation } from 'react-router';
 import { NavbarMobile } from '@/components/nav-bar-mobile';
 import Footer from '@/components/footer';
 import TopNavMobile from '@/components/top-nav-mobile';
+import { Sidebar } from '@/components/sidebar';
+import TopNavDesktop from '@/components/top-nav-desktop';
 
 const RootLayout = () => {
   const pathname = useLocation().pathname;
-  console.log(pathname);
   const validPaths = [
     '/',
     'projects',
@@ -22,9 +23,13 @@ const RootLayout = () => {
   return (
     <main className="relative flex flex-col gap-10 bg-sidebar-bg">
       <TopNavMobile />
-      <div className="mt-28 flex flex-col gap-10">
-        <Outlet />
-        {renderFooter && <Footer />}
+      <div className="flex max-w-[1440px] ">
+        <Sidebar />
+        <div className="flex md:w-[66.4%] relative mt-28 md:mt-0 flex-col gap-10">
+          <TopNavDesktop />
+          <Outlet />
+          {renderFooter && <Footer />}
+        </div>
       </div>
       <NavbarMobile />
     </main>

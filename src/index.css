@@ -411,3 +411,8 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.available-slots {
+  background: url(/public/assets/images/availableslots.svg) no-repeat;
+  background-size: cover;
+}

@@ -1,13 +1,49 @@
+import Logo from '@/../public/assets/images/Logo.svg';
 import { Calendar, Plain } from '@solar-icons/react';
 import Button from '@/ui/button';
 import Badge from '@/ui/badge';
 import { tools } from '@/lib/constants';
 import Testimonials from '@/components/testimonials';
 
-const MainContent = () => {
+export const Sidebar = () => {
   return (
-    <section className="py-8  gap-11 flex flex-col md:hidden">
-      <div className="flex flex-col gap-9 px-4">
+    <aside className="md:flex h-screen flex-col border-r border-r-grey-9/6 items-start w-[33.6%] hidden ">
+      <TopSection />
+      <div className="pt-10 px-0 pb-2.5 flex flex-col gap-11">
+        <IntroSection />
+        <Testimonials />
+      </div>
+    </aside>
+  );
+};
+
+const TopSection = () => {
+  return (
+    <section className="bg-[rgba(14,14,14,0.7)] border-b sticky top-0 border-b-grey-4/60 z-50 font-geist flex justify-between gap-4 w-full h-[86px] shrink-0 pl-10 backdrop-blur-[10px]">
+      <div className="flex justify-center flex-col gap-1 py-px">
+        <img
+          src={Logo}
+          alt="logo"
+          className="aspect-[122/25] w-[122px] h-[25px]"
+        />
+        <p className="text-[10px] text-grey-9 font-medium font-geist">
+          Designer, Researcher, and Creator
+        </p>
+      </div>
+      <div className="border-r grow border-l available-slots border-dashed flex justify-center items-center gap-2 border-grey-9 py-4 px-[7px]">
+        <div className="bg-green-500 size-2.5 rounded-full"></div>
+        <span className="text-sm  -tracking-smallest text-grey-9">
+          2 spots left
+        </span>
+      </div>
+    </section>
+  );
+};
+
+const IntroSection = () => {
+  return (
+    <section className="gap-11 pl-10 pr-4 h-[335px] overflow-hidden flex flex-col">
+      <div className="flex flex-col gap-9">
         <div className="flex flex-col gap-4">
           <Badge className="font-geist self-start inline-flex items-center gap-1">
             <span className="text-[#909090]">From</span>
@@ -44,10 +80,6 @@ const MainContent = () => {
           </div>
         </div>
       </div>
-
-      <Testimonials />
     </section>
   );
 };
-
-export default MainContent;
