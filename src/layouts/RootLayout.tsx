@@ -24,7 +24,7 @@ const RootLayout = () => {
 
   const renderFooter = validPaths.includes(pathname);
   const renderFaqAndQuestion = faqPaths.includes(pathname);
-
+  const renderFaq = ['/contact'].includes(pathname);
   return (
     <main className="relative flex flex-col gap-10 bg-sidebar-bg">
       <TopNavMobile />
@@ -35,8 +35,15 @@ const RootLayout = () => {
           <Outlet />
           {renderFaqAndQuestion && (
             <div className="flex flex-col px-4 gap-10 items-start md:flex-row md:gap-6">
-              <FaqSection />
+              <div className="md:w-8/12">
+                <FaqSection />
+              </div>
               <CustomQuestion />
+            </div>
+          )}
+          {renderFaq && (
+            <div className="px-4">
+              <FaqSection />
             </div>
           )}
           {renderFooter && <Footer />}
