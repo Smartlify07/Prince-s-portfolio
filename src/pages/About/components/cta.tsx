@@ -3,7 +3,7 @@ import Button from '@/ui/button';
 
 export const CallToActionSection = () => {
   return (
-    <section className="grid gap-8 texture-2 py-6 px-4 font-geist">
+    <section className="grid gap-8 texture-2 py-6 px-4 font-geist md:flex md:items-center md:justify-between">
       <div className="grid gap-2">
         <h1 className="gradient-text text-2xl -tracking-smaller font-medium">
           Looking for UX/UI research or product branding?
@@ -13,7 +13,7 @@ export const CallToActionSection = () => {
         </p>
       </div>
 
-      <div className="flex items-center gap-4">
+      <div className="flex items-center shrink-0 gap-4">
         <Button variant="outline">
           <CaseMinimalistic
             weight="Outline"
