@@ -5,12 +5,12 @@ import { SpotifyEmbed } from './spotify-embed';
 
 export const MoreInfo = () => {
   return (
-    <section className="px-4 font-geist flex flex-col gap-2">
-      <div className="flex items-center gap-4">
+    <section className="px-4 font-geist w-full flex flex-col gap-2">
+      <div className="flex items-center gap-4 w-full">
         <h1 className="text-grey-9 text-sm font-medium -tracking-smallest">
           I'M ALSO
         </h1>
-        <hr className="text-grey-4 w-9/12 border border-grey-4/60" />
+        <hr className="text-grey-4 w-9/12 md:w-10/12 border border-grey-4/60" />
       </div>
 
       <div className="flex items-center text-grey-opaque gap-4">

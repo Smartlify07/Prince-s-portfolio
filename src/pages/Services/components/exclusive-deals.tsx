@@ -11,8 +11,8 @@ export const ExclusiveDeals = () => {
 
   return (
     <section className="flex flex-col md:flex-row md:items-start w-full gap-6">
-      <CardStroke className="rounded-4xl w-full scrollbar-hide bg-[#171721] md:w-[40%]">
-        <div className="flex items-center gap-4 rounded-4xl p-6 scrollbar-hide overflow-scroll md:flex-col">
+      <CardStroke className="rounded-4xl scrollbar-hide bg-[#171721] md:w-[40%]">
+        <div className="flex items-center max-w-sm gap-4 rounded-4xl p-6 scrollbar-hide overflow-scroll md:flex-col">
           {exclusiveDeals.map((deal, index) => (
             <ExclusiveDealCard {...deal} key={index} />
           ))}

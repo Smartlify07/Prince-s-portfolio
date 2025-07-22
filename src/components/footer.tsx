@@ -6,6 +6,7 @@ import LinkedIn from '@/../public/assets/icons/LinkedIn.svg';
 import Behance from '@/../public/assets/icons/Behance.svg';
 import Email from '@/../public/assets/icons/envelope.svg';
 import SixSelf from '@/../public/assets/icons/sixself.svg';
+import { Link } from 'react-router';
 
 const Footer = () => {
   const socialIcons = [Email, Dribbble, Behance, X, LinkedIn, SixSelf];
@@ -39,7 +40,7 @@ const Footer = () => {
         </div>
       </section>
       <div className="rounded-full circle-gradient size-[1054px] absolute blur-[200px] right-[48px] top-[300px]"></div>
-      <section className="flex flex-col gap-8 p-4 border-t border-[#4C4C4C]/40">
+      <section className="flex flex-col gap-8 p-4 border-t z-10 border-[#4C4C4C]/40">
         <div className="flex items-center flex-col gap-2.5">
           <div className="flex items-center gap-4">
             {socialIcons.map((icon, index) => (
@@ -50,19 +51,19 @@ const Footer = () => {
           </div>
 
           <div className="flex items-center gap-1">
-            <a
-              href="#"
-              className="text-[#909090] p-1.5 text-sm/[14px] tracking-[0%] font-geist"
+            <Link
+              to="/privacy-policy"
+              className="text-[#909090] p-1.5 text-sm/[14px] tracking-[0%] cursor-pointer font-geist"
             >
               Privacy Policy
-            </a>
+            </Link>
             <span className="bg-[#909090] h-[18px] w-px"></span>
-            <a
-              href="#"
+            <Link
+              to="/termsofuse"
               className="text-[#909090] p-1.5 text-sm/[14px] tracking-[0%] font-geist"
             >
               Terms of Use
-            </a>
+            </Link>
           </div>
         </div>
         <div className="flex flex-col items-center gap-2">
@@ -72,6 +73,7 @@ const Footer = () => {
 
           <div className="flex items-center justify-center gap-2">
             <a
+              target="_blank"
               href="#"
               className="text-[#EDEDEB] font-medium text-sm/[14px] tracking-[0%] font-geist"
             >
@@ -79,6 +81,7 @@ const Footer = () => {
             </a>
             <span className="text-[#909090] font-geist text-sm/[150%]">or</span>
             <a
+              target="_blank"
               href="#"
               className="text-[#EDEDEB] font-medium text-sm/[14px] tracking-[0%] font-geist"
             >

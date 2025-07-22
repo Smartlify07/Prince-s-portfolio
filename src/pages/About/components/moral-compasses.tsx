@@ -13,8 +13,8 @@ export const MoralCompasses = () => {
   };
 
   return (
-    <section className="px-4 font-geist grid gap-6">
-      <div className="flex flex-col gap-9">
+    <section className="px-4 font-geist grid md:grid-cols-2 gap-6">
+      <div className="flex flex-col gap-9 justify-between">
         <div className="flex flex-col gap-4">
           <h1 className="gradient-text text-[40px] font-medium font-geist -tracking-smaller">
             My Moral Compasses

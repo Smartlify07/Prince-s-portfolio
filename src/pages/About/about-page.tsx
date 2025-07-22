@@ -10,9 +10,9 @@ import { UniqueValueProp } from './components/unique-value-prop';
 
 export default function AboutPage() {
   return (
-    <main className="flex flex-col  relative min-h-screen bg-sidebar-bg py-8 gap-10">
+    <main className="flex flex-col relative min-h-screen bg-sidebar-bg py-8 gap-10">
       <AboutTopSection />
-      <div className="flex flex-col z-30 mt-20 gap-2">
+      <div className="flex flex-col z-30 mt-20 gap-2 px-4">
         <AboutContainer />
         <MoreInfo />
       </div>

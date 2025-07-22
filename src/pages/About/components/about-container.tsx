@@ -4,8 +4,8 @@ import Ezekiel from '@/../public/assets/images/about/Ezekiel.png';
 
 export const AboutContainer = () => {
   return (
-    <section className="bg-[#111119] flex flex-col gap-8 rounded-4xl px-4 py-6">
-      <div className="flex flex-col gap-9">
+    <section className="bg-[#111119] flex flex-col gap-8 rounded-4xl px-4 py-6 md:flex-row">
+      <div className="flex flex-col md:w-8/12 gap-9">
         <StorySection />
         <div className="flex items-center gap-4">
           <Button
@@ -25,11 +25,11 @@ export const AboutContainer = () => {
         </div>
       </div>
 
-      <div className="inline-block rounded-2xl p-[2px] drop-shadow-[0_0px_5.5px_var(--color-card-shadow)] card-gradient">
+      <div className="inline-block rounded-2xl md:w-4/12 p-[2px] drop-shadow-[0_0px_5.5px_var(--color-card-shadow)] card-gradient">
         <img
           src={Ezekiel}
           alt="Ezekiel"
-          className="w-full h-[663px] object-cover rounded-2xl"
+          className="w-full h-[663px] md:h-full object-cover rounded-2xl"
         />
       </div>
     </section>
