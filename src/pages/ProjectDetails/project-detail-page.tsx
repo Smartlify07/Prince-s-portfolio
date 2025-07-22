@@ -1,6 +1,6 @@
 import { AboutProjectSection } from './components/about-project';
 import { ApproachSection } from './components/approach-section';
-import { BrainstomSection } from './components/brainstoming-section';
+import { BrainstormSection } from './components/brainstoming-section';
 import { ChallengesSection } from './components/challenges-section';
 import { DesignGoalSection } from './components/design-goal';
 import { FinalShowCaseSection } from './components/final-showcase';
@@ -20,7 +20,7 @@ export default function ProjectDetailsPage() {
         <DesignGoalSection />
         <ChallengesSection />
         <ApproachSection />
-        <BrainstomSection />
+        <BrainstormSection />
         <HighlightsSection />
         <OutcomeSection />
         <FinalShowCaseSection />

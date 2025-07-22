@@ -10,23 +10,23 @@ export const ProjectStats = ({ title }: { title: string }) => {
           {title}
         </h3>
       </div>
-      <div className="flex items-center flex-wrap p-2 gap-4 project-stats">
-        <div className="flex items-center border-r-grey-4 border-r justify-center pr-4">
+      <div className="flex items-center flex-wrap md:flex-nowrap p-2 gap-4 md:gap-2 project-stats">
+        <div className="flex items-center border-r-grey-4 border-r md:border-none shrink-0 justify-center pr-4">
           <p className="text-grey-opaque text-sm">Ezekiel Olayiwola</p>
         </div>
-        <div className="flex items-center border-r-grey-4 gap-2.5 border-r justify-center pr-4">
+        <div className="flex items-center border-r-grey-4 border-r md:border-none shrink-0 justify-center pr-4">
           <p className="text-grey-9 text-sm">Date:</p>
           <p className="text-grey-opaque text-sm">Dec 14, 2024</p>
         </div>
-        <div className="flex items-center border-r-grey-4 gap-2.5 border-r justify-center pr-4">
+        <div className="flex items-center border-r-grey-4 border-r md:border-none shrink-0 justify-center pr-4">
           <p className="text-grey-9 text-sm">Service:</p>
           <p className="text-grey-opaque text-sm">Website, Landing Page</p>
         </div>
-        <div className="flex items-center border-r-grey-4 gap-2.5 border-r justify-center pr-4">
+        <div className="flex items-center border-r-grey-4 border-r md:border-none shrink-0 justify-center pr-4">
           <p className="text-grey-9 text-sm">Timeline:</p>
           <p className="text-grey-opaque text-sm">3 weeks</p>
         </div>
-        <div className="flex items-center border-r-grey-4 gap-2.5 justify-center pr-4">
+        <div className="flex items-center border-r-grey-4 border-r md:border-none shrink-0 justify-center pr-4">
           <p className="text-grey-9 text-sm">Tool: </p>
           <p className="text-grey-opaque text-sm">Figma</p>
         </div>

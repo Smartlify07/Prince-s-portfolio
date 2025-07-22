@@ -3,7 +3,7 @@ import { CardWithMarker } from './card-with-marker';
 
 export const DesignGoalSection = () => {
   return (
-    <section className="grid gap-6 pb-10 border-b border-b-grey-4/60">
+    <section className="grid gap-6 pb-10 border-b border-b-grey-4/60 md:flex md:items-start">
       <h1 className="text-[40px]/[52px] w-9/12 -tracking-smaller font-medium gradient-text">
         Goal of the Design
       </h1>
