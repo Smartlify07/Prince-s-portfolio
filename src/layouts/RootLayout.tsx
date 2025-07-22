@@ -6,6 +6,7 @@ import { Sidebar } from '@/components/sidebar';
 import TopNavDesktop from '@/components/top-nav-desktop';
 import { FaqSection } from '@/components/faq';
 import { CustomQuestion } from '@/components/custom-question';
+import ScrollToTop from '@/components/scroll-to-top';
 
 const RootLayout = () => {
   const pathname = useLocation().pathname;
@@ -29,7 +30,7 @@ const RootLayout = () => {
       <TopNavMobile />
       <div className="flex max-w-[1440px]">
         <Sidebar />
-        <div className="flex md:w-[66.4%] relative mt-28 md:mt-0 flex-col gap-10">
+        <div className="flex md:w-[66.4%] relative md:mt-0 flex-col gap-10">
           <TopNavDesktop />
           <Outlet />
           {renderFaqAndQuestion && (
@@ -42,6 +43,7 @@ const RootLayout = () => {
         </div>
       </div>
       <NavbarMobile />
+      <ScrollToTop />
     </main>
   );
 };

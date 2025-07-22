@@ -5,7 +5,7 @@ import { SpotifyEmbed } from './spotify-embed';
 
 export const MoreInfo = () => {
   return (
-    <section className="px-4 font-geist w-full border flex flex-col gap-2">
+    <section className="px-4 font-geist w-full flex flex-col gap-2">
       <div className="flex items-center gap-4 w-full">
         <h1 className="text-grey-9 text-sm font-medium -tracking-smallest">
           I'M ALSO
