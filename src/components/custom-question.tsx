@@ -6,7 +6,7 @@ import { CardStroke } from '@/components/card-stroke';
 
 export const CustomQuestion = () => {
   return (
-    <section className="px-4">
+    <section className="px-4 md:px-0 md:w-4/12">
       <CardStroke className="rounded-4xl">
         <Card className="shadow-none rounded-4xl border-t-white-opaque bg-[#171721] border-l-white-opaque grid gap-6 border-b-white p-6">
           <div className="inline-block rounded-2xl p-[2px] w-[100px] card-gradient">

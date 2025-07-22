@@ -7,7 +7,5 @@ export const CardStroke = ({
   children: React.ReactNode;
   className: string;
 }) => {
-  return (
-    <div className={cn('card-gradient-2 p-px', className)}>{children}</div>
-  );
+  return <div className={cn('p-px', className)}>{children}</div>;
 };

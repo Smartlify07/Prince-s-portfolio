@@ -416,3 +416,11 @@
   background: url(/public/assets/images/availableslots.svg) no-repeat;
   background-size: cover;
 }
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

@@ -29,9 +29,11 @@ export const DesignProcess = () => {
         </div>
       </div>
 
-      {designProcesses.map((item, index) => (
-        <ProcessCard {...item} key={index} />
-      ))}
+      <div className="grid gap-6 md:grid-cols-2">
+        {designProcesses.map((item, index) => (
+          <ProcessCard {...item} key={index} />
+        ))}
+      </div>
     </section>
   );
 };
@@ -46,8 +48,8 @@ const ProcessCard = ({
   list: string[];
 }) => {
   return (
-    <CardStroke className="rounded-4xl">
-      <Card className="rounded-4xl bg-[#171721] font-geist flex flex-col gap-4 p-6">
+    <CardStroke className="rounded-4xl h-full row-span-1">
+      <Card className="rounded-4xl bg-[#171721] shadow-none  h-full font-geist flex flex-col gap-4 p-6">
         <img
           className="size-[100px] self-start"
           src={icon}

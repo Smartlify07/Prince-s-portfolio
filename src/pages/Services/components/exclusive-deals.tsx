@@ -10,9 +10,9 @@ export const ExclusiveDeals = () => {
   const [currentDeal] = useState(1);
 
   return (
-    <section className="flex flex-col gap-6">
-      <CardStroke className="rounded-4xl">
-        <div className="flex items-center bg-[#171721] gap-4 rounded-4xl p-6 overflow-hidden">
+    <section className="flex flex-col md:flex-row md:items-start w-full gap-6">
+      <CardStroke className="rounded-4xl w-full scrollbar-hide bg-[#171721] md:w-[40%]">
+        <div className="flex items-center gap-4 rounded-4xl p-6 scrollbar-hide overflow-scroll md:flex-col">
           {exclusiveDeals.map((deal, index) => (
             <ExclusiveDealCard {...deal} key={index} />
           ))}
@@ -38,7 +38,7 @@ export const ExclusiveDealCard = ({
   description: string;
 }) => {
   return (
-    <div className="rounded-[12px] min-w-[250px] border-b border-b-[rgba(76,76,76,0.5)] p-2 pb-4 flex items-center">
+    <div className="rounded-[12px] shrink-0 max-w-[250px] border-b border-b-[rgba(76,76,76,0.5)] p-2 pb-4 flex items-center md:p-2 md:pb-4">
       <div className="flex flex-col gap-1">
         <h1 className="text-[#EDEDEB] text-xl font-medium font-geist">
           {title}
@@ -67,9 +67,9 @@ export const ExclusiveDealExtendedCard = ({
   description: string;
 }) => {
   return (
-    <CardStroke className="rounded-4xl">
+    <CardStroke className="rounded-4xl md:w-[60%]">
       <div className="p-6 bg-[#171721] exclusive-deal-card rounded-4xl shadow-none flex flex-col gap-6">
-        <Badge className="flex text-[#EDEDEB] font-medium items-center self-start gap-2">
+        <Badge className="flex text-[#EDEDEB] opacity-50 font-medium items-center self-start gap-2">
           <img src={FiltersIcon} />
           {badgeTitle}
         </Badge>
@@ -82,8 +82,11 @@ export const ExclusiveDealExtendedCard = ({
               {description}
             </p>
           </div>
-          <div className="shadow-[0px_0px_5.5px_rgba(86,86,119,0.25)] rounded-2xl">
-            <img className="rounded-2xl" src={Deal1Image} />
+          <div className="shadow-[0px_0px_5.5px_rgba(86,86,119,0.25)] md:h-[468px] rounded-2xl">
+            <img
+              className="object-cover rounded-2xl md:w-full md:h-[468px]"
+              src={Deal1Image}
+            />
           </div>
         </div>
       </div>

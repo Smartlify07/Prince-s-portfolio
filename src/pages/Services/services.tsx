@@ -1,4 +1,3 @@
-import { FaqSection } from '@/components/faq';
 import { DesignProcess } from './components/design-process';
 import { ExclusiveDeals } from './components/exclusive-deals';
 import { ExclusiveDealsTopSection } from './components/exlusive-deals-top-section';
@@ -6,24 +5,23 @@ import { IndustriesExceled } from './components/industries-exceled';
 import { ServiceDescription } from './components/service-description';
 import { StatsSection } from './components/stats';
 import { TopSection } from './components/top-section';
-import { CustomQuestion } from '@/components/custom-question';
 import { Pricing } from '@/components/pricing';
 
 export default function ServicesPage() {
   return (
-    <main className="flex flex-col min-h-screen bg-sidebar-bg py-8 gap-10">
+    <main className="flex flex-col min-h-screen overflow-hidden bg-sidebar-bg py-8 gap-10 md:gap-20">
       <TopSection />
-      <ServiceDescription />
+      <div className="md:px-6">
+        <ServiceDescription />
+      </div>
       <StatsSection />
-      <div className="flex flex-col px-4 gap-12">
+      <div className="flex flex-col overflow-hidden px-4 md:px-6 gap-12">
         <ExclusiveDealsTopSection />
         <ExclusiveDeals />
       </div>
       <DesignProcess />
       <IndustriesExceled />
       <Pricing />
-      <FaqSection />
-      <CustomQuestion />
     </main>
   );
 }
