@@ -29,7 +29,7 @@ export const Pricing = () => {
           </p>
         </div>
       </div>
-      <div className="grid gap-6">
+      <div className="grid gap-6 md:grid-cols-3">
         <PricingCard
           title={pricing[0].title}
           icon={Layers}
@@ -101,7 +101,7 @@ const PricingCard = ({
   return (
     <CardStroke className="rounded-4xl">
       <div
-        className={`rounded-4xl gap-6 grid p-6   ${
+        className={`rounded-4xl gap-6 flex flex-col p-6 h-full  ${
           first ? 'texture bg-[rgba(15,15,26,0.3)]' : 'bg-[#171721]'
         }`}
       >
@@ -110,7 +110,7 @@ const PricingCard = ({
             <img src={icon} alt={title} />
           </div>
 
-          <div className="grid gap-14">
+          <div className="grid gap-14 md:gap-6">
             <div className="grid gap-2">
               <h1 className="gradient-text text-xl text-left -tracking-smaller font-medium ">
                 {title}
@@ -123,7 +123,10 @@ const PricingCard = ({
           </div>
         </div>
 
-        <Button className="w-full" variant={first ? 'default' : 'outline'}>
+        <Button
+          className="w-full h-fit"
+          variant={first ? 'default' : 'outline'}
+        >
           Contact Me
         </Button>
 

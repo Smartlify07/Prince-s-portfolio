@@ -7,7 +7,7 @@ import Testimonials from '@/components/testimonials';
 
 export const Sidebar = () => {
   return (
-    <aside className="md:flex h-screen flex-col border-r border-r-grey-9/6 items-start w-[33.6%] hidden ">
+    <aside className="md:flex h-screen flex-col border-r border-r-grey-9/6 items-start w-[33.6%] hidden">
       <TopSection />
       <div className="pt-10 px-0 pb-2.5 flex flex-col gap-11">
         <IntroSection />

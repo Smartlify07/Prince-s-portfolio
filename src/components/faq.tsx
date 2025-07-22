@@ -12,7 +12,7 @@ export const FaqSection = () => {
     setActiveIndex(activeIndex === index ? null : index);
   };
   return (
-    <section className="px-4 flex flex-col gap-12">
+    <section className="px-4 md:px-0 flex md:w-8/12 flex-col gap-12">
       <BadgeAndHeader
         title="Everything you need to know before we start"
         badgeTitle="Frequently Asked Questions"

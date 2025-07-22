@@ -7,8 +7,6 @@ import { Stack } from './components/stack';
 import { Statistics } from './components/statistics';
 import { AboutTopSection } from './components/top-section';
 import { UniqueValueProp } from './components/unique-value-prop';
-import { FaqSection } from '@/components/faq';
-import { CustomQuestion } from '@/components/custom-question';
 
 export default function AboutPage() {
   return (
@@ -24,8 +22,6 @@ export default function AboutPage() {
       <MoralCompasses />
       <UniqueValueProp />
       <Pricing />
-      <FaqSection />
-      <CustomQuestion />
     </main>
   );
 }

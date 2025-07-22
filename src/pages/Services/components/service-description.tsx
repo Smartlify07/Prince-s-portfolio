@@ -2,9 +2,9 @@ import Card from '@/ui/card';
 import Image from '@/../public/assets/images/services/service-description-image.png';
 export const ServiceDescription = () => {
   return (
-    <section className="flex flex-col gap-8 bg-[#111119] p-6 rounded-4xl">
+    <section className="flex flex-col gap-8 bg-[#111119] p-6 rounded-4xl md:flex-row">
       <div className="flex flex-col gap-4">
-        <h1 className="text-[40px] font-medium tracking-[-0.88px] font-geist gradient-text">
+        <h1 className="text-[40px] font-medium -tracking-smaller font-geist gradient-text">
           Comprehensive UI/UX Design Services: A 360-Degree Approach to Results
         </h1>
         <p className="text-sm/[150%] text-[#909090] font-geist">
@@ -24,7 +24,7 @@ export const ServiceDescription = () => {
         </p>
       </div>
 
-      <Card className="h-[362px]">
+      <Card className="h-[362px] md:w-[300px] shrink-0">
         <img src={Image} className="object-cover" />
       </Card>
     </section>
