@@ -10,15 +10,14 @@ export const ExclusiveDeals = () => {
   const [currentDeal] = useState(1);
 
   return (
-    <section className="flex flex-col md:flex-row md:items-start w-full gap-6">
-      <CardStroke className="rounded-4xl scrollbar-hide bg-[#171721] md:w-[40%]">
-        <div className="flex items-center max-w-sm gap-4 rounded-4xl p-6 scrollbar-hide overflow-scroll md:flex-col">
+    <section className="grid md:flex md:flex-row md:items-start gap-6">
+      <div className="rounded-4xl p-px bg-[#171721] w-full md:w-[40%] overflow-x-auto scrollbar-hide">
+        <div className="flex gap-4 rounded-4xl p-6 md:flex-col md:items-stretch">
           {exclusiveDeals.map((deal, index) => (
             <ExclusiveDealCard {...deal} key={index} />
           ))}
         </div>
-      </CardStroke>
-
+      </div>
       {currentDeal === 1 && (
         <ExclusiveDealExtendedCard
           badgeTitle={'Productcraft'}
@@ -38,7 +37,7 @@ export const ExclusiveDealCard = ({
   description: string;
 }) => {
   return (
-    <div className="rounded-[12px] shrink-0 max-w-[250px] border-b border-b-[rgba(76,76,76,0.5)] p-2 pb-4 flex items-center md:p-2 md:pb-4">
+    <div className="rounded-[12px] min-w-[250px] border-b border-b-[rgba(76,76,76,0.5)] p-2 pb-4 flex items-center">
       <div className="flex flex-col gap-1">
         <h1 className="text-[#EDEDEB] text-xl font-medium font-geist">
           {title}

@@ -13,11 +13,17 @@ const HeroSection = () => {
           </h1>
         </header>
 
-        <div className="flex items-center gap-4">
-          <Button variant="default" className="flex items-center gap-2">
+        <div className="flex items-center shrink-0 gap-4">
+          <Button
+            variant="default"
+            className="flex shrink-0 items-center gap-2"
+          >
             <Plain className="text-[#EDEDEB]" size={16} /> Let's talk
           </Button>
-          <Button variant="outline">
+          <Button
+            variant="outline"
+            className="flex items-center gap-2 shrink-0"
+          >
             <CloudDownload className="text-[#EDEDEB]" size={16} />
             Download Resume
           </Button>

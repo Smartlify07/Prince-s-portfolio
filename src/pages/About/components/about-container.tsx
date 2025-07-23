@@ -7,17 +7,17 @@ export const AboutContainer = () => {
     <section className="bg-[#111119] flex flex-col gap-8 rounded-4xl px-4 py-6 md:flex-row">
       <div className="flex flex-col md:w-8/12 gap-9">
         <StorySection />
-        <div className="flex items-center gap-4">
+        <div className="flex items-center shrink-0 gap-4">
           <Button
             variant="default"
-            className="inline-flex font-medium text-grey-opaque items-center gap-2"
+            className="inline-flex font-medium text-grey-opaque shrink-0 items-center gap-2"
           >
             <Plain size={16} />
             Let's Talk
           </Button>
           <Button
             variant="outline"
-            className="inline-flex font-medium text-grey-opaque items-center gap-2"
+            className="inline-flex font-medium text-grey-opaque shrink-0 items-center gap-2"
           >
             <CloudDownload size={16} />
             Download Resume

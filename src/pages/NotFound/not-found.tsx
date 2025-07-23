@@ -1,10 +1,15 @@
 import Button from '@/ui/button';
 import Ghost from '/public/assets/images/ghost.svg';
 import { DoubleAltArrowLeft } from '@solar-icons/react';
+import TopNavMobile from '@/components/top-nav-mobile';
+import { NavbarMobile } from '@/components/nav-bar-mobile';
+import ScrollToTop from '@/components/scroll-to-top';
 
 export const NotFound = () => {
   return (
-    <main className="not-found-page min-h-screen overflow-hidden bg-[#0F0F1A] font-geist">
+    <main className="not-found-page min-h-screen overflow-hidden relative bg-[#0F0F1A] font-geist">
+      <TopNavMobile />
+
       <div className="w-full min-h-screen px-4 flex items-center justify-center not-found-overlay">
         <div className="flex flex-col gap-10">
           <div className="grid gap-4">
@@ -33,6 +38,8 @@ export const NotFound = () => {
           </Button>
         </div>
       </div>
+      <NavbarMobile />
+      <ScrollToTop />
     </main>
   );
 };

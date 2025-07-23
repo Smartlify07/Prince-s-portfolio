@@ -9,13 +9,13 @@ import { Pricing } from '@/components/pricing';
 
 export default function ServicesPage() {
   return (
-    <main className="flex flex-col min-h-screen overflow-hidden bg-sidebar-bg py-8 gap-10 md:gap-20">
-      <TopSection />
-      <div className="md:px-6">
+    <main className="grid min-h-screen  bg-sidebar-bg py-8 gap-10 md:gap-20">
+      <div className="grid gap-10 md:gap-14 md:px-6">
+        <TopSection />
         <ServiceDescription />
       </div>
       <StatsSection />
-      <div className="flex flex-col overflow-hidden px-4 md:px-6 gap-12">
+      <div className="grid px-4 md:px-6 gap-12">
         <ExclusiveDealsTopSection />
         <ExclusiveDeals />
       </div>

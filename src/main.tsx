@@ -24,9 +24,8 @@ createRoot(document.getElementById('root')!).render(
           <Route element={<TermsOfUse />} path="/termsofuse" />
           <Route element={<PrivacyPolicy />} path="/privacy-policy" />
           <Route element={<ProjectDetailsPage />} path="/projects/:id" />
-          <Route element={<NotFound />} path="*" />
         </Route>
-        <Route></Route>
+        <Route element={<NotFound />} path="*" />
       </Routes>
     </BrowserRouter>
   </StrictMode>
