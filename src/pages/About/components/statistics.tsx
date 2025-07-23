@@ -42,7 +42,7 @@ const Stat = ({
 }) => {
   return (
     <div
-      className={`flex flex-col w-full col-span-1 md:justify-between  wrap-break-word font-geist gap-4  ${
+      className={`flex flex-col w-full col-span-1 justify-between  wrap-break-word font-geist gap-4  ${
         border ? 'border-r border-r-grey-4 pr-2' : ''
       }`}
     >
