@@ -8,7 +8,7 @@ import Dribbble from '@/../public/assets/icons/Dribbble.svg';
 import Twitter from '@/../public/assets/icons/Twitter.svg';
 import LinkedIn from '@/../public/assets/icons/LinkedIn.svg';
 import Button from '@/ui/button';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router';
 
 export default function TopNavMobile() {
@@ -54,10 +54,33 @@ const LogoSection = ({ onToggle }: { onToggle: () => void }) => {
 };
 
 const StatusSection = () => {
+  const [time, setTime] = useState({
+    hour: 0,
+    minute: 0,
+    second: 0,
+  });
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const date = new Date();
+
+      setTime((prev) => ({
+        ...prev,
+        second: date.getSeconds(),
+        minute: date.getMinutes(),
+        hour: date.getHours(),
+      }));
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="flex items-center font-geist py-2 h-10 justify-between">
       <div className="flex items-center gap-2 pr-2.5">
-        <span className="text-grey-opaque font-medium">9:41</span>
+        <span className="text-grey-opaque font-medium">
+          {time.hour.toString().padStart(2, '0')}:
+          {time.minute.toString().padStart(2, '0')}
+        </span>
       </div>
       <div className="pl-2.5 flex justify-end items-center gap-[7px]">
         <img src={Wifi} alt="wifi-icon" />
