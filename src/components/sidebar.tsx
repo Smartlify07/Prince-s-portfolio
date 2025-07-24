@@ -21,7 +21,7 @@ export const Sidebar = forwardRef<HTMLDivElement>((_, ref) => {
   );
 });
 
-const TopSection = () => {
+export const TopSection = () => {
   return (
     <section className="bg-[rgba(14,14,14,0.7)] border-b sticky top-0 border-b-grey-4/60 z-50 font-geist flex justify-between gap-4 w-full h-[86px] shrink-0 pl-10 backdrop-blur-[10px]">
       <div className="flex justify-center flex-col gap-1 py-px">

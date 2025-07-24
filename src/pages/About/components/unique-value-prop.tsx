@@ -4,7 +4,7 @@ import { CallToActionSection } from './cta';
 
 export const UniqueValueProp = () => {
   return (
-    <section className="px-4 grid gap-14">
+    <section className="px-4 md:px-0 grid gap-14">
       <div className="grid gap-12">
         <header>
           <h1 className="text-[40px] font-medium font-geist gradient-text md:text-center">

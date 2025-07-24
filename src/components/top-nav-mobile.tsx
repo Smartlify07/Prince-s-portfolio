@@ -9,6 +9,7 @@ import Twitter from '@/../public/assets/icons/Twitter.svg';
 import LinkedIn from '@/../public/assets/icons/LinkedIn.svg';
 import Button from '@/ui/button';
 import { useState } from 'react';
+import { Link } from 'react-router';
 
 export default function TopNavMobile() {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,16 +31,16 @@ const LogoSection = ({ onToggle }: { onToggle: () => void }) => {
   return (
     <div className="flex items-center justify-between font-geist border-b border-b-grey-4/60">
       <div className="flex items-center gap-6">
-        <div className="flex flex-col gap-1">
+        <Link to={'/'} className="flex flex-col gap-1">
           <img
             src={Logo}
             alt="logo"
             className="aspect-[122/25] w-[122px] h-[25px]"
           />
-          <p className="text-[10px] text-grey-9 font-medium font-geist">
+          <span className="text-[10px] text-grey-9 font-medium font-geist">
             Designer, Researcher, and Creator
-          </p>
-        </div>
+          </span>
+        </Link>
         <div className="border-r border-l border-dashed flex items-center gap-2 border-grey-9 py-4 px-[7px]">
           <div className="bg-green-500 size-2.5 rounded-full"></div>
           <span className="text-sm  -tracking-smallest text-grey-9">

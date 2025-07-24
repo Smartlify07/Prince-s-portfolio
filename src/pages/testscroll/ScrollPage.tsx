@@ -14,11 +14,7 @@ export default function ScrollHandoffLayout() {
         sidebar.scrollTop + sidebar.clientHeight >= sidebar.scrollHeight;
 
       const atTop = sidebar.scrollTop <= 0;
-      console.log(
-        sidebar.scrollTop + 'scroll top',
-        sidebar.clientHeight + 'client height',
-        sidebar.scrollHeight + 'scroll height'
-      );
+
       const isScrollingDown = deltaY > 0;
       const isScrollingUp = deltaY < 0;
 

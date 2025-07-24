@@ -396,6 +396,15 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+@media screen and (min-width: 1024px) {
+  .not-found-page {
+    background-image: url(/public/assets/images/404-large.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+}
 .not-found-overlay {
   background: var(
     --Overlayer-Linner,

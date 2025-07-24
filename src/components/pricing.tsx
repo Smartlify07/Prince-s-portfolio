@@ -10,14 +10,14 @@ import Button from '@/ui/button';
 
 export const Pricing = () => {
   return (
-    <section className="px-4 font-geist grid gap-11">
+    <section className="px-4 md:px-0 font-geist grid gap-11">
       <div className="grid gap-4 place-items-center">
         <Badge className="flex text-[#EDEDEB] items-center gap-2">
           <img src={CurrencyIcon} alt="currency-icon" />
           Pricing
         </Badge>
-        <div className="grid gap-4 place-items-center">
-          <h1 className="text-[40px] gradient-text text-center font-medium -tracking-smaller">
+        <div className="grid gap-4 place-items-center md:w-11/12">
+          <h1 className="text-[40px]/[52px] gradient-text text-center font-medium -tracking-smaller">
             Your visions , my creativity—strategies tailored just for you.
           </h1>
           <p className="text-sm/[150%] text-center text-[#909090]">

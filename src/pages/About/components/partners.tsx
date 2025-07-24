@@ -2,7 +2,7 @@ import { cn } from '@/lib/utils';
 
 export const BrandPartners = () => {
   return (
-    <section className="px-4 flex flex-col gap-8">
+    <section className="px-4 md:px-0 flex flex-col gap-8">
       <h1 className="gradient-text text-[40px] font-medium font-geist -tracking-smaller">
         Brands I’ve Partnered With
       </h1>

@@ -24,7 +24,7 @@ export const ProjectCard = ({
   category: string;
 }) => {
   return (
-    <div className="relative w-full shrink-0">
+    <div className="relative cursor-pointer w-full shrink-0">
       <div className="rounded-3xl h-[301px] w-full">
         <img
           src={image}

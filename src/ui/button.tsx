@@ -37,6 +37,7 @@ const Button = ({
           variant,
         })
       )}
+      {...props}
     >
       {props.children}
     </button>

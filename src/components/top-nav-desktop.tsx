@@ -43,7 +43,7 @@ const NavLinks = () => {
           key={link.path}
           to={link.path}
           className={cn(
-            'inline-flex items-center text-sm gap-1.5 text-drop-shadow',
+            'inline-flex items-center text-sm gap-1.5 text-drop-shadow transition-colors hover:text-grey-opaque',
             pathname === link.path ? 'text-grey-opaque' : 'text-grey-9'
           )}
         >

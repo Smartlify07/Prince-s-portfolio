@@ -5,7 +5,7 @@ import Button from '@/ui/button';
 import { CaseMinimalistic, Plain } from '@solar-icons/react';
 export const IndustriesExceled = () => {
   return (
-    <section className="px-4">
+    <section className="px-4 md:px-0">
       <div className="gap-11 flex flex-col">
         <TopSection />
 
@@ -15,7 +15,9 @@ export const IndustriesExceled = () => {
               <IndustryCard {...item} key={index} />
             ))}
           </div>
-          <CallToAction />
+          <div className="w-full justify-self-center md:w-10/12">
+            <CallToAction />
+          </div>
         </div>
       </div>
     </section>

@@ -1,4 +1,3 @@
-import { Pricing } from '@/components/pricing';
 import { AboutContainer } from './components/about-container';
 import { MoralCompasses } from './components/moral-compasses';
 import { MoreInfo } from './components/more-info';
@@ -10,9 +9,9 @@ import { UniqueValueProp } from './components/unique-value-prop';
 
 export default function AboutPage() {
   return (
-    <main className="flex flex-col relative min-h-screen bg-sidebar-bg py-8 gap-10">
+    <main className="flex flex-col relative min-h-screen bg-sidebar-bg gap-10 md:gap-20">
       <AboutTopSection />
-      <div className="flex flex-col z-30 mt-20 gap-2 px-4">
+      <div className="flex flex-col z-30 mt-20 gap-2 px-4 md:px-0">
         <AboutContainer />
         <MoreInfo />
       </div>
@@ -21,7 +20,6 @@ export default function AboutPage() {
       <Stack />
       <MoralCompasses />
       <UniqueValueProp />
-      <Pricing />
     </main>
   );
 }

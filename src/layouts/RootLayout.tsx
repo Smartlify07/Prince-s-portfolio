@@ -8,6 +8,7 @@ import { FaqSection } from '@/components/faq';
 import { CustomQuestion } from '@/components/custom-question';
 import ScrollToTop from '@/components/scroll-to-top';
 import useScroll from '@/hooks/useScroll';
+import { Pricing } from '@/components/pricing';
 
 const RootLayout = () => {
   const pathname = useLocation().pathname;
@@ -26,7 +27,9 @@ const RootLayout = () => {
   const renderFooter = validPaths.includes(pathname);
   const renderFaqAndQuestion = faqPaths.includes(pathname);
   const renderFaq = ['/contact'].includes(pathname);
+  const renderPricing = ['/about', '/services'].includes(pathname);
   const { mainRef } = useScroll();
+
   return (
     <main className="flex flex-col md:flex-row min-h-screen bg-sidebar-bg relative">
       <TopNavMobile />
@@ -36,30 +39,36 @@ const RootLayout = () => {
 
       <div
         ref={mainRef}
-        className="flex flex-col gap-10 relative z-[10] md:ml-[484px] overflow-y-hidden"
+        className="flex flex-col relative z-[10] gap-10 md:ml-[484px] overflow-y-hidden"
       >
         <TopNavDesktop />
-        <div className="md:w-full overflow-x-auto scrollbar-hide">
-          <div className="flex-1 overflow-y-auto md:w-[957px]  md:pl-4 md:pr-10">
-            <Outlet />
-          </div>
+        <div className="flex flex-col gap-10 md:gap-20">
+          <div className="md:w-full overflow-x-auto flex flex-col gap-10 md:gap-20 scrollbar-hide">
+            <div className="flex-1 overflow-y-auto md:w-[957px] md:pl-4 md:pr-10">
+              <Outlet />
+            </div>
 
-          {renderFaqAndQuestion && (
-            <div className="flex flex-col px-4 gap-10 items-start md:flex-row md:gap-6">
-              <div className="md:w-8/12">
+            {renderPricing && (
+              <div className="md:w-[957px] md:pl-4 md:pr-10">
+                <Pricing />
+              </div>
+            )}
+            {renderFaqAndQuestion && (
+              <div className="flex flex-col w-full md:w-[957px] md:pl-4 md:pr-10 gap-10 items-start md:flex-row md:gap-6">
+                <div className="w-full md:w-8/12">
+                  <FaqSection />
+                </div>
+                <CustomQuestion />
+              </div>
+            )}
+            {renderFaq && (
+              <div className="px-4 md:pl-4 md:pr-10 md:w-[957px] ">
                 <FaqSection />
               </div>
-              <CustomQuestion />
-            </div>
-          )}
-
-          {renderFaq && (
-            <div className="px-4">
-              <FaqSection />
-            </div>
-          )}
+            )}
+          </div>
+          {renderFooter && <Footer />}
         </div>
-        {renderFooter && <Footer />}
       </div>
       <NavbarMobile />
       <ScrollToTop />

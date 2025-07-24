@@ -150,9 +150,7 @@ const FormSelect = ({ placeholder }: { placeholder: string }) => {
       label="Select project type"
       options={options}
       placeholder={placeholder}
-      onChange={(event) => {
-        console.log(event);
-      }}
+      onChange={() => {}}
     />
   );
 };

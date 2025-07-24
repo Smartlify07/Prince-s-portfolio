@@ -4,20 +4,38 @@ import { DoubleAltArrowLeft } from '@solar-icons/react';
 import TopNavMobile from '@/components/top-nav-mobile';
 import { NavbarMobile } from '@/components/nav-bar-mobile';
 import ScrollToTop from '@/components/scroll-to-top';
+import TopNavDesktop from '@/components/top-nav-desktop';
+import { TopSection } from '@/components/sidebar';
+import { useNavigate } from 'react-router';
 
 export const NotFound = () => {
+  const router = useNavigate();
   return (
-    <main className="not-found-page min-h-screen overflow-hidden relative bg-[#0F0F1A] font-geist">
+    <main className="not-found-page min-h-screen overflow-hidden  scrollbar-hide relative bg-[#0F0F1A] font-geist">
       <TopNavMobile />
+      <div className="flex fixed top-0 left-0 w-full items-start">
+        <div className="w-[484px]">
+          <TopSection />
+        </div>
+        <TopNavDesktop />
+      </div>
 
-      <div className="w-full min-h-screen px-4 flex items-center justify-center not-found-overlay">
+      <div className="w-full min-h-screen  pb-10 px-4 flex items-center justify-center not-found-overlay">
         <div className="flex flex-col gap-10">
           <div className="grid gap-4">
             <div className="grid">
               <div className="flex justify-center items-center">
-                <h1 className="not-found-text font-semibold text-[180px]">4</h1>
-                <img src={Ghost} alt="ghost" className="size-[150px] mt-4" />
-                <h1 className="not-found-text font-semibold text-[180px]">4</h1>
+                <h1 className="not-found-text font-semibold text-[180px] md:text-[400px]">
+                  4
+                </h1>
+                <img
+                  src={Ghost}
+                  alt="ghost"
+                  className="size-[150px] mt-4 md:size-[346px]"
+                />
+                <h1 className="not-found-text font-semibold text-[180px] md:text-[400px]">
+                  4
+                </h1>
               </div>
               <p className="text-xl font-medium text-center -tracking-smaller not-found-text">
                 Oops! It seems that the page you are looking for is not
@@ -31,6 +49,9 @@ export const NotFound = () => {
           </div>
 
           <Button
+            onClick={() => {
+              router('/');
+            }}
             variant="default"
             className="flex self-center items-center gap-2"
           >
