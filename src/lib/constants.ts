@@ -11,11 +11,11 @@ import Amaka from '/public/assets/images/testimonials/amaka.png';
 import TymeTech from '/public/assets/images/testimonials/tyme.png';
 
 import BusBooks from '/public/assets/images/projects/busbooks.png';
-import VifZack from '/public/assets/images/projects/Vifzack 1.png';
-import BlesSoftware from '/public/assets/images/projects/Bles Software 1.png';
-import MaxWellEv from '/public/assets/images/projects/Maxwell Landing Page.png';
-import KaleriAi from '/public/assets/images/projects/Kaleri 1.png';
-import CrawlerAI from '/public/assets/images/projects/Crawler 2.png';
+import VifZack from '/public/assets/images/projects/Vifzack.png';
+import BlesSoftware from '/public/assets/images/projects/Bles_Software.png';
+import MaxWellEv from '/public/assets/images/projects/Maxwell_Landing_Page.png';
+import KaleriAi from '/public/assets/images/projects/Kaleri.png';
+import CrawlerAI from '/public/assets/images/projects/Crawler.png';
 
 import ResearchIcon from '/public/assets/images/services/Research Image.svg';
 import Conceptualize from '/public/assets/images/services/Conceptualize Image.svg';

@@ -25,11 +25,11 @@ export const ProjectCard = ({
 }) => {
   return (
     <div className="relative cursor-pointer w-full shrink-0">
-      <div className="rounded-3xl h-[301px] w-full">
+      <div className="rounded-3xl h-[309px] w-full">
         <img
           src={image}
           alt={title}
-          className="w-full h-full object-cover rounded-3xl"
+          className="w-[436.62px] h-[309px] aspect-[436.72/331.00] object-cover object-fill rounded-3xl"
         />
       </div>
       <div className="project-gradient absolute left-0 overflow-clip bottom-0 flex flex-col font-geist py-4 px-5 gap-2">
