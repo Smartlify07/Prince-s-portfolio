@@ -29,7 +29,7 @@ export const ProjectCard = ({
         <img
           src={image}
           alt={title}
-          className="w-[436.62px] h-[309px] aspect-[436.72/331.00] object-cover object-fill rounded-3xl"
+          className="w-[436.62px] h-[309px] aspect-[436.72/331.00] object-fill rounded-3xl"
         />
       </div>
       <div className="project-gradient absolute left-0 overflow-clip bottom-0 flex flex-col font-geist py-4 px-5 gap-2">

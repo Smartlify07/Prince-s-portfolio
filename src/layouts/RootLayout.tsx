@@ -41,8 +41,10 @@ const RootLayout = () => {
         ref={mainRef}
         className="flex flex-col relative z-[10] gap-10 md:ml-[484px] overflow-y-hidden"
       >
-        <TopNavDesktop />
-        <div className="flex flex-col gap-10 md:gap-20">
+        <div className="fixed z-[1000] hidden md:block border w-[800px]">
+          <TopNavDesktop />
+        </div>
+        <div className="flex flex-col pt-[126px] gap-10 md:gap-20">
           <div className="md:w-full md:overflow-x-auto flex flex-col gap-10 md:gap-20 scrollbar-hide">
             <div className="flex-1 overflow-y-auto md:w-[957px] md:pl-4 md:pr-10">
               <Outlet />

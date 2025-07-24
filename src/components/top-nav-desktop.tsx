@@ -27,7 +27,7 @@ const navLinks = [
 
 export default function TopNavDesktop() {
   return (
-    <nav className="bg-[rgba(14,14,14,0.7)] hidden h-[86px] sticky z-50 font-geist md:flex justify-between items-center gap-2.5 w-full pt-6 pr-10 pb-4 pl-6 backdrop-blur-[10px] top-0 border-b border-b-grey-4/60">
+    <nav className="bg-[rgba(14,14,14,0.7)] hidden h-[86px] z-[1000] font-geist md:flex justify-between items-center gap-2.5 w-full pt-6 pr-10 pb-4 pl-6 backdrop-blur-[10px] top-0 border-b border-b-grey-4/60">
       <NavLinks />
       <ContactSection />
     </nav>
