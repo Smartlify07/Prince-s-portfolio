@@ -43,7 +43,7 @@ const RootLayout = () => {
       >
         <TopNavDesktop />
         <div className="flex flex-col gap-10 md:gap-20">
-          <div className="md:w-full overflow-x-auto flex flex-col gap-10 md:gap-20 scrollbar-hide">
+          <div className="md:w-full md:overflow-x-auto flex flex-col gap-10 md:gap-20 scrollbar-hide">
             <div className="flex-1 overflow-y-auto md:w-[957px] md:pl-4 md:pr-10">
               <Outlet />
             </div>
@@ -55,14 +55,14 @@ const RootLayout = () => {
             )}
             {renderFaqAndQuestion && (
               <div className="flex flex-col w-full md:w-[957px] md:pl-4 md:pr-10 gap-10 items-start md:flex-row md:gap-6">
-                <div className="w-full md:w-8/12">
+                <div className="px-4 md:px-0 md:w-8/12">
                   <FaqSection />
                 </div>
                 <CustomQuestion />
               </div>
             )}
             {renderFaq && (
-              <div className="px-4 md:pl-4 md:pr-10 md:w-[957px] ">
+              <div className="px-4 border border-red-500 md:pl-4 md:pr-10 md:w-[957px] ">
                 <FaqSection />
               </div>
             )}
