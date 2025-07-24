@@ -46,7 +46,7 @@ export const TopSection = () => {
 
 const IntroSection = () => {
   return (
-    <section className="gap-11 pl-10 pr-4 h-[335px] overflow-hidden flex flex-col">
+    <section className="gap-11 pl-10 pr-4 h-[335px] overflow-y-auto scrollbar-hide flex flex-col">
       <div className="flex flex-col gap-9">
         <div className="flex flex-col gap-4">
           <Badge className="font-geist self-start inline-flex items-center gap-1">
