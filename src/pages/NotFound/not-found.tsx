@@ -11,10 +11,10 @@ import { useNavigate } from 'react-router';
 export const NotFound = () => {
   const router = useNavigate();
   return (
-    <main className="not-found-page min-h-screen overflow-hidden  scrollbar-hide relative bg-[#0F0F1A] font-geist">
+    <main className="not-found-page min-h-screen overflow-hidden flex flex-col scrollbar-hide relative bg-[#0F0F1A] font-geist">
       <TopNavMobile />
       <div className="flex fixed top-0 left-0 w-full items-start">
-        <div className="w-[484px]">
+        <div className="w-[484px] ">
           <TopSection />
         </div>
         <TopNavDesktop />

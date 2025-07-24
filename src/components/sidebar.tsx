@@ -24,7 +24,7 @@ export const Sidebar = forwardRef<HTMLDivElement>((_, ref) => {
 
 export const TopSection = () => {
   return (
-    <section className="bg-[rgba(14,14,14,0.7)] border-b sticky top-0 border-b-grey-4/60 z-50 font-geist flex justify-between gap-4 w-full h-[86px] shrink-0 pl-10 backdrop-blur-[10px]">
+    <section className="bg-[rgba(14,14,14,0.7)] hidden  border-b sticky top-0 border-b-grey-4/60 z-50 font-geist md:flex justify-between gap-4 w-full h-[86px] shrink-0 pl-10 backdrop-blur-[10px]">
       <Link to={'/'} className="flex justify-center flex-col gap-1 py-px">
         <img
           src={Logo}
@@ -37,7 +37,7 @@ export const TopSection = () => {
       </Link>
       <div className="border-r grow border-l available-slots border-dashed flex justify-center items-center gap-2 border-grey-9 py-4 px-[7px]">
         <div className="bg-green-500 size-2.5 rounded-full"></div>
-        <span className="text-sm  -tracking-smallest text-grey-9">
+        <span className="text-sm -tracking-smallest text-grey-9">
           2 spots left
         </span>
       </div>

@@ -1,5 +1,5 @@
 import type { Project } from '../types';
-import MaxWellEv from '@/../public/assets/images/projects/Maxwell Landing Page.png';
+import MaxWellEv from '@/../public/assets/images/projects/Maxwell_Landing_Page.png';
 
 export const maxwellEv: Project = {
   title: 'Maxwell EV Charging',
