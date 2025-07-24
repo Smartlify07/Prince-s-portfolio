@@ -4,7 +4,7 @@ import SelectedWork from './components/selected-work';
 
 const HomePage = () => {
   return (
-    <main className="bg-sidebar-bg min-h-screen flex flex-col gap-8">
+    <main className="bg-sidebar-bg  flex flex-col gap-8">
       <HeroSection />
       <MainContent />
       <SelectedWork />

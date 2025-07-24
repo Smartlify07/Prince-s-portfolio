@@ -7,6 +7,7 @@ import TopNavDesktop from '@/components/top-nav-desktop';
 import { FaqSection } from '@/components/faq';
 import { CustomQuestion } from '@/components/custom-question';
 import ScrollToTop from '@/components/scroll-to-top';
+import useScroll from '@/hooks/useScroll';
 
 const RootLayout = () => {
   const pathname = useLocation().pathname;
@@ -25,14 +26,24 @@ const RootLayout = () => {
   const renderFooter = validPaths.includes(pathname);
   const renderFaqAndQuestion = faqPaths.includes(pathname);
   const renderFaq = ['/contact'].includes(pathname);
+  const { mainRef } = useScroll();
   return (
-    <main className="relative flex flex-col gap-10 bg-sidebar-bg">
+    <main className="flex flex-col md:flex-row min-h-screen bg-sidebar-bg relative">
       <TopNavMobile />
-      <div className="flex max-w-[1440px]">
+      <div className="md:block md:w-[484px] hidden bg-sidebar-bg fixed top-0 left-0 bottom-0 z-20">
         <Sidebar />
-        <div className="flex md:w-[66.4%] relative md:mt-0 flex-col gap-10">
-          <TopNavDesktop />
-          <Outlet />
+      </div>
+
+      <div
+        ref={mainRef}
+        className="flex flex-col gap-10 relative z-[10] md:ml-[484px] overflow-y-hidden"
+      >
+        <TopNavDesktop />
+        <div className="md:w-full overflow-x-auto scrollbar-hide">
+          <div className="flex-1 overflow-y-auto md:w-[957px]  md:pl-4 md:pr-10">
+            <Outlet />
+          </div>
+
           {renderFaqAndQuestion && (
             <div className="flex flex-col px-4 gap-10 items-start md:flex-row md:gap-6">
               <div className="md:w-8/12">
@@ -41,13 +52,14 @@ const RootLayout = () => {
               <CustomQuestion />
             </div>
           )}
+
           {renderFaq && (
             <div className="px-4">
               <FaqSection />
             </div>
           )}
-          {renderFooter && <Footer />}
         </div>
+        {renderFooter && <Footer />}
       </div>
       <NavbarMobile />
       <ScrollToTop />

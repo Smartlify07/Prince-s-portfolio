@@ -11,6 +11,7 @@ import ProjectDetailsPage from './pages/ProjectDetails/project-detail-page.tsx';
 import TermsOfUse from './pages/TermsOfUse/terms-of-use.tsx';
 import PrivacyPolicy from './pages/PrivacyPolicy/privacy-policy.tsx';
 import { NotFound } from './pages/NotFound/not-found.tsx';
+import ScrollHandoffLayout from './pages/testscroll/ScrollPage.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -26,6 +27,7 @@ createRoot(document.getElementById('root')!).render(
           <Route element={<ProjectDetailsPage />} path="/projects/:id" />
         </Route>
         <Route element={<NotFound />} path="*" />
+        <Route element={<ScrollHandoffLayout />} path="/scroll" />
       </Routes>
     </BrowserRouter>
   </StrictMode>

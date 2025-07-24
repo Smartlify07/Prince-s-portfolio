@@ -9,7 +9,7 @@ import { Pricing } from '@/components/pricing';
 
 export default function ServicesPage() {
   return (
-    <main className="grid min-h-screen  bg-sidebar-bg py-8 gap-10 md:gap-20">
+    <main className="grid min-h-screen bg-sidebar-bg py-8 gap-10 md:gap-20">
       <div className="grid gap-10 md:gap-14 md:px-6">
         <TopSection />
         <ServiceDescription />

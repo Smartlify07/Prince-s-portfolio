@@ -4,10 +4,14 @@ import Button from '@/ui/button';
 import Badge from '@/ui/badge';
 import { tools } from '@/lib/constants';
 import Testimonials from '@/components/testimonials';
+import { forwardRef } from 'react';
 
-export const Sidebar = () => {
+export const Sidebar = forwardRef<HTMLDivElement>((_, ref) => {
   return (
-    <aside className="md:flex h-screen flex-col border-r border-r-grey-9/6 items-start w-[33.6%] hidden">
+    <aside
+      ref={ref}
+      className="md:flex h-screen overflow-y-auto flex-col border-r scrollbar-hide border-r-grey-9/6 items-start w-full hidden"
+    >
       <TopSection />
       <div className="pt-10 px-0 pb-2.5 flex flex-col gap-11">
         <IntroSection />
@@ -15,7 +19,7 @@ export const Sidebar = () => {
       </div>
     </aside>
   );
-};
+});
 
 const TopSection = () => {
   return (
