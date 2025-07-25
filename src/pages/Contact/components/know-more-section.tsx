@@ -7,7 +7,7 @@ import LinkedIn from '/assets/images/contact/LinkedIn.svg';
 
 export const KnowMoreSection = () => {
   return (
-    <section className="py-6 px-4 rounded-4xl bg-[#111119]/80 know-more-section font-geist grid gap-12">
+    <section className="py-6 px-4 rounded-4xl bg-[#111119]/80 z-[50] know-more-section font-geist grid gap-12">
       <header className="grid gap-4">
         <h1 className="text-[40px]/[56px] font-medium text-center gradient-text -tracking-smaller md:w-6/12 md:justify-self-center">
           Oh! You just want to know more about me? Fantastic!

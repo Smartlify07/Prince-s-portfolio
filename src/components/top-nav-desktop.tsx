@@ -5,6 +5,7 @@ import LinkedIn from '@/../public/assets/icons/LinkedIn.svg';
 import { CaseRoundMinimalistic, Crown, Cursor, User } from '@solar-icons/react';
 import { Link, useLocation } from 'react-router';
 import { cn } from '@/lib/utils';
+import { validPaths } from '@/lib/valid-paths';
 
 const navLinks = [
   { label: 'Projects', path: '/projects', icon: CaseRoundMinimalistic },
@@ -26,8 +27,20 @@ const navLinks = [
 ];
 
 export default function TopNavDesktop() {
+  const pathname = useLocation().pathname;
+  const normalizedPath = pathname.replace(/\/+$/, '');
+  const shouldBeFixed =
+    validPaths.includes(normalizedPath) ||
+    normalizedPath.startsWith('/projects/');
   return (
-    <nav className="bg-[rgba(14,14,14,0.7)] hidden h-[86px] z-[1000] font-geist md:flex justify-between items-center gap-2.5 w-full pt-6 pr-10 pb-4 pl-6 backdrop-blur-[10px] top-0 border-b border-b-grey-4/60">
+    <nav
+      className={cn(
+        'bg-[rgba(14,14,14,0.7)] hidden h-[86px] z-[50] font-geist md:flex justify-between items-center gap-2.5 w-full pt-6 pr-10 pb-4 pl-6 backdrop-blur-[10px] top-0 border-b border-b-grey-4/60',
+        shouldBeFixed
+          ? 'fixed top-0 left-[484px] w-[calc(100vw-484px)] z-50'
+          : 'static'
+      )}
+    >
       <NavLinks />
       <ContactSection />
     </nav>
@@ -37,18 +50,18 @@ export default function TopNavDesktop() {
 const NavLinks = () => {
   const pathname = useLocation().pathname;
   return (
-    <div className="flex items-center pr-4 gap-2 font-geist">
+    <div className="flex items-center pr-4 justify-center w-7/12 gap-2 font-geist">
       {navLinks.map((link) => (
         <Link
           key={link.path}
           to={link.path}
           className={cn(
-            'inline-flex items-center text-sm gap-1.5 text-drop-shadow transition-colors hover:text-grey-opaque',
+            'flex items-center text-sm gap-1.5 p-1.5 transition-colors hover:text-grey-opaque',
             pathname === link.path ? 'text-grey-opaque' : 'text-grey-9'
           )}
         >
           <link.icon size={16} weight="Outline" />
-          {link.label}
+          <span className="text-drop-shadow bg-none">{link.label}</span>
         </Link>
       ))}
     </div>
@@ -58,7 +71,7 @@ const NavLinks = () => {
 const ContactSection = () => {
   const icons = [Dribbble, Behance, Twitter, LinkedIn];
   return (
-    <div className="flex flex-col gap-6">
+    <div className="flex flex-col gap-6 pl-4 border-l border-l-grey-4">
       <div className="flex text-sm/[14px] items-center gap-2 text-grey-9">
         Connect with me at:
         <div className="flex items-center gap-0.5">

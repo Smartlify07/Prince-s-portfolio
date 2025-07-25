@@ -4,7 +4,7 @@ import { CardWithMarker } from './card-with-marker';
 export const ChallengesSection = () => {
   return (
     <section className="grid gap-6 pb-10 border-b border-b-grey-4/60 md:flex md:items-start">
-      <h1 className="text-[40px]/[52px] w-9/12 md:w-7/12 border border-red-500  -tracking-smaller font-medium gradient-text">
+      <h1 className="text-[40px]/[52px] w-9/12 md:w-7/12 -tracking-smaller font-medium gradient-text">
         Challenges
       </h1>
 

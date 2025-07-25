@@ -9,10 +9,12 @@ import { CustomQuestion } from '@/components/custom-question';
 import ScrollToTop from '@/components/scroll-to-top';
 import useScroll from '@/hooks/useScroll';
 import { Pricing } from '@/components/pricing';
+import { cn } from '@/lib/utils';
 
 const RootLayout = () => {
   const pathname = useLocation().pathname;
-  const validPaths = [
+  const normalizedPath = pathname.replace(/\/+$/, '');
+  const footerPaths = [
     '/',
     '/projects',
     '/contact',
@@ -24,10 +26,24 @@ const RootLayout = () => {
   ];
   const faqPaths = ['/services', '/about'];
 
-  const renderFooter = validPaths.includes(pathname);
-  const renderFaqAndQuestion = faqPaths.includes(pathname);
-  const renderFaq = ['/contact'].includes(pathname);
-  const renderPricing = ['/about', '/services'].includes(pathname);
+  const renderFooter =
+    footerPaths.includes(normalizedPath) ||
+    normalizedPath.startsWith('/projects/');
+  const renderFaqAndQuestion = faqPaths.includes(normalizedPath);
+  const renderFaq = ['/contact'].includes(normalizedPath);
+  const renderPricing = ['/about', '/services'].includes(normalizedPath);
+  const noPadding = [
+    '/contact',
+    '/projects',
+    '/faq',
+    '/termsofuse',
+    '/privacy-policy',
+  ];
+
+  const shouldRemovePadding =
+    noPadding.includes(normalizedPath) ||
+    normalizedPath.startsWith('/projects/');
+
   const { mainRef } = useScroll();
 
   return (
@@ -41,12 +57,20 @@ const RootLayout = () => {
         ref={mainRef}
         className="flex flex-col relative z-[10] gap-10 md:ml-[484px] overflow-y-hidden"
       >
-        <div className="fixed z-[1000] hidden md:block border w-[800px]">
-          <TopNavDesktop />
-        </div>
-        <div className="flex flex-col pt-[126px] gap-10 md:gap-20">
+        <TopNavDesktop />
+        <div
+          className={cn(
+            'flex flex-col gap-10 md:gap-20',
+            shouldRemovePadding ? 'pt-[86px]' : 'pt-[126px]'
+          )}
+        >
           <div className="md:w-full md:overflow-x-auto flex flex-col gap-10 md:gap-20 scrollbar-hide">
-            <div className="flex-1 overflow-y-auto md:w-[957px] md:pl-4 md:pr-10">
+            <div
+              className={cn(
+                'flex-1 overflow-y-auto md:w-[957px]',
+                !shouldRemovePadding ? 'md:pl-4 md:pr-10' : ''
+              )}
+            >
               <Outlet />
             </div>
 
@@ -64,7 +88,7 @@ const RootLayout = () => {
               </div>
             )}
             {renderFaq && (
-              <div className="px-4 border border-red-500 md:pl-4 md:pr-10 md:w-[957px] ">
+              <div className="px-4 md:pl-4 md:pr-10 md:w-[957px] ">
                 <FaqSection />
               </div>
             )}

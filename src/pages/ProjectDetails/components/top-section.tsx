@@ -1,12 +1,18 @@
 import Badge from '@/ui/badge';
-import BackgroundImage from '/public/assets/images/contact/topsectionimage.png';
+import BackgroundImage from '/public/assets/images/projects/top-section.png';
+import BackgroundImageMobile from '/public/assets/images/projects/top-section-mobile.png';
 
 export const TopSection = () => {
   return (
     <section className="w-full flex flex-col relative h-[400px]">
       <img
         src={BackgroundImage}
-        className="w-full h-full object-cover"
+        className="w-full h-[350px] hidden md:block object-cover"
+        alt="project-combo"
+      />
+      <img
+        src={BackgroundImageMobile}
+        className="w-full h-full md:hidden object-cover"
         alt="project-combo"
       />
 

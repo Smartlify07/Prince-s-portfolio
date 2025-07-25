@@ -31,7 +31,7 @@ const Button = ({
   return (
     <button
       className={cn(
-        'py-1.5 px-2 font-geist',
+        'py-1.5 px-2 font-geist cursor-pointer',
         className,
         buttonVariants({
           variant,

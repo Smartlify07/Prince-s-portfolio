@@ -70,7 +70,7 @@ const IndustryCard = ({
 
 const CallToAction = () => {
   return (
-    <section className="texture grid font-geist gap-2.5 p-6">
+    <section className="texture grid z-[1000] font-geist gap-2.5 p-6">
       <div className="grid gap-8">
         <div className="grid gap-2">
           <h1 className="gradient-text text-center text-xl tracking-[-0.88px] font-medium">
@@ -83,10 +83,19 @@ const CallToAction = () => {
         </div>
 
         <div className="flex items-center justify-center gap-4">
-          <Button variant="outline" className="flex items-center gap-2">
+          <Button
+            variant="outline"
+            className="flex cursor-pointer items-center gap-2"
+          >
             <CaseMinimalistic weight="Outline" /> See Projects
           </Button>
-          <Button variant="default" className="flex items-center gap-2">
+          <Button
+            onClick={() => {
+              console.log('click');
+            }}
+            variant="default"
+            className="flex items-center gap-2"
+          >
             <Plain weight="Outline" /> Let's Talk
           </Button>
         </div>
