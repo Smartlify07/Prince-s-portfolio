@@ -31,7 +31,8 @@ export default function TopNavDesktop() {
   const normalizedPath = pathname.replace(/\/+$/, '');
   const shouldBeFixed =
     validPaths.includes(normalizedPath) ||
-    normalizedPath.startsWith('/projects/');
+    normalizedPath.startsWith('/projects/') ||
+    normalizedPath === '';
   return (
     <nav
       className={cn(

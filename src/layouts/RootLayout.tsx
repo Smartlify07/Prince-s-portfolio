@@ -33,6 +33,7 @@ const RootLayout = () => {
   const renderFaq = ['/contact'].includes(normalizedPath);
   const renderPricing = ['/about', '/services'].includes(normalizedPath);
   const noPadding = [
+    '/',
     '/contact',
     '/projects',
     '/faq',
@@ -43,6 +44,7 @@ const RootLayout = () => {
   const shouldRemovePadding =
     noPadding.includes(normalizedPath) ||
     normalizedPath.startsWith('/projects/');
+  console.log(normalizedPath);
 
   const { mainRef } = useScroll();
 
