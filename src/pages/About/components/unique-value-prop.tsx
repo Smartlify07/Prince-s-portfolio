@@ -1,6 +1,7 @@
 import { uniqueValueProps } from '@/lib/constants';
 import Card from '@/ui/card';
 import { CallToActionSection } from './cta';
+import { cn } from '@/lib/utils';
 
 export const UniqueValueProp = () => {
   return (
@@ -13,7 +14,7 @@ export const UniqueValueProp = () => {
         </header>
         <div className="border-t border-dashed md:border-none border-t-grey-9/60">
           {uniqueValueProps.map((valueProp, index) => (
-            <ValuePropCard key={index} {...valueProp} />
+            <ValuePropCard key={index} index={index} {...valueProp} />
           ))}
         </div>
       </div>
@@ -27,13 +28,20 @@ const ValuePropCard = ({
   title,
   subtitle,
   image,
+  index,
 }: {
   title: string;
   subtitle: string;
   image: string;
+  index: number;
 }) => {
   return (
-    <Card className="shadow-none bg-sidebar-bg rounded-none py-9 border-t border-b border-grey-4/60 flex flex-col gap-6 font-geist px-0 md:flex-row">
+    <Card
+      className={cn(
+        'shadow-none bg-sidebar-bg rounded-none py-9 border-t border-b border-grey-4/60 flex flex-col gap-6 font-geist px-0',
+        index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+      )}
+    >
       <div className="flex items-start flex-col gap-2">
         <h1 className="gradient-text font-medium text-xl -tracking-smaller">
           {title}
