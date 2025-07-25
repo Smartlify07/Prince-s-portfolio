@@ -1,11 +1,17 @@
 import BackgroundImage from '/public/assets/images/termsofuse/top-image.png';
+import BackgroundImageLarge from '/public/assets/images/termsofuse/top-section-image-large.png';
 
 export const TopSection = () => {
   return (
     <section className="w-full flex flex-col relative h-[400px]">
       <img
         src={BackgroundImage}
-        className="w-full h-full object-cover"
+        className="w-full h-full md:hidden object-cover"
+        alt="project-combo"
+      />
+      <img
+        src={BackgroundImageLarge}
+        className="w-full hidden md:block h-full object-cover"
         alt="project-combo"
       />
 
