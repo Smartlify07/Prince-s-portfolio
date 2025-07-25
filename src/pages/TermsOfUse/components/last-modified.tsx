@@ -7,7 +7,7 @@ export const LastModified = () => {
         <h3 className="text-sm/[14px] text-grey-9 text-drop-shadow">Project</h3>
         <DoubleAltArrowRight weight="Outline" className="text-grey-9" />
         <h3 className="text-grey-opaque text-sm font-medium text-drop-shadow">
-          {'Term of Use'}
+          Terms of Use
         </h3>
       </div>
 

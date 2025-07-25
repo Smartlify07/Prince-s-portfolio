@@ -64,10 +64,10 @@ const RootLayout = () => {
             shouldRemovePadding ? 'pt-[86px]' : 'pt-[126px]'
           )}
         >
-          <div className="md:w-full md:overflow-x-auto flex flex-col gap-10 md:gap-20 scrollbar-hide">
+          <div className="md:w-full md:overflow-x-auto flex flex-col 2xl:items-center 2xl:w-[1440px] gap-10 md:gap-20 scrollbar-hide">
             <div
               className={cn(
-                'flex-1 overflow-y-auto md:w-[957px]',
+                'flex-1 2xl:grid place-items-center overflow-y-auto md:w-[957px] ',
                 !shouldRemovePadding ? 'md:pl-4 md:pr-10' : ''
               )}
             >
