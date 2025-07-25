@@ -44,7 +44,6 @@ const RootLayout = () => {
   const shouldRemovePadding =
     noPadding.includes(normalizedPath) ||
     normalizedPath.startsWith('/projects/');
-  console.log(normalizedPath);
 
   const { mainRef } = useScroll();
 
