@@ -28,6 +28,7 @@ const RootLayout = () => {
 
   const renderFooter =
     footerPaths.includes(normalizedPath) ||
+    pathname === '/' ||
     normalizedPath.startsWith('/projects/');
   const renderFaqAndQuestion = faqPaths.includes(normalizedPath);
   const renderFaq = ['/contact'].includes(normalizedPath);
