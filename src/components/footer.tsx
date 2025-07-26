@@ -11,10 +11,10 @@ import { Link } from 'react-router';
 const Footer = () => {
   const socialIcons = [Email, Dribbble, Behance, X, LinkedIn, SixSelf];
   return (
-    <footer className="py-10 px-4 bg-sidebar-bg overflow-hidden relative grid gap-10">
+    <footer className="py-10 px-4 md:px-0 bg-sidebar-bg overflow-hidden relative grid gap-10">
       <div className="absolute inset-0 bg-[rgba(225,185,148,0.1)] opacity-40"></div>
-      <section className="flex flex-col items-center gap-8">
-        <header className=" relative flex flex-col items-center ">
+      <section className="flex flex-col items-center gap-8 relative">
+        <header className=" relative md:static flex flex-col items-center ">
           <h1 className="gradient-text font-medium font-geist text-[40px]/[52px] tracking-1 text-center">
             Have a project in mind?
           </h1>
@@ -23,7 +23,7 @@ const Footer = () => {
           </h1>
 
           <ArrowUp
-            className="text-[#909090] absolute bottom-3 right-0"
+            className="text-grey-9 absolute bottom-3 right-0 md:right-10 md:top-10"
             size={16}
             weight="Broken"
           />
@@ -40,7 +40,7 @@ const Footer = () => {
         </div>
       </section>
       <div className="rounded-full circle-gradient size-[1054px] absolute blur-[200px] right-[48px] top-[300px]"></div>
-      <section className="flex flex-col gap-8 p-4 border-t z-10 border-[#4C4C4C]/40">
+      <section className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between p-4 md:pt-4 md:px-4 border-t z-10 border-[#4C4C4C]/40">
         <div className="flex items-center flex-col gap-2.5">
           <div className="flex items-center gap-4">
             {socialIcons.map((icon, index) => (
@@ -90,7 +90,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex flex-col items-center gap-2">
+        <div className="flex flex-col items-center md:items-start gap-2">
           <div className="flex items-center gap-2">
             <h3 className="text-[#909090] text-sm font-geist">CONTACT ME:</h3>
             <h3 className="text-[#EDEDEB] text-sm font-geist font-medium">

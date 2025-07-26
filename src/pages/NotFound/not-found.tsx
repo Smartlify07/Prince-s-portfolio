@@ -14,10 +14,12 @@ export const NotFound = () => {
     <main className="not-found-page min-h-screen overflow-hidden flex flex-col scrollbar-hide relative bg-[#0F0F1A] font-geist">
       <TopNavMobile />
       <div className="flex fixed top-0 left-0 w-full items-start">
-        <div className="w-[484px] ">
+        <div className="w-[33.3%]">
           <TopSection />
         </div>
-        <TopNavDesktop />
+        <div className="w-[66.7%]">
+          <TopNavDesktop />
+        </div>
       </div>
 
       <div className="w-full min-h-screen  pb-10 px-4 flex items-center justify-center not-found-overlay">

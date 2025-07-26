@@ -12,7 +12,6 @@ export const MoreInfo = () => {
         </h1>
         <hr className="text-grey-4 w-9/12 md:w-10/12 border border-grey-4/60" />
       </div>
-
       <div className="flex items-center text-grey-opaque gap-4">
         <img src={Star} />
         <p className="text-sm font-normal -tracking-smallest">
@@ -24,16 +23,20 @@ export const MoreInfo = () => {
         <img src={Suitcase} />
         <p className="text-sm font-normal -tracking-smallest">
           Open to remote job opportunities -{' '}
-          <span className="text-grey-9 italic">Contract Or Full Time</span>
+          <span className="text-grey-9 italic font-inter-tight">
+            Contract Or Full Time
+          </span>
         </p>
       </div>
-      <div className="flex items-center text-grey-opaque gap-4">
-        <img src={Headphones} />
-        <p className="text-sm font-normal -tracking-smallest">
-          Shipping while enjoying some tunes
-        </p>
+      <div className="flex flex-col md:flex-row md:items-center text-grey-opaque gap-2">
+        <div className="flex items-center gap-4">
+          <img src={Headphones} />
+          <p className="text-sm font-normal -tracking-smallest">
+            Shipping while enjoying some tunes
+          </p>
+        </div>
+        <SpotifyEmbed />
       </div>
-      <SpotifyEmbed />
     </section>
   );
 };

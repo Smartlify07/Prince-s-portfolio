@@ -10,13 +10,15 @@ export const TopSection = () => {
       </Badge>
 
       <div className="flex flex-col gap-2">
-        <h1 className="text-3xl font-medium tracking-1 text-[40px] text-[#909090] font-geist">
-          I specialize in
-        </h1>
-        <h1 className="text-3xl font-medium tracking-1 text-[36px] services-text-gradient font-geist">
-          UI/UX Design
-        </h1>
-        <p className="text-sm/[150%] font-medium font-geist text-[#909090]">
+        <div className="flex flex-col md:flex-row gap-2">
+          <h1 className="text-3xl font-medium tracking-1 text-[40px] text-[#909090] font-geist">
+            I specialize in
+          </h1>
+          <h1 className="text-3xl font-medium tracking-1 text-[36px] services-text-gradient font-geist">
+            UI/UX Design
+          </h1>
+        </div>
+        <p className="text-sm/[150%] font-normal font-geist text-[#909090]">
           Explore my suite of UI/UX, brand, and no-code design services—crafted
           to elevate your brand.
         </p>

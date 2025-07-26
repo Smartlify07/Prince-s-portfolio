@@ -256,7 +256,7 @@
 }
 
 .services-text-gradient {
-  background: linear-gradient(90deg, var(--primary-gradient));
+  background: linear-gradient(360deg, var(--primary-gradient));
   background-clip: text;
   color: transparent;
   -webkit-background-clip: text;

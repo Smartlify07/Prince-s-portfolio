@@ -11,7 +11,7 @@ export const Sidebar = forwardRef<HTMLDivElement>((_, ref) => {
   return (
     <aside
       ref={ref}
-      className="md:flex h-screen overflow-y-auto flex-col border-r scrollbar-hide border-r-grey-9/6 items-start w-full hidden"
+      className="md:flex h-screen overflow-y-auto flex-col border-r scrollbar-hide border-r-grey-4/60 items-start w-full hidden"
     >
       <TopSection />
       <div className="pt-10 px-0 pb-2.5 flex flex-col gap-11">
@@ -25,7 +25,10 @@ export const Sidebar = forwardRef<HTMLDivElement>((_, ref) => {
 export const TopSection = () => {
   return (
     <section className="bg-[rgba(14,14,14,0.7)] hidden  border-b sticky top-0 border-b-grey-4/60 z-50 font-geist md:flex justify-between gap-4 w-full h-[86px] shrink-0 pl-10 backdrop-blur-[10px]">
-      <Link to={'/'} className="flex justify-center flex-col gap-1 py-px">
+      <Link
+        to={'/'}
+        className="flex justify-center flex-col w-[20.1vw] gap-1 py-px"
+      >
         <img
           src={Logo}
           alt="logo"
@@ -35,7 +38,7 @@ export const TopSection = () => {
           Designer, Researcher, and Creator
         </p>
       </Link>
-      <div className="border-r grow border-l available-slots border-dashed flex justify-center items-center gap-2 border-grey-9 py-4 px-[7px]">
+      <div className="border-r grow border-l available-slots border-dashed flex justify-center items-center gap-2 border-grey-9 py-4 px-[7px] w-[9.58vw]">
         <div className="bg-green-500 size-2.5 rounded-full"></div>
         <span className="text-sm -tracking-smallest text-grey-9">
           2 spots left
@@ -63,7 +66,7 @@ const IntroSection = () => {
           </header>
         </div>
         <div className="flex flex-col gap-8">
-          <div className="flex items-center gap-4">
+          <div className="flex items-center md:flex-wrap xl:flex-nowrap gap-4">
             <Button variant="outline">
               <Calendar className="text-[#EDEDEB]" size={16} /> Book a Call
             </Button>

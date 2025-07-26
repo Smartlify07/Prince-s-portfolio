@@ -36,10 +36,8 @@ export default function TopNavDesktop() {
   return (
     <nav
       className={cn(
-        'bg-[rgba(14,14,14,0.7)] hidden h-[86px] z-[50] font-geist md:flex justify-between items-center gap-2.5 w-full pt-6 pr-10 pb-4 pl-6 backdrop-blur-[10px] top-0 border-b border-b-grey-4/60',
-        shouldBeFixed
-          ? 'fixed top-0 left-[484px] w-[calc(100vw-484px)] z-50'
-          : 'static'
+        'bg-[rgba(14,14,14,0.7)] hidden h-[86px] z-[50] font-geist md:flex justify-between items-center gap-2.5 pt-6 pr-10 pb-4 pl-6 backdrop-blur-[10px] top-0 border-b border-b-grey-4/60',
+        shouldBeFixed ? 'fixed top-0 md:w-[66.7%] z-50' : 'static'
       )}
     >
       <NavLinks />
@@ -51,7 +49,7 @@ export default function TopNavDesktop() {
 const NavLinks = () => {
   const pathname = useLocation().pathname;
   return (
-    <div className="flex items-center pr-4 justify-center w-7/12 gap-2 font-geist">
+    <div className="flex items-center pr-4 justify-center  gap-2 font-geist">
       {navLinks.map((link) => (
         <Link
           key={link.path}
@@ -77,7 +75,11 @@ const ContactSection = () => {
         Connect with me at:
         <div className="flex items-center gap-0.5">
           {icons.map((icon, i) => (
-            <img className="p-1.5" src={icon} key={i} />
+            <img
+              className="p-1.5 hover:rounded-sm hover:text-[#FCFFEC] transition-colors hover:bg-[#1F1F2B]"
+              src={icon}
+              key={i}
+            />
           ))}
         </div>
       </div>
