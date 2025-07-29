@@ -9,7 +9,7 @@ import { validPaths } from '@/lib/valid-paths';
 import LinkWithWave from './link-with-wave';
 
 const navLinks = [
-  { label: 'Projects', path: '/projects', icon: CaseRoundMinimalistic },
+  { label: 'Projects', path: '/', icon: CaseRoundMinimalistic },
   {
     label: 'Services',
     path: '/services',
