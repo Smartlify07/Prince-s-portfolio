@@ -1,14 +1,12 @@
 import { Calendar, HamburgerMenu, Plain } from '@solar-icons/react';
 import Logo from '@/../public/assets/images/Logo.svg';
-import Wifi from '@/../public/assets/icons/Wifi.svg';
-import Battery from '@/../public/assets/icons/Battery.svg';
-import Cellular from '@/../public/assets/icons/cellular.svg';
+
 import Behance from '@/../public/assets/icons/Behance.svg';
 import Dribbble from '@/../public/assets/icons/Dribbble.svg';
 import Twitter from '@/../public/assets/icons/Twitter.svg';
 import LinkedIn from '@/../public/assets/icons/LinkedIn.svg';
 import Button from '@/ui/button';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router';
 
 export default function TopNavMobile() {
@@ -19,7 +17,6 @@ export default function TopNavMobile() {
   return (
     <nav className="bg-[rgba(14,14,14,0.7)] fixed z-[1000] font-geist flex flex-col gap-4 md:hidden w-full px-4 backdrop-blur-[10px] top-0 rounded-b-2xl">
       <div className="flex flex-col gap-2">
-        <StatusSection />
         <LogoSection onToggle={() => toggle()} />
       </div>
       {isOpen && <BottomSection />}
@@ -29,7 +26,7 @@ export default function TopNavMobile() {
 
 const LogoSection = ({ onToggle }: { onToggle: () => void }) => {
   return (
-    <div className="flex items-center justify-between font-geist border-b border-b-grey-4/60">
+    <div className="flex items-center justify-between font-geist pt-1.5 border-b border-b-grey-4/60">
       <div className="flex items-center gap-6">
         <Link to={'/'} className="flex flex-col gap-1">
           <img
@@ -49,44 +46,6 @@ const LogoSection = ({ onToggle }: { onToggle: () => void }) => {
         </div>
       </div>
       <HamburgerMenu onClick={onToggle} className="text-grey-9" size={16} />
-    </div>
-  );
-};
-
-const StatusSection = () => {
-  const [time, setTime] = useState({
-    hour: 0,
-    minute: 0,
-    second: 0,
-  });
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const date = new Date();
-
-      setTime((prev) => ({
-        ...prev,
-        second: date.getSeconds(),
-        minute: date.getMinutes(),
-        hour: date.getHours(),
-      }));
-    }, 1000);
-    return () => clearInterval(interval);
-  }, []);
-
-  return (
-    <div className="flex items-center font-geist py-2 h-10 justify-between">
-      <div className="flex items-center gap-2 pr-2.5">
-        <span className="text-grey-opaque font-medium">
-          {time.hour.toString().padStart(2, '0')}:
-          {time.minute.toString().padStart(2, '0')}
-        </span>
-      </div>
-      <div className="pl-2.5 flex justify-end items-center gap-[7px]">
-        <img src={Wifi} alt="wifi-icon" />
-        <img src={Cellular} alt="wifi-icon" />
-        <img src={Battery} alt="wifi-icon" />
-      </div>
     </div>
   );
 };
