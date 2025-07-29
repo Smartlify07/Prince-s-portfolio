@@ -14,7 +14,7 @@ export const TopSection = () => {
           <h1 className="text-3xl font-medium tracking-1 text-[40px] text-[#909090] font-geist">
             I specialize in
           </h1>
-          <h1 className="text-3xl font-medium tracking-1 text-[36px] services-text-gradient font-geist">
+          <h1 className="font-medium  tracking-1 text-[36px] services-text-gradient font-geist">
             UI/UX Design
           </h1>
         </div>

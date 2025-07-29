@@ -3,9 +3,10 @@ import Dribbble from '@/../public/assets/icons/Dribbble.svg';
 import Twitter from '@/../public/assets/icons/Twitter.svg';
 import LinkedIn from '@/../public/assets/icons/LinkedIn.svg';
 import { CaseRoundMinimalistic, Crown, Cursor, User } from '@solar-icons/react';
-import { Link, useLocation } from 'react-router';
+import { useLocation } from 'react-router';
 import { cn } from '@/lib/utils';
 import { validPaths } from '@/lib/valid-paths';
+import LinkWithWave from './link-with-wave';
 
 const navLinks = [
   { label: 'Projects', path: '/projects', icon: CaseRoundMinimalistic },
@@ -48,20 +49,23 @@ export default function TopNavDesktop() {
 
 const NavLinks = () => {
   const pathname = useLocation().pathname;
+
   return (
     <div className="flex items-center pr-4 justify-center  gap-2 font-geist">
-      {navLinks.map((link) => (
-        <Link
-          key={link.path}
+      {navLinks.map((link, index) => (
+        <LinkWithWave
+          key={index}
           to={link.path}
           className={cn(
-            'flex items-center text-sm gap-1.5 p-1.5 transition-colors hover:text-grey-opaque',
+            'flex flex-col items-center text-sm gap-1.5 p-1.5 transition-colors hover:text-grey-opaque',
             pathname === link.path ? 'text-grey-opaque' : 'text-grey-9'
           )}
         >
-          <link.icon size={16} weight="Outline" />
-          <span className="text-drop-shadow bg-none">{link.label}</span>
-        </Link>
+          <div className="flex items-center gap-1.5">
+            <link.icon size={16} weight="Outline" />
+            <span className="text-drop-shadow bg-none">{link.label}</span>{' '}
+          </div>
+        </LinkWithWave>
       ))}
     </div>
   );

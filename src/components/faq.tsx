@@ -5,6 +5,7 @@ import Card from '@/ui/card';
 import { faqs, type Faq } from '@/lib/constants';
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
+import { AnimatePresence, motion } from 'motion/react';
 
 export const FaqSection = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -47,7 +48,10 @@ const FaqCard = ({
   index: number;
 } & Faq) => {
   return (
-    <Card className="shadow-none font-geist flex flex-col gap-4 items-start p-4 justify-between bg-[#171721]">
+    <Card
+      onClick={() => toggle(index)}
+      className="shadow-none font-geist flex flex-col gap-4 items-start p-4 justify-between bg-[#171721]"
+    >
       <div className="flex items-center w-full justify-between">
         <h1 className="gradient-text text-xl -tracking-smaller font-medium">
           {title}
@@ -62,11 +66,19 @@ const FaqCard = ({
         />
       </div>
 
-      {active && (
-        <div className="border-t border-t-grey-4/50 border-dashed pt-3  text-grey-9 text-sm/[150%]">
-          {subtitle}
-        </div>
-      )}
+      <AnimatePresence>
+        {active && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: active ? 'auto' : 0, opacity: active ? 1 : 0 }}
+            transition={{ duration: 0.3 }}
+            exit={{ height: 0 }}
+            className="border-t border-t-grey-4/50 border-dashed overflow-hidden pt-3  text-grey-9 text-sm/[150%]"
+          >
+            {subtitle}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </Card>
   );
 };

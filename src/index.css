@@ -47,36 +47,37 @@
     0px 1px 22px 0px rgba(255, 255, 255, 0.1),
     0px 4px 4px 0px rgba(0, 0, 0, 0.05), 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
 }
-
 .outline-button-outline {
   position: relative;
   padding: 8px 16px;
   border: none;
   border-radius: 12px;
-  background-color: rgba(0, 0, 0, 0.1); /* #0000001a */
+  background-color: rgba(0, 0, 0, 0.1);
   color: white;
   cursor: pointer;
   z-index: 1;
   overflow: hidden;
   border-radius: 10px;
   border: 1px solid rgba(255, 170, 76, 0.07);
-
   background: rgba(255, 170, 76, 0.02);
 
-  /* Button Primary */
-  box-shadow: 0px 1px 3px 0px rgba(199, 220, 255, 0.35) inset,
-    0px 0px 20px 0px rgba(198, 204, 255, 0.2) inset,
-    0px 1px 22px 0px rgba(255, 255, 255, 0.1),
-    0px 4px 4px 0px rgba(0, 0, 0, 0.05), 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px 0 rgba(199, 220, 255, 0.35) inset,
+    0 0 20px 0 rgba(198, 204, 255, 0.2) inset,
+    0 1px 22px 0 rgba(255, 255, 255, 0.1), 0 4px 4px 0 rgba(0, 0, 0, 0.05),
+    0 10px 10px 0 rgba(0, 0, 0, 0.1);
+
   backdrop-filter: blur(10px);
+
+  /* ✨ Add transition */
+  transition: box-shadow 0.4s ease;
 }
 
 .outline-button-outline::before {
   content: '';
   position: absolute;
-  inset: 0; /* top: 0; right: 0; bottom: 0; left: 0; */
+  inset: 0;
   border-radius: inherit;
-  padding: 1px; /* stroke thickness */
+  padding: 1px;
   background: linear-gradient(0deg, #ffaa4c00, rgba(255, 170, 76, 1)),
     rgba(255, 170, 76, 0.07);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
@@ -88,6 +89,9 @@
   box-shadow: inset 0px 1px 3px #c7dcff33, inset 0px 0px 20px 0px #c6ccff33,
     0px 1px 22px 0px #ffffff1a, 0px 4px 4px 0px #0000000d,
     0px 10px 10px 0px #0000001a;
+
+  /* ✨ Add transition */
+  transition: background 0.4s ease, box-shadow 0.4s ease;
 }
 
 .gradient-button {
@@ -102,6 +106,7 @@
   cursor: pointer;
   z-index: 1;
   overflow: hidden;
+  transition: box-shadow 0.4s ease;
 }
 
 .gradient-button::before {
@@ -128,6 +133,26 @@
   mix-blend-mode: overlay;
   pointer-events: none;
   z-index: 2;
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* 🔥 On hover: Pink box-shadow + pink outlines */
+.outline-button-outline:hover,
+.gradient-button:hover {
+  box-shadow: 0px 1px 3px 0px rgba(199, 220, 255, 0.35) inset,
+    0px 4px 20px 0px rgba(198, 204, 255, 0.2) inset,
+    0px 2px 1px 0px rgba(242, 108, 167, 0.1),
+    0px 2px 4px 1px rgb(208, 101, 255, 0.05),
+    0px 5px 15px 0px rgb(242, 108, 167, 0.25);
+}
+
+.outline-button-outline:hover::before,
+.gradient-button:hover:before {
+  background: linear-gradient(0deg, #ff69b400, rgba(242, 108, 167, 1)),
+    rgba(242, 108, 167, 0.1);
+  box-shadow: inset 0px 1px 3px #ffb6c133, inset 0px 0px 20px 0px #ffc0cb33,
+    0px 1px 22px 0px #ffc0cb1a, 0px 4px 4px 0px #ff69b41a,
+    0px 10px 10px 0px #ff69b41a;
 }
 
 .gradient-text {
@@ -201,7 +226,6 @@
 .texture {
   background: url(../public/assets/images/asfalt-light.png) repeat center center;
   background-size: cover;
-  pointer-events: none;
 }
 
 .texture-2 {
@@ -431,4 +455,18 @@
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+.project-card h2 {
+  color: white;
+  transition: color 0.3s ease, background 0.3s ease;
+  background: none;
+}
+
+.project-card:hover h2 {
+  color: transparent;
+  background: linear-gradient(90deg, var(--primary-gradient));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

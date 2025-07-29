@@ -6,7 +6,7 @@ import LinkedIn from '@/../public/assets/icons/LinkedIn.svg';
 import Behance from '@/../public/assets/icons/Behance.svg';
 import Email from '@/../public/assets/icons/envelope.svg';
 import SixSelf from '@/../public/assets/icons/sixself.svg';
-import { Link } from 'react-router';
+import LinkWithWave from './link-with-wave';
 
 const Footer = () => {
   const socialIcons = [Email, Dribbble, Behance, X, LinkedIn, SixSelf];
@@ -51,19 +51,19 @@ const Footer = () => {
           </div>
 
           <div className="flex items-center gap-1">
-            <Link
+            <LinkWithWave
               to="/privacy-policy"
-              className="text-[#909090] p-1.5 text-sm/[14px] tracking-[0%] cursor-pointer font-geist"
+              className="text-[#909090] hover:text-grey-opaque transition-colors p-1.5 text-sm/[14px] tracking-[0%] cursor-pointer font-geist"
             >
               Privacy Policy
-            </Link>
+            </LinkWithWave>
             <span className="bg-[#909090] h-[18px] w-px"></span>
-            <Link
+            <LinkWithWave
               to="/termsofuse"
-              className="text-[#909090] p-1.5 text-sm/[14px] tracking-[0%] font-geist"
+              className="text-[#909090] hover:text-grey-opaque transition-colors p-1.5 text-sm/[14px] tracking-[0%] font-geist"
             >
               Terms of Use
-            </Link>
+            </LinkWithWave>
           </div>
         </div>
         <div className="flex flex-col items-center gap-2">
@@ -72,21 +72,25 @@ const Footer = () => {
           </h3>
 
           <div className="flex items-center justify-center gap-2">
-            <a
-              target="_blank"
-              href="#"
-              className="text-[#EDEDEB] font-medium text-sm/[14px] tracking-[0%] font-geist"
-            >
-              Upwork
-            </a>
+            <LinkWithWave to="" className="w-fit">
+              <a
+                target="_blank"
+                href="#"
+                className="text-[#EDEDEB] font-medium text-sm/[14px] tracking-[0%] font-geist"
+              >
+                Upwork
+              </a>
+            </LinkWithWave>
             <span className="text-[#909090] font-geist text-sm/[150%]">or</span>
-            <a
-              target="_blank"
-              href="#"
-              className="text-[#EDEDEB] font-medium text-sm/[14px] tracking-[0%] font-geist"
-            >
-              Contra
-            </a>
+            <LinkWithWave to="" className="">
+              <a
+                target="_blank"
+                href="#"
+                className="text-[#EDEDEB] font-medium text-sm/[14px] tracking-[0%] font-geist"
+              >
+                Contra
+              </a>
+            </LinkWithWave>
           </div>
         </div>
 

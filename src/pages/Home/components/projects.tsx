@@ -1,7 +1,7 @@
 import { ArrowRightUp } from '@solar-icons/react';
 import { projects } from '@/lib/constants';
 import Badge from '@/ui/badge';
-
+import { motion, useAnimate } from 'motion/react';
 const ProjectsSection = () => {
   return (
     <section className="flex flex-col gap-6 px-4 md:grid md:grid-cols-2">
@@ -23,8 +23,20 @@ export const ProjectCard = ({
   image: string;
   category: string;
 }) => {
+  const [scope, animate] = useAnimate();
+  const handleMouseEnter = () => {
+    animate('button', { rotate: 45 });
+  };
+  const handleMouseLeave = () => {
+    animate('button', { rotate: 0 });
+  };
   return (
-    <div className="relative cursor-pointer w-full shrink-0">
+    <motion.div
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      ref={scope}
+      className="relative project-card cursor-pointer w-full shrink-0"
+    >
       <div className="rounded-3xl h-[309px] w-full">
         <img
           src={image}
@@ -45,10 +57,16 @@ export const ProjectCard = ({
               {description}...
             </p>
           </div>
-          <ArrowRightUp className="text-[#909090]  shrink-0" size={16} />
+          <button>
+            <ArrowRightUp
+              weight="Broken"
+              className="text-[#909090]  shrink-0"
+              size={16}
+            />
+          </button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
