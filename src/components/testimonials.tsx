@@ -1,26 +1,57 @@
 import { testimonials } from '@/lib/constants';
 import TestimonialBackground from '@/../public/assets/images/testimonial-bg.png';
+import { useEffect, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
-const Testimonials = () => {
+const INTERVAL = 100;
+const TOTAL_DURATION = 10000;
+
+export const Testimonials = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    let elapsed = 0;
+    const interval = setInterval(() => {
+      elapsed += INTERVAL;
+      setProgress((elapsed / TOTAL_DURATION) * 100);
+
+      if (elapsed >= TOTAL_DURATION) {
+        setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+        elapsed = 0;
+        setProgress(0);
+      }
+    }, INTERVAL);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const matched = testimonials[currentIndex];
+
   return (
     <section className="relative bg-primary w-full h-[247px] flex flex-col texture gap-2.5 overflow-hidden">
-      <div className="flex items-start">
-        {testimonials.map((testimonial, index) => (
+      <div className="flex items-start relative z-30">
+        <AnimatePresence mode="wait">
           <Testimonial
-            testimonial={testimonial.testimonial}
-            images={testimonial.images}
-            name={testimonial.name}
-            position={testimonial.position}
+            key={matched.id}
+            testimonial={matched.testimonial}
+            images={matched.images}
+            name={matched.name}
+            position={matched.position}
+          />
+        </AnimatePresence>
+      </div>
+
+      <div className="absolute z-10 top-[-5px] left-0 flex items-center gap-2 pt-2">
+        {testimonials.map((_, index) => (
+          <Indicator
+            progress={progress}
             key={index}
+            active={currentIndex === index}
           />
         ))}
       </div>
-      <div className="absolute z-10  top-0 flex items-center gap-2">
-        {testimonials.map((_, index) => (
-          <Indicator key={index} active={false} />
-        ))}
-        {/* Add any other content here */}
-      </div>
+
       <div className="absolute opacity-40 inset-0 z-0">
         <img
           style={{
@@ -30,14 +61,13 @@ const Testimonials = () => {
           alt="testimonial texture"
           className="w-full h-full object-cover opacity-20 backdrop-blur-xl"
         />
-        {/* Gradient Overlay */}
         <div
           className="absolute inset-0"
           style={{
             background: '#030712',
             opacity: 0.5,
             filter: 'blur(10px)',
-            mixBlendMode: 'overlay', // Optional: add for texture effect
+            mixBlendMode: 'overlay',
           }}
         />
         <div
@@ -46,7 +76,7 @@ const Testimonials = () => {
             background: 'linear-gradient(var(--button-primary-gradient))',
             filter: 'blur(20px)',
             opacity: 0.2,
-            mixBlendMode: 'overlay', // Optional: add for texture effect
+            mixBlendMode: 'overlay',
           }}
         />
       </div>
@@ -54,13 +84,24 @@ const Testimonials = () => {
   );
 };
 
-const Indicator = ({ active = false }: { active?: boolean }) => {
+const Indicator = ({
+  active = false,
+  progress,
+}: {
+  active?: boolean;
+  progress: number;
+}) => {
   return (
-    <div
-      className={`w-[90px] rounded-xs h-0.5 ${
-        active ? 'bg-[#636363]' : 'bg-[#636363]'
-      }`}
-    ></div>
+    <div className="w-[90px] rounded-xs h-0.5 bg-[#636363] overflow-hidden">
+      {active && (
+        <div
+          className="h-full bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 transition-all duration-100"
+          style={{
+            width: `${progress}%`,
+          }}
+        />
+      )}
+    </div>
   );
 };
 
@@ -76,7 +117,13 @@ const Testimonial = ({
   position: string;
 }) => {
   return (
-    <div className="flex flex-col z-30 gap-4 pl-4 py-8 pr-4">
+    <motion.div
+      initial={{ opacity: 0, filter: 'blur(2px)' }}
+      animate={{ opacity: 1, filter: 'blur(0px)' }}
+      exit={{ opacity: 0, filter: 'blur(2px)' }}
+      transition={{ duration: 0.5 }}
+      className="flex flex-col gap-4 pl-4 py-8 pr-4 absolute inset-0"
+    >
       <h2 className="text-grey-opaque text-xl/[25.2px] font-light tracking-[-0.72px] text-start font-geist">
         “{testimonial}”
       </h2>
@@ -84,16 +131,17 @@ const Testimonial = ({
       <div className="flex items-center gap-4">
         <div className="flex items-center min-w-[67px] min-h-[38px] relative">
           {images[0] && (
-            <img
-              src={images[0]}
-              className="object-cover shrink-0 size-10 absolute bottom-0 left-0 rounded-full border-2 border-[#EDEDEB] testimonial-image-shadow"
-            />
+            <div className="object-cover shrink-0 size-10 absolute flex items-center justify-center z-30 bottom-0 left-0 rounded-full border-2 border-[#EDEDEB] testimonial-image-shadow">
+              <img src={images[0]} className="w-9 h-9 object-cover" />
+            </div>
           )}
           {images[1] && (
-            <img
-              src={images[1]}
-              className="object-cover size-10 absolute bottom-0 left-7 rounded-full border-2 border-[#EDEDEB] testimonial-image-shadow"
-            />
+            <div className="object-cover  flex items-center justify-center overflow-hidden shrink-0 size-10 bg-grey-opaque absolute bottom-0 left-7 rounded-full border-2 border-[#EDEDEB] testimonial-image-shadow">
+              <img
+                src={images[1]}
+                className="w-10 h-10 mix-blend-difference object-cover"
+              />
+            </div>
           )}
         </div>
         <div className="flex flex-col">
@@ -105,8 +153,6 @@ const Testimonial = ({
           </h3>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
-
-export default Testimonials;

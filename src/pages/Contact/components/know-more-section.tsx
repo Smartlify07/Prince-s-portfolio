@@ -71,7 +71,7 @@ const SocialIcon = ({
   alt: string;
 }) => {
   return (
-    <div className="flex flex-col items-center gap-2 p-4">
+    <div className="flex flex-col items-center gap-2 p-4 rounded-3xl transition-colors hover:bg-[#1F1F2B]">
       <img src={icon} alt={alt} className="size-28" />
       <p className="text-grey-9 text-center -tracking-[0.42px] text-sm/[150%]">
         {text}

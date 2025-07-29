@@ -1,69 +1,79 @@
-import AdobeIllustrator from '/public/assets/icons/Adobe_Illustrator.svg';
-import Jira from '/public/assets/icons/Jira.svg';
-import Framer from '/public/assets/icons/Framer.svg';
-import Design from '/public/assets/icons/designVector.svg';
-import Layers from '/public/assets/icons/Layers.svg';
-import Global from '/public/assets/icons/Global.svg';
-import Settings from '/public/assets/icons/Settings.svg';
-import Figma from '/public/assets/icons/Figma.svg';
-import Smartphone from '/public/assets/icons/deviceVector.svg';
-import Amaka from '/public/assets/images/testimonials/amaka.png';
-import TymeTech from '/public/assets/images/testimonials/tyme.png';
+import AdobeIllustrator from '/assets/icons/Adobe_Illustrator.svg';
+import Jira from '/assets/icons/Jira.svg';
+import Framer from '/assets/icons/Framer.svg';
+import Design from '/assets/icons/designVector.svg';
+import Layers from '/assets/icons/Layers.svg';
+import Global from '/assets/icons/Global.svg';
+import Settings from '/assets/icons/Settings.svg';
+import Figma from '/assets/icons/Figma.svg';
+import Smartphone from '/assets/icons/deviceVector.svg';
 
-import BusBooks from '/public/assets/images/projects/busbooks.png';
-import VifZack from '/public/assets/images/projects/Vifzack.png';
-import BlesSoftware from '/public/assets/images/projects/Bles_Software.png';
-import MaxWellEv from '/public/assets/images/projects/Maxwell_Landing_Page.png';
-import KaleriAi from '/public/assets/images/projects/Kaleri.png';
-import CrawlerAI from '/public/assets/images/projects/Crawler.png';
+// Testimonials
+import Amaka from '/assets/images/testimonials/amaka.png';
+import TymeTech from '/assets/images/testimonials/tyme.png';
+import SaferVest from '/assets/images/testimonials/Safervest_Logo.png';
+import StudyVault from '/assets/images/testimonials/StudyVaultLogo.png';
+import SaferVestFounder from '/assets/images/testimonials/David_U.png';
+import StudyVaultFounder from '/assets/images/testimonials/Kelechi_O.png';
+import KaleriAI from '/assets/images/testimonials/KaleriAILogo.png';
+import KaleriAIFounder from '/assets/images/testimonials/Smith_A_Kaleri.png';
+import BlesSoftwareLogo from '/assets/images/testimonials/Bles.png';
+import BlesSoftwareFounder from '/assets/images/testimonials/Stas.png';
 
-import ResearchIcon from '/public/assets/images/services/Research Image.svg';
-import Conceptualize from '/public/assets/images/services/Conceptualize Image.svg';
-import Testing from '/public/assets/images/services/UX Testing Image.svg';
-import Implement from '/public/assets/images/services/Implement Image.svg';
+import BusBooks from '/assets/images/projects/busbooks.png';
+import VifZack from '/assets/images/projects/Vifzack.png';
+import BlesSoftware from '/assets/images/projects/Bles_Software.png';
+import MaxWellEv from '/assets/images/projects/Maxwell_Landing_Page.png';
+import KaleriAi from '/assets/images/projects/Kaleri.png';
+import CrawlerAI from '/assets/images/projects/Crawler.png';
 
-import HealthCareIcon from '/public/assets/images/services/Healthcare Image.svg';
-import FintechIcon from '/public/assets/images/services/Fintech Image.svg';
-import FitnessIcon from '/public/assets/images/services/Health & Fitness Image.svg';
-import EdTech from '/public/assets/images/services/EdTech Image.svg';
-import FashionDesign from '/public/assets/images/services/Fashion & Design Image.svg';
-import Food from '/public/assets/images/services/Food & Restaurant Image.svg';
-import Lawyers from '/public/assets/images/services/Lawyers & Attorneys Image.svg';
-import Commerce from '/public/assets/images/services/Retail & Ecommerce Image.svg';
-import NonProfit from '/public/assets/images/services/Non-Profit Organizations Image.svg';
+import ResearchIcon from '/assets/images/services/Research Image.svg';
+import Conceptualize from '/assets/images/services/Conceptualize Image.svg';
+import Testing from '/assets/images/services/UX Testing Image.svg';
+import Implement from '/assets/images/services/Implement Image.svg';
 
-import Jira2 from '/public/assets/images/about/jira.svg';
-import Figma2 from '/public/assets/images/about/figma.svg';
-import Protopie from '/public/assets/images/about/protopie.svg';
-import Framer2 from '/public/assets/images/about/framer.svg';
-import Lovalble from '/public/assets/images/about/Lovable.svg';
-import Maze from '/public/assets/images/about/maze.svg';
-import Jitter from '/public/assets/images/about/jitter.svg';
-import Adobe from '/public/assets/images/about/jitter.svg';
-import Gpt from '/public/assets/images/about/gpt.svg';
-import Linear from '/public/assets/images/about/linear.svg';
-import Shots from '/public/assets/images/about/shots.svg';
+import HealthCareIcon from '/assets/images/services/Healthcare Image.svg';
+import FintechIcon from '/assets/images/services/Fintech Image.svg';
+import FitnessIcon from '/assets/images/services/Health & Fitness Image.svg';
+import EdTech from '/assets/images/services/EdTech Image.svg';
+import FashionDesign from '/assets/images/services/Fashion & Design Image.svg';
+import Food from '/assets/images/services/Food & Restaurant Image.svg';
+import Lawyers from '/assets/images/services/Lawyers & Attorneys Image.svg';
+import Commerce from '/assets/images/services/Retail & Ecommerce Image.svg';
+import NonProfit from '/assets/images/services/Non-Profit Organizations Image.svg';
 
-import CollaborationImage from '/public/assets/images/about/collab2.png';
-import ArchitectImage from '/public/assets/images/about/architect.png';
-import EfficientImage from '/public/assets/images/about/efficient.png';
-import PrioritizeImage from '/public/assets/images/about/prioritize.png';
+import Jira2 from '/assets/images/about/jira.svg';
+import Figma2 from '/assets/images/about/figma.svg';
+import Protopie from '/assets/images/about/protopie.svg';
+import Framer2 from '/assets/images/about/framer.svg';
+import Lovalble from '/assets/images/about/Lovable.svg';
+import Maze from '/assets/images/about/maze.svg';
+import Jitter from '/assets/images/about/jitter.svg';
+import Adobe from '/assets/images/about/jitter.svg';
+import Gpt from '/assets/images/about/gpt.svg';
+import Linear from '/assets/images/about/linear.svg';
+import Shots from '/assets/images/about/shots.svg';
 
-import UserCenteredDesignImage from '@/../public/assets/images/services/exclusive-deals/user-centered-design.png';
-import InnovativeSolutionsImage from '@/../public/assets/images/services/exclusive-deals/innovative-solutions.png';
-import ExperiencedTeam from '@/../public/assets/images/services/exclusive-deals/experienced-team.png';
-import UXResearch from '@/../public/assets/images/services/exclusive-deals/ux-research.png';
-import EnterpriseUX from '@/../public/assets/images/services/exclusive-deals/enterprise-ux.png';
-import WebAppDesign from '@/../public/assets/images/services/exclusive-deals/web-app-design.png';
-import MobileAppDesign from '@/../public/assets/images/services/exclusive-deals/mobile-app.png';
-import WebDesign from '@/../public/assets/images/services/exclusive-deals/web-design.png';
-import LandingPage from '@/../public/assets/images/services/exclusive-deals/landing-page.png';
-import WebRedesign from '@/../public/assets/images/services/exclusive-deals/web-redesign.png';
-import BrandIdentity from '@/../public/assets/images/services/exclusive-deals/brand-identity.png';
-import LogoDesign from '@/../public/assets/images/services/exclusive-deals/logo-design.png';
-import Illustration from '@/../public/assets/images/services/exclusive-deals/illustration-design.png';
-import UXTester from '@/../public/assets/images/services/exclusive-deals/ux-tester.png';
-import UXAudit from '@/../public/assets/images/services/exclusive-deals/ux-audit.png';
+import CollaborationImage from '/assets/images/about/collab2.png';
+import ArchitectImage from '/assets/images/about/architect.png';
+import EfficientImage from '/assets/images/about/efficient.png';
+import PrioritizeImage from '/assets/images/about/prioritize.png';
+
+import UserCenteredDesignImage from '/assets/images/services/exclusive-deals/user-centered-design.png';
+import InnovativeSolutionsImage from '/assets/images/services/exclusive-deals/innovative-solutions.png';
+import ExperiencedTeam from '/assets/images/services/exclusive-deals/experienced-team.png';
+import UXResearch from '/assets/images/services/exclusive-deals/ux-research.png';
+import EnterpriseUX from '/assets/images/services/exclusive-deals/enterprise-ux.png';
+import WebAppDesign from '/assets/images/services/exclusive-deals/web-app-design.png';
+import MobileAppDesign from '/assets/images/services/exclusive-deals/mobile-app.png';
+import WebDesign from '/assets/images/services/exclusive-deals/web-design.png';
+import LandingPage from '/assets/images/services/exclusive-deals/landing-page.png';
+import WebRedesign from '/assets/images/services/exclusive-deals/web-redesign.png';
+import BrandIdentity from '/assets/images/services/exclusive-deals/brand-identity.png';
+import LogoDesign from '/assets/images/services/exclusive-deals/logo-design.png';
+import Illustration from '/assets/images/services/exclusive-deals/illustration-design.png';
+import UXTester from '/assets/images/services/exclusive-deals/ux-tester.png';
+import UXAudit from '/assets/images/services/exclusive-deals/ux-audit.png';
 
 type Tool = {
   Icon: string;
@@ -123,11 +133,45 @@ export const tools: Tool[] = [
 
 export const testimonials = [
   {
+    id: 1,
     name: 'Amaka I.',
     position: 'Product Manager at Tymetech',
     testimonial:
       'Ezekiel didn’t just design our product — he transformed it. Every screen now feels intentional and user-focused. Working with him was one of the best decisions we made for our MVP.',
     images: [Amaka, TymeTech],
+  },
+  {
+    id: 2,
+    name: 'Smith A.',
+    position: 'Co-founder at Kaleri AI ',
+    testimonial:
+      'His designs speak louder than words. From kickoff to handoff, Ezekiel was responsive, thoughtful, and insanely creative. We got compliments the week we launched.',
+    images: [KaleriAIFounder, KaleriAI],
+  },
+  {
+    id: 3,
+    name: 'Stas S.',
+    position: 'CEO at Bles Software',
+    testimonial:
+      'We needed a modern, mobile-friendly interface that still worked for our older and newly clients — Ezekiel nailed both. His ability to balance design beauty with usability is next level.',
+    images: [BlesSoftwareFounder, BlesSoftwareLogo],
+  },
+  {
+    id: 4,
+    name: 'David U.',
+    position: 'Founder at Safevest Inc',
+    testimonial:
+      'Ezekiel joined our project mid-sprint and still managed to elevate the entire experience. His Figma work is clean, scalable, and a dream to hand off to devs.',
+    images: [SaferVestFounder, SaferVest],
+  },
+  {
+    id: 5,
+
+    name: 'Kelechi O.',
+    position: 'CEO & Back-End Engineer at StudyVault',
+    testimonial:
+      'Beyond the visuals, Ezekiel brings strategy. He asked smart questions we didn’t think of, and helped us shape a product our users now love. Total game-changer.',
+    images: [StudyVaultFounder, StudyVault],
   },
 ];
 

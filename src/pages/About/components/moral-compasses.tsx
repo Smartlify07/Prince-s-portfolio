@@ -5,6 +5,7 @@ import Card from '@/ui/card';
 import Star from '@/../public/assets/icons/star.svg';
 import { cn } from '@/lib/utils';
 import { useState } from 'react';
+import { AnimatePresence, motion } from 'motion/react';
 
 export const MoralCompasses = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -88,11 +89,19 @@ const MoralCompassCard = ({
         />
       </div>
 
-      {active && (
-        <div className="border-t border-t-grey-4/50 border-dashed pt-3  text-grey-9 text-sm/[150%]">
-          {subtitle}
-        </div>
-      )}
+      <AnimatePresence>
+        {active && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: active ? 'auto' : 0, opacity: active ? 1 : 0 }}
+            transition={{ duration: 0.3 }}
+            exit={{ height: 0 }}
+            className="border-t border-t-grey-4/50 border-dashed pt-3 overflow-hidden text-grey-9 text-sm/[150%]"
+          >
+            {subtitle}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </Card>
   );
 };
