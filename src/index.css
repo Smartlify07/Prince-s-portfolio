@@ -476,3 +476,15 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.footer-bottom {
+  background: url(/public/assets/images/footer-sm.png) no-repeat;
+  background-size: cover;
+}
+
+@media screen and (min-width: 1024px) {
+  .footer-bottom {
+    background: url(/public/assets/images/footer-lg.png) no-repeat;
+    background-size: cover;
+  }
+}

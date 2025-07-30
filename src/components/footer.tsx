@@ -13,6 +13,8 @@ const Footer = () => {
   return (
     <footer className="py-10 px-4 md:px-0 bg-sidebar-bg overflow-hidden relative grid gap-10">
       <div className="absolute inset-0 bg-[rgba(225,185,148,0.1)] opacity-40"></div>
+      <div className="absolute w-full hidden lg:block h-[502px] md:w-[502px] left-0 footer-bottom opacity-10"></div>
+
       <section className="flex flex-col items-center gap-8 relative">
         <header className=" relative md:static flex flex-col items-center ">
           <h1 className="gradient-text font-medium font-geist text-[40px]/[52px] tracking-1 text-center">
@@ -40,7 +42,9 @@ const Footer = () => {
         </div>
       </section>
       <div className="rounded-full circle-gradient size-[1054px] absolute blur-[200px] right-[48px] top-[300px]"></div>
-      <section className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between p-4 md:pt-4 md:px-4 border-t z-10 border-[#4C4C4C]/40">
+
+      <section className="flex flex-col gap-8 relative md:flex-row md:items-center md:justify-between p-4 md:pt-4 md:px-4 border-t z-10 border-[#4C4C4C]/40">
+        <div className="absolute w-full lg:hidden h-[502px] md:w-[502px] left-0 top-0 footer-bottom opacity-50"></div>
         <div className="flex items-center flex-col gap-2.5">
           <div className="flex items-center gap-4">
             {socialIcons.map((icon, index) => (
