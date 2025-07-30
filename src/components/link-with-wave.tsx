@@ -26,7 +26,7 @@ export default function LinkWithWave({
       to={to}
       className={cn('relative', className)}
     >
-      {children}
+      <div>{children}</div>
       <AnimatePresence mode="popLayout">
         {showLine && (
           <motion.div

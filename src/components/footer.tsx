@@ -72,24 +72,18 @@ const Footer = () => {
           </h3>
 
           <div className="flex items-center justify-center gap-2">
-            <LinkWithWave to="" className="w-fit">
-              <a
-                target="_blank"
-                href="#"
-                className="text-[#EDEDEB] font-medium text-sm/[14px] tracking-[0%] font-geist"
-              >
-                Upwork
-              </a>
+            <LinkWithWave
+              to=""
+              className="text-[#EDEDEB] font-medium text-sm/[14px] tracking-[0%] font-geist"
+            >
+              Upwork
             </LinkWithWave>
             <span className="text-[#909090] font-geist text-sm/[150%]">or</span>
-            <LinkWithWave to="" className="">
-              <a
-                target="_blank"
-                href="#"
-                className="text-[#EDEDEB] font-medium text-sm/[14px] tracking-[0%] font-geist"
-              >
-                Contra
-              </a>
+            <LinkWithWave
+              to=""
+              className="text-[#EDEDEB] font-medium text-sm/[14px] tracking-[0%] font-geist"
+            >
+              Contra
             </LinkWithWave>
           </div>
         </div>

@@ -2,6 +2,7 @@ import { testimonials } from '@/lib/constants';
 import TestimonialBackground from '@/../public/assets/images/testimonial-bg.png';
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { cn } from '@/lib/utils';
 
 const INTERVAL = 100;
 const TOTAL_DURATION = 10000;
@@ -33,6 +34,7 @@ export const Testimonials = () => {
       <div className="flex items-start relative z-30">
         <AnimatePresence mode="wait">
           <Testimonial
+            id={matched.id}
             key={matched.id}
             testimonial={matched.testimonial}
             images={matched.images}
@@ -95,7 +97,7 @@ const Indicator = ({
     <div className="w-[90px] rounded-xs h-0.5 bg-[#636363] overflow-hidden">
       {active && (
         <div
-          className="h-full bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 transition-all duration-100"
+          className="h-full bg-linear-[180deg,var(--color-bright-purple)_-3.1%,var(--color-bright-pink)_49.48%,var(--color-bright-orange)_100%] transition-all duration-100"
           style={{
             width: `${progress}%`,
           }}
@@ -110,11 +112,13 @@ const Testimonial = ({
   images,
   name,
   position,
+  id,
 }: {
   testimonial: string;
   images: string[];
   name: string;
   position: string;
+  id: number;
 }) => {
   return (
     <motion.div
@@ -139,7 +143,10 @@ const Testimonial = ({
             <div className="object-cover  flex items-center justify-center overflow-hidden shrink-0 size-10 bg-grey-opaque absolute bottom-0 left-7 rounded-full border-2 border-[#EDEDEB] testimonial-image-shadow">
               <img
                 src={images[1]}
-                className="w-10 h-10 mix-blend-difference object-cover"
+                className={cn(
+                  'w-10 h-10 object-cover',
+                  id === 3 && 'mix-blend-difference'
+                )}
               />
             </div>
           )}

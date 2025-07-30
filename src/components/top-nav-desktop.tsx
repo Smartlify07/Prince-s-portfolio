@@ -1,12 +1,9 @@
-import Behance from '@/../public/assets/icons/Behance.svg';
-import Dribbble from '@/../public/assets/icons/Dribbble.svg';
-import Twitter from '@/../public/assets/icons/Twitter.svg';
-import LinkedIn from '@/../public/assets/icons/LinkedIn.svg';
 import { CaseRoundMinimalistic, Crown, Cursor, User } from '@solar-icons/react';
 import { useLocation } from 'react-router';
 import { cn } from '@/lib/utils';
 import { validPaths } from '@/lib/valid-paths';
 import LinkWithWave from './link-with-wave';
+import { Behance, Dribbble, LinkedIn, Twitter } from './contact-icons';
 
 const navLinks = [
   { label: 'Projects', path: '/', icon: CaseRoundMinimalistic },
@@ -78,12 +75,8 @@ const ContactSection = () => {
       <div className="flex text-sm/[14px] items-center gap-2 text-grey-9">
         Connect with me at:
         <div className="flex items-center gap-0.5">
-          {icons.map((icon, i) => (
-            <img
-              className="p-1.5 hover:rounded-sm hover:text-[#FCFFEC] transition-colors hover:bg-[#1F1F2B]"
-              src={icon}
-              key={i}
-            />
+          {icons.map((Icon, i) => (
+            <Icon key={i} />
           ))}
         </div>
       </div>
