@@ -15,7 +15,7 @@ export const ExclusiveDeals = () => {
   return (
     <section className="grid md:flex md:flex-row md:items-start gap-6">
       <div className="rounded-4xl p-px bg-[#171721] w-full md:w-[40%] overflow-x-auto scrollbar-hide">
-        <div className="flex gap-4 rounded-4xl h-[800px] overflow-y-auto scrollbar-hide p-6 md:flex-col md:items-stretch">
+        <div className="flex  gap-4 rounded-4xl md:h-[800px] overflow-y-auto scrollbar-hide p-6 md:flex-col md:items-stretch">
           {exclusiveDeals.map((deal, index) => (
             <ExclusiveDealCard
               currentDeal={currentDeal}
@@ -27,19 +27,20 @@ export const ExclusiveDeals = () => {
           ))}
         </div>
       </div>
-      {exclusiveDeals.map(
-        (deal, index) =>
-          currentDeal === index && (
-            <AnimatePresence>
+      <AnimatePresence>
+        {exclusiveDeals.map(
+          (deal, index) =>
+            currentDeal === index && (
               <ExclusiveDealExtendedCard
+                key={index}
                 badgeTitle={'Productcraft'}
                 title={deal.title}
                 image={deal.image}
                 description={deal.description}
               />
-            </AnimatePresence>
-          )
-      )}
+            )
+        )}
+      </AnimatePresence>
     </section>
   );
 };

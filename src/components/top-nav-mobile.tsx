@@ -6,13 +6,10 @@ import {
 } from '@solar-icons/react';
 import Logo from '@/../public/assets/images/Logo.svg';
 
-import Behance from '@/../public/assets/icons/Behance.svg';
-import Dribbble from '@/../public/assets/icons/Dribbble.svg';
-import Twitter from '@/../public/assets/icons/Twitter.svg';
-import LinkedIn from '@/../public/assets/icons/LinkedIn.svg';
 import Button from '@/ui/button';
 import { useState } from 'react';
 import { Link } from 'react-router';
+import { Behance, Dribbble, LinkedIn, Twitter } from './contact-icons';
 
 export default function TopNavMobile() {
   const [isOpen, setIsOpen] = useState(false);
@@ -49,11 +46,11 @@ const LogoSection = ({
             Designer, Researcher, and Creator
           </span>
         </Link>
-        <div className="border-r border-l border-dashed flex items-center gap-2 border-grey-9 py-4 px-[7px]">
+        <div className="border-r border-l  available-slots border-dashed flex items-center gap-2 border-grey-9 py-4 px-[7px]">
           <div className="size-5 flex items-center rounded-full justify-center bg-linear-[270deg,rgba(23,201,100,0.02)_2.08%,rgba(23,201,100,0.10)_50.96%,rgba(23,201,100,0.02)_97.92%]">
             <div className="bg-green-500 size-2.5 rounded-full"></div>
           </div>
-          <span className="text-sm  -tracking-smallest text-grey-9">
+          <span className="text-sm  -tracking-[0.45px] text-grey-9">
             2 spots left
           </span>
         </div>
@@ -75,8 +72,8 @@ const BottomSection = () => {
       <div className="flex text-sm/[14px] items-center gap-2 text-grey-9">
         Connect with me at:
         <div className="flex items-center gap-0.5">
-          {icons.map((icon, i) => (
-            <img className="p-1.5" src={icon} key={i} />
+          {icons.map((Icon, i) => (
+            <Icon key={i} />
           ))}
         </div>
       </div>

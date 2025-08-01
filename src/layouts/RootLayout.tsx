@@ -10,6 +10,7 @@ import ScrollToTop from '@/components/scroll-to-top';
 import useScroll from '@/hooks/useScroll';
 import { Pricing } from '@/components/pricing';
 import { cn } from '@/lib/utils';
+import BackgroundImage from '@/../public/assets/images/service-page-bg.svg';
 
 const RootLayout = () => {
   const pathname = useLocation().pathname;
@@ -49,7 +50,15 @@ const RootLayout = () => {
   const { mainRef } = useScroll();
 
   return (
-    <main className="flex flex-col md:flex-row min-h-screen bg-sidebar-bg relative">
+    <main
+      style={{
+        backgroundImage: `url(${BackgroundImage})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'contain',
+        backgroundPosition: 'top',
+      }}
+      className="flex flex-col md:flex-row min-h-screen bg-sidebar-bg relative"
+    >
       <TopNavMobile />
       <div className="md:block md:w-[33.3%] hidden bg-sidebar-bg fixed top-0 left-0 bottom-0 z-20">
         <Sidebar />

@@ -2,6 +2,7 @@ import { ArrowRightUp } from '@solar-icons/react';
 import { projects } from '@/lib/constants';
 import Badge from '@/ui/badge';
 import { motion, useAnimate } from 'motion/react';
+import { useNavigate } from 'react-router';
 const ProjectsSection = () => {
   return (
     <section className="flex flex-col gap-6 px-4 md:grid md:grid-cols-2">
@@ -30,6 +31,7 @@ export const ProjectCard = ({
   const handleMouseLeave = () => {
     animate('button', { rotate: 0 });
   };
+  const router = useNavigate();
   return (
     <motion.div
       onMouseEnter={handleMouseEnter}
@@ -57,7 +59,12 @@ export const ProjectCard = ({
               {description}...
             </p>
           </div>
-          <button>
+          <button
+            className="cursor-pointer"
+            onClick={() => {
+              router('/projects/1');
+            }}
+          >
             <ArrowRightUp
               weight="Broken"
               className="text-[#909090]  shrink-0"
