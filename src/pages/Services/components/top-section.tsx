@@ -25,7 +25,7 @@ export const TopSection = () => {
           <h1 className="text-3xl font-medium tracking-1 text-[40px] text-[#909090] font-geist">
             I specialize in
           </h1>
-          <div className="relative min-h-[100px] w-fit ">
+          <div className="relative w-fit ">
             <TypeIt
               as="h1"
               className="text-3xl font-medium font-geist services-text-gradient tracking-1 text-[40px] text"
