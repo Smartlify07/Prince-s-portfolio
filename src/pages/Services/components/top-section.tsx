@@ -1,10 +1,9 @@
 import Badge from '@/ui/badge';
 import Icon from '@/../public/assets/icons/selected-works.svg';
-import { useEffect, useState } from 'react';
-import { AnimatePresence, motion } from 'motion/react';
+import { motion } from 'motion/react';
+import TypeIt from 'typeit-react';
 
 export const TopSection = () => {
-  const [currentText, setCurrentText] = useState(0);
   const texts = [
     'UI/UX Design',
     'Branding and visual design',
@@ -13,14 +12,7 @@ export const TopSection = () => {
     'No-Code Development',
     'Collaboration & Consulting',
   ];
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentText((prev) =>
-        currentText === texts.length - 1 ? 0 : prev + 1
-      );
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [currentText, texts.length]);
+
   return (
     <section className="flex flex-col gap-6 px-4 md:px-0">
       <Badge className="text-[#EDEDEB] text-xl/[20px] px-2 py-2.5 opacity-50 font-medium flex gap-2 items-center font-geist self-start">
@@ -33,20 +25,44 @@ export const TopSection = () => {
           <h1 className="text-3xl font-medium tracking-1 text-[40px] text-[#909090] font-geist">
             I specialize in
           </h1>
-          <div className="relative min-h-[100px] md:min-h-auto">
-            {' '}
-            <AnimatePresence mode="wait">
-              <motion.h1
-                key={currentText}
-                initial={{ y: 40, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                exit={{ y: -40, opacity: 0 }}
-                transition={{ duration: 0.5, ease: 'easeInOut' }}
-                className="absolute font-medium tracking-1 text-[36px] services-text-gradient font-geist"
-              >
-                {texts[currentText]}
-              </motion.h1>
-            </AnimatePresence>
+          <div className="relative min-h-[100px] w-fit ">
+            <TypeIt
+              as="h1"
+              className="text-3xl font-medium font-geist services-text-gradient tracking-1 text-[40px] text"
+              getBeforeInit={(instance) => {
+                instance
+                  .type(texts[0])
+                  .pause(2500)
+                  .delete(texts[0].length)
+                  .pause(500)
+                  .type(texts[1])
+                  .pause(2500)
+                  .delete(texts[1].length)
+                  .pause(500)
+                  .type(texts[2])
+                  .pause(2500)
+                  .delete(texts[2].length)
+                  .pause(500)
+                  .type(texts[3])
+                  .pause(2500)
+                  .delete(texts[3].length)
+                  .pause(500)
+                  .type(texts[4])
+                  .pause(2500)
+                  .delete(texts[4].length)
+                  .pause(500)
+                  .type(texts[5])
+                  .pause(2500)
+                  .delete(texts[5].length)
+                  .pause(500);
+
+                return instance;
+              }}
+              options={{
+                loop: true,
+                speed: 100,
+              }}
+            />
           </div>
         </div>
         <motion.p className="text-sm/[150%] font-normal font-geist text-[#909090]">
