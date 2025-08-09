@@ -1,5 +1,4 @@
 import Star from '@/../public/assets/icons/Star Icon.svg';
-import Headphones from '@/../public/assets/icons/Headphones Icon.svg';
 import Suitcase from '@/../public/assets/icons/Suitcase Icon.svg';
 import { SpotifyEmbed } from './spotify-embed';
 
@@ -28,15 +27,8 @@ export const MoreInfo = () => {
           </span>
         </p>
       </div>
-      <div className="flex flex-col md:flex-row md:items-center text-grey-opaque gap-2">
-        <div className="flex items-center gap-4">
-          <img src={Headphones} />
-          <p className="text-sm font-normal -tracking-smallest">
-            Shipping while enjoying some tunes
-          </p>
-        </div>
-        <SpotifyEmbed />
-      </div>
+
+      <SpotifyEmbed />
     </section>
   );
 };
