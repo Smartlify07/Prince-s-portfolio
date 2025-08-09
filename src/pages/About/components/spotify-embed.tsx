@@ -17,7 +17,7 @@ export const SpotifyEmbed = () => {
     const fetchCurrentTrack = async () => {
       try {
         const res = await fetch(
-          'http://localhost:3000/api/spotify-currently-playing',
+          'https://ezekiels-portfolio-backend.onrender.com/api/spotify-currently-playing',
           {
             method: 'GET',
             headers: {
@@ -38,6 +38,12 @@ export const SpotifyEmbed = () => {
       }
     };
     fetchCurrentTrack();
+    window.addEventListener('focus', fetchCurrentTrack);
+    window.addEventListener('visibilitychange', fetchCurrentTrack);
+
+    return () => {
+      window.removeEventListener('focus', fetchCurrentTrack);
+    };
   }, []);
 
   const trackDisplay = track?.playing
@@ -50,7 +56,7 @@ export const SpotifyEmbed = () => {
         <img src={Headphones} />
         <p className="text-sm font-normal flex items-center gap-2 -tracking-smallest">
           Shipping while enjoying some tunes
-          <span className="spotify-text text-sm font-inter-tight italic">
+          <span className="spotify-text text-sm truncate overflow-ellipsis w-[150px] md:w-auto font-inter-tight italic">
             {loading && 'Getting track...'} {track && trackDisplay}
           </span>
         </p>
