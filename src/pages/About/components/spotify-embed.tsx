@@ -17,7 +17,7 @@ export const SpotifyEmbed = () => {
     const fetchCurrentTrack = async () => {
       try {
         const res = await fetch(
-          'https://ezekiels-portfolio-backend.onrender.com/api/spotify-currently-playing',
+          'https://ezekiels-portfolio-backend.onrender.com/currently-playing',
           {
             method: 'GET',
             headers: {
