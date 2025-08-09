@@ -2,13 +2,13 @@ import Headphones from '@/../public/assets/icons/Headphones Icon.svg';
 
 import { useEffect, useState } from 'react';
 type SpotifyTrack = {
-  song: string;
+  title: string;
   artist: string;
   album: string;
   image: string;
   albumArt: string;
   link: string;
-  playing: boolean;
+  isPlaying: boolean;
 };
 export const SpotifyEmbed = () => {
   const [track, setTrack] = useState<SpotifyTrack | null>(null);
@@ -46,8 +46,8 @@ export const SpotifyEmbed = () => {
     };
   }, []);
 
-  const trackDisplay = track?.playing
-    ? track.song + ' - ' + track.artist
+  const trackDisplay = track?.isPlaying
+    ? track.title + ' - ' + track.artist
     : 'No track playing';
 
   return (
