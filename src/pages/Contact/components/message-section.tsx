@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Button from '@/ui/button';
 import { Input } from '@/ui/input';
 import CustomSelect from '@/ui/select';
@@ -22,21 +23,40 @@ export const MessageSection = () => {
 };
 
 export const Form = () => {
+  const [selectedPlan, setSelectedPlan] = useState('');
+  const [selectedWork, setSelectedWork] = useState('');
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log({
+      selectedPlan,
+      selectedWork,
+    });
+  };
+
   return (
-    <form className="flex flex-col font-geist gap-4">
+    <form className="flex flex-col font-geist gap-4" onSubmit={handleSubmit}>
       <div className="pt-3 flex flex-col gap-2.5 border-t border-dashed border-t-grey-4/50">
         <FormInput type="text" name="name" placeholder="What is your name?" />
         <FormInput
           type="email"
-          name="name"
+          name="email"
           placeholder="Your email for contact"
         />
         <FormInput type="tel" name="phone" placeholder="Phone number" />
-        <FormSelect placeholder="Select work" />
+
+        <FormSelect
+          placeholder="Select work"
+          value={selectedWork}
+          onChange={setSelectedWork}
+        />
+
         <FormTextArea name="message" placeholder="Write your message here" />
-        <SelectPlan />
+
+        <SelectPlan selectedPlan={selectedPlan} onChange={setSelectedPlan} />
+
         <div className="border-t border-dashed pt-6 border-[rgba(76,76,76,0.50)]">
-          <Button variant="default" className="self-start">
+          <Button variant="default" className="self-start" type="submit">
             <Plain size={16} />
             Send Email
           </Button>
@@ -83,7 +103,13 @@ const FormTextArea = ({
   );
 };
 
-const SelectPlan = () => {
+const SelectPlan = ({
+  selectedPlan,
+  onChange,
+}: {
+  selectedPlan: string;
+  onChange: (plan: string) => void;
+}) => {
   return (
     <div className="grid gap-1">
       <div className="flex items-center gap-0.5">
@@ -97,9 +123,21 @@ const SelectPlan = () => {
       </div>
 
       <div className="flex flex-wrap items-center gap-y-2 gap-x-4">
-        <RadioInput selectedPlan={''} plan="Full Time UI/UX design" />
-        <RadioInput selectedPlan={''} plan="Framer Design" />
-        <RadioInput selectedPlan={''} plan="Freelance" />
+        <RadioInput
+          selectedPlan={selectedPlan}
+          plan="Full Time UI/UX design"
+          onChange={onChange}
+        />
+        <RadioInput
+          selectedPlan={selectedPlan}
+          plan="Framer Design"
+          onChange={onChange}
+        />
+        <RadioInput
+          selectedPlan={selectedPlan}
+          plan="Freelance"
+          onChange={onChange}
+        />
       </div>
     </div>
   );
@@ -108,49 +146,57 @@ const SelectPlan = () => {
 const RadioInput = ({
   selectedPlan,
   plan,
+  onChange,
 }: {
   selectedPlan: string;
   plan: string;
+  onChange: (plan: string) => void;
 }) => {
   return (
-    <label className="flex items-center cursor-pointer">
+    <label className="radio-wrapper">
       <input
         type="radio"
         name="option"
         value={plan}
         checked={selectedPlan === plan}
-        onChange={() => plan}
-        className="hidden peer"
+        onChange={() => onChange(plan)}
+        className="radio-input"
+        style={{ display: 'none' }}
       />
 
-      <div className={`flex items-center gap-1`}>
-        <div
-          className={`size-4 rounded-full border border-grey-9 flex items-center justify-center transition duration-200
-    `}
-        >
-          {selectedPlan === plan && (
-            <div className="w-3 h-3 rounded-full bg-grey-9" />
-          )}
+      <div className="radio-outer">
+        <div className="radio-gap">
+          <div className="radio-inner"></div>
         </div>
-        <span className="text-grey-9 text-sm/[150%] font-geist">{plan}</span>
       </div>
+
+      <span className="text-grey-9 text-sm/[150%] font-geist">{plan}</span>
     </label>
   );
 };
 
-const FormSelect = ({ placeholder }: { placeholder: string }) => {
+const FormSelect = ({
+  placeholder,
+  value,
+  onChange,
+}: {
+  placeholder: string;
+  value: string;
+  onChange: (val: string) => void;
+}) => {
   const options = [
-    {
-      label: 'Design',
-      value: 'design',
-    },
+    { label: 'Design', value: 'design' },
+    { label: 'Development', value: 'dev' },
+    { label: 'Consulting', value: 'consult' },
   ];
+
   return (
     <CustomSelect
       label="Select project type"
       options={options}
       placeholder={placeholder}
-      onChange={() => {}}
+      value={value}
+      onChange={(val) => onChange(val)}
     />
   );
 };
