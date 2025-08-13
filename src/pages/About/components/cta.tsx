@@ -1,5 +1,6 @@
-import { CaseMinimalistic, Plain } from '@solar-icons/react';
+import { CaseMinimalistic } from '@solar-icons/react';
 import Button from '@/ui/button';
+import { LetsTalkButton } from '@/components/lets-talk-button';
 
 export const CallToActionSection = ({
   title,
@@ -26,9 +27,7 @@ export const CallToActionSection = ({
           />
           See Projects
         </Button>
-        <Button variant="default" className="flex items-center gap-2">
-          <Plain className="text-grey-opaque" size={16} /> Let's talk
-        </Button>
+        <LetsTalkButton />
       </div>
     </section>
   );

@@ -13,7 +13,9 @@ import BackgroundImage from '@/../public/assets/images/service-page-bg.svg';
 
 const RootLayout = () => {
   const pathname = useLocation().pathname;
+
   const normalizedPath = pathname.replace(/\/+$/, '');
+
   const footerPaths = [
     '/',
     '/projects',
@@ -24,6 +26,7 @@ const RootLayout = () => {
     '/termsofuse',
     '/privacy-policy',
   ];
+
   const faqPaths = ['/services', '/about'];
 
   const renderFooter =
@@ -37,7 +40,7 @@ const RootLayout = () => {
 
   const renderPricing = ['/about', '/services'].includes(normalizedPath);
 
-  const noPadding = [
+  const pathsWithoutPadding = [
     '/',
     '/contact',
     '/projects',
@@ -46,8 +49,8 @@ const RootLayout = () => {
     '/privacy-policy',
   ];
 
-  const shouldRemovePadding =
-    noPadding.includes(normalizedPath) ||
+  const shouldRemovePaddingTop =
+    pathsWithoutPadding.includes(normalizedPath) ||
     normalizedPath.startsWith('/projects/');
 
   const { mainRef } = useScroll();
@@ -55,7 +58,11 @@ const RootLayout = () => {
   return (
     <main
       style={{
-        backgroundImage: `url(${BackgroundImage})`,
+        backgroundImage: `${
+          ['/services', '/about'].includes(normalizedPath)
+            ? `url(${BackgroundImage})`
+            : ''
+        }`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'contain',
         backgroundPosition: 'top',
@@ -75,14 +82,14 @@ const RootLayout = () => {
         <div
           className={cn(
             'flex flex-col gap-10 md:gap-20 2xl:w-full',
-            shouldRemovePadding ? 'pt-[86px]' : 'pt-[126px]'
+            shouldRemovePaddingTop ? 'pt-[86px]' : 'pt-[126px]'
           )}
         >
           <div className="md:w-full 2xl:max-w-[1024px] 2xl:self-center md:overflow-x-auto flex flex-col gap-10 md:gap-20 scrollbar-hide">
             <div
               className={cn(
                 'flex-1 overflow-y-auto  ',
-                !shouldRemovePadding ? 'md:px-4' : ''
+                !shouldRemovePaddingTop ? 'md:px-4' : ''
               )}
             >
               <Outlet />

@@ -1,6 +1,7 @@
-import { CloudDownload, Plain } from '@solar-icons/react';
+import { CloudDownload } from '@solar-icons/react';
 import Button from '@/ui/button';
 import Ezekiel from '@/../public/assets/images/about/Ezekiel.png';
+import { LetsTalkButton } from '@/components/lets-talk-button';
 
 export const AboutContainer = () => {
   return (
@@ -8,13 +9,7 @@ export const AboutContainer = () => {
       <div className="flex flex-col md:w-8/12 gap-9">
         <StorySection />
         <div className="flex items-center shrink-0 gap-4">
-          <Button
-            variant="default"
-            className="inline-flex font-medium text-grey-opaque shrink-0 items-center gap-2"
-          >
-            <Plain size={16} />
-            Let's Talk
-          </Button>
+          <LetsTalkButton />
           <Button
             variant="outline"
             className="inline-flex font-medium text-grey-opaque shrink-0 items-center gap-2"

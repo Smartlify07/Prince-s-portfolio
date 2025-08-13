@@ -1,11 +1,11 @@
 import Logo from '@/../public/assets/images/Logo.svg';
-import { Calendar, Plain } from '@solar-icons/react';
-import Button from '@/ui/button';
 import Badge from '@/ui/badge';
 import { tools } from '@/lib/constants';
 import { Testimonials } from '@/components/testimonials';
 import { forwardRef } from 'react';
 import { Link } from 'react-router';
+import { BookACallButton } from './book-a-call-button';
+import { LetsTalkButton } from './lets-talk-button';
 
 export const Sidebar = forwardRef<HTMLDivElement>((_, ref) => {
   return (
@@ -72,13 +72,8 @@ const IntroSection = () => {
         </div>
         <div className="flex flex-col gap-8">
           <div className="flex items-center md:flex-wrap xl:flex-nowrap gap-4">
-            <Button variant="outline">
-              <Calendar className="text-[#EDEDEB]" size={16} /> Book a Call
-            </Button>
-            <Button variant="default" className="flex items-center gap-2">
-              <Plain className="text-[#EDEDEB]" size={16} />
-              Let's Talk
-            </Button>
+            <BookACallButton />
+            <LetsTalkButton />
           </div>
           <div className="pt-4 flex items-center flex-wrap gap-2 border-t-[rgba(76,76,76,0.6)] border-t border-dashed">
             {tools.map((tool) => (

@@ -1,5 +1,3 @@
-import { Calendar, Plain } from '@solar-icons/react';
-import Button from '@/ui/button';
 import Dribbble from '@/../public/assets/icons/Dribbble.svg';
 import X from '@/../public/assets/icons/Twitter.svg';
 import LinkedIn from '@/../public/assets/icons/LinkedIn.svg';
@@ -8,6 +6,8 @@ import Email from '@/../public/assets/icons/envelope.svg';
 import SixSelf from '@/../public/assets/icons/sixself.svg';
 import LinkWithWave from './link-with-wave';
 import { ScrollToTopButton } from './scroll-to-top-button';
+import { LetsTalkButton } from './lets-talk-button';
+import { BookACallButton } from './book-a-call-button';
 
 const Footer = () => {
   const socialIcons = [Email, Dribbble, Behance, X, LinkedIn, SixSelf];
@@ -27,14 +27,8 @@ const Footer = () => {
           <ScrollToTopButton />
         </header>
         <div className="flex items-center justify-center gap-4">
-          <Button variant="outline" className="flex items-center gap-2">
-            <Calendar className="text-[#ededeb]" />
-            Book a Call
-          </Button>
-          <Button variant="default" className="flex items-center gap-2">
-            <Plain className="text-[#ededeb]" />
-            Let's Talk
-          </Button>
+          <BookACallButton />
+          <LetsTalkButton />
         </div>
       </section>
       <div className="rounded-full circle-gradient size-[1054px] absolute blur-[200px] right-[48px] top-[300px]"></div>

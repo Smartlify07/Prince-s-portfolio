@@ -1,15 +1,11 @@
-import {
-  Calendar,
-  CloseCircle,
-  HamburgerMenu,
-  Plain,
-} from '@solar-icons/react';
+import { CloseCircle, HamburgerMenu } from '@solar-icons/react';
 import Logo from '@/../public/assets/images/Logo.svg';
 
-import Button from '@/ui/button';
 import { useState } from 'react';
 import { Link } from 'react-router';
 import { Behance, Dribbble, LinkedIn, Twitter } from './contact-icons';
+import { BookACallButton } from './book-a-call-button';
+import { LetsTalkButton } from './lets-talk-button';
 
 export default function TopNavMobile() {
   const [isOpen, setIsOpen] = useState(false);
@@ -79,14 +75,8 @@ const BottomSection = () => {
       </div>
 
       <div className="flex flex-col gap-4">
-        <Button variant="outline" className="flex items-center gap-2">
-          <Calendar weight="Outline" size={16} />
-          Book a Call
-        </Button>
-        <Button variant="default" className="flex items-center gap-2">
-          <Plain weight="Outline" size={16} />
-          Let's Talk
-        </Button>
+        <BookACallButton />
+        <LetsTalkButton />
       </div>
     </div>
   );

@@ -26,7 +26,7 @@ export const FaqSection = ({
         icon={FaqIcon}
       />
 
-      <div className="flex flex-col md:flex-row items-start gap-10">
+      <div className="flex flex-col md:flex-row items-start gap-6">
         <div className="grid gap-6 md:w-8/12">
           {faqs.map((faq, index) => (
             <FaqCard
