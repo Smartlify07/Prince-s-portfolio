@@ -55,7 +55,10 @@ const IntroSection = () => {
     <section className="gap-11 pl-10 pr-4 h-[335px] overflow-y-auto scrollbar-hide flex flex-col">
       <div className="flex flex-col gap-9">
         <div className="flex flex-col gap-4">
-          <Badge className="font-geist self-start inline-flex items-center gap-1">
+          <Badge
+            shadows={false}
+            className="font-geist self-start inline-flex items-center gap-1"
+          >
             <span className="text-[#909090]">From</span>
             <span className="text-[#EDEDEB] font-semibold leading-[20px] text-sm">
               $1,300

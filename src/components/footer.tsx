@@ -1,4 +1,4 @@
-import { ArrowUp, Calendar, Plain } from '@solar-icons/react';
+import { Calendar, Plain } from '@solar-icons/react';
 import Button from '@/ui/button';
 import Dribbble from '@/../public/assets/icons/Dribbble.svg';
 import X from '@/../public/assets/icons/Twitter.svg';
@@ -7,6 +7,7 @@ import Behance from '@/../public/assets/icons/Behance.svg';
 import Email from '@/../public/assets/icons/envelope.svg';
 import SixSelf from '@/../public/assets/icons/sixself.svg';
 import LinkWithWave from './link-with-wave';
+import { ScrollToTopButton } from './scroll-to-top-button';
 
 const Footer = () => {
   const socialIcons = [Email, Dribbble, Behance, X, LinkedIn, SixSelf];
@@ -23,11 +24,7 @@ const Footer = () => {
             Let’s get to work.
           </h1>
 
-          <ArrowUp
-            className="text-grey-9 absolute bottom-3 right-0 md:right-10 md:top-10"
-            size={16}
-            weight="Broken"
-          />
+          <ScrollToTopButton />
         </header>
         <div className="flex items-center justify-center gap-4">
           <Button variant="outline" className="flex items-center gap-2">
@@ -41,9 +38,9 @@ const Footer = () => {
         </div>
       </section>
       <div className="rounded-full circle-gradient size-[1054px] absolute blur-[200px] right-[48px] top-[300px]"></div>
-      <section className="flex flex-col gap-8 relative md:flex-row md:items-center md:justify-between p-4 md:pt-4 md:px-4 border-t z-10 border-[#4C4C4C]/40">
+      <section className="flex flex-col gap-8 relative md:flex-row md:items-start md:justify-between p-4 md:pt-4 md:px-4 border-t z-10 border-[#4C4C4C]/40">
         <div className="absolute w-full lg:hidden h-[502px] md:w-[502px] left-0 top-0 footer-bottom opacity-50"></div>
-        <div className="flex items-center flex-col gap-2.5">
+        <div className="flex items-center md:items-start  flex-col gap-2.5">
           <div className="flex items-center gap-4">
             {socialIcons.map((icon, index) => (
               <a className="text-[#909090]" href="#" key={index}>
@@ -55,7 +52,7 @@ const Footer = () => {
           <div className="flex items-center gap-1">
             <LinkWithWave
               to="/privacy-policy"
-              className="text-[#909090] hover:text-grey-opaque transition-colors p-1.5 text-sm/[14px] tracking-[0%] cursor-pointer font-geist"
+              className="text-[#909090] hover:text-grey-opaque transition-colors pt-1.5 pb-1.5 pr-1.5 text-sm/[14px] tracking-[0%] cursor-pointer font-geist"
             >
               Privacy Policy
             </LinkWithWave>
@@ -106,7 +103,9 @@ const Footer = () => {
 
           <div className="pt-2">
             <h3 className="text-[#909090] text-sm/[150%] font-geist">
-              Ezekiel Olayiwola &copy; 2025 | All rights reserved.
+              Ezekiel Olayiwola &copy; 2025 | All rights
+              <br />
+              reserved.
             </h3>
           </div>
         </div>

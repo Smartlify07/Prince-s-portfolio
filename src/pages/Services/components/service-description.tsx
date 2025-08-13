@@ -24,7 +24,7 @@ export const ServiceDescription = () => {
         </p>
       </div>
 
-      <Card className="h-[362px] md:w-[300px] shrink-0">
+      <Card className="md:h-[362px] md:w-[300px] shrink-0">
         <img src={Image} className="object-cover" />
       </Card>
     </section>

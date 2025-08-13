@@ -1,8 +1,7 @@
 import Badge from '@/ui/badge';
 import BuildingIcon from '@/../public/assets/icons/Buildings 3.svg';
 import { industries } from '@/lib/constants';
-import Button from '@/ui/button';
-import { CaseMinimalistic, Plain } from '@solar-icons/react';
+import { CallToActionSection } from '@/pages/About/components/cta';
 export const IndustriesExceled = () => {
   return (
     <section className="px-4 md:px-0">
@@ -15,8 +14,11 @@ export const IndustriesExceled = () => {
               <IndustryCard {...item} key={index} />
             ))}
           </div>
-          <div className="w-full justify-self-center md:w-10/12">
-            <CallToAction />
+          <div className="w-full justify-self-center md:w-11/12">
+            <CallToActionSection
+              title="Your industry not on the list?"
+              subtitle="Contact me or check my portfolio since I have clients from various industries."
+            />
           </div>
         </div>
       </div>
@@ -65,41 +67,5 @@ const IndustryCard = ({
         <p className="text-[#909090] text-sm/[150%]">{description}</p>
       </div>
     </div>
-  );
-};
-
-const CallToAction = () => {
-  return (
-    <section className="texture grid z-[1000] font-geist gap-2.5 p-6">
-      <div className="grid gap-8">
-        <div className="grid gap-2">
-          <h1 className="gradient-text text-center text-xl tracking-[-0.88px] font-medium">
-            Your industry not on the list?
-          </h1>
-          <p className="text-[#909090] text-center text-sm/[150%] font-normal">
-            Contact me or check my portfolio since I have clients from various
-            industries.
-          </p>
-        </div>
-
-        <div className="flex items-center justify-center gap-4">
-          <Button
-            variant="outline"
-            className="flex cursor-pointer items-center gap-2"
-          >
-            <CaseMinimalistic weight="Outline" /> See Projects
-          </Button>
-          <Button
-            onClick={() => {
-              console.log('click');
-            }}
-            variant="default"
-            className="flex items-center gap-2"
-          >
-            <Plain weight="Outline" /> Let's Talk
-          </Button>
-        </div>
-      </div>
-    </section>
   );
 };

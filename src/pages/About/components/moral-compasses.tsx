@@ -8,7 +8,7 @@ import { useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 
 export const MoralCompasses = () => {
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [activeIndex, setActiveIndex] = useState<number | null>(0);
   const toggle = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
@@ -72,7 +72,7 @@ const MoralCompassCard = ({
   index: number;
 } & Moral) => {
   return (
-    <Card className="shadow-none font-geist flex flex-col gap-4 items-start p-4 justify-between bg-[#171721]">
+    <Card className="shadow-none cursor-pointer font-geist flex flex-col gap-4 items-start p-4 justify-between bg-[#171721]">
       <div
         onClick={() => toggle(index)}
         className="flex items-center w-full justify-between"

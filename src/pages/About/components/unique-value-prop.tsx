@@ -19,7 +19,11 @@ export const UniqueValueProp = () => {
         </div>
       </div>
 
-      <CallToActionSection />
+      <CallToActionSection
+        title="Looking for UX/UI research or product branding?"
+        subtitle="Simply post your query and I’ll promptly reach out to you.
+"
+      />
     </section>
   );
 };

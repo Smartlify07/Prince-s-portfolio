@@ -7,6 +7,7 @@ import Badge from '@/ui/badge';
 import { pricing } from '@/lib/constants';
 import { CardStroke } from '@/components/card-stroke';
 import Button from '@/ui/button';
+import { cn } from '@/lib/utils';
 
 export const Pricing = () => {
   return (
@@ -102,7 +103,7 @@ const PricingCard = ({
     <CardStroke className="rounded-4xl">
       <div
         className={`rounded-4xl gap-6 flex flex-col p-6 h-full  ${
-          first ? 'texture bg-[rgba(15,15,26,0.3)]' : 'bg-[#171721]'
+          first ? 'texture-2 bg-[rgba(15,15,26,0.3)]' : 'bg-[#171721]'
         }`}
       >
         <div className="grid gap-4">
@@ -117,7 +118,12 @@ const PricingCard = ({
               </h1>
               <div className="text-sm/[150%] text-[#909090]">{children}</div>
             </div>
-            <h1 className="pricing-text -tracking-smaller font-medium text-[40px]">
+            <h1
+              className={cn(
+                'pricing-text -tracking-smaller font-medium text-[40px]',
+                !first && 'md:mt-5'
+              )}
+            >
               Custom
             </h1>
           </div>

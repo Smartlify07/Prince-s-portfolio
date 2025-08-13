@@ -6,14 +6,19 @@ import { faqs, type Faq } from '@/lib/constants';
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
 import { AnimatePresence, motion } from 'motion/react';
+import { CustomQuestion } from './custom-question';
 
-export const FaqSection = () => {
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+export const FaqSection = ({
+  showCustomQuestion,
+}: {
+  showCustomQuestion: boolean;
+}) => {
+  const [activeIndex, setActiveIndex] = useState<number | null>(0);
   const toggle = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
   return (
-    <section className="md:px-0 flex flex-col gap-12">
+    <section className="px-4 flex flex-col gap-12">
       <BadgeAndHeader
         title="Everything you need to know before we start"
         badgeTitle="Frequently Asked Questions"
@@ -21,16 +26,19 @@ export const FaqSection = () => {
         icon={FaqIcon}
       />
 
-      <div className="grid gap-6">
-        {faqs.map((faq, index) => (
-          <FaqCard
-            index={index}
-            toggle={toggle}
-            active={activeIndex === index}
-            {...faq}
-            key={index}
-          />
-        ))}
+      <div className="flex flex-col md:flex-row items-start gap-10">
+        <div className="grid gap-6 md:w-8/12">
+          {faqs.map((faq, index) => (
+            <FaqCard
+              index={index}
+              toggle={toggle}
+              active={activeIndex === index}
+              {...faq}
+              key={index}
+            />
+          ))}
+        </div>
+        {showCustomQuestion && <CustomQuestion />}
       </div>
     </section>
   );
@@ -50,7 +58,7 @@ const FaqCard = ({
   return (
     <Card
       onClick={() => toggle(index)}
-      className="shadow-none font-geist flex flex-col gap-4 items-start p-4 justify-between bg-[#171721]"
+      className="shadow-none cursor-pointer font-geist flex flex-col gap-4 items-start p-4 justify-between bg-[#171721]"
     >
       <div className="flex items-center w-full justify-between">
         <h1 className="gradient-text text-xl -tracking-smaller font-medium">

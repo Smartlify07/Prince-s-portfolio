@@ -7,7 +7,7 @@ export const BrandPartners = () => {
         Brands I’ve Partnered With
       </h1>
 
-      <div className="rounded-3xl texture gap-4 flex flex-col md:flex-row py-6 px-4">
+      <div className="rounded-3xl texture-2 gap-4 flex flex-col md:flex-row py-6 px-4">
         <div className="flex items-center gap-10 md:items-stretch md:gap-6">
           <Stat
             title="Bles Software"

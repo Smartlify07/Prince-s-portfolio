@@ -226,90 +226,105 @@ export const exclusiveDeals = [
     description:
       'Embrace a truly user-centered approach that drives higher satisfaction, deeper engagement, and intuitive product designs that show your users they’re genuinely valued. Our UX design process is rooted in empathy and precision—prioritizing your target audience’s thoughts, behaviors, needs, and motivations to create experiences that resonate, convert, and build lasting loyalty.',
     image: UserCenteredDesignImage,
+    badgeTitle: 'Usercentrix',
   },
   {
     title: 'Innovative Solutions',
     description:
       'Bring your visionary designs to life with cutting-edge UI/UX features like animated microinteractions, multimodal interfaces, parallax scrolling, and location-based experiences. Leverage the latest in design frameworks, wireframing tools, advanced editing software, and generative AI to create immersive, intuitive, and future-ready digital products that captivate users and set your brand apart.',
     image: InnovativeSolutionsImage,
-  },
-  {
-    title: 'UX Audit',
-    description:
-      'Performs comprehensive design audits—integrating A/B testing, behavioral analytics, and in-depth target audience research—to refine and optimize customer journey maps, ensuring each touchpoint aligns with user needs and maximizes product engagement and satisfaction.',
-    image: UXAudit,
-  },
-  {
-    title: 'UX Tester',
-    description:
-      'Elevate your digital experience with cutting-edge UX testing services—meticulously designed and executed with precision, insight, and a deep understanding of user behavior—driven by my unmatched expertise in creating seamless, user-centric interfaces that convert and delight.',
-    image: UXTester,
-  },
-  {
-    title: 'Illustration',
-    description:
-      'Crafting immersive visual narratives that captivate audiences through emotionally compelling storytelling and breathtaking design—strategically amplifying brand identity, impact, and engagement.',
-    image: Illustration,
-  },
-  {
-    title: 'Brand Identity',
-    description:
-      'I design cohesive and strategic visual identities that authentically reflect your brand’s core values and connect emotionally with your target audience. From color palettes and typography to logos and design systems, every element is thoughtfully crafted to build recognition, trust, and long-term brand loyalty across all touchpoints.',
-    image: BrandIdentity,
-  },
-  {
-    title: 'Logo Design',
-    description:
-      'I transform abstract concepts into iconic, memorable visual identities that define your brand and instantly connect with your audience. By blending strategic thinking with creative execution, I craft brand symbols that stand the test of time — versatile across digital and print, and powerful enough to speak without words.',
-    image: LogoDesign,
-  },
-  {
-    title: 'Web Redesign',
-    description:
-      'Let’s collaborate to transform your website into a narrative-driven experience that informs, inspires, and engages. By weaving visual storytelling into every layer of UI design, I create custom websites that balance clarity with creativity — built to resonate with modern users and adapt to their evolving digital expectations.',
-    image: WebRedesign,
-  },
-  {
-    title: 'Landing Page',
-    description:
-      'I create visually compelling and conversion-focused digital interfaces that make powerful first impressions and drive meaningful user actions. With a strategic blend of design psychology, branding, and user behavior insights, I help businesses turn casual visitors into loyal customers — aligning every visual touchpoint with your business goals.',
-    image: LandingPage,
-  },
-  {
-    title: 'Web Design',
-    description:
-      'I design modern, high-performing websites that not only look stunning but also deliver smooth, intuitive experiences across all devices. By combining strategic UX thinking with clean UI aesthetics, I help businesses create digital experiences that captivate users, reduce friction, and drive results.',
-    image: WebDesign,
-  },
-  {
-    title: 'Mobile App',
-    description:
-      'I specialize in crafting intuitive, minimal, and high-performing mobile app interfaces that feel natural to use — across iOS, Android, and hybrid platforms.My designs prioritize clarity, responsiveness, and user behavior, helping products drive engagement, improve retention, and deliver a seamless mobile experience.',
-    image: MobileAppDesign,
-  },
-  {
-    title: 'Web App Design',
-    description:
-      'I craft user-centered web applications that align with your brand story and resonate deeply with your target audience. Through thoughtful design, strategic storytelling, and intuitive interfaces, I help brands turn ideas into digital experiences that build trust, engagement, and long-term loyalty.',
-    image: WebAppDesign,
-  },
-  {
-    title: 'Enterprise UX',
-    description:
-      'Discover innovative UI/UX design solutions crafted for both administrators and end-users — with a focus on usability, speed, and seamless cross-platform performance. I specialize in designing efficient, scalable interfaces that work flawlessly across web, mobile, and tablet, ensuring a unified and intuitive experience for every user.',
-    image: EnterpriseUX,
-  },
-  {
-    title: 'UX Research',
-    description:
-      'Enhance your user experience with strategic UX research, elevate design decisions, and drive innovation by deeply understanding user behavior, needs, and motivations through actionable insights.',
-    image: UXResearch,
+    badgeTitle: 'Innovique',
   },
   {
     title: 'Experienced Team',
     description:
       "From brainstorming ideas to developing MVPs and designing intricate products, I've successfully navigated this journey countless times. Over 8 companies have benefited from my UI/UX consulting services, enabling them to create, scale, and maintain a variety of digital products and platforms. My expertise in UX research and UI/UX design ensures that I deliver exceptional results on every project.",
     image: ExperiencedTeam,
+    badgeTitle: 'Productcraft',
+  },
+  {
+    title: 'UX Research',
+    description:
+      'Enhance your user experience with strategic UX research, elevate design decisions, and drive innovation by deeply understanding user behavior, needs, and motivations through actionable insights.',
+    image: UXResearch,
+    badgeTitle: 'Userlens',
+  },
+  {
+    title: 'Enterprise UX',
+    description:
+      'Discover innovative UI/UX design solutions crafted for both administrators and end-users — with a focus on usability, speed, and seamless cross-platform performance. I specialize in designing efficient, scalable interfaces that work flawlessly across web, mobile, and tablet, ensuring a unified and intuitive experience for every user.',
+    image: EnterpriseUX,
+    badgeTitle: 'Flowcraft',
+  },
+  {
+    title: 'Web App Design',
+    description:
+      'I craft user-centered web applications that align with your brand story and resonate deeply with your target audience. Through thoughtful design, strategic storytelling, and intuitive interfaces, I help brands turn ideas into digital experiences that build trust, engagement, and long-term loyalty.',
+    image: WebAppDesign,
+    badgeTitle: 'Storyflow',
+  },
+  {
+    title: 'Mobile App',
+    description:
+      'I specialize in crafting intuitive, minimal, and high-performing mobile app interfaces that feel natural to use — across iOS, Android, and hybrid platforms.My designs prioritize clarity, responsiveness, and user behavior, helping products drive engagement, improve retention, and deliver a seamless mobile experience.',
+    image: MobileAppDesign,
+    badgeTitle: 'Appfluence',
+  },
+  {
+    title: 'Web Design',
+    description:
+      'I design modern, high-performing websites that not only look stunning but also deliver smooth, intuitive experiences across all devices. By combining strategic UX thinking with clean UI aesthetics, I help businesses create digital experiences that captivate users, reduce friction, and drive results.',
+    image: WebDesign,
+    badgeTitle: 'Weblume',
+  },
+  {
+    title: 'Landing Page',
+    description:
+      'I create visually compelling and conversion-focused digital interfaces that make powerful first impressions and drive meaningful user actions. With a strategic blend of design psychology, branding, and user behavior insights, I help businesses turn casual visitors into loyal customers — aligning every visual touchpoint with your business goals.',
+    image: LandingPage,
+    badgeTitle: 'Convessence',
+  },
+  {
+    title: 'Web Redesign',
+    description:
+      'Let’s collaborate to transform your website into a narrative-driven experience that informs, inspires, and engages. By weaving visual storytelling into every layer of UI design, I create custom websites that balance clarity with creativity — built to resonate with modern users and adapt to their evolving digital expectations.',
+    image: WebRedesign,
+    badgeTitle: 'Narratide',
+  },
+  {
+    title: 'Logo Design',
+    description:
+      'I transform abstract concepts into iconic, memorable visual identities that define your brand and instantly connect with your audience. By blending strategic thinking with creative execution, I craft brand symbols that stand the test of time — versatile across digital and print, and powerful enough to speak without words.',
+    image: LogoDesign,
+    badgeTitle: 'Iconiqraft',
+  },
+  {
+    title: 'Brand Identity',
+    description:
+      'I design cohesive and strategic visual identities that authentically reflect your brand’s core values and connect emotionally with your target audience. From color palettes and typography to logos and design systems, every element is thoughtfully crafted to build recognition, trust, and long-term brand loyalty across all touchpoints.',
+    image: BrandIdentity,
+    badgeTitle: 'Brandescence',
+  },
+  {
+    title: 'Illustration',
+    description:
+      'Crafting immersive visual narratives that captivate audiences through emotionally compelling storytelling and breathtaking design—strategically amplifying brand identity, impact, and engagement.',
+    image: Illustration,
+    badgeTitle: 'Visuomotion',
+  },
+  {
+    title: 'UX Tester',
+    description:
+      'Elevate your digital experience with cutting-edge UX testing services—meticulously designed and executed with precision, insight, and a deep understanding of user behavior—driven by my unmatched expertise in creating seamless, user-centric interfaces that convert and delight.',
+    image: UXTester,
+    badgeTitle: 'Experify',
+  },
+  {
+    title: 'UX Audit',
+    description:
+      'Performs comprehensive design audits—integrating A/B testing, behavioral analytics, and in-depth target audience research—to refine and optimize customer journey maps, ensuring each touchpoint aligns with user needs and maximizes product engagement and satisfaction.',
+    image: UXAudit,
+    badgeTitle: 'Flowcraft',
   },
 ];
 

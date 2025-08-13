@@ -5,7 +5,6 @@ import TopNavMobile from '@/components/top-nav-mobile';
 import { Sidebar } from '@/components/sidebar';
 import TopNavDesktop from '@/components/top-nav-desktop';
 import { FaqSection } from '@/components/faq';
-import { CustomQuestion } from '@/components/custom-question';
 import ScrollToTop from '@/components/scroll-to-top';
 import useScroll from '@/hooks/useScroll';
 import { Pricing } from '@/components/pricing';
@@ -31,9 +30,13 @@ const RootLayout = () => {
     footerPaths.includes(normalizedPath) ||
     pathname === '/' ||
     normalizedPath.startsWith('/projects/');
+
   const renderFaqAndQuestion = faqPaths.includes(normalizedPath);
+
   const renderFaq = ['/contact'].includes(normalizedPath);
+
   const renderPricing = ['/about', '/services'].includes(normalizedPath);
+
   const noPadding = [
     '/',
     '/contact',
@@ -66,16 +69,16 @@ const RootLayout = () => {
 
       <div
         ref={mainRef}
-        className="flex flex-col relative z-[10] gap-10 md:ml-[33.3%] overflow-y-hidden"
+        className="flex flex-col relative z-[10] gap-10 md:ml-[33.3%] 2xl:w-full overflow-y-hidden"
       >
         <TopNavDesktop />
         <div
           className={cn(
-            'flex flex-col gap-10 md:gap-20',
+            'flex flex-col gap-10 md:gap-20 2xl:w-full',
             shouldRemovePadding ? 'pt-[86px]' : 'pt-[126px]'
           )}
         >
-          <div className="md:w-full md:overflow-x-auto flex flex-col  gap-10 md:gap-20 scrollbar-hide">
+          <div className="md:w-full 2xl:max-w-[1024px] 2xl:self-center md:overflow-x-auto flex flex-col gap-10 md:gap-20 scrollbar-hide">
             <div
               className={cn(
                 'flex-1 overflow-y-auto  ',
@@ -90,17 +93,10 @@ const RootLayout = () => {
                 <Pricing />
               </div>
             )}
-            {renderFaqAndQuestion && (
-              <div className="flex flex-col w-full md:px-4 gap-10 items-start md:flex-row md:gap-6">
-                <div className="px-4 md:px-0 md:w-8/12">
-                  <FaqSection />
-                </div>
-                <CustomQuestion />
-              </div>
-            )}
+            {renderFaqAndQuestion && <FaqSection showCustomQuestion />}
             {renderFaq && (
               <div className="px-4 md:px-4">
-                <FaqSection />
+                <FaqSection showCustomQuestion={false} />
               </div>
             )}
           </div>

@@ -4,7 +4,8 @@ import Badge from '@/ui/badge';
 import FiltersIcon from '@/../public/assets/icons/Filters.svg';
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
-import { AnimatePresence, motion } from 'motion/react';
+import { motion } from 'motion/react';
+import { CardStroke } from '@/components/card-stroke';
 
 export const ExclusiveDeals = () => {
   const [currentDeal, setCurrentDeal] = useState(0);
@@ -14,7 +15,7 @@ export const ExclusiveDeals = () => {
 
   return (
     <section className="grid md:flex md:flex-row md:items-start gap-6">
-      <div className="rounded-4xl p-px bg-[#171721] w-full md:w-[40%] overflow-x-auto scrollbar-hide">
+      <CardStroke className="rounded-4xl p-px bg-[#171721] w-full md:w-[40%] overflow-x-auto scrollbar-hide">
         <div className="flex  gap-4 rounded-4xl md:h-[800px] overflow-y-auto scrollbar-hide p-6 md:flex-col md:items-stretch">
           {exclusiveDeals.map((deal, index) => (
             <ExclusiveDealCard
@@ -26,21 +27,19 @@ export const ExclusiveDeals = () => {
             />
           ))}
         </div>
-      </div>
-      <AnimatePresence>
-        {exclusiveDeals.map(
-          (deal, index) =>
-            currentDeal === index && (
-              <ExclusiveDealExtendedCard
-                key={index}
-                badgeTitle={'Productcraft'}
-                title={deal.title}
-                image={deal.image}
-                description={deal.description}
-              />
-            )
-        )}
-      </AnimatePresence>
+      </CardStroke>
+      {exclusiveDeals.map(
+        (deal, index) =>
+          currentDeal === index && (
+            <ExclusiveDealExtendedCard
+              key={index}
+              badgeTitle={deal.badgeTitle}
+              title={deal.title}
+              image={deal.image}
+              description={deal.description}
+            />
+          )
+      )}
     </section>
   );
 };
@@ -119,7 +118,7 @@ export const ExclusiveDealExtendedCard = ({
         transition: { type: 'spring', duration: 2 },
       }}
       exit={{ opacity: 0 }}
-      className="rounded-4xl p-px md:w-[60%]"
+      className="rounded-4xl card-stroke  md:w-[60%]"
     >
       <motion.div className="p-6 bg-[#171721] exclusive-deal-card rounded-4xl shadow-none flex flex-col gap-6">
         <Badge className="flex text-[#EDEDEB] opacity-50 font-medium items-center self-start gap-2">

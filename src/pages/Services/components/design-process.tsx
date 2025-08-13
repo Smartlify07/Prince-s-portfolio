@@ -61,8 +61,8 @@ const ProcessCard = ({
 
           <div className="grid grid-cols-2 gap-x-4 gap-y-2">
             {list.map((item, index) => (
-              <div key={index} className="flex items-center gap-2">
-                <img src={Curve} />
+              <div key={index} className="flex items-start gap-2">
+                <img src={Curve} className="mt-1" />
                 <p className="text-[#909090] text-sm/[150%]">{item}</p>
               </div>
             ))}
