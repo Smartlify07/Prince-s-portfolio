@@ -4,6 +4,7 @@ import { Input } from '@/ui/input';
 import CustomSelect from '@/ui/select';
 import { TextArea } from '@/ui/textarea';
 import { Plain } from '@solar-icons/react';
+import { Link } from 'react-router';
 
 export const MessageSection = () => {
   return (
@@ -116,10 +117,13 @@ const SelectPlan = ({
         <p className="text-grey-9 text-sm/[150%] font-geist">
           Which plan are you interested in?
         </p>
-        <p className="text-sm/[150%] text-grey-opaque font-medium">
+        <Link
+          to={'/services'}
+          className="text-sm/[150%] text-grey-opaque font-medium"
+        >
           {' '}
           Learn more
-        </p>
+        </Link>
       </div>
 
       <div className="flex flex-wrap items-center gap-y-2 gap-x-4">

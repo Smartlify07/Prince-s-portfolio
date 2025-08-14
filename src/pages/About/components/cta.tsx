@@ -1,6 +1,7 @@
 import { CaseMinimalistic } from '@solar-icons/react';
 import Button from '@/ui/button';
 import { LetsTalkButton } from '@/components/lets-talk-button';
+import { useNavigate } from 'react-router';
 
 export const CallToActionSection = ({
   title,
@@ -9,6 +10,7 @@ export const CallToActionSection = ({
   title: string;
   subtitle: string;
 }) => {
+  const router = useNavigate();
   return (
     <section className="grid gap-8 texture-2 rounded-3xl py-6 px-4 font-geist md:w-11/12 md:justify-self-center md:flex md:items-center md:justify-between">
       <div className="grid gap-2">
@@ -19,7 +21,12 @@ export const CallToActionSection = ({
       </div>
 
       <div className="flex items-center shrink-0 gap-4">
-        <Button variant="outline">
+        <Button
+          onClick={() => {
+            router('/');
+          }}
+          variant="outline"
+        >
           <CaseMinimalistic
             weight="Outline"
             className="text-[#EDEDEB]"

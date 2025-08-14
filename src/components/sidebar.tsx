@@ -39,8 +39,8 @@ export const TopSection = () => {
         </p>
       </Link>
       <div className="border-r grow border-l available-slots border-dashed flex justify-center items-center gap-2 border-grey-9 py-4 px-[7px] w-[9.58vw]">
-        <div className="size-5 flex items-center rounded-full justify-center bg-linear-[270deg,rgba(23,201,100,0.02)_2.08%,rgba(23,201,100,0.10)_50.96%,rgba(23,201,100,0.02)_97.92%]">
-          <div className="bg-green-500 size-2.5 rounded-full"></div>
+        <div className="size-5 flex items-center rounded-full spots justify-center bg-linear-[270deg,rgba(23,201,100,0.02)_2.08%,rgba(23,201,100,0.10)_50.96%,rgba(23,201,100,0.02)_97.92%]">
+          <div className="bg-green-500 size-2.5 rounded-full spots"></div>
         </div>
         <span className="text-sm -tracking-smallest text-grey-9">
           2 spots left

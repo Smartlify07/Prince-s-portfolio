@@ -27,7 +27,12 @@ export const FaqSection = ({
       />
 
       <div className="flex flex-col md:flex-row items-start gap-6">
-        <div className="grid gap-6 md:w-8/12">
+        <div
+          className={cn(
+            'grid gap-6',
+            showCustomQuestion ? 'md:w-8/12' : 'w-full'
+          )}
+        >
           {faqs.map((faq, index) => (
             <FaqCard
               index={index}

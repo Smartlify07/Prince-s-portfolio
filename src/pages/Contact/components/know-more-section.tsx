@@ -4,6 +4,7 @@ import Facebook from '/assets/images/contact/Facebook.svg';
 import Twitter from '/assets/images/contact/Twitter.svg';
 import Dribbble from '/assets/images/contact/Dribbble.svg';
 import LinkedIn from '/assets/images/contact/LinkedIn.svg';
+import { Link } from 'react-router';
 
 export const KnowMoreSection = () => {
   return (
@@ -14,13 +15,17 @@ export const KnowMoreSection = () => {
         </h1>
         <div className="text-center text-sm/[150%] text-grey-9">
           You may read all{' '}
-          <span className="text-[#EDEDEB] inline text-drop-shadow font-medium drop-shadow-2xl">
-            About Me
-          </span>{' '}
+          <Link to={'/about'}>
+            <span className="text-[#EDEDEB] inline text-drop-shadow font-medium drop-shadow-2xl">
+              About Me
+            </span>{' '}
+          </Link>
           or check out{' '}
-          <span className="text-[#EDEDEB] inline text-drop-shadow font-medium drop-shadow-2xl">
-            My Services{' '}
-          </span>
+          <Link to={'/services'}>
+            <span className="text-[#EDEDEB] inline text-drop-shadow font-medium drop-shadow-2xl">
+              My Services{' '}
+            </span>
+          </Link>
           and, please, socialize with me. I love meeting new people!
         </div>
       </header>
