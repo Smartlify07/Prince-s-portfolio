@@ -1,5 +1,5 @@
-import Ezekiel1 from '@/../public/assets/images/about/ezekiel2.png';
-import CollaborationImage from '@/../public/assets/images/about/collaboration.png';
+import Prince1 from '@/../public/assets/images/about/prince-showing-peace-signs-to-the-camera.png';
+import CollaborationImage from '@/../public/assets/images/about/prince-looking-at-his-laptop.png';
 import { morals, type Moral } from '@/lib/constants';
 import Card from '@/ui/card';
 import Star from '@/../public/assets/icons/star.svg';
@@ -27,18 +27,18 @@ export const MoralCompasses = () => {
         </div>
 
         <div className="flex items-stretch gap-4 w-full">
-          <div className="w-[60%] rounded-2xl object-cover">
+          <div className="w-[40%] border h-[280px] rounded-2xl object-cover">
             <img
               src={CollaborationImage}
               alt="Collaboration"
-              className="w-full h-full rounded-2xl object-cover"
+              className=" rounded-2xl object-cover"
             />
           </div>
 
-          <div className="w-[40%] rounded-2xl object-cover">
+          <div className="w-[60%] h-[280px] rounded-2xl object-cover">
             <img
-              src={Ezekiel1}
-              alt="Ezekiel"
+              src={Prince1}
+              alt="Prince posing for the camera"
               className="w-full h-full rounded-2xl object-cover"
             />
           </div>
