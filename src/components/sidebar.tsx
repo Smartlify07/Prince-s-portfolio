@@ -1,4 +1,3 @@
-import Logo from '@/../public/assets/images/Logo.svg';
 import Badge from '@/ui/badge';
 import { tools } from '@/lib/constants';
 import { Testimonials } from '@/components/testimonials';
@@ -29,18 +28,17 @@ export const TopSection = () => {
         to={'/'}
         className="flex justify-center flex-col w-[20.1vw] gap-1 py-px"
       >
-        <img
-          src={Logo}
-          alt="logo"
-          className="aspect-[122/25] w-[122px] h-[25px]"
-        />
+        <h1 className="font-bold font-geist tracking-tighter gradient-text text-xl">
+          Prince Ugboga
+        </h1>
+
         <p className="text-[10px] text-grey-9 font-medium font-geist">
-          Designer, Researcher, and Creator
+          Product Designer , UI/UX Design{' '}
         </p>
       </Link>
       <div className="border-r grow border-l available-slots border-dashed flex justify-center items-center gap-2 border-grey-9 py-4 px-[7px] w-[9.58vw]">
-        <div className="size-5 flex items-center rounded-full spots justify-center bg-linear-[270deg,rgba(23,201,100,0.02)_2.08%,rgba(23,201,100,0.10)_50.96%,rgba(23,201,100,0.02)_97.92%]">
-          <div className="bg-green-500 size-2.5 rounded-full spots"></div>
+        <div className="size-5 flex items-center rounded-full spots justify-center bg-linear-[270deg,rgba(34,148,242,0.02)_2.08%,rgba(34,148,242,0.10)_50.96%,rgba(34,148,242,0.02)_97.92%]">
+          <div className="bg-primary size-2.5 rounded-full spots"></div>
         </div>
         <span className="text-sm -tracking-smallest text-grey-9">
           2 spots left
@@ -66,7 +64,8 @@ const IntroSection = () => {
           </Badge>
           <header>
             <h1 className="gradient-text text-[40px]/[52px] tracking-[-2px] font-medium text-left font-geist">
-              Making complex ideas easier to understand through smart design.
+              Transforming complex problems into intuitive and scalable
+              solutions.{' '}
             </h1>
           </header>
         </div>

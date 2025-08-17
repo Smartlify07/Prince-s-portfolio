@@ -21,9 +21,9 @@ export const WaveLine = () => {
           y2="4.85878"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#B96ADD" />
-          <stop offset="0.51" stopColor="#FF6C64" />
-          <stop offset="1" stopColor="#FFA94B" />
+          <stop stopColor="#0C85EE" />
+          <stop offset="0.51" stopColor="#15A1FA" />
+          <stop offset="1" stopColor="#036AE2" />
         </linearGradient>
       </defs>
     </svg>

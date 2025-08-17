@@ -2,7 +2,6 @@
 @import 'tailwindcss';
 
 :root {
-  --color-primary: '';
   --font-geist: 'Geist', sans-serif;
   --button-blur-shadow: 20px;
 }
@@ -10,15 +9,18 @@
 @theme {
   --font-geist: 'Geist', sans-serif;
   --font-inter-tight: 'Inter Tight', sans-serif;
+  --color-primary: rgba(12, 133, 238, 1);
+  --color-secondary: rgba(21, 161, 250, 1);
+  --color-accent: rgba(3, 106, 226, 1);
   --color-bright-purple: #d065ff;
   --color-bright-pink: #f26ca7;
   --color-bright-orange: #ffaa4c;
   --button-blur: 20px;
   --button-primary-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
-  --button-primary-gradient: var(--color-bright-purple) 0%,
-    var(--color-bright-pink) 51%, var(--color-bright-orange) 100%;
-  --primary-gradient: var(--color-bright-purple) 0%,
-    var(--color-bright-pink) 51%, var(--color-bright-orange) 100%;
+  --button-primary-gradient: var(--color-primary) 0%, var(--color-secondary) 51%,
+    var(--color-accent) 100%;
+  --primary-gradient: var(--color-primary) 0%, var(--color-secondary) 51%,
+    var(--color-accent) 100%;
   --color-button-outline-text: #ededeb;
   --color-button-outline-bg: rgba(255, 170, 76, 0.02);
   --color-sidebar-bg: #0f0f1a;
@@ -28,7 +30,6 @@
   --color-grey-opaque: #ededeb;
   --color-grey-9: #909090;
   --color-grey-4: #4c4c4c;
-  --color-primary: #030712;
   --color-purple-10: #565677;
 
   --color-card-shadow: rgba(86, 86, 119, 0.25);
@@ -52,14 +53,14 @@
   padding: 8px 16px;
   border: none;
   border-radius: 12px;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(12, 133, 238, 0.02);
   color: white;
   cursor: pointer;
   z-index: 1;
   overflow: hidden;
   border-radius: 10px;
-  border: 1px solid rgba(255, 170, 76, 0.07);
-  background: rgba(255, 170, 76, 0.02);
+  border: 1px solid rgba(12, 133, 238, 0.07);
+  background-color: rgba(12, 133, 238, 0.02);
 
   box-shadow: 0 1px 3px 0 rgba(199, 220, 255, 0.35) inset,
     0 0 20px 0 rgba(198, 204, 255, 0.2) inset,
@@ -78,17 +79,22 @@
   inset: 0;
   border-radius: inherit;
   padding: 1px;
-  background: linear-gradient(0deg, #ffaa4c00, rgba(255, 170, 76, 1)),
-    rgba(255, 170, 76, 0.07);
+  background: linear-gradient(
+      0deg,
+      rgba(12, 133, 238, 0),
+      rgba(12, 133, 238, 1)
+    ),
+    rgba(12, 133, 238, 0.07);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   mix-blend-mode: overlay;
   pointer-events: none;
   z-index: 2;
-  box-shadow: inset 0px 1px 3px #c7dcff33, inset 0px 0px 20px 0px #c6ccff33,
-    0px 1px 22px 0px #ffffff1a, 0px 4px 4px 0px #0000000d,
-    0px 10px 10px 0px #0000001a;
+  box-shadow: 0 1px 3px 0 rgba(199, 220, 255, 0.35) inset,
+    0 0 20px 0 rgba(198, 204, 255, 0.2) inset,
+    0 1px 22px 0 rgba(255, 255, 255, 0.1), 0 4px 4px 0 rgba(0, 0, 0, 0.05),
+    0 10px 10px 0 rgba(0, 0, 0, 0.1);
 
   /* ✨ Add transition */
   transition: background 0.4s ease, box-shadow 0.4s ease;
@@ -99,9 +105,7 @@
   padding: 8px 16px;
   border: none;
   border-radius: 12px;
-  background: linear-gradient(
-    var(--button-primary-gradient)
-  ); /* 3-color background */
+  background: linear-gradient(var(--button-primary-gradient));
   color: white;
   cursor: pointer;
   z-index: 1;
@@ -119,8 +123,8 @@
   /* Stroke: gradient → solid color overlay */
   background: linear-gradient(
       90deg,
-      rgba(255, 170, 76, 0) 0%,
-      rgba(255, 170, 76, 1) 70%
+      rgba(12, 133, 238, 0.07) 0%,
+      rgba(12, 133, 238, 1) 70%
     ),
     /* gradient part of stroke */ rgba(255, 170, 76, 0.07); /* solid part of stroke */
 
@@ -139,17 +143,21 @@
 /* 🔥 On hover: Pink box-shadow + pink outlines */
 .outline-button-outline:hover,
 .gradient-button:hover {
-  box-shadow: 0px 1px 3px 0px rgba(199, 220, 255, 0.35) inset,
-    0px 4px 20px 0px rgba(198, 204, 255, 0.2) inset,
-    0px 2px 1px 0px rgba(242, 108, 167, 0.1),
-    0px 2px 4px 1px rgb(208, 101, 255, 0.05),
-    0px 5px 15px 0px rgb(242, 108, 167, 0.25);
+  box-shadow: 0px 1px 3px 0px rgba(12, 133, 238, 0.07) inset,
+    0px 4px 20px 0px rgba(12, 133, 238, 0.2) inset,
+    0px 2px 1px 0px rgba(12, 133, 238, 0.1),
+    0px 2px 4px 1px rgb(21, 161, 250, 0.05),
+    0px 5px 15px 0px rgb(21, 161, 250, 0.05);
 }
 
 .outline-button-outline:hover::before,
 .gradient-button:hover:before {
-  background: linear-gradient(0deg, #ff69b400, rgba(242, 108, 167, 1)),
-    rgba(242, 108, 167, 0.1);
+  background: linear-gradient(
+      0deg,
+      rgba(12, 133, 238, 0),
+      rgba(12, 133, 238, 1)
+    ),
+    rgba(12, 133, 238, 0.07);
   box-shadow: inset 0px 1px 3px #ffb6c133, inset 0px 0px 20px 0px #ffc0cb33,
     0px 1px 22px 0px #ffc0cb1a, 0px 4px 4px 0px #ff69b41a,
     0px 10px 10px 0px #ff69b41a;
@@ -368,13 +376,18 @@
 }
 
 .circle-gradient {
-  background: linear-gradient(-33deg, #b96add, #ff6c64, #ffa94b);
+  background: linear-gradient(
+    -33deg,
+    var(--color-primary),
+    var(--color-secondary),
+    var(--color-accent)
+  );
   opacity: 15%;
 }
 
 .navbar-active {
   background: linear-gradient(var(--button-primary-gradient)),
-    url('/public/assets/images/asfalt-light.png'); /* Put your actual image path here */
+    url('/public/assets/images/asfalt-light.png');
 
   background-size: cover;
   background-position: center;
@@ -603,16 +616,4 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-.footer-bottom {
-  background: url(/public/assets/images/footer-sm.png) no-repeat;
-  background-size: cover;
-}
-
-@media screen and (min-width: 1024px) {
-  .footer-bottom {
-    background: url(/public/assets/images/footer-lg.png) no-repeat;
-    background-size: cover;
-  }
 }

@@ -1,4 +1,4 @@
-import { testimonials } from '@/lib/constants';
+import { testimonials } from '@/lib/data/testimonials';
 import TestimonialBackground from '@/../public/assets/images/testimonial-bg.png';
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';

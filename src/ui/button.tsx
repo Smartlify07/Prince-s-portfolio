@@ -11,7 +11,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          'text-white bg-linear-to-b from-bright-purple bg-linear-(--button-primary-gradient) z-[1]  gradient-button relative',
+          'text-white bg-linear-(--button-primary-gradient) z-[1]  gradient-button relative',
         outline: 'text-button-outline-text outline-button-outline',
       },
 
