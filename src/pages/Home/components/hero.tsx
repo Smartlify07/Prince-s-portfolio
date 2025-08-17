@@ -8,8 +8,8 @@ const HeroSection = () => {
       <div className="flex flex-col gap-8 md:gap-9 md:grow md:shrink-0 md:basis-0">
         <header>
           <h1 className="text-[40px]/[52px] font-geist font-medium tracking-[-0.88px] text-left gradient-text">
-            I'm a Product Designer with 3 years of experience creating
-            user-focused digital products for startups & enterprises.
+            UI/UX Designer with 3+ years of experience creating user-focused
+            digital products for startups & enterprises..
           </h1>
         </header>
 
@@ -30,7 +30,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <Card className="flex md:w-[300px] items-center shrink-0 justify-center h-[322px]">
+      <Card className="flex md:w-[291px] items-center shrink-0 justify-center h-[365px]">
         <img src={HeroImage} />
       </Card>
     </section>

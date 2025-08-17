@@ -1,5 +1,5 @@
 import { ArrowRightUp } from '@solar-icons/react';
-import { projects } from '@/lib/constants';
+import { projects } from '@/lib/data/projects';
 import Badge from '@/ui/badge';
 import { motion, useAnimate } from 'motion/react';
 import { useNavigate } from 'react-router';

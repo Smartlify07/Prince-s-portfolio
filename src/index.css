@@ -167,7 +167,7 @@
   background: linear-gradient(
     90deg,
     var(--color-white-opaque) 0%,
-    rgb(255, 255, 236, 0.2) 100%
+    rgb(255, 255, 236, 0.3) 100%
   );
   background-clip: text;
   color: transparent;
@@ -257,7 +257,7 @@
 }
 
 .pricing-gradient-text-1 {
-  background: linear-gradient(0deg, #d065ff 0%, #f26ca7 51%, #ffaa4c 100%);
+  background: linear-gradient(var(--primary-gradient));
   background-clip: text;
   color: transparent;
   -webkit-background-clip: text;
@@ -265,7 +265,7 @@
 }
 
 .pricing-gradient-text-2 {
-  background: linear-gradient(-71deg, #b96add 0%, #ff6c64 51%, #ffa94b 100%);
+  background: linear-gradient(var(--primary-gradient));
   background-clip: text;
   color: transparent;
   -webkit-background-clip: text;

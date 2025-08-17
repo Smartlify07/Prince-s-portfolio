@@ -23,7 +23,7 @@ export const MoreInfo = () => {
         <p className="text-sm font-normal -tracking-smallest">
           Open to remote job opportunities -{' '}
           <span className="text-grey-9 italic font-inter-tight">
-            Contract Or Full Time
+            Contract, Part Time, or Full Time
           </span>
         </p>
       </div>

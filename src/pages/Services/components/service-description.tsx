@@ -5,17 +5,15 @@ export const ServiceDescription = () => {
     <section className="flex flex-col gap-8 bg-[#111119] p-6 rounded-4xl md:flex-row">
       <div className="flex flex-col gap-4">
         <h1 className="text-[40px] font-medium -tracking-smaller font-geist gradient-text">
-          Comprehensive UI/UX Design Services: A 360-Degree Approach to Results
+          Comprehensive UI/UX design that gets your product to market 40%
+          faster.{' '}
         </h1>
         <p className="text-sm/[150%] text-[#909090] font-geist">
-          I create digital experiences that seamlessly blend aesthetics with
-          functionality, ensuring they are intuitive and resonate with your
-          brand's identity.
+          Transform your digital experience with innovative UI & UX design. I
+          create user-friendly, visually appealing, and high-performance web and
+          mobile user interfaces. From concept to launch, we ensure a process
+          that enhances user engagement, satisfaction, and business growth.
           <br />
-          As a UI/UX Designer, Brand Strategist, and No-Code Developer, I
-          partner with product teams and entrepreneurs to transform concepts
-          into reality, from in-depth research and wireframes to polished
-          interfaces and no-code solutions.
           <br />
           Whether you're launching a new venture or enhancing an existing
           product, my methodology integrates strategy, design, and no-code

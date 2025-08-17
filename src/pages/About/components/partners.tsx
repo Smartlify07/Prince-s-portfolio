@@ -4,49 +4,48 @@ export const BrandPartners = () => {
   return (
     <section className="px-4 md:px-0 flex flex-col gap-8">
       <h1 className="gradient-text text-[40px] font-medium font-geist -tracking-smaller">
-        Brands I’ve Partnered With
+        Companies I’ve Partnered With
       </h1>
 
       <div className="rounded-3xl texture-2 gap-4 flex flex-col md:flex-row py-6 px-4">
         <div className="flex items-center gap-10 md:items-stretch md:gap-6">
           <Stat
             title="Bles Software"
+            location="Tel Aviv, Israel"
             value="UI/UX Designer"
-            timeline="2024 – Present"
+            timeline="Jul 2024 - Jul 2025"
             border
           />
           <Stat
-            title="Sefarvest Inc"
+            title="Fahampesa,"
+            location="Sparks, United States"
             value="UI/UX Designer"
-            timeline="2023 – 2025"
+            timeline="Jun 2025 – July 2025"
             className="md:border-r md:border-r-grey-4"
           />
         </div>
         <div className="flex items-center gap-10 md:items-stretch md:gap-6">
           <Stat
-            title="Advertmetrics Ltd"
+            title="Sciential Agency, "
+            location="Florida, United States"
             value="UI/UX Designer"
-            timeline="Feb – May 2024"
+            timeline="Feb 2024  – May 2024"
             border
           />
           <Stat
-            title="Temtech Enterprise"
-            value="UX Researcher"
-            timeline="2019 – 2021"
+            title="Droomwork.io"
+            location="Lagos, Nigeria"
+            value="UI/UX Designer"
+            timeline="May 2023 – Sep 2023"
             className="md:border-r md:border-r-grey-4"
           />
         </div>
         <div className="flex items-center gap-10 md:items-stretch md:gap-6">
           <Stat
             title="Frubugh Nigeria Limited"
-            value="Graphics Designer"
-            timeline="2019 – 2020"
-            border
-          />
-          <Stat
-            title="Influence Global Relations"
-            value="Graphics Designer"
-            timeline="2015 – 2019"
+            value="UI/UX Design Mentor"
+            timeline="2023 – 2025"
+            location="Port Harcourt, Nigeria"
           />
         </div>
       </div>
@@ -60,12 +59,14 @@ const Stat = ({
   border,
   timeline,
   className,
+  location,
 }: {
   title: string;
   value: string;
   timeline: string;
   border?: boolean;
   className?: string;
+  location?: string;
 }) => {
   return (
     <div
@@ -75,8 +76,10 @@ const Stat = ({
         className
       )}
     >
-      <h4 className="text-grey-9 text-sm/[150%] font-normal break-words line-clamp-2">
-        {title}
+      <h4 className="text-grey-9 text-sm/[150%] font-normal 2xl:line-clamp-2">
+        <span className="font-semibold">{title}</span>
+        <br />
+        <span className="text-grey-9">{location}</span>
       </h4>
 
       <h1 className="text-xl -tracking-smaller gradient-text font-extrabold break-words line-clamp-2">

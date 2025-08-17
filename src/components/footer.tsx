@@ -11,7 +11,7 @@ const Footer = () => {
   const socialIcons = [LinkedIn, X, Behance, Email];
   return (
     <footer className="py-10 px-4 md:px-0 bg-sidebar-bg overflow-hidden relative grid gap-10">
-      <div className="absolute inset-0 bg-[rgba(225,185,148,0.1)] opacity-40"></div>
+      <div className="absolute inset-0 bg-[rgba(34,148,242,0.1)] w-full h-full left-0 top-0 opacity-40"></div>
       <div className="absolute w-full hidden lg:block h-[502px] md:w-[502px] left-0 footer-bottom opacity-10"></div>
       <section className="flex flex-col items-center gap-8 relative">
         <header className=" relative md:static flex flex-col items-center ">

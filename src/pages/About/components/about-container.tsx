@@ -1,6 +1,6 @@
 import { CloudDownload } from '@solar-icons/react';
 import Button from '@/ui/button';
-import Ezekiel from '@/../public/assets/images/about/Ezekiel.png';
+import Prince from '@/../public/assets/images/about/hero.png';
 import { LetsTalkButton } from '@/components/lets-talk-button';
 
 export const AboutContainer = () => {
@@ -20,10 +20,10 @@ export const AboutContainer = () => {
         </div>
       </div>
 
-      <div className="inline-block rounded-2xl md:w-4/12 p-[2px] drop-shadow-[0_0px_5.5px_var(--color-card-shadow)] card-gradient">
+      <div className="inline-block rounded-2xl md:w-5/12 p-[2px] drop-shadow-[0_0px_5.5px_var(--color-card-shadow)] ">
         <img
-          src={Ezekiel}
-          alt="Ezekiel"
+          src={Prince}
+          alt="Prince"
           className="w-full h-[663px] md:h-full object-cover rounded-2xl"
         />
       </div>
@@ -39,32 +39,26 @@ const StorySection = () => {
         into intuitive, impactful digital experiences.
       </h1>
       <p className="text-grey-9 text-sm/[150%] font-normal font-geist">
-        My name is{' '}
-        <span className="font-bold text-grey-opaque">Ezekiel Olayiwola</span>,{' '}
-        professionally known as
-        <span className="font-bold text-grey-opaque"> Ezeydesign</span> .
-        <br />
-        My journey into tech began in 2014, not in a classroom, but on a mobile
-        phone, where I created my very first logo using the{' '}
-        <span className="font-bold">PixGrid</span> app. That early spark of
-        curiosity grew into a passion for designing logos and graphics for small
-        businesses. Over time, I transitioned into the world of UI/UX design,
-        where I've spent the last 3+ years crafting intuitive, user-centered
-        digital experiences for startups, scale-ups, and brands across a range
-        of industries.
+        My tech journey began in 2014, not in a classroom, but on my mobile
+        phone, where I created my very first logo using the PixGrid App. That
+        initial spark of curiosity ignited a passion for designing various logos
+        and graphics for small businesses. Eventually, I transitioned into the
+        world of UI/UX design, where I've dedicated over three years to crafting
+        intuitive, user-centered digital experiences for startups, scale-ups,
+        and brands across diverse industries.
         <br />
         <br />
-        Today, I work as a UI/UX Designer, Brand Designer, and No-Code Builder,
-        blending strategic thinking with creative execution to help companies
-        not just look good, but solve real problems through thoughtful design.
+        As a UI/UX Designer, and Brand Designer, I combine strategic thinking
+        with creative execution, helping companies not only look great but solve
+        real problems through design.
         <br />
-        When I’m not designing, you’ll find me reading fiction, watching
-        documentaries, exploring new tech, gaming on my console, or sharing
-        insights with my growing community across{' '}
-        <span className="text-grey-opaque">
-          X (formerly Twitter), YouTube, LinkedIn
-        </span>
-        , and <span className="text-grey-opaque">Facebook</span>.
+        <br />
+        When I’m not designing, you’ll likely find me reading business books,
+        watching movies, exploring new tech, or sharing knowledge with my
+        community people across{' '}
+        <span className="text-[#EDEDEB] font-medium">YouTube</span>,{' '}
+        <span className="text-[#EDEDEB] font-medium">LinkedIn</span>, and{' '}
+        <span className="text-[#EDEDEB] font-medium">Whatsapp</span>.
       </p>
     </div>
   );

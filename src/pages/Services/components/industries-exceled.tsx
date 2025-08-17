@@ -1,7 +1,8 @@
 import Badge from '@/ui/badge';
 import BuildingIcon from '@/../public/assets/icons/Buildings 3.svg';
-import { industries } from '@/lib/constants';
+import { industries } from '@/lib/data/industries-expertise';
 import { CallToActionSection } from '@/pages/About/components/cta';
+
 export const IndustriesExceled = () => {
   return (
     <section className="px-4 md:px-0">
@@ -33,14 +34,13 @@ const TopSection = () => {
         <img src={BuildingIcon} /> Industries
       </Badge>
       <h1 className="text-[40px] text-center tracking-[-0.88px] font-medium gradient-text">
-        Industries Where Excellence Has Been Created
+        Industries Expertise
       </h1>
       <p className="text-sm/[150%] font-normal text-center text-[#909090]">
-        I aspire to be the UI/UX designer that helps your company excel in the
-        diverse digital ecosystem, where businesses from various industries
-        coexist. My goal is to create a compelling brand identity that fosters
-        maximum engagement and enables your company to thrive in this dynamic
-        environment.
+        I design exceptional UI/UX solutions that are customized for Fintech,
+        Edtech, Healthcare, SaaS, E-Commerce, and more industries. My
+        user-centric solutions increase engagement and usability and fuel your
+        business success.
       </p>
     </section>
   );
@@ -56,7 +56,7 @@ const IndustryCard = ({
   description: string;
 }) => {
   return (
-    <div className="bg-[#111119] font-geist rounded-4xl gap-4 p-6">
+    <div className="bg-[#111119] font-geist h-fit rounded-4xl gap-4 p-6">
       <div className="size-[100px]">
         <img src={icon} alt={title} />
       </div>

@@ -1,7 +1,7 @@
 import Badge from '@/ui/badge';
 import RoutingIcon from '@/../public/assets/icons/Routing 3.svg';
-import Curve from '@/../public/assets/icons/Curve.svg';
-import { designProcesses } from '@/lib/constants';
+import Checkmark from '@/../public/assets/icons/checkmark.svg';
+import { designProcesses } from '@/lib/data/design-process';
 import { CardStroke } from '@/components/card-stroke';
 import Card from '@/ui/card';
 
@@ -75,7 +75,7 @@ const ProcessCard = ({
           <div className="grid grid-cols-2 gap-x-4 gap-y-2">
             {list.map((item, index) => (
               <div key={index} className="flex items-start gap-2">
-                <img src={Curve} className="mt-1" />
+                <img src={Checkmark} className="mt-1" />
                 <p className="text-[#909090] text-sm/[150%]">{item}</p>
               </div>
             ))}

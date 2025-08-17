@@ -8,18 +8,6 @@ import Settings from '/assets/icons/Settings.svg';
 import Figma from '/assets/icons/Figma.svg';
 import Smartphone from '/assets/icons/deviceVector.svg';
 
-// Testimonials
-import Amaka from '/assets/images/testimonials/amaka.png';
-import TymeTech from '/assets/images/testimonials/tyme.png';
-import SaferVest from '/assets/images/testimonials/Safervest_Logo.png';
-import StudyVault from '/assets/images/testimonials/StudyVaultLogo.png';
-import SaferVestFounder from '/assets/images/testimonials/David_U.png';
-import StudyVaultFounder from '/assets/images/testimonials/Kelechi_O.png';
-import KaleriAI from '/assets/images/testimonials/KaleriAILogo.png';
-import KaleriAIFounder from '/assets/images/testimonials/Smith_A_Kaleri.png';
-import BlesSoftwareLogo from '/assets/images/testimonials/Bles.png';
-import BlesSoftwareFounder from '/assets/images/testimonials/Stas.png';
-
 import BusBooks from '/assets/images/projects/busbooks.png';
 import VifZack from '/assets/images/projects/Vifzack.png';
 import BlesSoftware from '/assets/images/projects/Bles_Software.png';
@@ -128,50 +116,6 @@ export const tools: Tool[] = [
   {
     Icon: AdobeIllustrator,
     name: 'Adobe Illustrator',
-  },
-];
-
-export const testimonials = [
-  {
-    id: 1,
-    name: 'Amaka I.',
-    position: 'Product Manager at Tymetech',
-    testimonial:
-      'Ezekiel didn’t just design our product — he transformed it. Every screen now feels intentional and user-focused. Working with him was one of the best decisions we made for our MVP.',
-    images: [Amaka, TymeTech],
-  },
-  {
-    id: 2,
-    name: 'Smith A.',
-    position: 'Co-founder at Kaleri AI ',
-    testimonial:
-      'His designs speak louder than words. From kickoff to handoff, Ezekiel was responsive, thoughtful, and insanely creative. We got compliments the week we launched.',
-    images: [KaleriAIFounder, KaleriAI],
-  },
-  {
-    id: 3,
-    name: 'Stas S.',
-    position: 'CEO at Bles Software',
-    testimonial:
-      'We needed a modern, mobile-friendly interface that still worked for our older and newly clients — Ezekiel nailed both. His ability to balance design beauty with usability is next level.',
-    images: [BlesSoftwareFounder, BlesSoftwareLogo],
-  },
-  {
-    id: 4,
-    name: 'David U.',
-    position: 'Founder at Safevest Inc',
-    testimonial:
-      'Ezekiel joined our project mid-sprint and still managed to elevate the entire experience. His Figma work is clean, scalable, and a dream to hand off to devs.',
-    images: [SaferVestFounder, SaferVest],
-  },
-  {
-    id: 5,
-
-    name: 'Kelechi O.',
-    position: 'CEO & Back-End Engineer at StudyVault',
-    testimonial:
-      'Beyond the visuals, Ezekiel brings strategy. He asked smart questions we didn’t think of, and helped us shape a product our users now love. Total game-changer.',
-    images: [StudyVaultFounder, StudyVault],
   },
 ];
 

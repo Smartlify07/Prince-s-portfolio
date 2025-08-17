@@ -8,20 +8,20 @@ export const Statistics = () => {
       <div className="rounded-3xl texture-2 gap-4 md:hidden flex flex-col md:flex-row py-6 px-4">
         <div className="grid grid-cols-2 gap-10 md:hidden">
           <Stat title="Years of Experience" value="3+" border />
-          <Stat title="Projects Completed" value="24+" />
+          <Stat title="Projects Completed" value="30+" />
         </div>
         <div className="grid grid-cols-2 gap-10">
           <Stat title="Collaborate as a Team" value="4+" border />
           <Stat title="Industries" value="12+" />
         </div>
         <div className="grid grid-cols-2 gap-10">
-          <Stat title="Design Community" value="200+" border />
+          <Stat title="Design Community" value="5+" border />
           <Stat title="Awards" value="2+" />
         </div>
       </div>
       <div className="hidden md:flex rounded-3xl texture-2 gap-8 py-6 px-4">
         <Stat title="Years of Experience" value="3+" border />
-        <Stat title="Projects Completed" value="24+" border />
+        <Stat title="Projects Completed" value="30+" border />
         <Stat title="Collaborate as a Team" value="4+" border />
         <Stat title="Industries" value="12+" border />
         <Stat title="Design Community" value="200+" border />
