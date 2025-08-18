@@ -220,9 +220,9 @@
   33% {
     background: linear-gradient(
       291deg,
-      #b96add 29.07%,
-      #ff6c64 57.18%,
-      #ffa94b 84.19%
+      var(--color-primary) 29.07%,
+      var(--color-secondary) 57.18%,
+      var(--color-accent) 84.19%
     );
     background-clip: text;
     -webkit-background-clip: text;

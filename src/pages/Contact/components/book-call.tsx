@@ -17,7 +17,7 @@ export const BookCall = () => {
         </h1>
       </header>
       <Cal
-        calLink="ezeydesign/clients"
+        calLink="princeugboga/secret"
         style={{ width: '100%', height: '100%' }}
         config={{ theme: 'dark', layout: 'month_view' }}
       ></Cal>
