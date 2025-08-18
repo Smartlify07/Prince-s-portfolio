@@ -5,24 +5,24 @@ import DribbleIcon from '@/../public/assets/icons/Dribbble.svg';
 import BehanceIcon from '@/../public/assets/icons/Behance.svg';
 import Twitter from '@/../public/assets/icons/Twitter.svg';
 import LinkedIn from '@/../public/assets/icons/LinkedIn.svg';
-import Sixself from '@/../public/assets/icons/sixself.svg';
+import Envelope from '@/../public/assets/icons/envelope.svg';
 
 const contact = [
   {
     Icon: Phone,
-    text: '+2349033267104',
+    text: '+2348102396534',
   },
   {
     Icon: Letter,
-    text: 'temitayobolaji@gmail.com ',
+    text: 'princeugboga@gmail.com',
   },
 ];
 const socialIcons = [
+  { title: 'Email', icon: Envelope },
   { title: 'Dribble', icon: DribbleIcon },
   { title: 'Behance', icon: BehanceIcon },
   { title: 'Twitter', icon: Twitter },
   { title: 'LinkedIn', icon: LinkedIn },
-  { title: 'Sixself', icon: Sixself },
 ];
 
 export const ConnectSection = () => {
