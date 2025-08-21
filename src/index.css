@@ -192,67 +192,38 @@
   background: linear-gradient(
     -87deg,
     var(--color-white-opaque) 0%,
-    rgb(255, 255, 236, 0.63) 38%,
-    rgb(255, 255, 236, 0.59) 42%,
-    rgb(255, 255, 236, 0.2) 100%
+    rgb(255, 255, 236, 0.63) 20%,
+    rgb(255, 255, 236, 0.59) 30%,
+    var(--color-primary) 50%,
+    var(--color-secondary) 75%,
+    var(--color-accent) 100%
   );
   background-clip: text;
-  color: transparent;
   -webkit-background-clip: text;
+  color: transparent;
   -webkit-text-fill-color: transparent;
-  background-size: 200% 200%;
-  animation: spotify 40s ease-in-out infinite;
+  background-size: 600%;
+  animation: spotify 3s ease-in-out infinite;
 }
 
 @keyframes spotify {
   0% {
-    background: linear-gradient(
-      278deg,
-      #fcffec 5.77%,
-      rgba(252, 255, 236, 0.02) 113.79%
-    );
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-position: 0% 50%;
+    background-position: 0 0;
   }
-
-  33% {
-    background: linear-gradient(
-      291deg,
-      var(--color-primary) 29.07%,
-      var(--color-secondary) 57.18%,
-      var(--color-accent) 84.19%
-    );
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-position: 50% 50%;
+  25% {
+    background-position: 50% 0;
   }
-
-  66% {
-    background: linear-gradient(
-      98deg,
-      #fcffec 0.67%,
-      rgba(252, 255, 236, 0.02) 97.81%
-    );
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-position: 100% 50%;
+  50% {
+    background-position: 90% 0;
   }
-
+  60% {
+    background-position: 60%;
+  }
+  75% {
+    background-position: 40%;
+  }
   100% {
-    background: linear-gradient(
-      180deg,
-      #d065ff -3.1%,
-      #f26ca7 49.48%,
-      #ffaa4c 100%
-    );
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-position: 0% 50%;
+    background-position: 0 0;
   }
 }
 
@@ -441,10 +412,10 @@
 
 .gradient-input:focus {
   background: #171721;
-  border-top: 1px solid #d065ff;
-  border-right: 1px solid #f26ca7;
-  border-left: 1px solid #f26ca7;
-  border-bottom: 1px solid #ffaa4c;
+  border-top: 1px solid var(--color-primary);
+  border-right: 1px solid var(--color-secondary);
+  border-left: 1px solid var(--color-accent);
+  border-bottom: 1px solid var(--color-accent);
 }
 
 .custom-select-dropdown {

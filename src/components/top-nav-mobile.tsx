@@ -1,5 +1,4 @@
 import { CloseCircle, HamburgerMenu } from '@solar-icons/react';
-import Logo from '@/../public/assets/images/Logo.svg';
 
 import { useState } from 'react';
 import { Link } from 'react-router';
@@ -32,15 +31,14 @@ const LogoSection = ({
   return (
     <div className="flex items-center justify-between font-geist pt-2 border-b border-b-grey-4/60">
       <div className="flex items-center gap-6">
-        <Link to={'/'} className="flex flex-col gap-1">
-          <img
-            src={Logo}
-            alt="logo"
-            className="aspect-[122/25] w-[122px] h-[25px]"
-          />
-          <span className="text-[10px] text-grey-9 font-medium font-geist">
-            Designer, Researcher, and Creator
-          </span>
+        <Link to={'/'} className="flex justify-center flex-col gap-1 py-px">
+          <h1 className="font-bold font-geist tracking-tighter gradient-text text-xl">
+            Prince Ugboga
+          </h1>
+
+          <p className="text-[10px] text-grey-9 font-medium font-geist">
+            Product Designer , UI/UX Design{' '}
+          </p>
         </Link>
         <div className="border-r border-l  available-slots border-dashed flex items-center gap-2 border-grey-9 py-4 px-[7px]">
           <div className="size-5 flex spots items-center rounded-full justify-center bg-linear-[270deg,rgba(23,201,100,0.02)_2.08%,rgba(23,201,100,0.10)_50.96%,rgba(23,201,100,0.02)_97.92%]">

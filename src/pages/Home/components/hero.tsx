@@ -9,7 +9,7 @@ const HeroSection = () => {
         <header>
           <h1 className="text-[40px]/[52px] font-geist font-medium tracking-[-0.88px] text-left gradient-text">
             UI/UX Designer with 3+ years of experience creating user-focused
-            digital products for startups & enterprises..
+            digital products for startups & enterprises.
           </h1>
         </header>
 

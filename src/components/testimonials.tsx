@@ -97,7 +97,7 @@ const Indicator = ({
     <div className="w-[90px] rounded-xs h-0.5 bg-[#636363] overflow-hidden">
       {active && (
         <div
-          className="h-full bg-linear-[180deg,var(--color-bright-purple)_-3.1%,var(--color-bright-pink)_49.48%,var(--color-bright-orange)_100%] transition-all duration-100"
+          className="h-full bg-linear-[180deg,var(--color-primary)_-3.1%,var(--color-secondary)_49.48%,var(--color-accent)_100%] transition-all duration-100"
           style={{
             width: `${progress}%`,
           }}
