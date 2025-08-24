@@ -1,11 +1,17 @@
 import type { Project } from '../types';
-import MaxWellEv from '@/../public/assets/images/projects/Maxwell_Landing_Page.png';
+import MaxWellEv from '@/../public/assets/images/projects/sony-website.png';
 
 export const maxwellEv: Project = {
-  title: 'Maxwell EV Charging',
+  id: 4,
+  title: 'Sony CH520',
+  subtitle: 'Sony CH520',
+  previewTitle: 'Sony CH520 | Landing Lage',
+
   description:
     "is a smart, user-centric digital platform built to empower electric vehicle (EV) users with the ability to seamlessly locate, access, monitor, and manage EV charging stations in real time. Designed with both convenience and sustainability in mind, the platform offers a robust map-based interface for discovering nearby stations, detailed filtering by connector type, speed, and cost, live session tracking, secure wallet integration for hassle-free payments, and intelligent notifications to keep users updated on session progress. Whether you're a daily commuter, fleet manager, or eco-conscious traveler, Maxwell simplifies the entire EV charging journey through a clean, intuitive, and responsive user experience tailored for modern mobility.",
-  category: 'web app',
+  category: 'Web Application',
+  shortDescription:
+    'The Maxwell landing page presents a clean, modern user interface for promoting the company’s EV charging solutions. It targets individuals and businesses seeking reliable and efficient EV infrastructure.',
   image: MaxWellEv,
   goals: {
     description:

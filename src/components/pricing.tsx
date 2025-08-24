@@ -13,7 +13,10 @@ export const Pricing = () => {
   return (
     <section className="px-4 md:px-0 font-geist grid gap-11">
       <div className="grid gap-4 place-items-center">
-        <Badge className="flex text-[#EDEDEB] items-center gap-2">
+        <Badge
+          shadowSize="small"
+          className="flex text-[#EDEDEB] items-center gap-2"
+        >
           <img src={CurrencyIcon} alt="currency-icon" />
           Pricing
         </Badge>

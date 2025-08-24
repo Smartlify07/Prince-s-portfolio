@@ -1,11 +1,15 @@
-import { maxwellEv } from '@/lib/projects/maxwell-ev';
 import React from 'react';
 import { CardWithMarker } from './card-with-marker';
 import BrainstormImage from '@/../public/assets/images/projects/brainstorm.png';
+import type { Project } from '@/lib/types';
 
-export const BrainstormSection = () => {
-  const description = maxwellEv.brainstorm.description.split('\n');
-
+export const BrainstormSection = ({
+  description,
+  content,
+}: {
+  description: Project['brainstorm']['description'];
+  content: Project['brainstorm']['content'];
+}) => {
   return (
     <section className="grid gap-6 font-geist pb-10 border-b border-b-grey-4/60 md:flex md:items-center">
       <div className="grid gap-6 md:w-7/12">
@@ -15,7 +19,7 @@ export const BrainstormSection = () => {
           </h1>
           <p className="text-sm/[150%] text-grey-9">
             {' '}
-            {description.map((line, index) => (
+            {description.split('\n').map((line, index) => (
               <React.Fragment key={index}>
                 {line}
                 {index < description.length - 1 && (
@@ -29,7 +33,7 @@ export const BrainstormSection = () => {
         </div>
 
         <div className="grid gap-4">
-          {maxwellEv.brainstorm.content.map((item, i) => (
+          {content.map((item, i) => (
             <div key={i} className="grid gap-2">
               <h3 className="text-xl -tracking-smaller font-medium gradient-text">
                 {item.title}

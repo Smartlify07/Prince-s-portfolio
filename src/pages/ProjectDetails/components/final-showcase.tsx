@@ -1,9 +1,13 @@
-import { maxwellEv } from '@/lib/projects/maxwell-ev';
 import { CardWithMarker } from './card-with-marker';
 import Button from '@/ui/button';
 import HighlightImage from '@/../public/assets/images/projects/design-highlight-2.png';
+import type { Project } from '@/lib/types';
 
-export const FinalShowCaseSection = () => {
+export const FinalShowCaseSection = ({
+  finalShowcase,
+}: {
+  finalShowcase: Project['finalShowcase'];
+}) => {
   return (
     <section className="flex flex-col gap-6 font-geist pb-10 border-b border-b-grey-4/60">
       <div className="flex flex-col gap-6 md:flex-row md:items-start">
@@ -19,7 +23,7 @@ export const FinalShowCaseSection = () => {
               What I Delivered:
             </h3>
             <div className="grid gap-2 px-4">
-              {maxwellEv.finalShowcase.blocks.map((item, i) => (
+              {finalShowcase.blocks.map((item, i) => (
                 <CardWithMarker
                   text={item.text}
                   keyword={item.keyword}
@@ -30,9 +34,7 @@ export const FinalShowCaseSection = () => {
           </div>
         </div>
         <div className="grid gap-6 md:w-6/12">
-          <p className="text-sm/[150%] text-grey-9">
-            {maxwellEv.finalShowcase.footer}
-          </p>
+          <p className="text-sm/[150%] text-grey-9">{finalShowcase.footer}</p>
 
           <Button variant="outline" className="justify-self-start">
             View Website

@@ -5,6 +5,7 @@ import { forwardRef } from 'react';
 import { Link } from 'react-router';
 import { BookACallButton } from './book-a-call-button';
 import { LetsTalkButton } from './lets-talk-button';
+import PriceBadge from './price-badge';
 
 export const Sidebar = forwardRef<HTMLDivElement>((_, ref) => {
   return (
@@ -53,15 +54,7 @@ const IntroSection = () => {
     <section className="gap-11 pl-10 pr-4 h-[335px] overflow-y-auto scrollbar-hide flex flex-col">
       <div className="flex flex-col gap-9">
         <div className="flex flex-col gap-4">
-          <Badge
-            shadows={false}
-            className="font-geist self-start inline-flex items-center gap-1"
-          >
-            <span className="text-[#909090]">From</span>
-            <span className="text-[#EDEDEB] font-semibold leading-[20px] text-sm">
-              $1,300
-            </span>
-          </Badge>
+          <PriceBadge />
           <header>
             <h1 className="gradient-text text-[40px]/[52px] tracking-[-2px] font-medium text-left font-geist">
               Transforming complex problems into intuitive and scalable

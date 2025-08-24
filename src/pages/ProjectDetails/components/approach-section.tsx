@@ -1,10 +1,16 @@
-import { maxwellEv } from '@/lib/projects/maxwell-ev';
 import React from 'react';
 import ApproachImage from '@/../public/assets/images/projects/approach.png';
+import type { Project } from '@/lib/types';
 
-export const ApproachSection = () => {
-  const content = maxwellEv.approach.content.split('\n');
-
+export const ApproachSection = ({
+  title,
+  content,
+  subtitle,
+}: {
+  title: Project['approach']['title'];
+  subtitle: Project['approach']['subtitle'];
+  content: Project['approach']['content'];
+}) => {
   return (
     <section className="grid gap-8 pb-10 border-b border-b-grey-4/60">
       <header>
@@ -22,15 +28,13 @@ export const ApproachSection = () => {
         </div>
         <div className="grid gap-2">
           <div className="grid gap-2">
-            <h3 className="gradient-text font-medium text-xl">
-              {maxwellEv.approach.title}
-            </h3>
+            <h3 className="gradient-text font-medium text-xl">{title}</h3>
             <p className="text-grey-opaque font-bold text-sm/[150%]">
-              {maxwellEv.approach.subtitle}
+              {subtitle}
             </p>
           </div>
           <p className="text-grey-9 text-sm/[150%]">
-            {content.map((line, index) => (
+            {content.split('\n').map((line, index) => (
               <React.Fragment key={index}>
                 {line}
                 {index < content.length - 1 && (

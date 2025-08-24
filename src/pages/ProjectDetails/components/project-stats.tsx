@@ -1,5 +1,5 @@
 import { DoubleAltArrowRight } from '@solar-icons/react';
-import Avatar from '@/../public/assets/images/projects/ezekiel.png';
+import Avatar from '@/../public/assets/images/hero-image.png';
 
 export const ProjectStats = ({ title }: { title: string }) => {
   return (
@@ -19,7 +19,7 @@ export const ProjectStats = ({ title }: { title: string }) => {
               className="w-[25px] h-8 object-cover rounded-md"
             />
           </div>
-          <h1 className="text-grey-opaque text-sm">Ezekiel Olayiwola</h1>
+          <h1 className="text-grey-opaque text-sm">Prince Ugboga</h1>
         </div>
         <div className="flex items-center border-r-grey-4 border-r md:border-none shrink-0 justify-center pr-4">
           <p className="text-grey-9 text-sm">Date:</p>

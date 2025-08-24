@@ -1,7 +1,13 @@
-import { maxwellEv } from '@/lib/projects/maxwell-ev';
 import { CardWithMarker } from './card-with-marker';
+import type { Project } from '@/lib/types';
 
-export const ChallengesSection = () => {
+export const ChallengesSection = ({
+  challengeBlocks,
+  challengeDescription,
+}: {
+  challengeBlocks: Project['challenge']['blocks'];
+  challengeDescription: Project['challenge']['description'];
+}) => {
   return (
     <section className="grid gap-6 pb-10 border-b border-b-grey-4/60 md:flex md:items-start">
       <h1 className="text-[40px]/[52px] w-9/12 md:w-7/12 -tracking-smaller font-medium gradient-text">
@@ -9,12 +15,10 @@ export const ChallengesSection = () => {
       </h1>
 
       <div className="grid gap-4">
-        <p className="text-sm/[150%] text-grey-9">
-          {maxwellEv.challenge.description}
-        </p>
+        <p className="text-sm/[150%] text-grey-9">{challengeDescription}</p>
 
         <div className="px-4 grid gap-4">
-          {maxwellEv.challenge.blocks.map((block, i) => (
+          {challengeBlocks.map((block, i) => (
             <div key={i} className="grid gap-2">
               <h1 className="gradient-text text-xl font-medium -tracking-smaller">
                 {block.title}

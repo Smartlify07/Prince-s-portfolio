@@ -3,18 +3,14 @@ import { tools } from '@/lib/constants';
 import { Testimonials } from '@/components/testimonials';
 import { LetsTalkButton } from '@/components/lets-talk-button';
 import { BookACallButton } from '@/components/book-a-call-button';
+import PriceBadge from '@/components/price-badge';
 
 const MainContent = () => {
   return (
     <section className="py-8  gap-11 flex flex-col md:hidden">
       <div className="flex flex-col gap-9 px-4">
         <div className="flex flex-col gap-4">
-          <Badge className="font-geist self-start inline-flex items-center gap-1">
-            <span className="text-[#909090]">From</span>
-            <span className="text-[#EDEDEB] font-semibold leading-[20px] text-sm">
-              $1,300
-            </span>
-          </Badge>
+          <PriceBadge />
           <header>
             <h1 className="gradient-text text-[40px]/[52px] tracking-[-2px] font-medium text-left font-geist">
               Making complex ideas easier to understand through smart design.

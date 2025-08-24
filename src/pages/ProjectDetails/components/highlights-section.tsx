@@ -1,8 +1,14 @@
-import { maxwellEv } from '@/lib/projects/maxwell-ev';
 import { CardWithMarker } from './card-with-marker';
 import HighlightImage from '@/../public/assets/images/projects/design-highlight-1.png';
+import type { Project } from '@/lib/types';
 
-export const HighlightsSection = () => {
+export const HighlightsSection = ({
+  highlights,
+  testing,
+}: {
+  highlights: Project['highlights'];
+  testing: Project['testing'];
+}) => {
   return (
     <section className="grid gap-6 font-geist pb-10 border-b border-b-grey-4/60 md:flex">
       <div className="md:w-5/12">
@@ -25,7 +31,7 @@ export const HighlightsSection = () => {
         </div>
 
         <div className="grid gap-2 px-4">
-          {maxwellEv.highlights.list.map((item, i) => (
+          {highlights.list.map((item, i) => (
             <CardWithMarker text={item} key={i} />
           ))}
         </div>
@@ -34,7 +40,7 @@ export const HighlightsSection = () => {
             Testing & Refinement
           </h3>
           <div className="grid gap-2 px-4">
-            {maxwellEv.testing.list.map((item, i) => (
+            {testing.list.map((item, i) => (
               <CardWithMarker text={item} key={i} />
             ))}
           </div>

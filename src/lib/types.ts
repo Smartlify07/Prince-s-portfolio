@@ -6,10 +6,14 @@ export type Block = {
 };
 
 export type Project = {
+  id: number;
   title: string;
+  previewTitle: string;
   description: string;
   category: string;
   image: string;
+  shortDescription: string;
+  subtitle: string;
 
   goals: {
     description: string;
