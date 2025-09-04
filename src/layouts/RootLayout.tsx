@@ -49,9 +49,7 @@ const RootLayout = () => {
     '/privacy-policy',
   ];
 
-  const shouldRemovePaddingTop =
-    pathsWithoutPadding.includes(normalizedPath) ||
-    normalizedPath.startsWith('/projects/');
+  const shouldRemovePaddingTop = pathsWithoutPadding.includes(normalizedPath);
 
   const { mainRef } = useScroll();
 

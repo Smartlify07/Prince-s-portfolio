@@ -11,7 +11,7 @@ export const UpcomingCaseStudies = () => {
     <section className="flex flex-col gap-6 font-geist border-b-grey-4/60">
       <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
         <h1 className="gradient-text text-start font-medium text-[40px]/[52px] -tracking-smaller">
-          Upcoming Case Studies
+          Other Case Studies
         </h1>
         <Button variant="default" className="self-start md:self-center">
           <Case size={16} weight="Outline" />

@@ -175,6 +175,14 @@
     0px 10px 10px 0px #ff69b41a;
 }
 
+.linear-gradient-text-1 {
+  background: linear-gradient(90deg, #fcffec 0%, rgb(252, 255, 236, 0.3) 100%);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .gradient-text {
   background: linear-gradient(
     90deg,
