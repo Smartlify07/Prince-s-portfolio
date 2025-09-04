@@ -12,7 +12,7 @@ export default function ProjectDetailsPage() {
   const projectWithId = getProject(Number(id));
 
   return (
-    <main className="grid px-4 gap-15 mt-10  font-geist">
+    <main className="grid px-4 gap-15 font-geist">
       <TopSection
         description={projectWithId?.shortDescription}
         title={projectWithId?.title ?? ''}

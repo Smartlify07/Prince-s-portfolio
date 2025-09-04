@@ -3,6 +3,28 @@ import CaretIcon from '@/../public/assets/icons/Curve.svg';
 import DesignHighlightImage from '@/../public/assets/images/projects/design-highlight-2.png';
 
 export const OutcomeSection = () => {
+  const outcomes = [
+    {
+      bold: 'Automatic conversation capture',
+      text: ' Records dentist-patient interactions in real time.',
+    },
+    {
+      bold: 'Smart categorization',
+      text: 'Notes are organized by treatment type like  exams, fillings, or extractions.',
+    },
+    {
+      bold: 'Speaker recognition',
+      text: ' Differentiates between dentist and patient; allows renaming patients later.',
+    },
+    {
+      bold: 'Summarized highlights',
+      text: 'Key medical information is extracted and ready for EHR transfer.',
+    },
+    {
+      bold: 'Time-saving workflow',
+      text: 'Reduces manual documentation, letting dentists focus on care.',
+    },
+  ];
   return (
     <section className="flex flex-col gap-6">
       <div className="flex flex-col gap-11">
@@ -41,62 +63,19 @@ export const OutcomeSection = () => {
             </h1>
 
             <div className="flex flex-col gap-2">
-              <div className="flex items-center gap-2 text-sm text-grey-9">
-                <img
-                  src={CaretIcon}
-                  alt="orange-chevron-down"
-                  className="size-2"
-                />
-                <strong>Automatic conversation capture:</strong>
-                <p>Records dentist-patient interactions in real time.</p>
-              </div>
-              <div className="flex items-center gap-2 text-sm text-grey-9">
-                <img
-                  src={CaretIcon}
-                  alt="orange-chevron-down"
-                  className="size-2"
-                />
-                <strong>Smart categorization:</strong>
-                <p>
-                  Notes are organized by treatment type like exams, fillings, or
-                  extractions.
-                </p>
-              </div>
-              <div className="flex items-center gap-2 text-sm text-grey-9">
-                <img
-                  src={CaretIcon}
-                  alt="orange-chevron-down"
-                  className="size-2"
-                />
-                <strong>Speaker recognition:</strong>
-                <p>
-                  Differentiates between dentist and patient; allows renaming
-                  patients later.
-                </p>
-              </div>
-              <div className="flex items-center gap-2 text-sm text-grey-9">
-                <img
-                  src={CaretIcon}
-                  alt="orange-chevron-down"
-                  className="size-2"
-                />
-                <strong>Summarized highlights:</strong>
-                <p>
-                  Key medical information is extracted and ready for EHR
-                  transfer.
-                </p>
-              </div>
-              <div className="flex items-center gap-2 text-sm text-grey-9">
-                <img
-                  src={CaretIcon}
-                  alt="orange-chevron-down"
-                  className="size-2"
-                />
-                <strong>Time-saving workflow:</strong>
-                <p>
-                  Reduces manual documentation, letting dentists focus on care.
-                </p>
-              </div>
+              {outcomes.map((outcome) => (
+                <div className="flex items-start gap-2">
+                  <img
+                    src={CaretIcon}
+                    alt="orange-chevron-down"
+                    className="size-2 mt-2"
+                  />
+                  <p className="text-sm text-grey-9">
+                    <strong className="font-medium">{outcome.bold}:</strong>{' '}
+                    {outcome.text}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </div>

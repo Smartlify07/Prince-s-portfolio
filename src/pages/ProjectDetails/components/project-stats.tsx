@@ -5,7 +5,7 @@ export const ProjectStats = () => {
       description: 'UI/UX Designer',
     },
 
-    { title: 'Duration', description: '10 Weeks' },
+    { title: 'Duration', description: '6 Weeks' },
     {
       title: 'Industry',
       description: 'HR Tech / Recruitment',
@@ -16,7 +16,7 @@ export const ProjectStats = () => {
     },
   ];
   return (
-    <section className="flex items-center justify-between gap-10 border-b border-b-grey-4/60 min-h-[131px] font-geist">
+    <section className="flex items-center flex-wrap lg:justify-between gap-10 pb-10 border-b border-b-grey-4/60 min-h-[131px] font-geist lg:flex-nowrap">
       {stats.map((stat) => (
         <ProjectStatCard {...stat} key={stat.title} />
       ))}
@@ -32,11 +32,11 @@ const ProjectStatCard = ({
   description: string;
 }) => {
   return (
-    <div className="flex flex-col gap-3">
-      <h1 className="gradient-text text-2xl font-medium -tracking-smaller">
+    <div className="flex flex-col basis-[40%] gap-3">
+      <h1 className="gradient-text text-xl lg:text-2xl font-medium -tracking-smaller">
         {title}
       </h1>
-      <p className="text-grey-9 text-base">{description}</p>
+      <p className="text-grey-9 text-sm lg:text-sm">{description}</p>
     </div>
   );
 };
