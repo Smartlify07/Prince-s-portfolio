@@ -24,8 +24,8 @@ export const TopSection = () => {
           </div>
           <p className="text-sm/[20px] text-[#909090]">
             Here are the General Terms and Conditions of Business (hereafter
-            referred to as "GTC") for Ezekiel Olayiwola, who specializes as a
-            UI/UX Designer, Brand Designer, and Non-Code Developer-as-a-Service.
+            referred to as "GTC") for Prince Ugboga, who specializes as a UI/UX
+            Designer, Brand Designer, and Non-Code Developer-as-a-Service.
           </p>
         </div>
       </div>

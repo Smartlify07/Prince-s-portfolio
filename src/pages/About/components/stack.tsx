@@ -1,4 +1,4 @@
-import { toolsUsed } from '@/lib/constants';
+import { stack } from '@/lib/data/stack';
 
 export const Stack = () => {
   return (
@@ -12,7 +12,7 @@ export const Stack = () => {
         </p>
       </header>
       <div className="grid grid-cols-5 md:grid-cols-11 gap-4">
-        {toolsUsed.map((tool) => (
+        {stack.map((tool) => (
           <div key={tool.title} className="flex flex-col items-center gap-2">
             <div className="flex flex-col rounded-full bg-orange-2/2 opacity-50 button-shadows items-center justify-center size-14 gap-2">
               <img src={tool.icon} alt={tool.title} className="size-6" />

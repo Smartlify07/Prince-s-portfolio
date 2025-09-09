@@ -12,7 +12,7 @@ export const ExclusiveDealsTopSection = () => {
         Exclusive Deals
       </Badge>
 
-      <h1 className="gradient-text font-medium text-[40px] font-geist text-center tracking-[-0.88px]">
+      <h1 className="gradient-text font-medium text-[40px] font-geist text-center lg:w-10/12 tracking-[-0.88px]">
         Why Choose Me for Your UI/UX Design Needs
       </h1>
 

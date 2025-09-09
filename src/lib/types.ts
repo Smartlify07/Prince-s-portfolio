@@ -14,42 +14,14 @@ export type Project = {
   image: string;
   shortDescription: string;
   subtitle: string;
+  categories: { icon: string; label: string }[];
 
-  goals: {
-    description: string;
-    goalBlocks: Block[];
-    footer: string;
-  };
-  challenge: {
-    description: string;
-    blocks: { title: string; subBlocks: string[] }[];
-  };
+  overview: string[];
+  stats: { title: string; description: string }[];
 
-  approach: {
-    title: string;
-    subtitle: string;
-    content: string;
-  };
-
-  brainstorm: {
-    description: string;
-    content: { title: string; description?: string; blocks: Block[] }[];
-  };
-  highlights: {
-    description: string;
-    list: string[];
-  };
-  testing: {
-    list: string[];
-  };
   outcome: {
     description: string;
-    list: string[];
-    footer: string;
-  };
-  finalShowcase: {
-    footer: string;
-    blocks: Block[];
+    features: { bold: string; text: string }[];
   };
 };
 

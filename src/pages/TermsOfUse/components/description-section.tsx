@@ -2,7 +2,7 @@ export const DescriptionSection = () => {
   return (
     <section>
       <p className="text-sm/[150%] text-grey-9">
-        I Ezekiel Olayiwola, wish to provide you with a smooth journey that
+        I Prince Ugboga, wish to provide you with a smooth journey that
         would keep you coming back again and again. And that is precisely why I
         have laid out certain guidelines for using my website and/or my
         services. These guidelines will ensure that every business transaction
@@ -14,7 +14,7 @@ export const DescriptionSection = () => {
         rules and regulations, Privacy Policy and Terms of Use for access or
         usage of{' '}
         <a className="font-medium text-grey-opaque underline">
-          https://ezeydesign.com.
+          https://prince-ugboga.com.
         </a>
         <br /> <br />
         For the purpose of these Terms of Use, wherever the context so requires

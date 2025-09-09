@@ -3,6 +3,7 @@ import Image from '@/../public/assets/images/services/prince.png';
 import Forward from '@/../public/assets/icons/Forward.svg';
 import Button from '@/ui/button';
 import { CardStroke } from '@/components/card-stroke';
+import { details } from '@/lib/constants';
 
 export const CustomQuestion = () => {
   return (
@@ -18,9 +19,9 @@ export const CustomQuestion = () => {
           </div>
           <div className="grid gap-9">
             <h3 className="font-geist text-xl font-medium -tracking-smaller gradient-text">
-              Send Ezekiel a quick message — whether it’s about pricing,
-              timelines, or how we can bring your idea to life. Get clear
-              answers fast.
+              Send {details.firstName} a quick message — whether it’s about
+              pricing, timelines, or how we can bring your idea to life. Get
+              clear answers fast.
             </h3>
             <Button
               variant="default"

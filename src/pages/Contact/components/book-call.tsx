@@ -10,7 +10,10 @@ export const BookCall = () => {
   }, []);
 
   return (
-    <section className="p-6 font-geist grid bg-[#111119] rounded-4xl gap-6">
+    <section
+      id="book-a-call"
+      className="p-6 font-geist grid bg-[#111119] rounded-4xl gap-6"
+    >
       <header>
         <h1 className="text-[40px] font-medium text-center -tracking-smaller gradient-text">
           Book a call

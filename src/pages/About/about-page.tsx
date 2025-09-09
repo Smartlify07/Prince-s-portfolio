@@ -1,7 +1,7 @@
 import { AboutContainer } from './components/about-container';
 import { MoralCompasses } from './components/moral-compasses';
 import { MoreInfo } from './components/more-info';
-import { BrandPartners } from './components/partners';
+import { WorkHistory } from '././components/work-history';
 import { Stack } from './components/stack';
 import { Statistics } from './components/statistics';
 import { AboutTopSection } from './components/top-section';
@@ -16,7 +16,7 @@ export default function AboutPage() {
         <MoreInfo />
       </div>
       <Statistics />
-      <BrandPartners />
+      <WorkHistory />
       <Stack />
       <MoralCompasses />
       <UniqueValueProp />

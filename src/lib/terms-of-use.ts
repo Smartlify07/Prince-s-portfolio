@@ -77,7 +77,7 @@ export const termsOfUse = [
   {
     title: 'Governing Law and Jurisdiction',
     description:
-      'These conditions are governed by and construed in accordance with the laws of Nigeria. You agree, as we do, to submit to the exclusive jurisdiction of the courts at Nigeria.<br/><br/> In no event shall Ezekiel Olayiwola be liable for any special, incidental, indirect or consequential damages of any kind in connection with these terms of use, even if User has been informed in advance of the possibility of such damages.',
+      'These conditions are governed by and construed in accordance with the laws of Nigeria. You agree, as we do, to submit to the exclusive jurisdiction of the courts at Nigeria.<br/><br/> In no event shall Prince Ugboga be liable for any special, incidental, indirect or consequential damages of any kind in connection with these terms of use, even if User has been informed in advance of the possibility of such damages.',
   },
   {
     title: 'Severability & Waiver Contact Information',

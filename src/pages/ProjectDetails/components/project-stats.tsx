@@ -1,20 +1,6 @@
-export const ProjectStats = () => {
-  const stats = [
-    {
-      title: 'My Role',
-      description: 'UI/UX Designer',
-    },
+import type { Project } from '@/lib/types';
 
-    { title: 'Duration', description: '6 Weeks' },
-    {
-      title: 'Industry',
-      description: 'HR Tech / Recruitment',
-    },
-    {
-      title: 'Platform',
-      description: 'Responsive Web App',
-    },
-  ];
+export const ProjectStats = ({ stats }: { stats: Project['stats'] }) => {
   return (
     <section className="flex items-center flex-wrap lg:justify-between gap-10 pb-10 border-b border-b-grey-4/60 min-h-[131px] font-geist lg:flex-nowrap">
       {stats.map((stat) => (

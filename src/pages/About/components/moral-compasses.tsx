@@ -1,6 +1,6 @@
 import Prince1 from '@/../public/assets/images/about/prince-showing-peace-signs-to-the-camera.png';
 import CollaborationImage from '@/../public/assets/images/about/prince-looking-at-his-laptop.png';
-import { morals, type Moral } from '@/lib/constants';
+import { morals, type Moral } from '@/lib/data/morals';
 import Card from '@/ui/card';
 import Star from '@/../public/assets/icons/star.svg';
 import { cn } from '@/lib/utils';
@@ -31,7 +31,7 @@ export const MoralCompasses = () => {
             <img
               src={CollaborationImage}
               alt="Collaboration"
-              className=" rounded-2xl object-cover"
+              className=" rounded-2xl w-full h-full object-cover"
             />
           </div>
 

@@ -6,8 +6,7 @@ import type { Project } from '@/lib/types';
 import { cn } from '@/lib/utils';
 
 export const ProjectCard = ({
-  title,
-  description,
+  shortDescription,
   category,
   image,
   id,
@@ -35,11 +34,11 @@ export const ProjectCard = ({
         className
       )}
     >
-      <div className="rounded-3xl h-[309px] w-full">
+      <div className="rounded-lg h-[309px] w-full">
         <img
           src={image}
-          alt={title}
-          className="w-[436.62px] h-[309px] aspect-[436.72/331.00] object-cover rounded-3xl"
+          alt={previewTitle + 'thumbnail'}
+          className="w-full h-[309px] aspect-[436.72/331.00] object-cover rounded-lg"
         />
       </div>
       <div className="project-gradient absolute left-0 overflow-clip bottom-0 flex flex-col font-geist py-4 px-5 gap-2">
@@ -52,7 +51,7 @@ export const ProjectCard = ({
               {previewTitle}
             </h2>
             <p className="text-sm text-[#909090] font-normal h-10 line-clamp-2 ">
-              {description}...
+              {shortDescription}...
             </p>
           </div>
           <button className="cursor-pointer">

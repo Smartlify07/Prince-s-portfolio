@@ -3,7 +3,8 @@ import { useLocation } from 'react-router';
 import { cn } from '@/lib/utils';
 import { validPaths } from '@/lib/valid-paths';
 import LinkWithWave from './link-with-wave';
-import { Behance, Dribbble, LinkedIn, Twitter } from './contact-icons';
+import { Behance, LinkedIn, Twitter } from './contact-icons';
+import { socialLinks } from '@/lib/constants';
 
 const navLinks = [
   { label: 'Projects', path: '/', icon: CaseRoundMinimalistic },
@@ -18,8 +19,8 @@ const navLinks = [
     icon: User,
   },
   {
-    label: 'Mentorship',
-    path: '/mentorship',
+    label: 'Testimonials',
+    path: '/testimonials',
     icon: Crown,
   },
 ];
@@ -35,7 +36,9 @@ export default function TopNavDesktop() {
     <nav
       className={cn(
         'bg-[rgba(14,14,14,0.7)] hidden h-[86px] z-[50] font-geist md:flex justify-between items-center gap-2.5 pt-6 pr-10 pb-4 pl-6 backdrop-blur-[10px] top-0 border-b border-b-grey-4/60',
-        shouldBeFixed ? 'fixed top-0 md:w-[66.7%] z-50' : 'static'
+        shouldBeFixed
+          ? 'fixed top-0 md:w-[66.7%] 2xl:w-[calc(100%-484px)] z-50'
+          : 'static'
       )}
     >
       <NavLinks />
@@ -69,14 +72,24 @@ const NavLinks = () => {
 };
 
 const ContactSection = () => {
-  const icons = [Dribbble, Behance, Twitter, LinkedIn];
+  const socialIcons = [
+    {
+      icon: LinkedIn,
+      link: socialLinks.linkedin,
+    },
+    { icon: Twitter, link: socialLinks.twitter },
+    { icon: Behance, link: socialLinks.behance },
+  ];
+
   return (
     <div className="flex flex-col gap-6 pl-4 border-l border-l-grey-4">
       <div className="flex text-sm/[14px] items-center gap-2 text-grey-9">
         Connect with me at:
         <div className="flex items-center gap-0.5">
-          {icons.map((Icon, i) => (
-            <Icon key={i} />
+          {socialIcons.map((icon, i) => (
+            <a href={icon.link} key={i} target="_blank">
+              <icon.icon key={i} />
+            </a>
           ))}
         </div>
       </div>

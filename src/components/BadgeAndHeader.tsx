@@ -23,7 +23,7 @@ const BadgeAndHeader = ({
         {badgeTitle}
       </Badge>
       <div className="grid gap-4 place-items-center">
-        <h1 className="text-[40px]/[52px] md:w-10/12 gradient-text text-center font-medium -tracking-smaller">
+        <h1 className="text-[40px]/[52px] lg:w-10/12 gradient-text text-center font-medium -tracking-smaller">
           {title}
         </h1>
         {subtitle && (

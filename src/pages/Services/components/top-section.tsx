@@ -6,11 +6,11 @@ import TypeIt from 'typeit-react';
 export const TopSection = () => {
   const texts = [
     'UI/UX Design',
-    'Branding and visual design',
-    'UX Research',
+    'Responsive Design',
+    'Dashboards',
     'Product Design',
-    'No-Code Development',
-    'Collaboration & Consulting',
+    'Websites',
+    'Mobile Apps',
   ];
 
   return (
@@ -69,8 +69,8 @@ export const TopSection = () => {
           </div>
         </div>
         <motion.p className="text-sm/[150%] font-normal font-geist text-[#909090]">
-          Explore my suite of UI/UX, brand, and no-code design services—crafted
-          to elevate your brand.
+          Explore my suite of UI/UX design services—crafted to elevate your
+          brand.
         </motion.p>
       </div>
     </section>

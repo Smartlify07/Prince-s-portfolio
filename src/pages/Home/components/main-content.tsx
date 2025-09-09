@@ -1,5 +1,5 @@
 import Badge from '@/ui/badge';
-import { tools } from '@/lib/constants';
+import { tools } from '@/lib/data/tools';
 import { Testimonials } from '@/components/testimonials';
 import { LetsTalkButton } from '@/components/lets-talk-button';
 import { BookACallButton } from '@/components/book-a-call-button';

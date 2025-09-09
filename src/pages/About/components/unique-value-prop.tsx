@@ -1,4 +1,4 @@
-import { uniqueValueProps } from '@/lib/constants';
+import { uniqueValueProps } from '@/lib/data/unique-values';
 import Card from '@/ui/card';
 import { CallToActionSection } from './cta';
 import { cn } from '@/lib/utils';

@@ -1,5 +1,5 @@
 import { ArrowRightUp } from '@solar-icons/react';
-import { exclusiveDeals } from '@/lib/constants';
+import { exclusiveDeals } from '@/lib/data/exclusive-deals';
 import Badge from '@/ui/badge';
 import FiltersIcon from '@/../public/assets/icons/Filters.svg';
 import { useState } from 'react';
@@ -14,9 +14,9 @@ export const ExclusiveDeals = () => {
   };
 
   return (
-    <section className="grid md:flex md:flex-row md:items-start gap-6">
+    <section className="grid md:flex md:flex-row md:items-stretch gap-6">
       <CardStroke className="rounded-4xl p-px bg-[#171721] w-full md:w-[40%] overflow-x-auto scrollbar-hide">
-        <div className="flex  gap-4 rounded-4xl md:h-[800px] overflow-y-auto scrollbar-hide p-6 md:flex-col md:items-stretch">
+        <div className="flex  gap-4 rounded-4xl md:h-[725px] overflow-y-auto scrollbar-hide p-6 md:flex-col md:items-stretch">
           {exclusiveDeals.map((deal, index) => (
             <ExclusiveDealCard
               currentDeal={currentDeal}

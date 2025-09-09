@@ -2,9 +2,10 @@ import { CloseCircle, HamburgerMenu } from '@solar-icons/react';
 
 import { useState } from 'react';
 import { Link } from 'react-router';
-import { Behance, Dribbble, LinkedIn, Twitter } from './contact-icons';
+import { Behance, LinkedIn, Twitter } from './contact-icons';
 import { BookACallButton } from './book-a-call-button';
 import { LetsTalkButton } from './lets-talk-button';
+import { details } from '@/lib/constants';
 
 export default function TopNavMobile() {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,7 +34,7 @@ const LogoSection = ({
       <div className="flex items-center gap-6">
         <Link to={'/'} className="flex justify-center flex-col gap-1 py-px">
           <h1 className="font-bold font-geist tracking-tighter gradient-text text-xl">
-            Prince Ugboga
+            {details.firstName} {details.lastName}
           </h1>
 
           <p className="text-[10px] text-grey-9 font-medium font-geist">
@@ -60,7 +61,7 @@ const LogoSection = ({
 };
 
 const BottomSection = () => {
-  const icons = [Dribbble, Behance, Twitter, LinkedIn];
+  const icons = [LinkedIn, Behance, Twitter];
   return (
     <div className="flex flex-col gap-6 pb-4">
       <div className="flex text-sm/[14px] items-center gap-2 text-grey-9">

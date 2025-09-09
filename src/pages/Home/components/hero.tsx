@@ -1,37 +1,35 @@
-import { CloudDownload, Plain } from '@solar-icons/react';
-import Button from '@/ui/button';
 import Card from '@/ui/card';
 import HeroImage from '@/../public/assets/images/hero-image.png';
+import { DownloadResumeButton } from '@/components/resume-button';
+import { LetsTalkButton } from '@/components/lets-talk-button';
+
 const HeroSection = () => {
   return (
     <section className="flex flex-col bg-[#111119] rounded-4xl p-6 gap-8 md:flex-row">
       <div className="flex flex-col gap-8 md:gap-9 md:grow md:shrink-0 md:basis-0">
-        <header>
+        <header className="flex flex-col gap-2">
           <h1 className="text-[40px]/[52px] font-geist font-medium tracking-[-0.88px] text-left gradient-text">
-            UI/UX Designer with 3+ years of experience creating user-focused
-            digital products for startups & enterprises.
+            Prince is a Product Designer based in Africa. Previously at Bles
+            Software Company. Top-rated on Upwork
           </h1>
+
+          <p className="text-base/[150%] font-geist font-normal text-grey-9">
+            My expertise lies in creating visually appealing yet highly usable
+            websites, web apps, and mobile apps that align with your brand's
+            vision and resonate with your target audience. Let me be your
+            partner in transforming ideas into captivating digital solutions
+            that prioritize user experience (UX) and drive conversions.
+          </p>
         </header>
 
         <div className="flex items-center shrink-0 gap-4">
-          <Button
-            variant="default"
-            className="flex shrink-0 items-center gap-2"
-          >
-            <Plain className="text-[#EDEDEB]" size={16} /> Let's talk
-          </Button>
-          <Button
-            variant="outline"
-            className="flex items-center gap-2 shrink-0"
-          >
-            <CloudDownload className="text-[#EDEDEB]" size={16} />
-            Download Resume
-          </Button>
+          <LetsTalkButton />
+          <DownloadResumeButton />
         </div>
       </div>
 
-      <Card className="flex md:w-[291px] items-center shrink-0 justify-center h-[365px]">
-        <img src={HeroImage} />
+      <Card className="flex md:w-[326px] items-center shrink-0 justify-center h-[441px]">
+        <img src={HeroImage} className="w-[274px] h-[331px] rounded-2xl" />
       </Card>
     </section>
   );

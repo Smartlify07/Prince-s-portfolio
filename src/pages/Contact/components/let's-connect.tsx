@@ -1,7 +1,6 @@
 import Card from '@/ui/card';
 import { Letter, Phone } from '@solar-icons/react';
 import type { Icon } from '@solar-icons/react/lib/types';
-import DribbleIcon from '@/../public/assets/icons/Dribbble.svg';
 import BehanceIcon from '@/../public/assets/icons/Behance.svg';
 import Twitter from '@/../public/assets/icons/Twitter.svg';
 import LinkedIn from '@/../public/assets/icons/LinkedIn.svg';
@@ -19,7 +18,6 @@ const contact = [
 ];
 const socialIcons = [
   { title: 'Email', icon: Envelope },
-  { title: 'Dribble', icon: DribbleIcon },
   { title: 'Behance', icon: BehanceIcon },
   { title: 'Twitter', icon: Twitter },
   { title: 'LinkedIn', icon: LinkedIn },

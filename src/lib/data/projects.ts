@@ -1,20 +1,20 @@
 import type { Project } from '../types';
-import { BlesSoftware } from '@/lib/projects/bles-software';
-import { Crawler } from '@/lib/projects/crawler';
-import { ExpenseMaster } from '@/lib/projects/expense-master';
-import { TabbioSmartCv } from '@/lib/projects/tabbio';
-import { Vifzack } from '@/lib/projects/vifzack';
-import { KaleriAI } from '@/lib/projects/kaleri-ai';
-import { BusBooks } from '../projects/busbooks';
-import { maxwellEv } from '../projects/maxwell-ev';
+import { Laxmii } from '@/lib/projects/laxmii';
+import { Tabbio } from '@/lib/projects/tabbio';
+import { Radivox } from '@/lib/projects/radivox';
+import { PumpDB } from '@/lib/projects/pump-db';
+import { Invysion } from '@/lib/projects/invysion';
+import { Ableton } from '@/lib/projects/ableton';
+import { Aora } from '../projects/aora';
+import { QuantCore } from '../projects/quantcore';
 
 export const projects: Project[] = [
-  BusBooks,
-  Vifzack,
-  BlesSoftware,
-  maxwellEv,
-  Crawler,
-  ExpenseMaster,
-  KaleriAI,
-  TabbioSmartCv,
+  Aora,
+  Invysion,
+  Laxmii,
+  QuantCore,
+  Tabbio,
+  Ableton,
+  Radivox,
+  PumpDB,
 ];

@@ -4,7 +4,7 @@ import Framer from '@/../public/assets/icons/Framer.svg';
 import Cursor from '@/../public/assets/icons/Cursor.svg';
 import DoubleCheck from '@/../public/assets/icons/DoubleCheck.svg';
 import Badge from '@/ui/badge';
-import { pricing } from '@/lib/constants';
+import { pricing } from '@/lib/data/pricing';
 import { CardStroke } from '@/components/card-stroke';
 import Button from '@/ui/button';
 import { cn } from '@/lib/utils';

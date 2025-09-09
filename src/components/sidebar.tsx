@@ -1,11 +1,12 @@
 import Badge from '@/ui/badge';
-import { tools } from '@/lib/constants';
+import { tools } from '@/lib/data/tools';
 import { Testimonials } from '@/components/testimonials';
 import { forwardRef } from 'react';
 import { Link } from 'react-router';
 import { BookACallButton } from './book-a-call-button';
 import { LetsTalkButton } from './lets-talk-button';
 import PriceBadge from './price-badge';
+import { details } from '@/lib/constants';
 
 export const Sidebar = forwardRef<HTMLDivElement>((_, ref) => {
   return (
@@ -30,7 +31,7 @@ export const TopSection = () => {
         className="flex justify-center flex-col w-[20.1vw] gap-1 py-px"
       >
         <h1 className="font-bold font-geist tracking-tighter gradient-text text-xl">
-          Prince Ugboga
+          {details.firstName} {details.lastName}
         </h1>
 
         <p className="text-[10px] text-grey-9 font-medium font-geist">

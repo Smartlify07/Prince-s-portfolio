@@ -2,7 +2,7 @@ import BadgeAndHeader from '@/components/BadgeAndHeader';
 import FaqIcon from '@/../public/assets/icons/Question Circle.svg';
 import DoubleArrowDown from '@/../public/assets/icons/DoubleArrowDown.svg';
 import Card from '@/ui/card';
-import { faqs, type Faq } from '@/lib/constants';
+import { faqs, type Faq } from '@/lib/data/faq';
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
 import { AnimatePresence, motion } from 'motion/react';

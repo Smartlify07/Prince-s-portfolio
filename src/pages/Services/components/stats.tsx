@@ -9,7 +9,7 @@ export const StatsSection = () => {
           <Stat number={24} text="Projects Completed" />
         </div>
         <div className="w-6/12 md:w-auto z-20">
-          <Stat number={4} text="Collaborate as a team" />
+          <Stat number={4} text="Team Collaboration" />
         </div>
       </div>
       <hr className="border-[#D9D9D9]/5 border hidden md:block w-4/12" />

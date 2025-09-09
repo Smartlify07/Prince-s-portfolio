@@ -9,10 +9,11 @@ export const ServiceDescription = () => {
           faster.{' '}
         </h1>
         <p className="text-sm/[150%] text-[#909090] font-geist">
-          Transform your digital experience with innovative UI & UX design. I
-          create user-friendly, visually appealing, and high-performance web and
-          mobile user interfaces. From concept to launch, we ensure a process
-          that enhances user engagement, satisfaction, and business growth.
+          My expertise lies in creating visually appealing yet highly usable
+          websites, web apps, and mobile apps that align with your brand's
+          vision and resonate with your target audience. Let me be your partner
+          in transforming ideas into captivating digital solutions that
+          prioritize user experience (UX) and drive conversions.
           <br />
           <br />
           Whether you're launching a new venture or enhancing an existing

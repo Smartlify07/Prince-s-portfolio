@@ -14,8 +14,9 @@ export default function ProjectDetailsPage() {
   return (
     <main className="grid px-4 gap-15 font-geist">
       <TopSection
-        description={projectWithId?.shortDescription}
+        description={projectWithId?.description}
         title={projectWithId?.title ?? ''}
+        categories={projectWithId?.categories ?? []}
       />
 
       <img
@@ -24,9 +25,9 @@ export default function ProjectDetailsPage() {
         className="w-full h-[600px] object-cover rounded-2xl"
       />
 
-      <ProjectStats />
-      <OverviewSection />
-      <OutcomeSection />
+      <ProjectStats stats={projectWithId?.stats ?? []} />
+      <OverviewSection overview={projectWithId?.overview ?? []} />
+      <OutcomeSection outcome={projectWithId!.outcome!} />
       <UpcomingCaseStudies />
     </main>
   );

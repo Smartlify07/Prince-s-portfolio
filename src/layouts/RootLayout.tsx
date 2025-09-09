@@ -25,6 +25,7 @@ const RootLayout = () => {
     '/contact',
     '/termsofuse',
     '/privacy-policy',
+    '/testimonials',
   ];
 
   const faqPaths = ['/services', '/about'];
@@ -68,19 +69,20 @@ const RootLayout = () => {
       className="flex flex-col md:flex-row min-h-screen bg-sidebar-bg relative"
     >
       <TopNavMobile />
-      <div className="md:block md:w-[33.3%] hidden bg-sidebar-bg fixed top-0 left-0 bottom-0 z-20">
+      <div className="md:block md:w-[33.3%] 2xl:max-w-[484px] hidden bg-sidebar-bg fixed top-0 left-0 bottom-0 z-20">
         <Sidebar />
       </div>
 
       <div
         ref={mainRef}
-        className="flex flex-col relative z-[10] gap-10 md:ml-[33.3%] 2xl:w-full overflow-y-hidden"
+        className="flex flex-col relative z-[10] gap-10 md:ml-[33.3%] 2xl:ml-[484px] 2xl:w-full overflow-y-hidden"
       >
         <TopNavDesktop />
         <div
           className={cn(
             'flex flex-col gap-10 md:gap-20 2xl:w-full',
-            shouldRemovePaddingTop ? 'pt-[86px]' : 'pt-[126px]'
+            shouldRemovePaddingTop ? 'pt-[86px]' : 'pt-[126px]',
+            normalizedPath.startsWith('/testimonials') && 'pt-0'
           )}
         >
           <div className="md:w-full 2xl:max-w-[1024px] 2xl:self-center md:overflow-x-auto flex flex-col gap-10 md:gap-20 scrollbar-hide">

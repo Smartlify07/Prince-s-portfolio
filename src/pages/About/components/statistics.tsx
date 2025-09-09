@@ -11,7 +11,7 @@ export const Statistics = () => {
           <Stat title="Projects Completed" value="30+" />
         </div>
         <div className="grid grid-cols-2 gap-10">
-          <Stat title="Collaborate as a Team" value="4+" border />
+          <Stat title="Team Collaboration" value="4+" border />
           <Stat title="Industries" value="12+" />
         </div>
         <div className="grid grid-cols-2 gap-10">
@@ -19,12 +19,12 @@ export const Statistics = () => {
           <Stat title="Awards" value="2+" />
         </div>
       </div>
-      <div className="hidden md:flex rounded-3xl texture-2 gap-8 py-6 px-4">
+      <div className="hidden md:flex rounded-3xl texture-2 gap-8 py-6 pl-4">
         <Stat title="Years of Experience" value="3+" border />
         <Stat title="Projects Completed" value="30+" border />
-        <Stat title="Collaborate as a Team" value="4+" border />
+        <Stat title="Team Collaboration" value="4+" border />
         <Stat title="Industries" value="12+" border />
-        <Stat title="Design Community" value="200+" border />
+        <Stat title="Design Community" value="5+" border />
         <Stat title="Awards" value="2+" />
       </div>
     </section>
@@ -46,13 +46,12 @@ const Stat = ({
         border ? 'border-r border-r-grey-4 pr-2' : ''
       }`}
     >
-      <h4 className="text-grey-9 text-sm/[150%] font-normal font-geist wrap-break-word text-wrap  line-clamp-2">
-        {title}
-      </h4>
-
       <h1 className="text-[40px] -tracking-smaller gradient-text font-bold line-clamp-2">
         {value}
       </h1>
+      <h4 className="text-grey-9 text-sm/[150%] font-normal font-geist wrap-break-word text-wrap  line-clamp-2">
+        {title}
+      </h4>
     </div>
   );
 };
