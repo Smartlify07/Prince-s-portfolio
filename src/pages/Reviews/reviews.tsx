@@ -4,11 +4,11 @@ import QuoteIcon from '@/../public/assets/icons/quote.svg';
 export const ReviewsPage = () => {
   return (
     <main className="grid min-h-screen font-geist bg-sidebar-bg py-8 px-4 md:px-0 pt-[126px] md:pt-0 md:py-0 gap-9 md:gap-14">
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-5">
         <h1 className="gradient-text font-medium -tracking-smaller text-[40px]/[52px]">
           Reviews
         </h1>
-        <p className="text-sm/[150%] lg:w-9/12 text-grey-9">
+        <p className="text-base/[150%] lg:w-9/12 text-grey-9">
           Hear from people I’ve worked with about how my designs helped them
           create scalable products and achieve real results.
         </p>
@@ -18,13 +18,15 @@ export const ReviewsPage = () => {
         {reviews.map((review, index) => (
           <div
             key={index}
-            className="rounded-[20px] relative  p-4 lg:p-6 bg-[#171721] card-stroke flex h-[322px] flex-col lg:h-[340px] justify-between"
+            className="rounded-[20px] relative p-4 lg:p-6 bg-[#171721] card-stroke flex min-h-[322px] flex-col lg:gap-5 lg:min-h-[340px] justify-between"
           >
             <div className="flex flex-col gap-5">
-              <h1 className="gradient-text -tracking-smaller font-normal text-2xl">
+              <h1 className="gradient-text -tracking-smaller min-h-[36px] font-normal text-2xl">
                 {review.title}
               </h1>
-              <p className="text-sm/[150%] text-grey-9">{review.description}</p>
+              <p className="text-base/[150%] text-grey-9">
+                {review.description}
+              </p>
             </div>
 
             <div className="flex items-center justify-between">

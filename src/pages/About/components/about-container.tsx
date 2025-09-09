@@ -27,7 +27,7 @@ export const AboutContainer = () => {
 const StorySection = () => {
   return (
     <div className="flex flex-col gap-4">
-      <h1 className="gradient-text font-medium font-geist -tracking-smaller text-[40px]">
+      <h1 className="gradient-text font-medium font-geist -tracking-smaller text-[40px]/[60px]">
         I’m a Top-rated UI/UX Designer that crafts scalable designs with a blend
         of user delight.
       </h1>
