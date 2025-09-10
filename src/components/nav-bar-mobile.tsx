@@ -9,7 +9,7 @@ export const NavbarMobile = () => {
       <NavLink to="/services" Icon={Cursor} label="Services" />
       <NavLink to="/about" Icon={User} label="About" />
       <NavLink
-        to="/mentorship"
+        to="/testimonials"
         Icon={CaseRoundMinimalistic}
         label="Mentorship"
       />
