@@ -1,4 +1,4 @@
-import { CaseRoundMinimalistic, Cursor, User } from '@solar-icons/react';
+import { CaseRoundMinimalistic, Cursor, User, Crown } from '@solar-icons/react';
 import type { Icon } from '@solar-icons/react/lib/types';
 import { Link, useLocation } from 'react-router';
 
@@ -8,11 +8,7 @@ export const NavbarMobile = () => {
       <NavLink to="/" Icon={CaseRoundMinimalistic} label="Projects" />
       <NavLink to="/services" Icon={Cursor} label="Services" />
       <NavLink to="/about" Icon={User} label="About" />
-      <NavLink
-        to="/testimonials"
-        Icon={CaseRoundMinimalistic}
-        label="Mentorship"
-      />
+      <NavLink to="/testimonials" Icon={Crown} label="Testimonials" />
     </nav>
   );
 };
