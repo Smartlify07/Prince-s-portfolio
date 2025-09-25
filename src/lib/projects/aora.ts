@@ -1,5 +1,5 @@
 import type { Project } from '../types';
-import AoraImage from '@/../public/assets/images/projects/learn-web.png';
+import AoraImage from '@/../public/assets/images/projects/aora-fashion.png';
 import DesignVector from '@/../public/assets/icons/designVector.svg';
 import Figma from '@/../public/assets/icons/Figma.svg';
 import Layers from '@/../public/assets/icons/Layers.svg';

@@ -1,5 +1,5 @@
 import type { Project } from '../types';
-import CrawlerImage from '@/../public/assets/images/projects/product-page.png';
+import LaxmiiThumbnail from '@/../public/assets/images/projects/laxmii.png';
 import DesignVector from '@/../public/assets/icons/designVector.svg';
 import Figma from '@/../public/assets/icons/Figma.svg';
 import Layers from '@/../public/assets/icons/Layers.svg';
@@ -15,7 +15,7 @@ export const Laxmii: Project = {
   category: 'Mobile Application',
   shortDescription:
     'Laxmii is an AI-driven financial management app designed to help users take control of their money without stresshe Maxwell landing page is designed to present a clean, modern, and informative user interface for promoting the company’s electric vehicle (EV) charging solutions. It targets individuals, businesses, and institutions seeking reliable, accessible, and efficient EV infrastructure and mobile app support.',
-  image: CrawlerImage,
+  image: LaxmiiThumbnail,
 
   stats: [
     { title: 'My Role', description: 'UI/UX Designer ' },
