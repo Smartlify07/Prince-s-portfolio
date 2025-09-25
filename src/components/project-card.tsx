@@ -15,9 +15,23 @@ export const ProjectCard = ({
 }: Project & { className?: string }) => {
   const [scope, animate] = useAnimate();
   const handleMouseEnter = () => {
+    animate(
+      'img',
+      { scale: 1.2 },
+      {
+        duration: 0.5,
+      }
+    );
     animate('button', { rotate: 45 });
   };
   const handleMouseLeave = () => {
+    animate(
+      'img',
+      { scale: 1 },
+      {
+        duration: 0.5,
+      }
+    );
     animate('button', { rotate: 0 });
   };
   const router = useNavigate();
@@ -34,7 +48,7 @@ export const ProjectCard = ({
         className
       )}
     >
-      <div className="rounded-lg h-[309px] w-full">
+      <div className="rounded-lg h-[309px] overflow-hidden w-full">
         <img
           src={image}
           alt={previewTitle + 'thumbnail'}
