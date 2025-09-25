@@ -9,8 +9,8 @@ export const PumpDB: Project = {
   id: 8,
   title:
     'Digital workspace for tracking, storing, and managing vessel pump information with ease.',
-  subtitle: 'Pump DB AI | UI/UX Design',
-  previewTitle: 'Pump DB AI | UI/UX Design',
+  subtitle: 'Pump DB | UI/UX Design',
+  previewTitle: 'Pump DB | UI/UX Design',
   description:
     'Pump-DB is built as a handy tool where marine engineering crew can quickly capture pump details and monitor pump health while staying on top of maintenance and replacements.',
 
