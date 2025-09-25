@@ -1,5 +1,5 @@
 import type { Project } from '../types';
-import RadivoxImage from '@/../public/assets/images/projects/expense-master.png';
+import RadivoxImage from '@/../public/assets/images/projects/Radivox.png';
 import DesignVector from '@/../public/assets/icons/designVector.svg';
 import Figma from '@/../public/assets/icons/Figma.svg';
 import Layers from '@/../public/assets/icons/Layers.svg';

@@ -1,5 +1,5 @@
 import type { Project } from '../types';
-import AbletonImage from '@/../public/assets/images/projects/saas-web.png';
+import AbletonImage from '@/../public/assets/images/projects/Ableton.png';
 import DesignVector from '@/../public/assets/icons/designVector.svg';
 import Figma from '@/../public/assets/icons/Figma.svg';
 import Layers from '@/../public/assets/icons/Layers.svg';

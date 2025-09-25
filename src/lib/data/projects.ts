@@ -13,8 +13,8 @@ export const projects: Project[] = [
   Invysion,
   Laxmii,
   QuantCore,
-  Tabbio,
-  Ableton,
   Radivox,
+  Ableton,
+  Tabbio,
   PumpDB,
 ];
