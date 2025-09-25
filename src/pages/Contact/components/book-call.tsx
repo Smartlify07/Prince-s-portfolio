@@ -1,13 +1,39 @@
 import Cal, { getCalApi } from '@calcom/embed-react';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 export const BookCall = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
   useEffect(() => {
-    (async function () {
-      const cal = await getCalApi({ namespace: '30min' });
-      cal('ui', { hideEventTypeDetails: false, layout: 'month_view' });
-    })();
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    const section = document.getElementById('book-a-call');
+    if (section) {
+      observer.observe(section);
+    }
+
+    return () => {
+      if (section) observer.disconnect();
+    };
   }, []);
+
+  useEffect(() => {
+    async function loadCalendar() {
+      if (isVisible) {
+        const cal = await getCalApi({ namespace: '30min' });
+        cal('ui', { hideEventTypeDetails: false, layout: 'month_view' });
+      }
+    }
+    loadCalendar();
+  }, [isVisible]);
 
   return (
     <section
@@ -19,11 +45,13 @@ export const BookCall = () => {
           Book a call
         </h1>
       </header>
-      <Cal
-        calLink="princeugboga/secret"
-        style={{ width: '100%', height: '100%' }}
-        config={{ theme: 'dark', layout: 'month_view' }}
-      ></Cal>
+      {isVisible && (
+        <Cal
+          calLink="princeugboga/secret"
+          style={{ width: '100%', height: '100%' }}
+          config={{ theme: 'dark', layout: 'month_view' }}
+        ></Cal>
+      )}
     </section>
   );
 };
