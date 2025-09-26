@@ -1,16 +1,16 @@
-import UserCenteredDesignImage from '/assets/images/services/exclusive-deals/user-centered-design.png';
-import InnovativeSolutionsImage from '/assets/images/services/exclusive-deals/innovative-solutions.png';
-import ExperiencedTeam from '/assets/images/services/exclusive-deals/experienced-team.png';
-import UXResearch from '/assets/images/services/exclusive-deals/ux-research.png';
-import EnterpriseUX from '/assets/images/services/exclusive-deals/enterprise-ux.png';
-import WebAppDesign from '/assets/images/services/exclusive-deals/web-app-design.png';
-import MobileAppDesign from '/assets/images/services/exclusive-deals/mobile-app.png';
-import WebDesign from '/assets/images/services/exclusive-deals/web-design.png';
-import LandingPage from '/assets/images/services/exclusive-deals/landing-page.png';
-import WebRedesign from '/assets/images/services/exclusive-deals/web-redesign.png';
-import BrandIdentity from '/assets/images/services/exclusive-deals/brand-identity.png';
-import UXTester from '/assets/images/services/exclusive-deals/ux-tester.png';
-import UXAudit from '/assets/images/services/exclusive-deals/ux-audit.png';
+import UserCenteredDesignImage from '/assets/images/services/exclusive-deals/user-centered-design.webp';
+import InnovativeSolutionsImage from '/assets/images/services/exclusive-deals/innovative-solutions.webp';
+import ExperiencedTeam from '/assets/images/services/exclusive-deals/experienced-team.webp';
+import UXResearch from '/assets/images/services/exclusive-deals/ux-research.webp';
+import EnterpriseUX from '/assets/images/services/exclusive-deals/enterprise-ux.webp';
+import WebAppDesign from '/assets/images/services/exclusive-deals/web-app-design.webp';
+import MobileAppDesign from '/assets/images/services/exclusive-deals/mobile-app.webp';
+import WebDesign from '/assets/images/services/exclusive-deals/web-design.webp';
+import LandingPage from '/assets/images/services/exclusive-deals/landing-page.webp';
+import WebRedesign from '/assets/images/services/exclusive-deals/web-redesign.webp';
+import BrandIdentity from '/assets/images/services/exclusive-deals/brand-identity.webp';
+import UXTester from '/assets/images/services/exclusive-deals/ux-tester.webp';
+import UXAudit from '/assets/images/services/exclusive-deals/ux-audit.webp';
 
 export const exclusiveDeals = [
   {

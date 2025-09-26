@@ -1,20 +1,19 @@
-import BackgroundImage from '@/../public/assets/images/contact/topsectionimage.png';
-import BackgroundImageMobile from '@/../public/assets/images/contact/topsectionimagemobile.png';
+import BackgroundImage from '@/../public/assets/images/contact/topsectionimage.webp';
+import BackgroundImageMobile from '@/../public/assets/images/contact/topsectionimagemobile.webp';
 
 export const TopSection = () => {
   return (
     <section className="w-full flex flex-col relative h-[400px]">
       {/* Background Image */}
-      <img
-        src={BackgroundImage}
-        className="w-full h-full hidden md:block object-cover"
-        alt="project-combo"
-      />
-      <img
-        src={BackgroundImageMobile}
-        className="w-full h-full md:hidden object-cover"
-        alt="project-combo"
-      />
+      <picture>
+        <source srcSet={BackgroundImage} media="(min-width:1024px)" />
+        <source srcSet={BackgroundImageMobile} media="(max-width:1023px)" />
+        <img
+          src={BackgroundImage}
+          className="w-full h-full hidden md:block object-cover"
+          alt="projects-presentation"
+        />
+      </picture>
 
       {/* Gradient Overlay + Text */}
       <div className="project-gradient absolute z-10 inset-0 overflow-clip flex flex-col justify-end font-geist py-4 px-5 gap-2">

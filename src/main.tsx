@@ -1,18 +1,23 @@
-import { StrictMode } from 'react';
+import { lazy, StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';
 import { BrowserRouter, Route, Routes } from 'react-router';
 import HomePage from './pages/Home/home.tsx';
-import ServicesPage from './pages/Services/services.tsx';
 import RootLayout from './layouts/RootLayout.tsx';
-import AboutPage from './pages/About/about-page.tsx';
-import ContactPage from './pages/Contact/contact-page.tsx';
-import ProjectDetailsPage from './pages/ProjectDetails/project-detail-page.tsx';
-import TermsOfUse from './pages/TermsOfUse/terms-of-use.tsx';
-import PrivacyPolicy from './pages/PrivacyPolicy/privacy-policy.tsx';
-import { NotFound } from './pages/NotFound/not-found.tsx';
 import ScrollHandoffLayout from './pages/testscroll/ScrollPage.tsx';
-import { ReviewsPage } from './pages/Reviews/reviews.tsx';
+
+const AboutPage = lazy(() => import('./pages/About/about-page.tsx'));
+const ContactPage = lazy(() => import('./pages/Contact/contact-page.tsx'));
+const ProjectDetailsPage = lazy(
+  () => import('./pages/ProjectDetails/project-detail-page.tsx')
+);
+const TermsOfUse = lazy(() => import('./pages/TermsOfUse/terms-of-use.tsx'));
+const NotFound = lazy(() => import('./pages/NotFound/not-found.tsx'));
+const PrivacyPolicy = lazy(
+  () => import('./pages/PrivacyPolicy/privacy-policy.tsx')
+);
+const ServicesPage = lazy(() => import('./pages/Services/services.tsx'));
+const ReviewsPage = lazy(() => import('./pages/Reviews/reviews.tsx'));
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

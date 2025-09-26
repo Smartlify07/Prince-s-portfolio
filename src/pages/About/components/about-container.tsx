@@ -1,4 +1,4 @@
-import Prince from '@/../public/assets/images/about/hero.png';
+import Prince from '@/../public/assets/images/about/hero.webp';
 import { LetsTalkButton } from '@/components/lets-talk-button';
 import { DownloadResumeButton } from '@/components/resume-button';
 

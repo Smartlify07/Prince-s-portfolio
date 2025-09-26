@@ -1,4 +1,4 @@
-import ProfileImage from '@/../public/assets/images/about/Profile Image.png';
+import ProfileImage from '@/../public/assets/images/about/Profile Image.webp';
 import Icon from '@/../public/assets/icons/About Me Button.svg';
 import Badge from '@/ui/badge';
 

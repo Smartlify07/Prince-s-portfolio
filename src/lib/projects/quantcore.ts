@@ -1,5 +1,5 @@
 import type { Project } from '../types';
-import MaxWellEv from '@/../public/assets/images/projects/QuantCoreAI.png';
+import MaxWellEv from '@/../public/assets/images/projects/QuantCoreAI.webp';
 import DesignVector from '@/../public/assets/icons/designVector.svg';
 import Figma from '@/../public/assets/icons/Figma.svg';
 import Layers from '@/../public/assets/icons/Layers.svg';

@@ -1,5 +1,5 @@
 import Card from '@/ui/card';
-import Image from '@/../public/assets/images/services/service-description-image.png';
+import Image from '@/../public/assets/images/services/service-description-image.webp';
 export const ServiceDescription = () => {
   return (
     <section className="flex flex-col gap-8 bg-[#111119] p-6 rounded-4xl md:flex-row">

@@ -1,7 +1,7 @@
 import { ProjectStats } from './components/project-stats';
 import { TopSection } from './components/top-section';
 import { useParams } from 'react-router';
-import DesignHighlightImage from '@/../public/assets/images/projects/design-highlight-2.png';
+import DesignHighlightImage from '@/../public/assets/images/projects/design-highlight-2.webp';
 import { getProject } from '@/lib/utils';
 import OverviewSection from './components/overview-section';
 import { OutcomeSection } from './components/outcome-section';

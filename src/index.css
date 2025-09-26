@@ -533,7 +533,7 @@
   height: 100%;
   z-index: -1;
   content: '';
-  background: url(/public/assets/images/contact/Shape.png) no-repeat;
+  background: url(/public/assets/images/contact/Shape.webp) no-repeat;
   background-size: contain;
   background-position: 50%;
   opacity: 20%;
@@ -552,14 +552,14 @@
 }
 
 .not-found-page {
-  background-image: url(/public/assets/images/404-small.png);
+  background-image: url(/public/assets/images/404-moon-image-small.webp);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 @media screen and (min-width: 1024px) {
   .not-found-page {
-    background-image: url(/public/assets/images/404-large.png);
+    background-image: url(/public/assets/images/404-moon-image-large.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;

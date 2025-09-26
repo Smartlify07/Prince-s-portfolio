@@ -1,5 +1,5 @@
-import BackgroundImage from '/public/assets/images/privacy/top-image-large.png';
-import BackgroundImageSmall from '/public/assets/images/privacy/top-image-small.png';
+import BackgroundImage from '/public/assets/images/privacy/top-image-large.webp';
+import BackgroundImageSmall from '/public/assets/images/privacy/top-image-small.webp';
 
 export const TopSection = () => {
   return (

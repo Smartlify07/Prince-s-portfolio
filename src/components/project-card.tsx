@@ -12,7 +12,11 @@ export const ProjectCard = ({
   id,
   previewTitle,
   className,
-}: Project & { className?: string }) => {
+  imageLoading,
+}: Project & {
+  className?: string;
+  imageLoading?: HTMLImageElement['loading'];
+}) => {
   const [scope, animate] = useAnimate();
   const handleMouseEnter = () => {
     animate(
@@ -50,6 +54,8 @@ export const ProjectCard = ({
     >
       <div className="rounded-lg h-[309px] overflow-hidden w-full">
         <img
+          loading={imageLoading}
+          fetchPriority="low"
           src={image}
           alt={previewTitle + 'thumbnail'}
           className="w-full h-[309px] aspect-[436.72/331.00] object-cover rounded-lg"

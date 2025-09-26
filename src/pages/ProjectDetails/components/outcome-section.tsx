@@ -1,6 +1,6 @@
 import Badge from '@/ui/badge';
 import CaretIcon from '@/../public/assets/icons/Curve.svg';
-import DesignHighlightImage from '@/../public/assets/images/projects/design-highlight-2.png';
+import DesignHighlightImage from '@/../public/assets/images/projects/design-highlight-2.webp';
 import type { Project } from '@/lib/types';
 
 export const OutcomeSection = ({

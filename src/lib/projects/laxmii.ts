@@ -1,5 +1,5 @@
 import type { Project } from '../types';
-import LaxmiiThumbnail from '@/../public/assets/images/projects/laxmii.png';
+import LaxmiiThumbnail from '@/../public/assets/images/projects/laxmii.webp';
 import DesignVector from '@/../public/assets/icons/designVector.svg';
 import Figma from '@/../public/assets/icons/Figma.svg';
 import Layers from '@/../public/assets/icons/Layers.svg';

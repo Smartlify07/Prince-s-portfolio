@@ -1,5 +1,5 @@
 import { testimonials } from '@/lib/data/testimonials';
-import TestimonialBackground from '@/../public/assets/images/testimonial-bg.png';
+import TestimonialBackground from '@/../public/assets/images/testimonials-background-image.webp';
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils';

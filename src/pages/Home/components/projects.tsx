@@ -5,7 +5,7 @@ const ProjectsSection = () => {
   return (
     <section className="flex flex-col gap-6 px-4 lg:grid lg:grid-cols-2">
       {projects.map((project, index) => (
-        <ProjectCard {...project} key={index} />
+        <ProjectCard imageLoading="lazy" {...project} key={index} />
       ))}
     </section>
   );

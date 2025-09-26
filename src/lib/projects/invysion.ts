@@ -1,5 +1,5 @@
 import type { Project } from '../types';
-import InvysionImage from '@/../public/assets/images/projects/invysion.png';
+import InvysionImage from '@/../public/assets/images/projects/invysion.webp';
 import DesignVector from '@/../public/assets/icons/designVector.svg';
 import Figma from '@/../public/assets/icons/Figma.svg';
 import Layers from '@/../public/assets/icons/Layers.svg';

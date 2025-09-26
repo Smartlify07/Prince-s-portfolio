@@ -1,7 +1,7 @@
-import CollaborationImage from '/assets/images/about/collab2.png';
-import ArchitectImage from '/assets/images/about/architect.png';
-import EfficientImage from '/assets/images/about/efficient.png';
-import PrioritizeImage from '/assets/images/about/prioritize.png';
+import CollaborationImage from '/assets/images/about/collab2.webp';
+import ArchitectImage from '/assets/images/about/architect.webp';
+import EfficientImage from '/assets/images/about/efficient.webp';
+import PrioritizeImage from '/assets/images/about/prioritize.webp';
 
 export type Value = {
   title: string;

@@ -1,5 +1,4 @@
 import Card from '@/ui/card';
-import HeroImage from '@/../public/assets/images/hero-image.png';
 import { DownloadResumeButton } from '@/components/resume-button';
 import { LetsTalkButton } from '@/components/lets-talk-button';
 
@@ -30,8 +29,14 @@ const HeroSection = () => {
 
       <Card className="flex md:w-5/12 items-center shrink-0 px-6 py-10 justify-center ">
         <img
-          src={HeroImage}
+          width={320}
+          height={320}
           className="h-[320px] lg:h-full rounded-2xl object-cover"
+          src="/assets/images/prince-looking-at-the-camera.webp"
+          sizes="(max-width: 768px) 100vw, 420px"
+          alt="Prince"
+          decoding="async"
+          fetchPriority="high"
         />
       </Card>
     </section>

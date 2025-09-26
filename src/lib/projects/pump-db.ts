@@ -1,5 +1,5 @@
 import type { Project } from '../types';
-import PumpDBImage from '@/../public/assets/images/projects/PumpDB.png';
+import PumpDBImage from '@/../public/assets/images/projects/PumpDB.webp';
 import DeviceVector from '@/../public/assets/icons/deviceVector.svg';
 import DesignVector from '@/../public/assets/icons/designVector.svg';
 import Figma from '@/../public/assets/icons/Figma.svg';

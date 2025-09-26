@@ -1,7 +1,7 @@
 import { reviews } from '@/lib/data/reviews';
 import QuoteIcon from '@/../public/assets/icons/quote.svg';
 
-export const ReviewsPage = () => {
+const ReviewsPage = () => {
   return (
     <main className="grid min-h-screen font-geist bg-sidebar-bg py-8 px-4 md:px-0 pt-[126px] md:pt-0 md:py-0 gap-9 md:gap-14">
       <div className="flex flex-col gap-5">
@@ -55,3 +55,4 @@ export const ReviewsPage = () => {
     </main>
   );
 };
+export default ReviewsPage;

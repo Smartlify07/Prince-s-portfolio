@@ -8,7 +8,7 @@ import TopNavDesktop from '@/components/top-nav-desktop';
 import { TopSection } from '@/components/sidebar';
 import { useNavigate } from 'react-router';
 
-export const NotFound = () => {
+const NotFound = () => {
   const router = useNavigate();
   return (
     <main className="not-found-page min-h-screen overflow-hidden flex flex-col scrollbar-hide relative bg-[#0F0F1A] font-geist">
@@ -66,3 +66,5 @@ export const NotFound = () => {
     </main>
   );
 };
+
+export default NotFound;
