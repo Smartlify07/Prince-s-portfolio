@@ -1,9 +1,9 @@
 import type { Project } from '../types';
-import TabbioImage from '@/../public/assets/images/projects/tabbio.webp';
-import DesignVector from '@/../public/assets/icons/designVector.svg';
-import Figma from '@/../public/assets/icons/Figma.svg';
-import Layers from '@/../public/assets/icons/Layers.svg';
-import Laptop from '@/../public/assets/icons/laptop.svg';
+import TabbioImage from '/public/assets/images/projects/tabbio.webp';
+import DesignVector from '/public/assets/icons/designVector.svg';
+import Figma from '/public/assets/icons/Figma.svg';
+import Layers from '/public/assets/icons/Layers.svg';
+import Laptop from '/public/assets/icons/laptop.svg';
 
 export const Tabbio: Project = {
   id: 5,
