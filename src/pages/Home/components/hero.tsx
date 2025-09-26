@@ -31,7 +31,7 @@ const HeroSection = () => {
         <img
           width={320}
           height={320}
-          className="h-[320px] lg:h-full rounded-2xl object-cover"
+          className="h-[320px] lg:h-full rounded-2xl object-top lg:object-center object-cover"
           src="/assets/images/prince-looking-at-the-camera.webp"
           sizes="(max-width: 768px) 100vw, 420px"
           alt="Prince"
