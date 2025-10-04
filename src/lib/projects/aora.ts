@@ -4,6 +4,17 @@ import DesignVector from '@/../public/assets/icons/designVector.svg';
 import Figma from '@/../public/assets/icons/Figma.svg';
 import Layers from '@/../public/assets/icons/Layers.svg';
 import Laptop from '@/../public/assets/icons/laptop.svg';
+import AoraMockupLarge from '@/../public/assets/images/projects/aora-fashion-mockup.webp';
+import AoraWireframeLarge from '@/../public/assets/images/projects/aora-wireframe.webp';
+import AoraWireframeSmall from '@/../public/assets/images/projects/aora-wireframe-sm.webp';
+import AoraFontsLarge from '@/../public/assets/images/projects/aora-fonts.webp';
+import AoraFontsSmall from '@/../public/assets/images/projects/aora-fonts-sm.webp';
+import AoraColorsSmall from '@/../public/assets/images/projects/aora-colors-sm.webp';
+import AoraColorsLarge from '@/../public/assets/images/projects/aora-colors.webp';
+import AoraMockup2Large from '@/../public/assets/images/projects/aora-mockup-2.webp';
+import AoraMockup2Small from '@/../public/assets/images/projects/aora-mockup-2-sm.webp';
+import TimelineImageLarge from '@/../public/assets/images/projects/aora-time.webp';
+import TimelineImageSmall from '@/../public/assets/images/projects/aora-time-sm.webp';
 
 export const Aora: Project = {
   id: 1,
@@ -61,4 +72,32 @@ export const Aora: Project = {
     },
     { title: 'Platform', description: 'Web App' },
   ],
+  mockupImages: {
+    sm: AoraMockupLarge,
+    lg: AoraMockupLarge,
+  },
+  outcomeImages: {
+    lg: [
+      { src: AoraWireframeLarge, fullWidth: true },
+      { fullWidth: true, src: AoraMockup2Large },
+    ],
+    sm: [
+      { fullWidth: true, src: AoraWireframeSmall },
+      { fullWidth: true, src: AoraMockup2Small },
+    ],
+  },
+  designChoiceImages: {
+    sm: {
+      font: AoraFontsSmall,
+      colors: AoraColorsSmall,
+    },
+    lg: {
+      font: AoraFontsLarge,
+      colors: AoraColorsLarge,
+    },
+  },
+  timeLineImage: {
+    sm: TimelineImageSmall,
+    lg: TimelineImageLarge,
+  },
 };

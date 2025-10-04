@@ -4,6 +4,20 @@ import DesignVector from '@/../public/assets/icons/designVector.svg';
 import Figma from '@/../public/assets/icons/Figma.svg';
 import Layers from '@/../public/assets/icons/Layers.svg';
 import MobileVector from '@/../public/assets/icons/deviceVector.svg';
+import LaxmiiMockupLarge from '@/../public/assets/images/projects/laxmii-mockup.webp';
+import LaxmiiMockupSmall from '@/../public/assets/images/projects/laxmii-mockup-sm.webp';
+import LaxmiiChartsLarge from '@/../public/assets/images/projects/laxmii-mockup-charts.webp';
+import LaxmiiChartsSmall from '@/../public/assets/images/projects/laxmii-mockup-charts-sm.webp';
+import LaxmiiHomeScreenLarge from '@/../public/assets/images/projects/laxmii-home-screen.webp';
+import LaxmiiHomeScreenSmall from '@/../public/assets/images/projects/laxmii-home-screen-sm.webp';
+import LaxmiiFontsLarge from '@/../public/assets/images/projects/laxmii-font.webp';
+import LaxmiiFontsSmall from '@/../public/assets/images/projects/laxmii-font-sm.webp';
+import LaxmiiColorsSmall from '@/../public/assets/images/projects/laxmii-colors-sm.webp';
+import LaxmiiColorsLarge from '@/../public/assets/images/projects/laxmii-colors.webp';
+import LaxmiiPresentationLarge from '@/../public/assets/images/projects/laxmii-presentation.webp';
+import LaxmiiPresentationSmall from '@/../public/assets/images/projects/laxmii-presentation-sm.webp';
+import TimelineImageLarge from '@/../public/assets/images/projects/laxmii-project-timeline.webp';
+import TimelineImageSmall from '@/../public/assets/images/projects/laxmii-project-timeline-sm.webp';
 
 export const Laxmii: Project = {
   id: 3,
@@ -65,5 +79,53 @@ export const Laxmii: Project = {
         text: 'Calculates and updates user’s Net-worth in real time',
       },
     ],
+  },
+  mockupImages: {
+    sm: LaxmiiMockupSmall,
+    lg: LaxmiiMockupLarge,
+  },
+  outcomeImages: {
+    sm: [
+      {
+        src: LaxmiiChartsSmall,
+        fullWidth: true,
+      },
+      {
+        src: LaxmiiHomeScreenSmall,
+        fullWidth: true,
+      },
+      {
+        src: LaxmiiPresentationSmall,
+        fullWidth: true,
+      },
+    ],
+    lg: [
+      {
+        src: LaxmiiChartsLarge,
+        fullWidth: false,
+      },
+      {
+        src: LaxmiiHomeScreenLarge,
+        fullWidth: false,
+      },
+      {
+        src: LaxmiiPresentationLarge,
+        fullWidth: true,
+      },
+    ],
+  },
+  designChoiceImages: {
+    sm: {
+      font: LaxmiiFontsSmall,
+      colors: LaxmiiColorsSmall,
+    },
+    lg: {
+      font: LaxmiiFontsLarge,
+      colors: LaxmiiColorsLarge,
+    },
+  },
+  timeLineImage: {
+    lg: TimelineImageLarge,
+    sm: TimelineImageSmall,
   },
 };

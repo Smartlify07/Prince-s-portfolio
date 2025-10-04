@@ -5,7 +5,18 @@ import Figma from '@/../public/assets/icons/Figma.svg';
 import Layers from '@/../public/assets/icons/Layers.svg';
 import Mobile from '@/../public/assets/icons/deviceVector.svg';
 import Responsiveness from '@/../public/assets/icons/responsive_design.svg';
-
+import InvysionMockupLarge from '@/../public/assets/images/projects/dental-note-taking-mockup.webp';
+import InvysionMockupSmall from '@/../public/assets/images/projects/dental-note-taking-mockup-sm.webp';
+import InvysionUseCaseLarge from '@/../public/assets/images/projects/dental-note-taking-use-case.webp';
+import InvysionUseCaseSmall from '@/../public/assets/images/projects/dental-note-taking-use-case-sm.webp';
+import InvysionFontsLarge from '@/../public/assets/images/projects/dental-note-taking-font.webp';
+import InvysionFontsSmall from '@/../public/assets/images/projects/dental-note-taking-font-sm.webp';
+import InvysionColorsSmall from '@/../public/assets/images/projects/dental-note-taking-colors-sm.webp';
+import InvysionColorsLarge from '@/../public/assets/images/projects/dental-note-taking-colors.webp';
+import InvysionPresentationLarge from '@/../public/assets/images/projects/dental-note-taking-presentation.webp';
+import InvysionPresentationSmall from '@/../public/assets/images/projects/dental-note-taking-presentation-sm.webp';
+import TimelineImageLarge from '@/../public/assets/images/projects/aora-time.webp';
+import TimelineImageSmall from '@/../public/assets/images/projects/aora-time-sm.webp';
 export const Invysion: Project = {
   id: 2,
   title: 'Dental Note-Taking App for the Digital Age',
@@ -62,5 +73,53 @@ export const Invysion: Project = {
         text: 'Key medical information is extracted and ready for EHR transfer.',
       },
     ],
+  },
+  mockupImages: {
+    sm: InvysionMockupLarge,
+    lg: InvysionMockupSmall,
+  },
+  outcomeImages: {
+    sm: [
+      {
+        src: InvysionUseCaseSmall,
+        fullWidth: true,
+      },
+      {
+        src: InvysionMockupLarge,
+        fullWidth: true,
+      },
+      {
+        src: InvysionPresentationSmall,
+        fullWidth: true,
+      },
+    ],
+    lg: [
+      {
+        src: InvysionUseCaseLarge,
+        fullWidth: false,
+      },
+      {
+        src: InvysionMockupLarge,
+        fullWidth: false,
+      },
+      {
+        src: InvysionPresentationLarge,
+        fullWidth: true,
+      },
+    ],
+  },
+  designChoiceImages: {
+    sm: {
+      font: InvysionFontsSmall,
+      colors: InvysionColorsSmall,
+    },
+    lg: {
+      font: InvysionFontsLarge,
+      colors: InvysionColorsLarge,
+    },
+  },
+  timeLineImage: {
+    lg: TimelineImageLarge,
+    sm: TimelineImageSmall,
   },
 };
