@@ -4,20 +4,20 @@ import DesignVector from '@/../public/assets/icons/designVector.svg';
 import Figma from '@/../public/assets/icons/Figma.svg';
 import Layers from '@/../public/assets/icons/Layers.svg';
 import MobileVector from '@/../public/assets/icons/deviceVector.svg';
-import LaxmiiMockupLarge from '@/../public/assets/images/projects/laxmii-mockup.webp';
-import LaxmiiMockupSmall from '@/../public/assets/images/projects/laxmii-mockup-sm.webp';
-import LaxmiiChartsLarge from '@/../public/assets/images/projects/laxmii-mockup-charts.webp';
-import LaxmiiChartsSmall from '@/../public/assets/images/projects/laxmii-mockup-charts-sm.webp';
-import LaxmiiHomeScreenLarge from '@/../public/assets/images/projects/laxmii-home-screen.webp';
-import LaxmiiHomeScreenSmall from '@/../public/assets/images/projects/laxmii-home-screen-sm.webp';
-import LaxmiiFontsLarge from '@/../public/assets/images/projects/laxmii-font.webp';
-import LaxmiiFontsSmall from '@/../public/assets/images/projects/laxmii-font-sm.webp';
-import LaxmiiColorsSmall from '@/../public/assets/images/projects/laxmii-colors-sm.webp';
-import LaxmiiColorsLarge from '@/../public/assets/images/projects/laxmii-colors.webp';
-import LaxmiiPresentationLarge from '@/../public/assets/images/projects/laxmii-presentation.webp';
-import LaxmiiPresentationSmall from '@/../public/assets/images/projects/laxmii-presentation-sm.webp';
-import TimelineImageLarge from '@/../public/assets/images/projects/laxmii-project-timeline.webp';
-import TimelineImageSmall from '@/../public/assets/images/projects/laxmii-project-timeline-sm.webp';
+import LaxmiiMockupLarge from '@/../public/assets/images/projects/laxmii-mockup.png';
+import LaxmiiMockupSmall from '@/../public/assets/images/projects/laxmii-mockup-sm.png';
+import LaxmiiChartsLarge from '@/../public/assets/images/projects/laxmii-mockup-charts.png';
+import LaxmiiChartsSmall from '@/../public/assets/images/projects/laxmii-mockup-charts-sm.png';
+import LaxmiiHomeScreenLarge from '@/../public/assets/images/projects/laxmii-home-screen.png';
+import LaxmiiHomeScreenSmall from '@/../public/assets/images/projects/laxmii-home-screen-sm.png';
+import LaxmiiFontsLarge from '@/../public/assets/images/projects/laxmii-font.png';
+import LaxmiiFontsSmall from '@/../public/assets/images/projects/laxmii-font-sm.png';
+import LaxmiiColorsSmall from '@/../public/assets/images/projects/laxmii-colors-sm.png';
+import LaxmiiColorsLarge from '@/../public/assets/images/projects/laxmii-colors.png';
+import LaxmiiPresentationLarge from '@/../public/assets/images/projects/laxmii-presentation.png';
+import LaxmiiPresentationSmall from '@/../public/assets/images/projects/laxmii-presentation-sm.png';
+import TimelineImageLarge from '@/../public/assets/images/projects/laxmii-project-timeline.png';
+import TimelineImageSmall from '@/../public/assets/images/projects/laxmii-project-timeline-sm.png';
 
 export const Laxmii: Project = {
   id: 3,
@@ -89,10 +89,12 @@ export const Laxmii: Project = {
       {
         src: LaxmiiChartsSmall,
         fullWidth: true,
+        height: '500px',
       },
       {
         src: LaxmiiHomeScreenSmall,
         fullWidth: true,
+        height: '500px',
       },
       {
         src: LaxmiiPresentationSmall,

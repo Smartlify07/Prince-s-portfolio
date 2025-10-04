@@ -31,7 +31,7 @@ export default function ProjectDetailsPage() {
         <img
           src={projectWithId?.mockupImages?.lg ?? DesignHighlightImage}
           alt="design-highlight-image"
-          className="w-full h-[600px] lg:h-[600px] object-cover rounded-2xl lg:object-cover"
+          className="w-full h-[600px] lg:h-[600px] object-cover rounded-2xl"
         />
       </picture>
 

@@ -31,8 +31,13 @@ export type Project = {
     sm: {
       src: string;
       fullWidth: boolean;
+      height?: string;
     }[];
-    lg: { src: string; fullWidth: boolean }[];
+    lg: {
+      src: string;
+      fullWidth: boolean;
+      height?: string;
+    }[];
   };
   designChoiceImages?: {
     sm: {
