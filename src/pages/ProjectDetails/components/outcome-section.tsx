@@ -61,9 +61,14 @@ export const OutcomeSection = ({ project }: { project: Project }) => {
                 media="(max-width: 1023px)"
                 srcSet={project.outcomeImages?.sm[index].src}
               />
+
               <img
-                className={`h-[500px] lg:h-[600px] rounded-2xl object-cover ${
+                className={`lg:h-[600px] rounded-2xl lg:rounded-3xl object-cover ${
                   img.fullWidth ? 'col-span-2' : 'w-full'
+                } ${
+                  project.outcomeImages?.sm[index].height
+                    ? `h-[500px]`
+                    : 'h-[356px]'
                 }`}
                 src={img.src ?? DesignHighlightImage}
                 alt={`${project.title} outcome-image`}
@@ -87,7 +92,7 @@ export const OutcomeSection = ({ project }: { project: Project }) => {
               }
             />
             <img
-              className={`h-[500px] w-full lg:w-full lg:h-[500px] object-cover lg:object-cover rounded-2xl`}
+              className={`h-[500px] w-full lg:w-full lg:h-[600px] object-cover rounded-2xl lg:rounded-3xl`}
               src={project.designChoiceImages?.lg.font ?? DesignHighlightImage}
               alt={`${project.title} font design`}
             />
@@ -108,7 +113,7 @@ export const OutcomeSection = ({ project }: { project: Project }) => {
               }
             />
             <img
-              className={`h-[500px] w-full lg:w-full lg:h-[500px] object-cover lg:object-cover rounded-2xl`}
+              className={`h-[500px] w-full lg:w-full lg:h-[600px] lg:object-cover rounded-2xl lg:rounded-3xl`}
               src={
                 project.designChoiceImages?.lg.colors ?? DesignHighlightImage
               }
@@ -130,7 +135,7 @@ export const OutcomeSection = ({ project }: { project: Project }) => {
           <img
             src={project.timeLineImage?.lg ?? DesignHighlightImage}
             alt="design-highlight-image"
-            className="w-full object-contain rounded-2xl"
+            className="w-full h-[356px] lg:h-[600px] object-cover rounded-2xl"
           />
         </picture>
       </div>
