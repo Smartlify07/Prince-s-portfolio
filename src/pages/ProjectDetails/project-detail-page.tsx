@@ -19,15 +19,25 @@ export default function ProjectDetailsPage() {
         categories={projectWithId?.categories ?? []}
       />
 
-      <img
-        src={DesignHighlightImage}
-        alt="design-highlight-image"
-        className="w-full h-[600px] object-cover rounded-2xl"
-      />
+      <picture>
+        <source
+          media="(min-width: 1024px)"
+          srcSet={projectWithId?.mockupImages?.lg ?? DesignHighlightImage}
+        />
+        <source
+          media="(max-width: 1023px)"
+          srcSet={projectWithId?.mockupImages?.sm ?? DesignHighlightImage}
+        />
+        <img
+          src={projectWithId?.mockupImages?.lg ?? DesignHighlightImage}
+          alt="design-highlight-image"
+          className="w-full h-[600px] lg:h-[600px] object-cover rounded-2xl lg:object-cover"
+        />
+      </picture>
 
       <ProjectStats stats={projectWithId?.stats ?? []} />
       <OverviewSection overview={projectWithId?.overview ?? []} />
-      <OutcomeSection outcome={projectWithId!.outcome!} />
+      <OutcomeSection project={projectWithId!} />
       <UpcomingCaseStudies />
     </main>
   );
