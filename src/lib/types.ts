@@ -23,18 +23,18 @@ export type Project = {
     description: string;
     features: { bold: string; text: string }[];
   };
-  mockupImages: {
+  mockupImages?: {
     sm: string;
     lg: string;
   };
-  outcomeImages: {
+  outcomeImages?: {
     sm: {
       src: string;
       fullWidth: boolean;
     }[];
     lg: { src: string; fullWidth: boolean }[];
   };
-  designChoiceImages: {
+  designChoiceImages?: {
     sm: {
       font: string;
       colors: string;
@@ -44,7 +44,7 @@ export type Project = {
       colors: string;
     };
   };
-  timeLineImage: {
+  timeLineImage?: {
     sm: string;
     lg: string;
   };
