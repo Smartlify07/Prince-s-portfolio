@@ -6,10 +6,11 @@ import { getProject } from '@/lib/utils';
 import OverviewSection from './components/overview-section';
 import { OutcomeSection } from './components/outcome-section';
 import { UpcomingCaseStudies } from './components/upcoming-casestudies';
+import { useMemo } from 'react';
 
 export default function ProjectDetailsPage() {
   const id = useParams().id;
-  const projectWithId = getProject(Number(id));
+  const projectWithId = useMemo(() => getProject(Number(id)), [id]);
 
   return (
     <main className="grid px-4 gap-15 font-geist">
