@@ -98,6 +98,8 @@ export const OutcomeSection = ({ project }: { project: Project }) => {
               }
             />
             <img
+              decoding="async"
+              fetchPriority="high"
               className={`h-[500px] w-full lg:w-full lg:h-[600px] object-cover rounded-2xl lg:rounded-3xl`}
               src={project.designChoiceImages?.lg.font ?? DesignHighlightImage}
               alt={`${project.title} font design`}
@@ -119,6 +121,7 @@ export const OutcomeSection = ({ project }: { project: Project }) => {
               }
             />
             <img
+              fetchPriority="high"
               className={`h-[500px] w-full lg:w-full lg:h-[600px] lg:object-cover rounded-2xl lg:rounded-3xl`}
               src={
                 project.designChoiceImages?.lg.colors ?? DesignHighlightImage
@@ -144,6 +147,7 @@ export const OutcomeSection = ({ project }: { project: Project }) => {
             srcSet={project.timeLineImage?.sm ?? DesignHighlightImage}
           />
           <img
+            fetchPriority="high"
             src={project.timeLineImage?.lg ?? DesignHighlightImage}
             alt="design-highlight-image"
             className="w-full h-[356px] lg:h-[600px] object-cover rounded-2xl"
