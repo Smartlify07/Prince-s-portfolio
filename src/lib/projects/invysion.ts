@@ -7,6 +7,7 @@ import Mobile from '@/../public/assets/icons/deviceVector.svg';
 import Responsiveness from '@/../public/assets/icons/responsive_design.svg';
 import InvysionMockupLarge from '@/../public/assets/images/projects/dental-note-taking-mockup.png';
 import InvysionMockupSmall from '@/../public/assets/images/projects/dental-note-taking-mockup-sm.png';
+import InvysionMockup2Small from '@/../public/assets/images/projects/dental-note-taking-mockup-2-sm.png';
 import InvysionUseCaseLarge from '@/../public/assets/images/projects/dental-note-taking-use-case.png';
 import InvysionUseCaseSmall from '@/../public/assets/images/projects/dental-note-taking-use-case-sm.png';
 import InvysionFontsLarge from '@/../public/assets/images/projects/dental-note-taking-font.png';
@@ -17,6 +18,7 @@ import InvysionPresentationLarge from '@/../public/assets/images/projects/dental
 import InvysionPresentationSmall from '@/../public/assets/images/projects/dental-note-taking-presentation-sm.png';
 import TimelineImageLarge from '@/../public/assets/images/projects/aora-time.png';
 import TimelineImageSmall from '@/../public/assets/images/projects/aora-time-sm.png';
+
 export const Invysion: Project = {
   id: 2,
   title: 'Dental Note-Taking App for the Digital Age',
@@ -85,7 +87,7 @@ export const Invysion: Project = {
         fullWidth: true,
       },
       {
-        src: InvysionMockupSmall,
+        src: InvysionMockup2Small,
         fullWidth: true,
         height: '500px',
       },
