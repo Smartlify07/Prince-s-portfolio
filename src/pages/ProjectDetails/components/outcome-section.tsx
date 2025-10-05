@@ -51,7 +51,7 @@ export const OutcomeSection = ({ project }: { project: Project }) => {
           {project.outcomeImages?.lg.map((img, index) => (
             <picture
               key={index}
-              className={`${img.fullWidth ? 'col-span-2' : 'w-full'}`}
+              className={`${img.fullWidth ? 'col-span-2 w-full' : 'w-full'}`}
             >
               <source
                 media="(min-width: 1024px)"
@@ -64,7 +64,7 @@ export const OutcomeSection = ({ project }: { project: Project }) => {
 
               <img
                 className={`lg:h-[600px] rounded-2xl lg:rounded-3xl object-cover ${
-                  img.fullWidth ? 'col-span-2' : 'w-full'
+                  img.fullWidth ? 'col-span-2 w-full' : 'w-full'
                 } ${
                   project.outcomeImages?.sm[index].height
                     ? `h-[500px]`
