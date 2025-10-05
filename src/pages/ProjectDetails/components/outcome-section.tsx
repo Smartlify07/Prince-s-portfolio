@@ -3,40 +3,7 @@ import CaretIcon from '@/../public/assets/icons/Curve.svg';
 import DesignHighlightImage from '@/../public/assets/images/projects/design-highlight-2.webp';
 import type { Project } from '@/lib/types';
 
-type ProjetOutcomeImageLg = NonNullable<Project['outcomeImages']>['lg'];
 export const OutcomeSection = ({ project }: { project: Project }) => {
-  const renderOutcomeImages = (images: ProjetOutcomeImageLg) => (
-    <div className="flex flex-col lg:grid gap-6 lg:grid-cols-2 items-start">
-      {images?.map((img, index) => (
-        <picture
-          key={index}
-          className={`${img.fullWidth ? 'col-span-2 w-full' : 'w-full'}`}
-        >
-          <source
-            media="(min-width: 1024px)"
-            srcSet={img?.src ?? DesignHighlightImage}
-          />
-          <source
-            media="(max-width: 1023px)"
-            srcSet={
-              project.outcomeImages?.sm[index]?.src ?? DesignHighlightImage
-            }
-          />
-          <img
-            className={`rounded-2xl lg:rounded-3xl object-cover w-full ${
-              img.fullWidth ? 'col-span-2' : ''
-            } ${
-              project.outcomeImages?.sm[index]?.height
-                ? 'h-[500px]'
-                : 'h-[356px]'
-            } lg:h-[600px]`}
-            src={img?.src ?? DesignHighlightImage}
-            alt={`${project.title} outcome-image`}
-          />
-        </picture>
-      ))}
-    </div>
-  );
   return (
     <section className="flex flex-col gap-6">
       <div className="flex flex-col gap-11">
@@ -78,10 +45,42 @@ export const OutcomeSection = ({ project }: { project: Project }) => {
       </div>
 
       <div className="flex flex-col gap-6">
-        {project.outcomeImages?.lg.some((img) => !img.afterFont) &&
-          renderOutcomeImages(
-            project.outcomeImages.lg.filter((img) => !img.afterFont)
+        <div
+          className={`flex flex-col lg:grid gap-6 lg:grid-cols-2 items-start`}
+        >
+          {project.outcomeImages?.lg.map(
+            (img, index) =>
+              !img.afterFont && (
+                <picture
+                  key={index}
+                  className={`${
+                    img.fullWidth ? 'col-span-2 w-full' : 'w-full'
+                  }`}
+                >
+                  <source
+                    media="(min-width: 1024px)"
+                    srcSet={img?.src ?? DesignHighlightImage}
+                  />
+                  <source
+                    media="(max-width: 1023px)"
+                    srcSet={project.outcomeImages?.sm[index].src}
+                  />
+
+                  <img
+                    className={`lg:h-[600px] rounded-2xl lg:rounded-3xl object-cover ${
+                      img.fullWidth ? 'col-span-2 w-full' : 'w-full'
+                    } ${
+                      project.outcomeImages?.sm[index].height
+                        ? `h-[500px]`
+                        : 'h-[356px]'
+                    }`}
+                    src={img.src ?? DesignHighlightImage}
+                    alt={`${project.title} outcome-image`}
+                  />
+                </picture>
+              )
           )}
+        </div>
         <div className={`grid gap-6 lg:grid-cols-2 items-start`}>
           {/* Font */}
           <picture className="">
@@ -128,10 +127,42 @@ export const OutcomeSection = ({ project }: { project: Project }) => {
           </picture>
         </div>
 
-        {project.outcomeImages?.lg.some((img) => img.afterFont) &&
-          renderOutcomeImages(
-            project.outcomeImages.lg.filter((img) => img.afterFont)
+        <div
+          className={`flex flex-col lg:grid gap-6 lg:grid-cols-2 items-start`}
+        >
+          {project.outcomeImages?.lg.map(
+            (img, index) =>
+              img.afterFont && (
+                <picture
+                  key={index}
+                  className={`${
+                    img.fullWidth ? 'col-span-2 w-full' : 'w-full'
+                  }`}
+                >
+                  <source
+                    media="(min-width: 1024px)"
+                    srcSet={img?.src ?? DesignHighlightImage}
+                  />
+                  <source
+                    media="(max-width: 1023px)"
+                    srcSet={project.outcomeImages?.sm[index].src}
+                  />
+
+                  <img
+                    className={`lg:h-[600px] rounded-2xl lg:rounded-3xl object-cover ${
+                      img.fullWidth ? 'col-span-2 w-full' : 'w-full'
+                    } ${
+                      project.outcomeImages?.sm[index].height
+                        ? `h-[500px]`
+                        : 'h-[356px]'
+                    }`}
+                    src={img.src ?? DesignHighlightImage}
+                    alt={`${project.title} outcome-image`}
+                  />
+                </picture>
+              )
           )}
+        </div>
 
         {/* Timeline Image */}
         <picture>

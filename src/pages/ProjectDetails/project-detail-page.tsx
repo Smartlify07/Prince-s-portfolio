@@ -30,6 +30,7 @@ export default function ProjectDetailsPage() {
           srcSet={projectWithId?.mockupImages?.sm ?? DesignHighlightImage}
         />
         <img
+          fetchPriority="high"
           src={projectWithId?.mockupImages?.lg ?? DesignHighlightImage}
           alt="design-highlight-image"
           className="w-full h-[600px] lg:h-[600px] object-cover rounded-2xl"
