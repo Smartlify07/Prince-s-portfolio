@@ -79,11 +79,11 @@ export const Aora: Project = {
   outcomeImages: {
     lg: [
       { src: AoraWireframeLarge, fullWidth: true },
-      { fullWidth: true, src: AoraMockup2Large },
+      { fullWidth: true, src: AoraMockup2Large, afterFont: true },
     ],
     sm: [
       { fullWidth: true, src: AoraWireframeSmall },
-      { fullWidth: true, src: AoraMockup2Small },
+      { fullWidth: true, src: AoraMockup2Small, afterFont: true },
     ],
   },
   designChoiceImages: {

@@ -32,11 +32,13 @@ export type Project = {
       src: string;
       fullWidth: boolean;
       height?: string;
+      afterFont?: boolean;
     }[];
     lg: {
       src: string;
       fullWidth: boolean;
       height?: string;
+      afterFont?: boolean;
     }[];
   };
   designChoiceImages?: {
