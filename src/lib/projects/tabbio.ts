@@ -4,6 +4,18 @@ import DesignVector from '/public/assets/icons/designVector.svg';
 import Figma from '/public/assets/icons/Figma.svg';
 import Layers from '/public/assets/icons/Layers.svg';
 import Laptop from '/public/assets/icons/laptop.svg';
+import TabbioMockupLarge from '@/../public/assets/images/projects/tabbio-macbook-mockup.png';
+import TabbioMockupSmall from '@/../public/assets/images/projects/tabbio-macbook-mockup-small.png';
+import TabbioColorsLarge from '@/../public/assets/images/projects/tabbio-colors.png';
+import TabbioColorsSmall from '@/../public/assets/images/projects/tabbio-colors-sm.png';
+import TabbioSlantPresentationLarge from '@/../public/assets/images/projects/tabbio-slant-presentation.png';
+import TabbioSlantPresentationSmall from '@/../public/assets/images/projects/tabbio-slant-presentation-sm.png';
+import TabbioFontsLarge from '@/../public/assets/images/projects/tabbio-fonts.png';
+import TabbioFontsSmall from '@/../public/assets/images/projects/tabbio-fonts-sm.png';
+import TabbioDesktopMockupLarge from '@/../public/assets/images/projects/tabbio-monitor-mockup.png';
+import TabbioDesktopMockupSmall from '@/../public/assets/images/projects/tabbio-monitor-mockup-small.png';
+import TimelineImageLarge from '@/../public/assets/images/projects/aora-time.png';
+import TimelineImageSmall from '@/../public/assets/images/projects/aora-time-sm.png';
 
 export const Tabbio: Project = {
   id: 5,
@@ -63,5 +75,33 @@ export const Tabbio: Project = {
         text: 'Help recruiters find the right candidates efficiently.',
       },
     ],
+  },
+  mockupImages: {
+    sm: TabbioMockupLarge,
+    lg: TabbioMockupSmall,
+  },
+  outcomeImages: {
+    lg: [
+      { src: TabbioDesktopMockupLarge, fullWidth: true },
+      { fullWidth: true, src: TabbioSlantPresentationLarge, afterFont: true },
+    ],
+    sm: [
+      { fullWidth: true, src: TabbioDesktopMockupSmall },
+      { fullWidth: true, src: TabbioSlantPresentationSmall, afterFont: true },
+    ],
+  },
+  designChoiceImages: {
+    sm: {
+      font: TabbioFontsSmall,
+      colors: TabbioColorsSmall,
+    },
+    lg: {
+      font: TabbioFontsLarge,
+      colors: TabbioColorsLarge,
+    },
+  },
+  timeLineImage: {
+    sm: TimelineImageSmall,
+    lg: TimelineImageLarge,
   },
 };
