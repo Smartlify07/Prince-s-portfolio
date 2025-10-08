@@ -78,8 +78,8 @@ export const QuantCore: Project = {
     ],
   },
   mockupImages: {
-    sm: QuantCoreMockupSmall,
-    lg: QuantCoreMockupLarge,
+    sm: { src: QuantCoreMockupSmall, height: '400px' },
+    lg: { src: QuantCoreMockupLarge },
   },
   outcomeImages: {
     lg: [

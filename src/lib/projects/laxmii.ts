@@ -81,8 +81,8 @@ export const Laxmii: Project = {
     ],
   },
   mockupImages: {
-    sm: LaxmiiMockupSmall,
-    lg: LaxmiiMockupLarge,
+    sm: { src: LaxmiiMockupSmall },
+    lg: { src: LaxmiiMockupLarge },
   },
   outcomeImages: {
     sm: [

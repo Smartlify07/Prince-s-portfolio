@@ -77,8 +77,8 @@ export const Tabbio: Project = {
     ],
   },
   mockupImages: {
-    sm: TabbioMockupSmall,
-    lg: TabbioMockupLarge,
+    sm: { height: '500px', src: TabbioMockupSmall },
+    lg: { src: TabbioMockupLarge },
   },
   outcomeImages: {
     lg: [

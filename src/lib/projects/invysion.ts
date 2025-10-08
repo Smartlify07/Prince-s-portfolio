@@ -77,8 +77,8 @@ export const Invysion: Project = {
     ],
   },
   mockupImages: {
-    sm: InvysionMockupSmall,
-    lg: InvysionMockupLarge,
+    sm: { src: InvysionMockupSmall },
+    lg: { src: InvysionMockupLarge },
   },
   outcomeImages: {
     sm: [

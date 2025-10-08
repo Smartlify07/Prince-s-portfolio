@@ -5,6 +5,7 @@ import Figma from '@/../public/assets/icons/Figma.svg';
 import Layers from '@/../public/assets/icons/Layers.svg';
 import Laptop from '@/../public/assets/icons/laptop.svg';
 import AoraMockupLarge from '@/../public/assets/images/projects/aora-fashion-mockup.webp';
+import AoraMockupSmall from '@/../public/assets/images/projects/aora-fashion-mockup-sm.png';
 import AoraWireframeLarge from '@/../public/assets/images/projects/aora-wireframe.png';
 import AoraWireframeSmall from '@/../public/assets/images/projects/aora-wireframe-sm.png';
 import AoraFontsLarge from '@/../public/assets/images/projects/aora-fonts.png';
@@ -73,8 +74,8 @@ export const Aora: Project = {
     { title: 'Platform', description: 'Web App' },
   ],
   mockupImages: {
-    sm: AoraMockupLarge,
-    lg: AoraMockupLarge,
+    sm: { src: AoraMockupSmall, height: '500px' },
+    lg: { src: AoraMockupLarge },
   },
   outcomeImages: {
     lg: [
