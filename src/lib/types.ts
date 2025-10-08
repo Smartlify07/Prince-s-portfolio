@@ -24,8 +24,8 @@ export type Project = {
     features: { bold: string; text: string }[];
   };
   mockupImages?: {
-    sm: string;
-    lg: string;
+    sm: { height?: string; src: string };
+    lg: { height?: string; src: string };
   };
   outcomeImages?: {
     sm: {

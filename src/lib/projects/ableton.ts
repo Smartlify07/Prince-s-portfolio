@@ -5,6 +5,19 @@ import Figma from '@/../public/assets/icons/Figma.svg';
 import Layers from '@/../public/assets/icons/Layers.svg';
 import Laptop from '@/../public/assets/icons/laptop.svg';
 
+import AbletonDisplayLarge from '@/../public/assets/images/projects/ableton-display.png';
+import AbletonDisplaySmall from '@/../public/assets/images/projects/ableton-display-sm.png';
+import AbletonColorsLarge from '@/../public/assets/images/projects/ableton-colors.png';
+import AbletonColorsSmall from '@/../public/assets/images/projects/ableton-colors-sm.png';
+import AbletonSlantPresentationLarge from '@/../public/assets/images/projects/ableton-slant-presentation.png';
+import AbletonSlantPresentationSmall from '@/../public/assets/images/projects/ableton-slant-presentation-sm.png';
+import AbletonFontsLarge from '@/../public/assets/images/projects/ableton-fonts.png';
+import AbletonFontsSmall from '@/../public/assets/images/projects/ableton-fonts-sm.png';
+import AbletonInUseLarge from '@/../public/assets/images/projects/ableton-in-use.png';
+import AbletonInUseSmall from '@/../public/assets/images/projects/ableton-in-use-sm.png';
+import TimelineImageLarge from '@/../public/assets/images/projects/ableton-timeline.png';
+import TimelineImageSmall from '@/../public/assets/images/projects/ableton-timeline-sm.png';
+
 export const Ableton: Project = {
   id: 6,
   title: 'Ableton Music Controller in Hebrew Language for Live Performances',
@@ -61,5 +74,33 @@ export const Ableton: Project = {
         text: 'Quick configuration tools to prepare for stage performances.',
       },
     ],
+  },
+  mockupImages: {
+    sm: { src: AbletonDisplaySmall, height: '500px' },
+    lg: { src: AbletonDisplayLarge },
+  },
+  outcomeImages: {
+    lg: [
+      { src: AbletonInUseLarge, fullWidth: true, afterFont: true },
+      { fullWidth: true, src: AbletonSlantPresentationLarge },
+    ],
+    sm: [
+      { fullWidth: true, src: AbletonInUseSmall, afterFont: true },
+      { fullWidth: true, src: AbletonSlantPresentationSmall },
+    ],
+  },
+  designChoiceImages: {
+    sm: {
+      font: AbletonFontsSmall,
+      colors: AbletonColorsSmall,
+    },
+    lg: {
+      font: AbletonFontsLarge,
+      colors: AbletonColorsLarge,
+    },
+  },
+  timeLineImage: {
+    sm: TimelineImageSmall,
+    lg: TimelineImageLarge,
   },
 };

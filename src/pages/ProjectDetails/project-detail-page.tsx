@@ -23,17 +23,19 @@ export default function ProjectDetailsPage() {
       <picture>
         <source
           media="(min-width: 1024px)"
-          srcSet={projectWithId?.mockupImages?.lg ?? DesignHighlightImage}
+          srcSet={projectWithId?.mockupImages?.lg.src ?? DesignHighlightImage}
         />
         <source
           media="(max-width: 1023px)"
-          srcSet={projectWithId?.mockupImages?.sm ?? DesignHighlightImage}
+          srcSet={projectWithId?.mockupImages?.sm.src ?? DesignHighlightImage}
         />
         <img
           fetchPriority="high"
-          src={projectWithId?.mockupImages?.lg ?? DesignHighlightImage}
+          src={projectWithId?.mockupImages?.lg.src ?? DesignHighlightImage}
           alt="design-highlight-image"
-          className="w-full h-[600px] lg:h-[600px] object-cover rounded-2xl"
+          className={`w-full h-[${
+            projectWithId?.mockupImages?.sm.height ?? '500px'
+          }] lg:h-[600px] object-cover rounded-2xl`}
         />
       </picture>
 
