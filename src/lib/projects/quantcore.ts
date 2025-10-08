@@ -4,6 +4,18 @@ import DesignVector from '@/../public/assets/icons/designVector.svg';
 import Figma from '@/../public/assets/icons/Figma.svg';
 import Layers from '@/../public/assets/icons/Layers.svg';
 import MobileVector from '@/../public/assets/icons/deviceVector.svg';
+import QuantCoreMockupLarge from '@/../public/assets/images/projects/quantcore-landing-page.png';
+import QuantCoreMockupSmall from '@/../public/assets/images/projects/quantcore-landing-page-sm.png';
+import QuantCoreColorsLarge from '@/../public/assets/images/projects/quantcore-colors.png';
+import QuantCoreColorsSmall from '@/../public/assets/images/projects/quantcore-colors-sm.png';
+import QuantCoreLaptopMockupLarge from '@/../public/assets/images/projects/quantcore-laptop-mockup.png';
+import QuantCoreLaptopMockupSmall from '@/../public/assets/images/projects/quantcore-laptop-mockup-sm.png';
+import QuantCoreFontsLarge from '@/../public/assets/images/projects/quantcore-fonts.png';
+import QuantCoreFontsSmall from '@/../public/assets/images/projects/quantcore-fonts-sm.png';
+import QuantCoreDesktopMockupLarge from '@/../public/assets/images/projects/quantcore-desktop-mockup.png';
+import QuantCoreDesktopMockupSmall from '@/../public/assets/images/projects/quantcore-desktop-mockup-sm.png';
+import TimelineImageLarge from '@/../public/assets/images/projects/quantcore-timeline.png';
+import TimelineImageSmall from '@/../public/assets/images/projects/quantcore-timeline.png';
 
 export const QuantCore: Project = {
   id: 4,
@@ -64,5 +76,33 @@ export const QuantCore: Project = {
         text: ' Students gain practical trading experience without real-world risk.',
       },
     ],
+  },
+  mockupImages: {
+    sm: QuantCoreMockupSmall,
+    lg: QuantCoreMockupLarge,
+  },
+  outcomeImages: {
+    lg: [
+      { src: QuantCoreDesktopMockupLarge, fullWidth: true },
+      { fullWidth: true, src: QuantCoreLaptopMockupLarge, afterFont: true },
+    ],
+    sm: [
+      { fullWidth: true, src: QuantCoreDesktopMockupSmall },
+      { fullWidth: true, src: QuantCoreLaptopMockupSmall, afterFont: true },
+    ],
+  },
+  designChoiceImages: {
+    sm: {
+      font: QuantCoreFontsSmall,
+      colors: QuantCoreColorsSmall,
+    },
+    lg: {
+      font: QuantCoreFontsLarge,
+      colors: QuantCoreColorsLarge,
+    },
+  },
+  timeLineImage: {
+    sm: TimelineImageSmall,
+    lg: TimelineImageLarge,
   },
 };
