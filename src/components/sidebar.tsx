@@ -57,9 +57,8 @@ const IntroSection = () => {
         <div className="flex flex-col gap-4">
           <PriceBadge />
           <header>
-            <h1 className="gradient-text text-[40px]/[52px] tracking-[-2px] font-medium text-left font-geist">
-              Transforming complex problems into intuitive and scalable
-              solutions.{' '}
+            <h1 className="gradient-text capitalize text-[40px]/[52px] tracking-[-2px] font-medium text-left font-geist">
+              I design products that drives results.
             </h1>
           </header>
         </div>
