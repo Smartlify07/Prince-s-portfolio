@@ -13,7 +13,7 @@ export const LetsTalkButton = () => {
       className="flex items-center gap-2"
     >
       <Plain className="text-[#ededeb]" />
-      Let's Talk
+      Quick Chat
     </Button>
   );
 };

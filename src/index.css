@@ -464,6 +464,14 @@
   -webkit-text-fill-color: transparent;
 }
 
+.custom-select-dropdown-text:hover {
+  background: linear-gradient(91deg, #fcffec08 2.15%);
+  color: #fcffec;
+  background-clip: unset;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
+}
+
 .radio-wrapper {
   display: flex;
   align-items: center;

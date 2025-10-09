@@ -61,14 +61,14 @@ const CustomSelect = ({
       </div>
 
       {isOpen && (
-        <ul className="absolute w-full z-20 custom-select-dropdown rounded-2xl pb-3">
+        <ul className="absolute w-full z-20 custom-select-dropdown rounded-2xl h-[200px] scrollbar-hide overflow-auto pb-3">
           <div className="border-b border-dashed w-full border-[rgba(76,76,76,0.50)] text-xs text-grey-9 font-geist font-medium pt-4 pr-3 pb-2 pl-3">
             {label || value}
           </div>
           {options.map((option) => (
             <li
               key={option.value}
-              className="p-3 w-full cursor-pointer bg-[rgba(23,23,33,0.10)] font-medium custom-select-dropdown-text font-geist text-xs/[18px]"
+              className="p-3 w-full cursor-pointer hover:bg-primary bg-[rgba(23,23,33,0.10)] font-medium custom-select-dropdown-text font-geist text-xs/[18px]"
               onClick={() => handleOptionClick(option)}
             >
               {option.label}

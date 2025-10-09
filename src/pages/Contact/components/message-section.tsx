@@ -189,9 +189,14 @@ const FormSelect = ({
   onChange: (val: string) => void;
 }) => {
   const options = [
-    { label: 'Design', value: 'design' },
-    { label: 'Development', value: 'dev' },
-    { label: 'Consulting', value: 'consult' },
+    { label: 'Website', value: 'website' },
+    { label: 'Web app', value: 'web_app' },
+    { label: 'Mobile app', value: 'mobile_app' },
+    { label: 'Development', value: 'development' },
+    {
+      label: 'Consulting',
+      value: 'consulting',
+    },
   ];
 
   return (
