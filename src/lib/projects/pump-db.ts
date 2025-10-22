@@ -5,6 +5,19 @@ import DesignVector from '@/../public/assets/icons/designVector.svg';
 import Figma from '@/../public/assets/icons/Figma.svg';
 import Layers from '@/../public/assets/icons/Layers.svg';
 
+import PumpDBDisplayLarge from '@/../public/assets/images/projects/pumpdb-hand-mockup.png';
+import PumpDBDisplaySmall from '@/../public/assets/images/projects/pumpdb-hand-mockup-sm.png';
+import PumpDBColorsLarge from '@/../public/assets/images/projects/pumpdb-colors.png';
+import PumpDBColorsSmall from '@/../public/assets/images/projects/pumpdb-colors-sm.png';
+import PumpDBSlantPresentationLarge from '@/../public/assets/images/projects/pump-db-double-mockup.png';
+import PumpDBSlantPresentationSmall from '@/../public/assets/images/projects/pump-db-double-mockup-sm.png';
+import PumpDBFontsLarge from '@/../public/assets/images/projects/pumpdb-font.png';
+import PumpDBFontsSmall from '@/../public/assets/images/projects/pumpdb-font-sm.png';
+import PumpDBInUseLarge from '@/../public/assets/images/projects/pumpdb-three-mockups.png';
+import PumpDBInUseSmall from '@/../public/assets/images/projects/pumpdb-three-mockups-sm.png';
+import TimelineImageLarge from '@/../public/assets/images/projects/aora-time.png';
+import TimelineImageSmall from '@/../public/assets/images/projects/aora-time-sm.png';
+
 export const PumpDB: Project = {
   id: 8,
   title:
@@ -67,4 +80,33 @@ export const PumpDB: Project = {
     'Marine crews often juggle scattered records, outdated logs, and manual inspections when it comes to managing pumps. This makes it hard to track maintenance schedules, know when a pump is due for replacement, or quickly find important details during critical operations. These gaps can lead to unnecessary downtime, costly repairs, and added stress for crew members.',
     'Pump DB was designed as a central digital workspace where crews can store, access, and monitor all pump information with ease. By keeping everything in one platform, it reduces errors, saves time, and ensures crews always know the status of their equipment.',
   ],
+
+  mockupImages: {
+    sm: { src: PumpDBDisplaySmall, height: '500px' },
+    lg: { src: PumpDBDisplayLarge },
+  },
+  outcomeImages: {
+    lg: [
+      { src: PumpDBInUseLarge, fullWidth: true, afterFont: true },
+      { fullWidth: true, src: PumpDBSlantPresentationLarge },
+    ],
+    sm: [
+      { fullWidth: true, src: PumpDBInUseSmall, afterFont: true },
+      { fullWidth: true, src: PumpDBSlantPresentationSmall },
+    ],
+  },
+  designChoiceImages: {
+    sm: {
+      font: PumpDBFontsSmall,
+      colors: PumpDBColorsSmall,
+    },
+    lg: {
+      font: PumpDBFontsLarge,
+      colors: PumpDBColorsLarge,
+    },
+  },
+  timeLineImage: {
+    sm: TimelineImageSmall,
+    lg: TimelineImageLarge,
+  },
 };
