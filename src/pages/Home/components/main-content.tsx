@@ -7,13 +7,13 @@ import PriceBadge from '@/components/price-badge';
 
 const MainContent = () => {
   return (
-    <section className="py-8  gap-11 flex flex-col md:hidden">
+    <section className="py-8  gap-11 flex flex-col lg:hidden">
       <div className="flex flex-col gap-9 px-4">
         <div className="flex flex-col gap-4">
           <PriceBadge />
           <header>
             <h1 className="gradient-text text-[40px]/[52px] tracking-[-2px] font-medium text-left font-geist">
-              Making complex ideas easier to understand through smart design.
+              I Design Products That Drives Results
             </h1>
           </header>
         </div>

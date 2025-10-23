@@ -4,8 +4,8 @@ import { DownloadResumeButton } from '@/components/resume-button';
 
 export const AboutContainer = () => {
   return (
-    <section className="bg-[#111119] flex flex-col gap-8 rounded-4xl px-4 py-6 md:flex-row">
-      <div className="flex flex-col md:w-7/12 gap-9">
+    <section className="bg-[#111119] flex flex-col gap-8 rounded-4xl px-4 py-6 lg:flex-row">
+      <div className="flex flex-col lg:w-7/12 gap-9">
         <StorySection />
         <div className="flex items-center shrink-0 gap-4">
           <LetsTalkButton />
@@ -13,11 +13,11 @@ export const AboutContainer = () => {
         </div>
       </div>
 
-      <div className="inline-block rounded-2xl md:w-5/12 p-[2px] drop-shadow-[0_0px_5.5px_var(--color-card-shadow)] ">
+      <div className="inline-block rounded-2xl lg:w-5/12 p-[2px] drop-shadow-[0_0px_5.5px_var(--color-card-shadow)] ">
         <img
           src={Prince}
           alt="Prince"
-          className="w-full h-[663px] md:h-full object-cover rounded-2xl"
+          className="w-full h-[663px] lg:h-full object-cover rounded-2xl"
         />
       </div>
     </section>

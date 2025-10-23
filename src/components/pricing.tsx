@@ -11,7 +11,7 @@ import { cn } from '@/lib/utils';
 
 export const Pricing = () => {
   return (
-    <section className="px-4 md:px-0 font-geist grid gap-11">
+    <section className="px-4 lg:px-0 font-geist grid gap-11">
       <div className="grid gap-4 place-items-center">
         <Badge
           shadowSize="small"
@@ -20,7 +20,7 @@ export const Pricing = () => {
           <img src={CurrencyIcon} alt="currency-icon" />
           Pricing
         </Badge>
-        <div className="grid gap-4 place-items-center md:w-11/12">
+        <div className="grid gap-4 place-items-center lg:w-11/12">
           <h1 className="text-[40px]/[52px] gradient-text text-center font-medium -tracking-smaller">
             Your visions , my creativity—strategies tailored just for you.
           </h1>
@@ -33,57 +33,29 @@ export const Pricing = () => {
           </p>
         </div>
       </div>
-      <div className="grid gap-6 md:grid-cols-3">
+      <div className="grid gap-6 lg:grid-cols-3">
         <PricingCard
+          description={pricing[0].description}
           title={pricing[0].title}
           icon={Layers}
           first
           list={pricing[0].list}
-        >
-          <p>
-            <span className="pricing-gradient-text-1">Perfect</span> for
-            startups and solo founders needing a full-time UI/UX designer.
-            Whether starting fresh or scaling up, this option guarantees
-            consistent,
-            <span className="pricing-gradient-text-2">
-              {' '}
-              high-quality design integrated into your workflow
-            </span>
-            .
-          </p>
-        </PricingCard>
+          price="6,000"
+        ></PricingCard>
         <PricingCard
+          description={pricing[1].description}
           title={pricing[1].title}
           icon={Framer}
           list={pricing[1].list}
-        >
-          <p>
-            <span className="pricing-gradient-text-1">Perfect</span> or startups
-            needing fast websites in Framer. I’ll create a sleek, animated site
-            with CMS features. From landing to multi-page sites
-            <span className="pricing-gradient-text-2">
-              {' '}
-              you’ll have a polished, easy-to-maintain site
-            </span>
-            .
-          </p>
-        </PricingCard>
+          price="4,500"
+        ></PricingCard>
         <PricingCard
+          description={pricing[2].description}
           title={pricing[2].title}
           icon={Cursor}
           list={pricing[2].list}
-        >
-          <p>
-            <span className="pricing-gradient-text-1">Great</span> for startups
-            and individuals needing expert UI/UX design for a project. Ideal for
-            MVPs, landing pages, or refreshing your
-            <span className="pricing-gradient-text-2">
-              {' '}
-              brand's digital look
-            </span>
-            .
-          </p>
-        </PricingCard>
+          price="7,500"
+        ></PricingCard>
       </div>
     </section>
   );
@@ -95,12 +67,16 @@ const PricingCard = ({
   children,
   list,
   first,
+  price,
+  description,
 }: {
   icon: string;
   title: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
   first?: boolean;
   list: string[];
+  price: string;
+  description: string;
 }) => {
   return (
     <CardStroke className="rounded-4xl">
@@ -114,27 +90,30 @@ const PricingCard = ({
             <img src={icon} alt={title} />
           </div>
 
-          <div className="grid gap-14 md:gap-6">
+          <div className="grid gap-14 lg:gap-6">
             <div className="grid gap-2">
               <h1 className="gradient-text text-xl text-left -tracking-smaller font-medium ">
                 {title}
               </h1>
-              <div className="text-sm/[150%] text-[#909090]">{children}</div>
+              <p className="text-grey-9 text-sm">{description}</p>
+              {children && (
+                <div className="text-sm/[150%] text-[#909090]">{children}</div>
+              )}
             </div>
             <h1
-              className={cn(
-                'pricing-text -tracking-smaller font-medium text-[40px]',
-                !first && 'md:mt-5'
-              )}
+              className={
+                'pricing-text -tracking-smaller font-medium text-[40px]'
+              }
             >
-              Custom
+              ${price}
             </h1>
           </div>
         </div>
 
         <Button
-          className="w-full h-fit"
           variant={first ? 'default' : 'outline'}
+          as="a"
+          href="https://prince-ugboga.ng"
         >
           Contact Me
         </Button>

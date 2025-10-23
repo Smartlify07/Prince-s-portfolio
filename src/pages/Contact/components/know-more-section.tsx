@@ -11,7 +11,7 @@ export const KnowMoreSection = () => {
       className="py-6 px-4 rounded-4xl bg-[#111119]/80 z-[50] know-more-section font-geist grid gap-12"
     >
       <header className="grid gap-4">
-        <h1 className="text-[40px]/[56px] font-medium text-center gradient-text -tracking-smaller md:w-6/12 md:justify-self-center">
+        <h1 className="text-[40px]/[56px] font-medium text-center gradient-text -tracking-smaller lg:w-6/12 lg:justify-self-center">
           Oh! You just want to know more about me? Fantastic!
         </h1>
         <div className="text-center text-sm/[150%] text-grey-9">
@@ -31,7 +31,7 @@ export const KnowMoreSection = () => {
         </div>
       </header>
 
-      <div className="grid gap-4 grid-cols-2 place-items-center md:grid-cols-3">
+      <div className="grid gap-4 grid-cols-2 place-items-center lg:grid-cols-3">
         <SocialIcon
           icon={LinkedIn}
           alt={'linkedin-icon'}

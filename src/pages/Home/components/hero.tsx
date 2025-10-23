@@ -4,8 +4,8 @@ import { LetsTalkButton } from '@/components/lets-talk-button';
 
 const HeroSection = () => {
   return (
-    <section className="flex flex-col bg-[#111119] rounded-4xl p-6 gap-8 md:flex-row">
-      <div className="flex flex-col gap-8 md:w-7/12 md:gap-9 md:grow md:shrink-0 md:basis-0">
+    <section className="flex flex-col bg-[#111119] rounded-4xl p-6 gap-8 lg:flex-row">
+      <div className="flex flex-col gap-8 lg:w-7/12 lg:gap-9 lg:grow lg:shrink-0 lg:basis-0">
         <header className="flex flex-col gap-2">
           <h1 className="text-[40px]/[52px] font-geist font-medium tracking-[-0.88px] text-left gradient-text">
             Prince is a Product Designer based in Africa. Previously at Bles
@@ -27,7 +27,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <Card className="flex md:w-5/12 items-center shrink-0 px-6 py-10 justify-center ">
+      <Card className="flex lg:w-5/12 items-center shrink-0 px-6 py-10 justify-center ">
         <img
           width={320}
           height={320}

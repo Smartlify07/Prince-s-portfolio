@@ -10,7 +10,7 @@ export const TopSection = () => {
         <source srcSet={BackgroundImageMobile} media="(max-width:1023px)" />
         <img
           src={BackgroundImage}
-          className="w-full h-full hidden md:block object-cover"
+          className="w-full h-full  md:block object-cover"
           alt="projects-presentation"
         />
       </picture>

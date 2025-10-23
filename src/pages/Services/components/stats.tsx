@@ -1,18 +1,18 @@
 export const StatsSection = () => {
   return (
-    <section className="px-4 flex items-center overflow-hidden justify-center md:px-0">
-      <hr className="border-[#D9D9D9]/5 border hidden md:block w-4/12" />
-      <div className="flex flex-col relative md:w-11/12 md:flex-row md:justify-center md:items-center texture rounded-3xl p-6 gap-2.5 md:gap-[42px] bg-sidebar-bg/30">
+    <section className="px-4 flex items-center overflow-hidden justify-center lg:px-0">
+      <hr className="border-[#D9D9D9]/5 border hidden lg:block w-4/12" />
+      <div className="flex flex-col relative lg:w-11/12 lg:flex-row lg:justify-center lg:items-center texture rounded-3xl p-6 gap-2.5 lg:gap-[42px] bg-sidebar-bg/30">
         <div className="absolute bg-[#0F0F1A] opacity-30 z-10 w-full h-full"></div>
-        <div className="flex items-center gap-4 flex-wrap z-20 md:justify-center md:flex-nowrap md:gap-[42px]">
+        <div className="flex items-center gap-4 flex-wrap z-20 lg:justify-center lg:flex-nowrap lg:gap-[42px]">
           <Stat number={3} text="Years of Experience" />
           <Stat number={24} text="Projects Completed" />
         </div>
-        <div className="w-6/12 md:w-auto z-20">
+        <div className="w-6/12 lg:w-auto z-20">
           <Stat number={4} text="Team Collaboration" />
         </div>
       </div>
-      <hr className="border-[#D9D9D9]/5 border hidden md:block w-4/12" />
+      <hr className="border-[#D9D9D9]/5 border hidden lg:block w-4/12" />
     </section>
   );
 };

@@ -1,12 +1,12 @@
 export const Statistics = () => {
   return (
-    <section className="px-4 md:px-0 flex flex-col gap-8">
+    <section className="px-4 lg:px-0 flex flex-col gap-8">
       <h1 className="gradient-text text-[40px] font-medium font-geist -tracking-smaller">
         Statistics:
       </h1>
 
-      <div className="rounded-3xl texture-2 gap-4 md:hidden flex flex-col md:flex-row py-6 px-4">
-        <div className="grid grid-cols-2 gap-10 md:hidden">
+      <div className="rounded-3xl texture-2 gap-4 lg:hidden flex flex-col lg:flex-row py-6 px-4">
+        <div className="grid grid-cols-2 gap-10 lg:hidden">
           <Stat title="Years of Experience" value="3+" border />
           <Stat title="Projects Completed" value="30+" />
         </div>
@@ -19,7 +19,7 @@ export const Statistics = () => {
           <Stat title="Awards" value="2+" />
         </div>
       </div>
-      <div className="hidden md:flex rounded-3xl texture-2 gap-8 py-6 pl-4">
+      <div className="hidden lg:flex rounded-3xl texture-2 gap-8 py-6 pl-4">
         <Stat title="Years of Experience" value="3+" border />
         <Stat title="Projects Completed" value="30+" border />
         <Stat title="Team Collaboration" value="4+" border />

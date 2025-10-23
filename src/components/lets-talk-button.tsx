@@ -1,19 +1,18 @@
+import { defaultEnquiryMail } from '@/lib/constants';
 import Button from '@/ui/button';
 import { Plain } from '@solar-icons/react';
-import { useNavigate } from 'react-router';
 
 export const LetsTalkButton = () => {
-  const router = useNavigate();
   return (
     <Button
-      onClick={() => {
-        router('/contact');
-      }}
+      as="a"
+      href={defaultEnquiryMail}
+      target="_blank"
       variant="default"
       className="flex items-center gap-2"
     >
       <Plain className="text-[#ededeb]" />
-      Let's Talk
+      Quick Chat
     </Button>
   );
 };

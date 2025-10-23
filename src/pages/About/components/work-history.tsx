@@ -2,12 +2,12 @@ import { cn } from '@/lib/utils';
 
 export const WorkHistory = () => {
   return (
-    <section className="px-4 md:px-0 flex flex-col gap-8">
+    <section className="px-4 lg:px-0 flex flex-col gap-8">
       <h1 className="gradient-text text-[40px] font-medium font-geist -tracking-smaller">
         Work History
       </h1>
 
-      <div className="rounded-3xl texture-2 grid grid-cols-2 gap-10 md:flex md:flex-nowrap md:flex-row md:gap-4 2xl:justify-between py-6 px-4">
+      <div className="rounded-3xl texture-2 grid grid-cols-2 gap-10 lg:flex lg:flex-nowrap lg:flex-row lg:gap-4 2xl:justify-between py-6 px-4">
         <Stat
           title="Bles Software"
           location="Tel Aviv, Israel"
@@ -20,7 +20,7 @@ export const WorkHistory = () => {
           location="Sparks, United States"
           value="UI/UX Designer"
           timeline="Jun 2025 – July 2025"
-          className="md:border-r md:border-r-grey-4"
+          className="lg:border-r lg:border-r-grey-4"
         />
         <Stat
           title="Sciential Agency"
@@ -34,7 +34,7 @@ export const WorkHistory = () => {
           location="Lagos, Nigeria"
           value="UI/UX Designer"
           timeline="May 2023 – Sep 2023"
-          className="md:border-r md:border-r-grey-4"
+          className="lg:border-r lg:border-r-grey-4"
         />
         <Stat
           title="X-plore Design Studio"
@@ -68,7 +68,7 @@ const Stat = ({
   return (
     <div
       className={cn(
-        'flex flex-col w-full grow md:justify-between md:w-1/5 2xl:w-full font-geist gap-4',
+        'flex flex-col w-full grow lg:justify-between lg:w-1/5 2xl:w-full font-geist gap-4',
         last ? 'pr-0' : 'pr-2',
         border ? 'border-r border-r-grey-4' : '',
         className

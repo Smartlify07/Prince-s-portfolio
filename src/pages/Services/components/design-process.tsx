@@ -7,7 +7,7 @@ import Card from '@/ui/card';
 
 export const DesignProcess = () => {
   return (
-    <section className="flex flex-col font-geist gap-11 px-4 md:px-0">
+    <section className="flex flex-col font-geist gap-11 px-4 lg:px-0">
       <div className="flex flex-col gap-4">
         <Badge
           shadowSize="small"
@@ -32,7 +32,7 @@ export const DesignProcess = () => {
         </div>
       </div>
 
-      <div className="grid gap-6 md:grid-cols-2">
+      <div className="grid gap-6 lg:grid-cols-2">
         {designProcesses.map((item, index) => (
           <ProcessCard index={index} {...item} key={index} />
         ))}

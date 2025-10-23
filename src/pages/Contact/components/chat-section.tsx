@@ -14,7 +14,7 @@ export const ChatSection = () => {
         </p>
       </header>
 
-      <div className="grid gap-6 md:items-start md:grid-cols-2">
+      <div className="grid gap-6 lg:items-start lg:grid-cols-2">
         <ConnectSection />
         <MessageSection />
       </div>

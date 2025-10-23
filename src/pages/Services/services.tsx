@@ -8,13 +8,13 @@ import { TopSection } from './components/top-section';
 
 export default function ServicesPage() {
   return (
-    <main className="grid min-h-screen bg-sidebar-bg py-8 md:py-0 gap-8 md:gap-20">
-      <div className="grid gap-10 md:gap-14">
+    <main className="grid min-h-screen bg-sidebar-bg py-8 lg:py-0 gap-8 lg:gap-20">
+      <div className="grid gap-10 lg:gap-14">
         <TopSection />
         <ServiceDescription />
       </div>
       <StatsSection />
-      <div className="grid px-4 md:px-0 gap-12">
+      <div className="grid px-4 lg:px-0 gap-12">
         <ExclusiveDealsTopSection />
         <ExclusiveDeals />
       </div>

@@ -35,9 +35,9 @@ export default function TopNavDesktop() {
   return (
     <nav
       className={cn(
-        'bg-[rgba(14,14,14,0.7)] hidden h-[86px] z-[50] font-geist md:flex justify-between items-center gap-2.5 pt-6 pr-10 pb-4 pl-6 backdrop-blur-[10px] top-0 border-b border-b-grey-4/60',
+        'bg-[rgba(14,14,14,0.7)] hidden h-[86px] z-[50] font-geist lg:flex justify-between items-center gap-2.5 pt-6 pr-10 pb-4 pl-6 backdrop-blur-[10px] top-0 border-b border-b-grey-4/60',
         shouldBeFixed
-          ? 'fixed top-0 md:w-[66.7%] 2xl:w-[calc(100%-484px)] z-50'
+          ? 'fixed top-0 lg:w-[66.7%] 2xl:w-[calc(100%-484px)] z-50'
           : 'static'
       )}
     >

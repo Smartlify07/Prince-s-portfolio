@@ -12,7 +12,7 @@ export const CallToActionSection = ({
 }) => {
   const router = useNavigate();
   return (
-    <section className="grid gap-8 texture-2 rounded-3xl py-6 px-4 font-geist md:w-11/12 md:justify-self-center md:flex md:items-center md:justify-between">
+    <section className="grid gap-8 texture-2 rounded-3xl py-6 px-4 font-geist lg:w-11/12 lg:justify-self-center lg:flex lg:items-center lg:justify-between">
       <div className="grid gap-2">
         <h1 className="gradient-text text-2xl -tracking-smaller font-medium">
           {title}
