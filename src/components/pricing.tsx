@@ -7,7 +7,6 @@ import Badge from '@/ui/badge';
 import { pricing } from '@/lib/data/pricing';
 import { CardStroke } from '@/components/card-stroke';
 import Button from '@/ui/button';
-import { cn } from '@/lib/utils';
 
 export const Pricing = () => {
   return (
