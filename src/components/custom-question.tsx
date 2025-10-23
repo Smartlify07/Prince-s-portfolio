@@ -3,7 +3,7 @@ import Image from '/public/assets/images/services/prince.webp';
 import Forward from '/public/assets/icons/Forward.svg';
 import Button from '@/ui/button';
 import { CardStroke } from '@/components/card-stroke';
-import { defaultEnquiryMail, details } from '@/lib/constants';
+import { details } from '@/lib/constants';
 
 export const CustomQuestion = () => {
   return (
