@@ -7,6 +7,7 @@ import Badge from '@/ui/badge';
 import { pricing } from '@/lib/data/pricing';
 import { CardStroke } from '@/components/card-stroke';
 import Button from '@/ui/button';
+import { defaultEnquiryMail } from '@/lib/constants';
 
 export const Pricing = () => {
   return (
@@ -112,7 +113,7 @@ const PricingCard = ({
         <Button
           variant={first ? 'default' : 'outline'}
           as="a"
-          href="https://prince-ugboga.ng"
+          href={defaultEnquiryMail}
         >
           Contact Me
         </Button>
