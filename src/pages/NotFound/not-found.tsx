@@ -27,15 +27,15 @@ const NotFound = () => {
           <div className="grid gap-4">
             <div className="grid">
               <div className="flex justify-center items-center">
-                <h1 className="not-found-text font-semibold text-[180px] md:text-[400px]">
+                <h1 className="not-found-text font-semibold text-[180px] lg:text-[400px]">
                   4
                 </h1>
                 <img
                   src={Ghost}
                   alt="ghost"
-                  className="size-[150px] mt-4 md:size-[346px]"
+                  className="size-[150px] mt-4 lg:size-[346px]"
                 />
-                <h1 className="not-found-text font-semibold text-[180px] md:text-[400px]">
+                <h1 className="not-found-text font-semibold text-[180px] lg:text-[400px]">
                   4
                 </h1>
               </div>

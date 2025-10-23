@@ -9,13 +9,18 @@ export const UpcomingCaseStudies = () => {
 
   return (
     <section className="flex flex-col gap-6 font-geist border-b-grey-4/60">
-      <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+      <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
         <h1 className="gradient-text text-start font-medium text-[40px]/[52px] -tracking-smaller">
           Other Case Studies
         </h1>
-        <Button variant="default" className="self-start md:self-center">
+        <Button
+          as="a"
+          href="/"
+          variant="default"
+          className="self-start lg:self-center"
+        >
           <Case size={16} weight="Outline" />
-          See More Case Study
+          Back to Projects
         </Button>
       </div>
 
@@ -24,7 +29,7 @@ export const UpcomingCaseStudies = () => {
           .filter((project) => project.id !== Number(params.id))
           .map((project, index) => (
             <ProjectCard
-              className="w-11/12 md:w-6/12 shrink-0"
+              className="w-11/12 lg:w-6/12 shrink-0"
               {...project}
               key={index}
             />

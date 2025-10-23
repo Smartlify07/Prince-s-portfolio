@@ -276,12 +276,14 @@
 }
 
 .texture {
-  background: url(../public/assets/images/asfalt-light.png) repeat center center;
+  background: url(../public/assets/images/texture-image-large.webp) repeat
+    center center;
   background-size: cover;
 }
 
 .texture-2 {
-  background: url(../public/assets/images/asfalt-light.png) repeat center;
+  background: url(../public/assets/images/texture-image-large.webp) repeat
+    center;
   z-index: 1;
   position: relative;
 }
@@ -378,7 +380,7 @@
 
 .navbar-active {
   background: linear-gradient(var(--button-primary-gradient)),
-    url('/public/assets/images/asfalt-light.png');
+    url('/public/assets/images/texture-image-large.webp');
 
   background-size: cover;
   background-position: center;

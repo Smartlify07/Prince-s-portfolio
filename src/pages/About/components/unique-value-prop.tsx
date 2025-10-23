@@ -5,14 +5,14 @@ import { cn } from '@/lib/utils';
 
 export const UniqueValueProp = () => {
   return (
-    <section className="px-4 md:px-0 grid gap-14">
+    <section className="px-4 lg:px-0 grid gap-14">
       <div className="grid gap-12">
         <header>
-          <h1 className="text-[40px] font-medium font-geist gradient-text md:text-center">
+          <h1 className="text-[40px] font-medium font-geist gradient-text lg:text-center">
             Why Am I Unique?
           </h1>
         </header>
-        <div className="border-t border-dashed md:border-none border-t-grey-9/60">
+        <div className="border-t border-dashed lg:border-none border-t-grey-9/60">
           {uniqueValueProps.map((valueProp, index) => (
             <ValuePropCard key={index} index={index} {...valueProp} />
           ))}
@@ -43,7 +43,7 @@ const ValuePropCard = ({
     <Card
       className={cn(
         'shadow-none bg-sidebar-bg rounded-none py-9 border-t border-b border-grey-4/60 flex flex-col gap-6 font-geist px-0',
-        index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+        index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
       )}
     >
       <div className="flex items-start flex-col gap-2">
@@ -52,7 +52,7 @@ const ValuePropCard = ({
         </h1>
         <p className="text-sm/[150%] text-grey-9">{subtitle}</p>
       </div>
-      <div className="rounded-2xl shrink-0 md:w-[300px] md:h-[130px]">
+      <div className="rounded-2xl shrink-0 lg:w-[300px] lg:h-[130px]">
         <img
           src={image}
           alt={title}

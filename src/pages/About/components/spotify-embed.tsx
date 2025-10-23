@@ -51,12 +51,12 @@ export const SpotifyEmbed = () => {
     : 'No track playing';
 
   return (
-    <div className="flex flex-col md:flex-row md:items-center text-grey-opaque gap-2">
+    <div className="flex flex-col lg:flex-row lg:items-center text-grey-opaque gap-2">
       <div className="flex items-center gap-4">
         <img src={Headphones} />
         <p className="text-sm font-normal flex items-center gap-2 -tracking-smallest">
           Shipping while enjoying some tunes
-          <span className="spotify-text text-sm truncate overflow-ellipsis w-[150px] md:w-auto font-inter-tight italic">
+          <span className="spotify-text text-sm truncate overflow-ellipsis w-[150px] lg:w-auto font-inter-tight italic">
             {loading && 'Getting track...'} {track && trackDisplay}
           </span>
         </p>

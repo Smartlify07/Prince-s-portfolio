@@ -3,7 +3,7 @@ import QuoteIcon from '@/../public/assets/icons/quote.svg';
 
 const ReviewsPage = () => {
   return (
-    <main className="grid min-h-screen font-geist bg-sidebar-bg py-8 px-4 md:px-0 pt-[126px] md:pt-0 md:py-0 gap-9 md:gap-14">
+    <main className="grid min-h-screen font-geist bg-sidebar-bg py-8 px-4 lg:px-0 pt-[126px] lg:pt-0 lg:py-0 gap-9 lg:gap-14">
       <div className="flex flex-col gap-5">
         <h1 className="gradient-text font-medium -tracking-smaller text-[40px]/[52px]">
           Reviews
@@ -14,7 +14,7 @@ const ReviewsPage = () => {
         </p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-5 md:gap-6">
+      <div className="grid lg:grid-cols-2 gap-5 lg:gap-6">
         {reviews.map((review, index) => (
           <div
             key={index}
@@ -47,7 +47,7 @@ const ReviewsPage = () => {
             </div>
             <img
               src={QuoteIcon}
-              className="absolute bottom-7 right-10 md:right-10 md:bottom-10"
+              className="absolute bottom-7 right-10 lg:right-10 lg:bottom-10"
             />
           </div>
         ))}

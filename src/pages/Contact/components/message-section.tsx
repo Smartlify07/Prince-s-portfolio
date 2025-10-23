@@ -23,28 +23,88 @@ export const MessageSection = () => {
   );
 };
 
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mblzvoek';
+
 export const Form = () => {
   const [selectedPlan, setSelectedPlan] = useState('');
   const [selectedWork, setSelectedWork] = useState('');
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: '',
+  });
+  const [status, setStatus] = useState<
+    'idle' | 'loading' | 'success' | 'error'
+  >('idle');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log({
+    setStatus('loading');
+
+    const payload = {
+      ...formData,
       selectedPlan,
       selectedWork,
-    });
+    };
+
+    try {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+
+      if (res.ok) {
+        setStatus('success');
+        setFormData({ name: '', email: '', phone: '', message: '' });
+        setSelectedPlan('');
+        setSelectedWork('');
+      } else {
+        throw new Error('Failed to send');
+      }
+    } catch {
+      setStatus('error');
+    }
   };
+  const isFormNotComplete = Object.values(formData).some(
+    (value) => value === ''
+  );
 
   return (
     <form className="flex flex-col font-geist gap-4" onSubmit={handleSubmit}>
       <div className="pt-3 flex flex-col gap-2.5 border-t border-dashed border-t-grey-4/50">
-        <FormInput type="text" name="name" placeholder="What is your name?" />
-        <FormInput
+        <Input
+          type="text"
+          name="name"
+          placeholder="What is your name?"
+          value={formData.name}
+          onChange={handleChange}
+          className="z-10 gradient-input text-[#636363] text-xs font-geist font-medium p-4 w-full"
+        />
+        <Input
           type="email"
           name="email"
           placeholder="Your email for contact"
+          value={formData.email}
+          onChange={handleChange}
+          className="z-10 gradient-input text-[#636363] text-xs font-geist font-medium p-4 w-full"
         />
-        <FormInput type="tel" name="phone" placeholder="Phone number" />
+        <Input
+          type="tel"
+          name="phone"
+          placeholder="Phone number"
+          value={formData.phone}
+          onChange={handleChange}
+          className="z-10 gradient-input text-[#636363] text-xs font-geist font-medium p-4 w-full"
+        />
 
         <FormSelect
           placeholder="Select work"
@@ -52,55 +112,37 @@ export const Form = () => {
           onChange={setSelectedWork}
         />
 
-        <FormTextArea name="message" placeholder="Write your message here" />
+        <TextArea
+          rows={5}
+          cols={5}
+          name="message"
+          placeholder="Write your message here"
+          value={formData.message}
+          onChange={handleChange}
+          className="z-10 gradient-input text-[#636363] text-xs font-geist font-medium p-4 min-h-[115px] w-full"
+        />
 
         <SelectPlan selectedPlan={selectedPlan} onChange={setSelectedPlan} />
 
         <div className="border-t border-dashed pt-6 border-[rgba(76,76,76,0.50)]">
-          <Button variant="default" className="self-start" type="submit">
-            <Plain size={16} />
-            Send Email
+          <Button
+            variant="default"
+            className="self-start"
+            type="submit"
+            disabled={status === 'loading' || isFormNotComplete}
+          >
+            {status === 'loading' ? (
+              <div className="w-4 h-4 border-[1px] border-white border-b-transparent rounded-full box-border inline-block animate-spin"></div>
+            ) : (
+              <>
+                <Plain size={16} />
+                Send Email
+              </>
+            )}
           </Button>
         </div>
       </div>
     </form>
-  );
-};
-
-const FormInput = ({
-  type,
-  name,
-  placeholder,
-}: {
-  type: string;
-  name: string;
-  placeholder: string;
-}) => {
-  return (
-    <Input
-      type={type}
-      name={name}
-      placeholder={placeholder}
-      className="z-10 gradient-input text-[#636363] text-xs font-geist font-medium p-4 w-full"
-    />
-  );
-};
-
-const FormTextArea = ({
-  name,
-  placeholder,
-}: {
-  name: string;
-  placeholder: string;
-}) => {
-  return (
-    <TextArea
-      rows={5}
-      cols={5}
-      name={name}
-      placeholder={placeholder}
-      className="z-10 gradient-input text-[#636363] text-xs font-geist font-medium p-4 min-h-[115px] w-full"
-    />
   );
 };
 
@@ -134,12 +176,12 @@ const SelectPlan = ({
         />
         <RadioInput
           selectedPlan={selectedPlan}
-          plan="Framer Design"
+          plan="Mobile Design"
           onChange={onChange}
         />
         <RadioInput
           selectedPlan={selectedPlan}
-          plan="Freelance"
+          plan="Mobile App Design"
           onChange={onChange}
         />
       </div>
@@ -190,8 +232,8 @@ const FormSelect = ({
 }) => {
   const options = [
     { label: 'Design', value: 'design' },
-    { label: 'Development', value: 'dev' },
-    { label: 'Consulting', value: 'consult' },
+    { label: 'Development', value: 'development' },
+    { label: 'Consulting', value: 'consulting' },
   ];
 
   return (

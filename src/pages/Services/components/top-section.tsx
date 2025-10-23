@@ -14,7 +14,7 @@ export const TopSection = () => {
   ];
 
   return (
-    <section className="flex flex-col gap-6 px-4 md:px-0">
+    <section className="flex flex-col gap-6 px-4 lg:px-0">
       <Badge
         shadowSize="small"
         className="text-[#EDEDEB] text-xl/[20px] px-2 py-2.5 opacity-50 font-medium flex gap-2 items-center font-geist self-start"
@@ -24,7 +24,7 @@ export const TopSection = () => {
       </Badge>
 
       <div className="flex flex-col gap-2">
-        <div className="flex flex-col md:flex-row gap-2">
+        <div className="flex flex-col lg:flex-row gap-2">
           <h1 className="text-3xl font-medium tracking-1 text-[40px] text-[#909090] font-geist">
             I specialize in
           </h1>

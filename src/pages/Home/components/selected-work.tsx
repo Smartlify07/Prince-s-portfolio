@@ -3,7 +3,7 @@ import Icon from '@/../public/assets/icons/selected-works.svg';
 import ProjectsSection from './projects';
 const SelectedWork = () => {
   return (
-    <section className="flex flex-col gap-4">
+    <section id="selected-work" className="flex flex-col gap-4">
       <header className="px-4 flex items-center">
         <Badge
           shadowSize="small"

@@ -4,7 +4,7 @@ import Behance from '@/../public/assets/icons/Behance.svg';
 import Email from '@/../public/assets/icons/envelope.svg';
 import LinkWithWave from './link-with-wave';
 import { ScrollToTopButton } from './scroll-to-top-button';
-import { details, socialLinks } from '@/lib/constants';
+import { defaultEnquiryMail, details, socialLinks } from '@/lib/constants';
 import { ReachOutButton } from './reach-out-button';
 import { HireOnUpwork } from './hire-on-upwork-button';
 
@@ -17,17 +17,17 @@ const Footer = () => {
     { icon: X, link: socialLinks.twitter },
     { icon: Behance, link: socialLinks.behance },
     {
-      link: `https://mail.google.com/mail/?view=cm&fs=1&to=${details.email}`,
+      link: `https://mail.google.com/mail/?view=cm&fs=1&to=${defaultEnquiryMail}`,
       icon: Email,
     },
   ];
   return (
-    <footer className="py-10 px-4 min-h-[580px] md:px-0 bg-sidebar-bg overflow-hidden relative grid gap-10 lg:justify-items-center lg:min-h-auto">
+    <footer className="py-10 px-4 min-h-[580px] lg:px-0 bg-sidebar-bg overflow-hidden relative grid gap-10 lg:justify-items-center lg:min-h-auto">
       <div className="absolute inset-0 bg-[rgba(34,148,242,0.1)] w-full h-full left-0 top-0 opacity-40"></div>
-      <div className="absolute w-full hidden lg:block h-[502px] md:w-[502px] left-0 footer-bottom opacity-10"></div>
+      <div className="absolute w-full hidden lg:block h-[502px] lg:w-[502px] left-0 footer-bottom opacity-10"></div>
       <div className="w-full flex flex-col gap-10">
         <section className="flex flex-col items-center gap-8 relative ">
-          <header className=" relative md:static flex flex-col items-center ">
+          <header className=" relative lg:static flex flex-col items-center ">
             <h1 className="gradient-text font-medium font-geist text-[40px]/[52px] tracking-1 text-center">
               Have a project in mind?
             </h1>
@@ -37,16 +37,16 @@ const Footer = () => {
 
             <ScrollToTopButton />
           </header>
-          <div className="flex items-center justify-center gap-4">
+          <div className="flex items-center justify-center flex-wrap lg:flex-nowrap gap-4">
             <ReachOutButton />
             <HireOnUpwork />
           </div>
         </section>
         <div className="rounded-full circle-gradient size-[1054px] absolute blur-[200px] right-[48px] top-[300px]"></div>
-        <section className="flex flex-col gap-8 relative p-4 md:pt-4 md:px-4 2xl:items-center 2xl:w-full lg:pl-6 lg:pr-10 border-t z-10 border-[#4C4C4C]/40">
-          <div className="w-full 2xl:max-w-[956px] flex flex-col gap-8 relative md:flex-row md:items-start md:justify-between">
-            <div className="absolute w-full lg:hidden h-[502px] md:w-[502px] left-0 top-0 footer-bottom opacity-50"></div>
-            <div className="flex items-center md:items-start  flex-col gap-2.5">
+        <section className="flex flex-col gap-8 relative p-4 lg:pt-4 lg:px-4 2xl:items-center 2xl:w-full lg:pl-6 lg:pr-10 border-t z-10 border-[#4C4C4C]/40">
+          <div className="w-full 2xl:max-w-[956px] flex flex-col gap-8 relative lg:flex-row lg:items-start lg:justify-between">
+            <div className="absolute w-full lg:hidden h-[502px] lg:w-[502px] left-0 top-0 footer-bottom opacity-50"></div>
+            <div className="flex items-center lg:items-start z-20  flex-col gap-2.5">
               <div className="flex items-center gap-4">
                 {socialIcons.map((icon, index) => (
                   <a
@@ -77,7 +77,7 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="flex flex-col items-center md:items-start gap-2">
+            <div className="flex flex-col items-center lg:items-start gap-2">
               <div className="flex items-center gap-2">
                 <h3 className="text-[#909090] text-sm font-geist">
                   CONTACT ME:

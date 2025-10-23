@@ -14,9 +14,9 @@ export const ExclusiveDeals = () => {
   };
 
   return (
-    <section className="grid md:flex md:flex-row md:items-stretch gap-6">
-      <CardStroke className="rounded-4xl p-px bg-[#171721] w-full md:w-[40%] overflow-x-auto scrollbar-hide">
-        <div className="flex  gap-4 rounded-4xl md:h-[725px] overflow-y-auto scrollbar-hide p-6 md:flex-col md:items-stretch">
+    <section className="grid lg:flex lg:flex-row lg:items-stretch gap-6">
+      <CardStroke className="rounded-4xl p-px bg-[#171721] w-full lg:w-[40%] overflow-x-auto scrollbar-hide">
+        <div className="flex  gap-4 rounded-4xl lg:h-[725px] overflow-y-auto scrollbar-hide p-6 lg:flex-col lg:items-stretch">
           {exclusiveDeals.map((deal, index) => (
             <ExclusiveDealCard
               currentDeal={currentDeal}
@@ -118,7 +118,7 @@ export const ExclusiveDealExtendedCard = ({
         transition: { type: 'spring', duration: 2 },
       }}
       exit={{ opacity: 0 }}
-      className="rounded-4xl card-stroke  md:w-[60%]"
+      className="rounded-4xl card-stroke  lg:w-[60%]"
     >
       <motion.div className="p-6 bg-[#171721] exclusive-deal-card rounded-4xl shadow-none flex flex-col gap-6">
         <Badge className="flex text-[#EDEDEB] opacity-50 font-medium items-center self-start gap-2">
@@ -134,9 +134,9 @@ export const ExclusiveDealExtendedCard = ({
               {description}
             </p>
           </motion.div>
-          <motion.div className="shadow-[0px_0px_5.5px_rgba(86,86,119,0.25)] md:h-[468px] rounded-2xl">
+          <motion.div className="shadow-[0px_0px_5.5px_rgba(86,86,119,0.25)] lg:h-[468px] rounded-2xl">
             <img
-              className="object-cover rounded-2xl md:w-full md:h-[468px]"
+              className="object-cover rounded-2xl lg:w-full lg:h-[468px]"
               src={image}
             />
           </motion.div>

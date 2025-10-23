@@ -5,17 +5,17 @@ import { CallToActionSection } from '@/pages/About/components/cta';
 
 export const IndustriesExceled = () => {
   return (
-    <section className="px-4 md:px-0">
+    <section className="px-4 lg:px-0">
       <div className="gap-11 flex flex-col">
         <TopSection />
 
         <div className="grid gap-10">
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 lg:grid-cols-2 lg:grid-cols-3">
             {industries.map((item, index) => (
               <IndustryCard {...item} key={index} />
             ))}
           </div>
-          <div className="w-full justify-self-center md:w-11/12">
+          <div className="w-full justify-self-center lg:w-11/12">
             <CallToActionSection
               title="Your industry not on the list?"
               subtitle="Contact me or check my portfolio since I have clients from various industries."

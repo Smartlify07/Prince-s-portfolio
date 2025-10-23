@@ -12,7 +12,7 @@ export const Sidebar = forwardRef<HTMLDivElement>((_, ref) => {
   return (
     <aside
       ref={ref}
-      className="md:flex h-screen overflow-y-auto flex-col border-r scrollbar-hide border-r-grey-4/60 items-start w-full hidden"
+      className="lg:flex h-screen overflow-y-auto flex-col border-r scrollbar-hide border-r-grey-4/60 items-start w-full hidden"
     >
       <TopSection />
       <div className="pt-10 px-0 pb-2.5 flex flex-col gap-11">
@@ -25,7 +25,7 @@ export const Sidebar = forwardRef<HTMLDivElement>((_, ref) => {
 
 export const TopSection = () => {
   return (
-    <section className="bg-[rgba(14,14,14,0.7)] hidden  border-b sticky top-0 border-b-grey-4/60 z-50 font-geist md:flex justify-between gap-4 w-full h-[86px] shrink-0 pl-10 backdrop-blur-[10px]">
+    <section className="bg-[rgba(14,14,14,0.7)] hidden  border-b sticky top-0 border-b-grey-4/60 z-50 font-geist lg:flex justify-between gap-4 w-full h-[86px] shrink-0 pl-10 backdrop-blur-[10px]">
       <Link
         to={'/'}
         className="flex justify-center flex-col w-[20.1vw] gap-1 py-px"
@@ -63,7 +63,7 @@ const IntroSection = () => {
           </header>
         </div>
         <div className="flex flex-col gap-8">
-          <div className="flex items-center md:flex-wrap xl:flex-nowrap gap-4">
+          <div className="flex items-center lg:flex-wrap xl:flex-nowrap gap-4">
             <BookACallButton />
             <LetsTalkButton />
           </div>

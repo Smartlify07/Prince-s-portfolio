@@ -67,7 +67,7 @@ export const OutcomeSection = ({ project }: { project: Project }) => {
                   />
 
                   <img
-                    className={`lg:h-[600px] rounded-2xl lg:rounded-3xl object-cover ${
+                    className={`h-full lg:h-[600px] rounded-2xl object-cover lg:rounded-3xl ${
                       img.fullWidth ? 'col-span-2 w-full' : 'w-full'
                     } ${
                       project.outcomeImages?.sm[index].height
@@ -83,103 +83,110 @@ export const OutcomeSection = ({ project }: { project: Project }) => {
         </div>
         <div className={`grid gap-6 lg:grid-cols-2 items-start`}>
           {/* Font */}
-          <picture className="">
-            <source
-              media="(min-width: 1024px)"
-              srcSet={
-                project.designChoiceImages?.lg.font ?? DesignHighlightImage
-              }
-            />
-            <source
-              media="(max-width: 1023px)"
-              srcSet={
-                project.designChoiceImages?.sm.font ?? DesignHighlightImage
-              }
-            />
-            <img
-              className={`h-[500px] w-full lg:w-full lg:h-[600px] object-cover rounded-2xl lg:rounded-3xl`}
-              src={project.designChoiceImages?.lg.font ?? DesignHighlightImage}
-              alt={`${project.title} font design`}
-            />
-          </picture>
+          <div className="relative w-full h-[500px] lg:h-[600px] overflow-hidden rounded-2xl lg:rounded-3xl bg-[#f8f8f8]">
+            <picture>
+              <source
+                media="(min-width: 1024px)"
+                srcSet={
+                  project.designChoiceImages?.lg.font ?? DesignHighlightImage
+                }
+              />
+              <source
+                media="(max-width: 1023px)"
+                srcSet={
+                  project.designChoiceImages?.sm.font ?? DesignHighlightImage
+                }
+              />
+              <img
+                className="w-full h-full object-cover"
+                src={
+                  project.designChoiceImages?.lg.font ?? DesignHighlightImage
+                }
+                alt={`${project.title} font design`}
+              />
+            </picture>
+          </div>
 
           {/* Colors */}
-          <picture className="w-full">
-            <source
-              media="(min-width: 1024px)"
-              srcSet={
-                project.designChoiceImages?.lg.colors ?? DesignHighlightImage
-              }
-            />
-            <source
-              media="(max-width: 1023px)"
-              srcSet={
-                project.designChoiceImages?.sm.colors ?? DesignHighlightImage
-              }
-            />
-            <img
-              className={`h-[500px] w-full lg:w-full lg:h-[600px] lg:object-cover rounded-2xl lg:rounded-3xl`}
-              src={
-                project.designChoiceImages?.lg.colors ?? DesignHighlightImage
-              }
-              alt={`${project.title} color design`}
-            />
-          </picture>
+          <div className="relative w-full h-[500px] lg:h-[600px] overflow-hidden rounded-2xl lg:rounded-3xl bg-[#f8f8f8]">
+            <picture>
+              <source
+                media="(min-width: 1024px)"
+                srcSet={
+                  project.designChoiceImages?.lg.colors ?? DesignHighlightImage
+                }
+              />
+              <source
+                media="(max-width: 1023px)"
+                srcSet={
+                  project.designChoiceImages?.sm.colors ?? DesignHighlightImage
+                }
+              />
+              <img
+                className="w-full h-full object-cover"
+                src={
+                  project.designChoiceImages?.lg.colors ?? DesignHighlightImage
+                }
+                alt={`${project.title} color design`}
+              />
+            </picture>
+          </div>
         </div>
 
         <div
-          className={`flex flex-col lg:grid gap-6 lg:grid-cols-2 items-start`}
+          className={`flex flex-col lg:grid gap-6 lg:grid-cols-2 items-start ${
+            project.outcomeImages?.lg.some((img) => img.afterFont)
+              ? ''
+              : 'hidden'
+          }`}
         >
           {project.outcomeImages?.lg.map(
             (img, index) =>
               img.afterFont && (
-                <picture
+                <div
                   key={index}
-                  className={`${
-                    img.fullWidth ? 'col-span-2 w-full' : 'w-full'
-                  }`}
+                  className={`relative w-full ${
+                    img.fullWidth ? 'col-span-2' : ''
+                  } h-[356px] lg:h-[600px] overflow-hidden rounded-2xl lg:rounded-3xl bg-[#f8f8f8]`}
                 >
-                  <source
-                    media="(min-width: 1024px)"
-                    srcSet={img?.src ?? DesignHighlightImage}
-                  />
-                  <source
-                    media="(max-width: 1023px)"
-                    srcSet={project.outcomeImages?.sm[index].src}
-                  />
-
-                  <img
-                    className={`lg:h-[600px] rounded-2xl lg:rounded-3xl object-cover ${
-                      img.fullWidth ? 'col-span-2 w-full' : 'w-full'
-                    } ${
-                      project.outcomeImages?.sm[index].height
-                        ? `h-[500px]`
-                        : 'h-[356px]'
-                    }`}
-                    src={img.src ?? DesignHighlightImage}
-                    alt={`${project.title} outcome-image`}
-                  />
-                </picture>
+                  <picture>
+                    <source
+                      media="(min-width: 1024px)"
+                      srcSet={img?.src ?? DesignHighlightImage}
+                    />
+                    <source
+                      media="(max-width: 1023px)"
+                      srcSet={project.outcomeImages?.sm[index].src}
+                    />
+                    <img
+                      className="w-full h-full object-cover"
+                      src={img.src ?? DesignHighlightImage}
+                      alt={`${project.title} outcome-image`}
+                    />
+                  </picture>
+                </div>
               )
           )}
         </div>
 
         {/* Timeline Image */}
-        <picture>
-          <source
-            media="(min-width: 1024px)"
-            srcSet={project.timeLineImage?.lg ?? DesignHighlightImage}
-          />
-          <source
-            media="(max-width: 1023px)"
-            srcSet={project.timeLineImage?.sm ?? DesignHighlightImage}
-          />
-          <img
-            src={project.timeLineImage?.lg ?? DesignHighlightImage}
-            alt="design-highlight-image"
-            className="w-full h-[356px] lg:h-[600px] object-cover rounded-2xl"
-          />
-        </picture>
+        <div className="w-full h-[356px] lg:h-[600px] rounded-2xl overflow-hidden">
+          <picture>
+            <source
+              media="(min-width: 1024px)"
+              srcSet={project.timeLineImage?.lg ?? DesignHighlightImage}
+            />
+            <source
+              media="(max-width: 1023px)"
+              srcSet={project.timeLineImage?.sm ?? DesignHighlightImage}
+            />
+            <img
+              src={project.timeLineImage?.lg ?? DesignHighlightImage}
+              alt="design-highlight-image"
+              className="w-full h-full object-cover"
+            />
+          </picture>
+        </div>
       </div>
     </section>
   );
