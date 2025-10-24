@@ -16,9 +16,11 @@
   --color-bright-orange: #ffaa4c;
   --button-blur: 20px;
   --button-primary-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
-  --button-primary-gradient: var(--color-primary) 0%, var(--color-secondary) 51%,
+  --button-primary-gradient:
+    var(--color-primary) 0%, var(--color-secondary) 51%,
     var(--color-accent) 100%;
-  --primary-gradient: var(--color-primary) 0%, var(--color-secondary) 51%,
+  --primary-gradient:
+    var(--color-primary) 0%, var(--color-secondary) 51%,
     var(--color-accent) 100%;
   --color-button-outline-text: #ededeb;
   --color-button-outline-bg: rgba(255, 170, 76, 0.02);
@@ -42,19 +44,23 @@
 }
 
 .button-shadows {
-  box-shadow: inset 0px 1px 3px #c7dcff33,
+  box-shadow:
+    inset 0px 1px 3px #c7dcff33,
     inset 0px 0px 20px 0px rgba(198, 204, 255, 0.2),
     0px 1px 22px 0px rgba(255, 255, 255, 0.1),
-    0px 4px 4px 0px rgba(0, 0, 0, 0.05), 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
+    0px 4px 4px 0px rgba(0, 0, 0, 0.05),
+    0px 10px 10px 0px rgba(0, 0, 0, 0.1);
 }
 
 .badge-shadow {
   border-radius: 10px;
   opacity: 0.5;
   background: rgba(255, 170, 76, 0.02);
-  box-shadow: 0 1px 3px 0 rgba(199, 220, 255, 0.35) inset,
+  box-shadow:
+    0 1px 3px 0 rgba(199, 220, 255, 0.35) inset,
     0 0 20px 0 rgba(198, 204, 255, 0.2) inset,
-    0 1px 22px 0 rgba(255, 255, 255, 0.1), 0 4px 4px 0 rgba(0, 0, 0, 0.05),
+    0 1px 22px 0 rgba(255, 255, 255, 0.1),
+    0 4px 4px 0 rgba(0, 0, 0, 0.05),
     0 10px 10px 0 rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
 }
@@ -73,9 +79,11 @@
   border: 1px solid rgba(12, 133, 238, 0.07);
   background-color: rgba(12, 133, 238, 0.02);
 
-  box-shadow: 0 1px 3px 0 rgba(199, 220, 255, 0.35) inset,
+  box-shadow:
+    0 1px 3px 0 rgba(199, 220, 255, 0.35) inset,
     0 0 20px 0 rgba(198, 204, 255, 0.2) inset,
-    0 1px 22px 0 rgba(255, 255, 255, 0.1), 0 4px 4px 0 rgba(0, 0, 0, 0.05),
+    0 1px 22px 0 rgba(255, 255, 255, 0.1),
+    0 4px 4px 0 rgba(0, 0, 0, 0.05),
     0 10px 10px 0 rgba(0, 0, 0, 0.1);
 
   backdrop-filter: blur(10px);
@@ -90,25 +98,28 @@
   inset: 0;
   border-radius: inherit;
   padding: 1px;
-  background: linear-gradient(
-      0deg,
-      rgba(12, 133, 238, 0),
-      rgba(12, 133, 238, 1)
-    ),
+  background:
+    linear-gradient(0deg, rgba(12, 133, 238, 0), rgba(12, 133, 238, 1)),
     rgba(12, 133, 238, 0.07);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   mix-blend-mode: overlay;
   pointer-events: none;
   z-index: 2;
-  box-shadow: 0 1px 3px 0 rgba(199, 220, 255, 0.35) inset,
+  box-shadow:
+    0 1px 3px 0 rgba(199, 220, 255, 0.35) inset,
     0 0 20px 0 rgba(198, 204, 255, 0.2) inset,
-    0 1px 22px 0 rgba(255, 255, 255, 0.1), 0 4px 4px 0 rgba(0, 0, 0, 0.05),
+    0 1px 22px 0 rgba(255, 255, 255, 0.1),
+    0 4px 4px 0 rgba(0, 0, 0, 0.05),
     0 10px 10px 0 rgba(0, 0, 0, 0.1);
 
   /* ✨ Add transition */
-  transition: background 0.4s ease, box-shadow 0.4s ease;
+  transition:
+    background 0.4s ease,
+    box-shadow 0.4s ease;
 }
 
 .gradient-button {
@@ -132,7 +143,8 @@
   padding: 1px;
 
   /* Stroke: gradient → solid color overlay */
-  background: linear-gradient(
+  background:
+    linear-gradient(
       90deg,
       rgba(12, 133, 238, 0.07) 0%,
       rgba(12, 133, 238, 1) 70%
@@ -141,20 +153,25 @@
 
   background-blend-mode: normal;
 
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
 
   mix-blend-mode: overlay;
   pointer-events: none;
   z-index: 2;
-  transition: background 0.4s ease, box-shadow 0.4s ease;
+  transition:
+    background 0.4s ease,
+    box-shadow 0.4s ease;
 }
 
 /* 🔥 On hover: Pink box-shadow + pink outlines */
 .outline-button-outline:hover,
 .gradient-button:hover {
-  box-shadow: 0px 1px 3px 0px rgba(12, 133, 238, 0.07) inset,
+  box-shadow:
+    0px 1px 3px 0px rgba(12, 133, 238, 0.07) inset,
     0px 4px 20px 0px rgba(12, 133, 238, 0.2) inset,
     0px 2px 1px 0px rgba(12, 133, 238, 0.1),
     0px 2px 4px 1px rgb(21, 161, 250, 0.05),
@@ -163,14 +180,14 @@
 
 .outline-button-outline:hover::before,
 .gradient-button:hover:before {
-  background: linear-gradient(
-      0deg,
-      rgba(12, 133, 238, 0),
-      rgba(12, 133, 238, 1)
-    ),
+  background:
+    linear-gradient(0deg, rgba(12, 133, 238, 0), rgba(12, 133, 238, 1)),
     rgba(12, 133, 238, 0.07);
-  box-shadow: inset 0px 1px 3px #ffb6c133, inset 0px 0px 20px 0px #ffc0cb33,
-    0px 1px 22px 0px #ffc0cb1a, 0px 4px 4px 0px #ff69b41a,
+  box-shadow:
+    inset 0px 1px 3px #ffb6c133,
+    inset 0px 0px 20px 0px #ffc0cb33,
+    0px 1px 22px 0px #ffc0cb1a,
+    0px 4px 4px 0px #ff69b41a,
     0px 10px 10px 0px #ff69b41a;
 }
 
@@ -379,7 +396,8 @@
 }
 
 .navbar-active {
-  background: linear-gradient(var(--button-primary-gradient)),
+  background:
+    linear-gradient(var(--button-primary-gradient)),
     url('/public/assets/images/texture-image-large.webp');
 
   background-size: cover;
@@ -417,8 +435,10 @@
     rgba(255, 255, 255, 0.03) 100%
   );
 
-  box-shadow: 0px 0.75px 0px 0px rgba(0, 0, 0, 0.05),
-    0px 3px 3px 0px rgba(0, 0, 0, 0.05), 0px 7.5px 7.5px 0px rgba(0, 0, 0, 0.1);
+  box-shadow:
+    0px 0.75px 0px 0px rgba(0, 0, 0, 0.05),
+    0px 3px 3px 0px rgba(0, 0, 0, 0.05),
+    0px 7.5px 7.5px 0px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(7.5px);
   display: flex;
   align-items: center;
@@ -448,10 +468,12 @@
   gap: 4px;
   border-radius: 16px;
   background: rgba(23, 23, 33, 0.3);
-  box-shadow: 0px 1px 3px 0px rgba(199, 220, 255, 0.35) inset,
+  box-shadow:
+    0px 1px 3px 0px rgba(199, 220, 255, 0.35) inset,
     0px 0px 20px 0px rgba(198, 204, 255, 0.2) inset,
     0px 1px 22px 0px rgba(255, 255, 255, 0.1),
-    0px 4px 4px 0px rgba(0, 0, 0, 0.05), 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
+    0px 4px 4px 0px rgba(0, 0, 0, 0.05),
+    0px 10px 10px 0px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
 }
 
@@ -545,10 +567,12 @@
   border-radius: 10px;
   background: rgba(255, 170, 76, 0.02);
 
-  box-shadow: 0px 1px 3px 0px rgba(199, 220, 255, 0.35) inset,
+  box-shadow:
+    0px 1px 3px 0px rgba(199, 220, 255, 0.35) inset,
     0px 0px 20px 0px rgba(198, 204, 255, 0.2) inset,
     0px 1px 22px 0px rgba(255, 255, 255, 0.1),
-    0px 4px 4px 0px rgba(0, 0, 0, 0.05), 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
+    0px 4px 4px 0px rgba(0, 0, 0, 0.05),
+    0px 10px 10px 0px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
 }
 
@@ -597,7 +621,9 @@
 
 .project-card h2 {
   color: white;
-  transition: color 0.3s ease, background 0.3s ease;
+  transition:
+    color 0.3s ease,
+    background 0.3s ease;
   background: none;
 }
 
