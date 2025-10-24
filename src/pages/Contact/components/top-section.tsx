@@ -16,7 +16,7 @@ export const TopSection = () => {
       </picture>
 
       {/* Gradient Overlay + Text */}
-      <div className="absolute inset-0 z-10 h-full top-0 left-0 project-gradient border border-red-500 flex flex-col justify-end font-geist py-4 px-5 gap-2">
+      <div className="absolute inset-0 z-10 h-full top-0 left-0 project-gradient flex flex-col justify-end font-geist py-4 px-5 gap-2">
         <div className="flex items-center">
           <div className="flex flex-col gap-2 sm:max-w-[50%]">
             <h2 className="text-[40px]/[50px] font-medium gradient-text tracking-[-2px] text-start">
