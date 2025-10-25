@@ -176,7 +176,7 @@ const SelectPlan = ({
         />
         <RadioInput
           selectedPlan={selectedPlan}
-          plan="Mobile Design"
+          plan="Website Design"
           onChange={onChange}
         />
         <RadioInput
