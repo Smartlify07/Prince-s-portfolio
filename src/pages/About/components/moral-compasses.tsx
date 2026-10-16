@@ -1,5 +1,5 @@
-import Prince1 from '@/../public/assets/images/about/prince-looking-at-the-camera.webp';
-import Prince2 from '@/../public/assets/images/about/prince-looking-at-his-laptop.webp';
+import Prince1 from '@/../public/assets/images/prince-without-watch.jpg';
+import Prince2 from '@/../public/assets/images/prince-with-watch.jpg';
 import { morals, type Moral } from '@/lib/data/morals';
 import Card from '@/ui/card';
 import Star from '@/../public/assets/icons/star.svg';
