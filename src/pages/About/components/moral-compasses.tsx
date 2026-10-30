@@ -1,4 +1,4 @@
-import Prince1 from '@/../public/assets/images/prince-without-watch.jpg';
+import Prince1 from '@/../public/assets/images/prince-moral.jpg';
 import Prince2 from '@/../public/assets/images/prince-with-watch.jpg';
 import { morals, type Moral } from '@/lib/data/morals';
 import Card from '@/ui/card';

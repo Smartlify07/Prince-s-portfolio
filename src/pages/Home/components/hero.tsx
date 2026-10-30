@@ -32,7 +32,7 @@ const HeroSection = () => {
           width={320}
           height={320}
           className="h-[320px] lg:h-full rounded-2xl object-top lg:object-center object-cover"
-          src="/assets/images/prince-with-watch.jpg"
+          src="/assets/images/prince-hero.jpg"
           sizes="(max-width: 768px) 100vw, 420px"
           alt="Prince"
           decoding="async"
