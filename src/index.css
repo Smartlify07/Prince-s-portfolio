@@ -8,6 +8,8 @@
 @theme {
   --font-geist: 'Geist', sans-serif;
   --font-inter-tight: 'Inter Tight', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+  --font-bricolage: 'Bricolage Grotesque', sans-serif;
   --color-primary: rgba(12, 133, 238, 1);
   --color-secondary: rgba(21, 161, 250, 1);
   --color-accent: rgba(3, 106, 226, 1);
@@ -32,6 +34,17 @@
   --color-grey-9: #909090;
   --color-grey-4: #4c4c4c;
   --color-purple-10: #565677;
+
+  /* Course page theme */
+  --color-course-bg: #fdfbf7;
+  --color-course-ink: #1c1b1a;
+  --color-course-muted: #6f6b66;
+  --color-course-accent: #ff6a4d;
+  --color-course-mint: #7ad0a8;
+  --color-course-peach: #ffd9c2;
+  --color-course-shadow: #0f0f1a;
+  --color-course-card: #262523;
+  --color-course-dim: #a8a8a7;
 
   --color-card-shadow: rgba(86, 86, 119, 0.25);
   --color-badge-primary: rgba(144, 144, 144, 0.2);
@@ -639,3 +652,24 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+/* Course page display type — Bricolage Grotesque at the design's axis settings */
+.course-display {
+  font-variation-settings:
+    'opsz' 14,
+    'wdth' 100;
+}
+
+/* Marker-style highlight behind a text run: a 30px band at 56px type */
+.course-highlight {
+  background-image: linear-gradient(
+    var(--color-course-accent),
+    var(--color-course-accent)
+  );
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 100% 0.536em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
