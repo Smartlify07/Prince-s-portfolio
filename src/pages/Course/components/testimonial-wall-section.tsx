@@ -1,6 +1,6 @@
-import Dot from '@/../public/assets/images/course/dot.svg';
 import { testimonialWall } from '../testimonial-wall.constants';
 import { CourseCta } from './course-cta';
+import { SpotsNote } from './spots-note';
 import { TestimonialWallCard } from './testimonial-wall-card';
 
 export function TestimonialWallSection() {
@@ -20,11 +20,7 @@ export function TestimonialWallSection() {
         Register Now - <span className="line-through">N</span>25,000
       </CourseCta>
 
-      <div className="mt-5 flex flex-wrap items-center justify-center gap-[10px] font-inter text-[14px] leading-[17px] font-medium text-course-muted">
-        <p>Only 30 spots available</p>
-        <img src={Dot} width={8} height={8} alt="" />
-        <p>UI/UX Design + Remote Job Training</p>
-      </div>
+      <SpotsNote className="mt-5" />
     </section>
   );
 }
