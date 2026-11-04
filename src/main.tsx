@@ -18,6 +18,7 @@ const PrivacyPolicy = lazy(
 );
 const ServicesPage = lazy(() => import('./pages/Services/services.tsx'));
 const ReviewsPage = lazy(() => import('./pages/Reviews/reviews.tsx'));
+const CoursePage = lazy(() => import('./pages/Course/course-page.tsx'));
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -33,6 +34,7 @@ createRoot(document.getElementById('root')!).render(
           <Route element={<ProjectDetailsPage />} path="/projects/:id" />
           <Route element={<ReviewsPage />} path="/testimonials" />
         </Route>
+        <Route element={<CoursePage />} path="/course" />
         <Route element={<NotFound />} path="*" />
         <Route element={<ScrollHandoffLayout />} path="/scroll" />
       </Routes>
