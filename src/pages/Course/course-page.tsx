@@ -1,6 +1,7 @@
 import { BonusesSection } from './components/bonuses-section';
 import { CourseHero } from './components/course-hero';
 import { CourseModulesSection } from './components/course-modules-section';
+import { ProofSection } from './components/proof-section';
 import { RegistrationSection } from './components/registration-section';
 import { TestimonialSection } from './components/testimonial-section';
 import { TestimonialWallSection } from './components/testimonial-wall-section';
@@ -14,6 +15,7 @@ export default function CoursePage() {
       <TestimonialWallSection />
       <CourseModulesSection />
       <BonusesSection />
+      <ProofSection />
     </main>
   );
 }
