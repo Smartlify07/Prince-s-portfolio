@@ -1,8 +1,8 @@
+import { COURSE_PREVIEW_VIDEO_SRC } from '../course.constants';
 import { HeroHeading } from './hero-heading';
 import { HeroSubcopy } from './hero-subcopy';
 import { HeroTag } from './hero-tag';
 import { HeroVideo } from './hero-video';
-import { HeroVideoStatus } from './hero-video-status';
 import { SectionCaption } from './section-caption';
 
 export function CourseHero() {
@@ -14,8 +14,7 @@ export function CourseHero() {
       <SectionCaption index={1} className="mt-10">
         Watch this video below
       </SectionCaption>
-      <HeroVideo />
-      <HeroVideoStatus />
+      <HeroVideo src={COURSE_PREVIEW_VIDEO_SRC} />
     </section>
   );
 }

@@ -1,8 +1,7 @@
 import Poster from '@/../public/assets/images/course/testimonial-video-poster.png';
 
 type TestimonialVideoProps = {
-  /** Embedded later — pass the mentee's video URL and the player takes over. */
-  src?: string;
+  src: string;
 };
 
 export function TestimonialVideo({ src }: TestimonialVideoProps) {
@@ -28,14 +27,13 @@ export function TestimonialVideo({ src }: TestimonialVideoProps) {
             className="absolute top-[-256.64%] left-[-97.79%] h-[358.85%] w-[586.03%] max-w-none"
           />
         </div>
-        {src && (
-          <video
-            src={src}
-            controls
-            playsInline
-            className="absolute inset-0 size-full object-cover"
-          />
-        )}
+        <video
+          src={src}
+          controls
+          playsInline
+          preload="metadata"
+          className="absolute inset-0 size-full object-cover"
+        />
       </div>
     </div>
   );
