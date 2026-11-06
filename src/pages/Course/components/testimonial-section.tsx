@@ -1,4 +1,5 @@
 import UserGraduate from '@/../public/assets/images/course/user-graduate.svg';
+import { COURSE_PREVIEW_VIDEO_SRC } from '../course.constants';
 import { CoursePill } from './course-pill';
 import { TestimonialVideo } from './testimonial-video';
 
@@ -17,7 +18,7 @@ export function TestimonialSection() {
         Real stories from my mentees
       </p>
 
-      <TestimonialVideo />
+      <TestimonialVideo src={COURSE_PREVIEW_VIDEO_SRC} />
     </section>
   );
 }
