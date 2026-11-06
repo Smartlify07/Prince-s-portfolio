@@ -6,7 +6,7 @@ export function HeroHeading() {
         <span className="line-through">N</span>1m -
       </span>{' '}
       <span className="course-highlight">
-        <span className="line-through">N2</span>M Monthly
+        <span className="line-through">N</span>2M Monthly
       </span>{' '}
       from UI/UX Design
     </h1>
