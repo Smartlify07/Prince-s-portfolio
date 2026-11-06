@@ -1,0 +1,14 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="emojione:warning" clip-path="url(#clip0_0_5)">
+<path id="Vector" d="M1.475 15.5C0.65 15.5 0.275 14.9 0.65 14.175L7.325 1.05C7.7 0.325 8.3 0.325 8.675 1.05L15.35 14.175C15.725 14.9 15.35 15.5 14.525 15.5H1.475Z" fill="#FFCE31"/>
+<g id="Group">
+<path id="Vector_2" d="M6.95 5.9L7.65 10.525C7.725 10.975 8.3 10.975 8.375 10.525L9.05 5.9C9.175 4.1 6.825 4.1 6.95 5.9Z" fill="#231F20"/>
+<path id="Vector_3" d="M8 13.45C8.5799 13.45 9.05 12.9799 9.05 12.4C9.05 11.8201 8.5799 11.35 8 11.35C7.4201 11.35 6.95 11.8201 6.95 12.4C6.95 12.9799 7.4201 13.45 8 13.45Z" fill="#231F20"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_0_5">
+<rect width="16" height="16" fill="white"/>
+</clipPath>
+</defs>
+</svg>
