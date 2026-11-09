@@ -1,5 +1,8 @@
-/** Registration countdown deadline — replace with the live campaign deadline. */
-export const REGISTRATION_DEADLINE = '2026-11-30T23:59:59+01:00';
+/**
+ * Fixed registration deadline — 12 hours after the campaign timer was set.
+ * Update this to extend the window.
+ */
+export const REGISTRATION_DEADLINE = '2026-11-10T10:12:03+01:00';
 
 /** Where every "Register Now" CTA points — Paystack checkout. */
 export const REGISTRATION_URL = 'https://paystack.shop/pay/princeugboga';
