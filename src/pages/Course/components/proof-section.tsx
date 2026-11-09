@@ -37,7 +37,7 @@ export function ProofSection() {
         Register Now - <span className="line-through">N</span>25,000
       </CourseCta>
 
-      <SpotsNote className="mt-5 text-[#2b2b2b]" />
+      <SpotsNote className="mt-5 text-course-charcoal" />
     </section>
   );
 }

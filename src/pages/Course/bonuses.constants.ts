@@ -1,6 +1,6 @@
 export const bonuses = [
   {
-    title: 'Remote USD Job Training (UI/UX)',
+    title: 'Free USD account opening',
     cardClassName: 'bg-course-peach',
     titleClassName: 'max-w-[184px]',
   },

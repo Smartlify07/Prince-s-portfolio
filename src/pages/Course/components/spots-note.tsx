@@ -1,11 +1,16 @@
-import Dot from '@/../public/assets/images/course/dot.svg';
 import { cn } from '@/lib/utils';
 
 type SpotsNoteProps = {
   className?: string;
+  primary?: string;
+  secondary?: string;
 };
 
-export function SpotsNote({ className }: SpotsNoteProps) {
+export function SpotsNote({
+  className,
+  primary = 'Only 30 spots available',
+  secondary = 'UI/UX Design + Remote Job Training',
+}: SpotsNoteProps) {
   return (
     <div
       className={cn(
@@ -13,9 +18,9 @@ export function SpotsNote({ className }: SpotsNoteProps) {
         className
       )}
     >
-      <p>Only 30 spots available</p>
-      <img src={Dot} width={8} height={8} alt="" />
-      <p>UI/UX Design + Remote Job Training</p>
+      <p>{primary}</p>
+      <span aria-hidden className="size-2 shrink-0 rounded-full bg-current" />
+      <p>{secondary}</p>
     </div>
   );
 }

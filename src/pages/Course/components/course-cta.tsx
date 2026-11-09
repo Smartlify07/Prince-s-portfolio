@@ -1,4 +1,5 @@
 import { cva, type VariantProps } from 'class-variance-authority';
+import { motion } from 'motion/react';
 import type { ReactNode } from 'react';
 import ArrowRight from '@/../public/assets/images/course/arrow-right.svg';
 import { cn } from '@/lib/utils';
@@ -19,6 +20,13 @@ const ctaVariants = cva(
   }
 );
 
+const pressSpring = {
+  type: 'spring',
+  stiffness: 500,
+  damping: 30,
+  mass: 0.6,
+} as const;
+
 type CourseCtaProps = VariantProps<typeof ctaVariants> & {
   className?: string;
   children: ReactNode;
@@ -26,9 +34,14 @@ type CourseCtaProps = VariantProps<typeof ctaVariants> & {
 
 export function CourseCta({ variant, className, children }: CourseCtaProps) {
   return (
-    <a href={REGISTRATION_URL} className={cn(ctaVariants({ variant }), className)}>
+    <motion.a
+      href={REGISTRATION_URL}
+      className={cn(ctaVariants({ variant }), className)}
+      whileTap={{ scale: 0.96 }}
+      transition={pressSpring}
+    >
       <span>{children}</span>
       <img src={ArrowRight} width={24} height={24} alt="" />
-    </a>
+    </motion.a>
   );
 }

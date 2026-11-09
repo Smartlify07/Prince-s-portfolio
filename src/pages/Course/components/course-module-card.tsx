@@ -10,7 +10,7 @@ export function CourseModuleCard({
   description,
 }: CourseModuleCardProps) {
   return (
-    <article className="flex w-full flex-col gap-2 rounded-[20px] border border-course-muted bg-course-card px-[30px] py-5 sm:flex-row sm:items-start sm:gap-5">
+    <article className="flex w-full flex-col gap-2 rounded-[20px] border border-course-muted bg-course-card px-[30px] py-5 transition-colors duration-200 hover:border-course-yellow sm:flex-row sm:items-start sm:gap-5">
       <p className="course-display shrink-0 font-bricolage text-[18px] leading-[22px] font-bold whitespace-nowrap text-course-mint">
         MODULE {index}
       </p>

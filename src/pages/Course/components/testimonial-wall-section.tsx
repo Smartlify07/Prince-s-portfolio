@@ -20,7 +20,11 @@ export function TestimonialWallSection() {
         Register Now - <span className="line-through">N</span>25,000
       </CourseCta>
 
-      <SpotsNote className="mt-5" />
+      <SpotsNote
+        className="mt-5"
+        primary="Your story is Next"
+        secondary="Lock in your spot now"
+      />
     </section>
   );
 }
