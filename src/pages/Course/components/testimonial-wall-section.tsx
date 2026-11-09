@@ -1,3 +1,4 @@
+import { COURSE_PRICE } from '../course.constants';
 import { testimonialWall } from '../testimonial-wall.constants';
 import { CourseCta } from './course-cta';
 import { SpotsNote } from './spots-note';
@@ -17,7 +18,7 @@ export function TestimonialWallSection() {
       </div>
 
       <CourseCta variant="ink" className="mt-[46px]">
-        Register Now - <span className="line-through">N</span>25,000
+        Register Now - <span className="line-through">N</span>{COURSE_PRICE}
       </CourseCta>
 
       <SpotsNote

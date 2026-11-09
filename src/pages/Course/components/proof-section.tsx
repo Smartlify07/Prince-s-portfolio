@@ -1,4 +1,5 @@
 import CoolFace from '@/../public/assets/images/course/cool-face.png';
+import { COURSE_PRICE } from '../course.constants';
 import { proofCards } from '../proof.constants';
 import { CourseCta } from './course-cta';
 import { CoursePill } from './course-pill';
@@ -34,7 +35,7 @@ export function ProofSection() {
       </div>
 
       <CourseCta variant="ink" className="mt-[46px]">
-        Register Now - <span className="line-through">N</span>25,000
+        Register Now - <span className="line-through">N</span>{COURSE_PRICE}
       </CourseCta>
 
       <SpotsNote className="mt-5 text-course-charcoal" />

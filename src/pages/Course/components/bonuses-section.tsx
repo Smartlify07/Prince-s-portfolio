@@ -1,4 +1,5 @@
 import Gift from '@/../public/assets/images/course/gift.svg';
+import { COURSE_PRICE } from '../course.constants';
 import { bonuses } from '../bonuses.constants';
 import { BonusCard } from './bonus-card';
 import { CourseCta } from './course-cta';
@@ -34,7 +35,7 @@ export function BonusesSection() {
       </div>
 
       <CourseCta variant="ink" className="mt-[45px]">
-        Register Now - <span className="line-through">N</span>25,000
+        Register Now - <span className="line-through">N</span>{COURSE_PRICE}
       </CourseCta>
 
       <SpotsNote className="mt-5" />

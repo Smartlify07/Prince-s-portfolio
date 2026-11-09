@@ -1,5 +1,5 @@
 import WarningIcon from '@/../public/assets/images/course/warning.svg';
-import { REGISTRATION_DEADLINE } from '../course.constants';
+import { COURSE_PRICE, REGISTRATION_DEADLINE } from '../course.constants';
 import { CountdownTimer } from './countdown-timer';
 import { CourseCta } from './course-cta';
 
@@ -11,7 +11,7 @@ export function RegistrationCard() {
           One-time investment
         </p>
         <p className="course-display font-bricolage text-[56px] leading-[65px] font-bold text-course-ink sm:text-[68px]">
-          <span className="line-through">N</span>25,000
+          <span className="line-through">N</span>{COURSE_PRICE}
         </p>
       </div>
 

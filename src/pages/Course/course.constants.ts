@@ -7,6 +7,9 @@ export const REGISTRATION_DEADLINE = '2026-11-10T10:12:03+01:00';
 /** Where every "Register Now" CTA points — Paystack checkout. */
 export const REGISTRATION_URL = 'https://paystack.shop/pay/princeugboga';
 
+/** Price shown on the landing page. Paystack's product price must match. */
+export const COURSE_PRICE = '30,000';
+
 /**
  * Hero preview, sourced from the client's Google Drive upload
  * (drive file 1Zb2ddtlt-r5CwaaZHlCURKsPRR1VygMS). Drive serves it with
