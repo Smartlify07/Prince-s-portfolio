@@ -1,4 +1,4 @@
-import { COURSE_PREVIEW_VIDEO_SRC } from '../course.constants';
+import { COURSE_HERO_VIDEO_SRC } from '../course.constants';
 import { HeroHeading } from './hero-heading';
 import { HeroSubcopy } from './hero-subcopy';
 import { HeroTag } from './hero-tag';
@@ -14,7 +14,7 @@ export function CourseHero() {
       <SectionCaption index={1} className="mt-10">
         Watch this video below
       </SectionCaption>
-      <HeroVideo src={COURSE_PREVIEW_VIDEO_SRC} />
+      <HeroVideo src={COURSE_HERO_VIDEO_SRC} />
     </section>
   );
 }
