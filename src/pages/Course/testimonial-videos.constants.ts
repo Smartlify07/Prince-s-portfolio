@@ -1,26 +1,35 @@
-import CardA from '@/../public/assets/images/course/testimonial-video-1.png';
-import CardB from '@/../public/assets/images/course/testimonial-video-2.png';
-import CardC from '@/../public/assets/images/course/testimonial-video-3.png';
+import DasolaPoster from '@/../public/assets/images/course/testimonial-dasola.webp';
+import HarounPoster from '@/../public/assets/images/course/testimonial-haroun.webp';
+import SylverPoster from '@/../public/assets/images/course/testimonial-sylver.webp';
 
 export type TestimonialVideoItem = {
+  src: string;
   poster: string;
   alt: string;
-  /** Figma crops the middle card higher than centre; the rest use a plain cover crop. */
+  /**
+   * Each clip is framed differently: the value matches the poster's crop so
+   * the first frame lines up with the still.
+   */
   videoClassName?: string;
 };
 
 export const testimonialVideos: TestimonialVideoItem[] = [
   {
-    poster: CardA,
-    alt: 'Mentee sharing her experience after the UI/UX design training',
+    src: '/assets/videos/course-testimonial-dasola.mp4',
+    poster: DasolaPoster,
+    alt: 'Dasola, a UI/UX design mentee, sharing her experience',
+    videoClassName: 'object-[50%_20%]',
   },
   {
-    poster: CardB,
-    alt: 'Mentee describing the jobs he landed after the training',
-    videoClassName: 'object-[50%_19.8%]',
+    src: '/assets/videos/course-testimonial-sylver.mp4',
+    poster: SylverPoster,
+    alt: 'Sylver, a UI/UX design mentee, describing the jobs he landed',
+    videoClassName: 'object-[50%_35%]',
   },
   {
-    poster: CardC,
-    alt: 'Mentee talking about earning in dollars from Nigeria',
+    src: '/assets/videos/course-testimonial-haroun.mp4',
+    poster: HarounPoster,
+    alt: 'Haroun, a UI/UX design mentee, talking about earning in dollars',
+    videoClassName: 'object-[50%_50%]',
   },
 ];

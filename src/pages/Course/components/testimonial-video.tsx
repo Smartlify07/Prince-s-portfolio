@@ -1,17 +1,13 @@
 import { testimonialVideos } from '../testimonial-videos.constants';
 import { TestimonialVideoCard } from './testimonial-video-card';
 
-type TestimonialVideoProps = {
-  src: string;
-};
-
-export function TestimonialVideo({ src }: TestimonialVideoProps) {
+export function TestimonialVideo() {
   return (
     <div className="mt-[36px] grid w-full max-w-[1000px] grid-cols-1 gap-5 sm:grid-cols-3">
       {testimonialVideos.map((card) => (
         <TestimonialVideoCard
-          key={card.alt}
-          src={src}
+          key={card.src}
+          src={card.src}
           poster={card.poster}
           alt={card.alt}
           videoClassName={card.videoClassName}

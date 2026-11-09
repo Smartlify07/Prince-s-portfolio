@@ -1,16 +1,12 @@
 import { cn } from '@/lib/utils';
 import type { TestimonialVideoItem } from '../testimonial-videos.constants';
 
-type TestimonialVideoCardProps = TestimonialVideoItem & {
-  src: string;
-};
-
 export function TestimonialVideoCard({
   src,
   poster,
   alt,
   videoClassName,
-}: TestimonialVideoCardProps) {
+}: TestimonialVideoItem) {
   return (
     <div className="relative aspect-[320/440] w-full overflow-hidden rounded-[30px] bg-course-ink">
       <video
