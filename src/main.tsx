@@ -34,7 +34,7 @@ createRoot(document.getElementById('root')!).render(
           <Route element={<ProjectDetailsPage />} path="/projects/:id" />
           <Route element={<ReviewsPage />} path="/testimonials" />
         </Route>
-        <Route element={<CoursePage />} path="/course" />
+        <Route element={<CoursePage />} path="/training" />
         <Route element={<NotFound />} path="*" />
         <Route element={<ScrollHandoffLayout />} path="/scroll" />
       </Routes>

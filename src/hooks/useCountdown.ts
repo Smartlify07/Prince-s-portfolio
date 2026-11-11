@@ -1,37 +1,35 @@
 import { useEffect, useState } from 'react';
+import {
+  formatCountdown,
+  getCycleRemaining,
+  type Countdown,
+} from '@/lib/countdown';
 
-export type Countdown = {
-  days: string;
-  hours: string;
-  minutes: string;
-  seconds: string;
-  isExpired: boolean;
-};
+const HOUR_MS = 3_600_000;
 
-const pad = (value: number) => String(value).padStart(2, '0');
+/**
+ * Counts down to `deadline`, then restarts the window every `cycleHours`
+ * from that anchor instead of expiring at zero.
+ */
+export function useCountdown(
+  deadline: string,
+  cycleHours: number
+): Countdown {
+  const anchor = new Date(deadline).getTime();
+  const cycleMs = cycleHours * HOUR_MS;
+  const read = () =>
+    formatCountdown(getCycleRemaining(Date.now(), anchor, cycleMs));
 
-const getRemaining = (deadline: number): Countdown => {
-  const remainingMs = Math.max(deadline - Date.now(), 0);
-  const totalSeconds = Math.floor(remainingMs / 1000);
-
-  return {
-    days: pad(Math.floor(totalSeconds / 86_400)),
-    hours: pad(Math.floor((totalSeconds % 86_400) / 3_600)),
-    minutes: pad(Math.floor((totalSeconds % 3_600) / 60)),
-    seconds: pad(totalSeconds % 60),
-    isExpired: remainingMs === 0,
-  };
-};
-
-export function useCountdown(deadline: string): Countdown {
-  const target = new Date(deadline).getTime();
-  const [remaining, setRemaining] = useState(() => getRemaining(target));
+  const [remaining, setRemaining] = useState(read);
 
   useEffect(() => {
-    setRemaining(getRemaining(target));
-    const interval = setInterval(() => setRemaining(getRemaining(target)), 1000);
+    const tick = () =>
+      setRemaining(formatCountdown(getCycleRemaining(Date.now(), anchor, cycleMs)));
+
+    tick();
+    const interval = setInterval(tick, 1000);
     return () => clearInterval(interval);
-  }, [target]);
+  }, [anchor, cycleMs]);
 
   return remaining;
 }
