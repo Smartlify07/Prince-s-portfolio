@@ -1,5 +1,9 @@
 import WarningIcon from '@/../public/assets/images/course/warning.svg';
-import { COURSE_PRICE, REGISTRATION_DEADLINE } from '../course.constants';
+import {
+  COURSE_PRICE,
+  REGISTRATION_DEADLINE,
+  REGISTRATION_WINDOW_HOURS,
+} from '../course.constants';
 import { CountdownTimer } from './countdown-timer';
 import { CourseCta } from './course-cta';
 
@@ -26,7 +30,10 @@ export function RegistrationCard() {
         YOUR REGISTRATION WINDOW CLOSES IN
       </p>
 
-      <CountdownTimer deadline={REGISTRATION_DEADLINE} />
+      <CountdownTimer
+        deadline={REGISTRATION_DEADLINE}
+        windowHours={REGISTRATION_WINDOW_HOURS}
+      />
 
       <CourseCta>Register Now</CourseCta>
     </div>

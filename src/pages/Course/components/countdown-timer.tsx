@@ -2,10 +2,14 @@ import { useCountdown } from '@/hooks/useCountdown';
 
 type CountdownTimerProps = {
   deadline: string;
+  windowHours: number;
 };
 
-export function CountdownTimer({ deadline }: CountdownTimerProps) {
-  const { days, hours, minutes, seconds } = useCountdown(deadline);
+export function CountdownTimer({
+  deadline,
+  windowHours,
+}: CountdownTimerProps) {
+  const { days, hours, minutes, seconds } = useCountdown(deadline, windowHours);
 
   const units = [
     { value: days, label: 'DAYS' },

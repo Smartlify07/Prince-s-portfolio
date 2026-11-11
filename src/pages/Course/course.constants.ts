@@ -1,8 +1,12 @@
 /**
- * Fixed registration deadline — 12 hours after the campaign timer was set.
- * Update this to extend the window.
+ * Anchor for the rolling registration window. The visible timer counts down
+ * to it, then restarts a fresh `REGISTRATION_WINDOW_HOURS` window from this
+ * same moment — it never stays parked at 00:00:00.
  */
 export const REGISTRATION_DEADLINE = '2026-11-10T10:12:03+01:00';
+
+/** Length of the registration window, in hours. */
+export const REGISTRATION_WINDOW_HOURS = 12;
 
 /** Where every "Register Now" CTA points — Paystack checkout. */
 export const REGISTRATION_URL = 'https://paystack.shop/pay/princeugboga';
